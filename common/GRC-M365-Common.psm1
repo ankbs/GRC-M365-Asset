@@ -76,4 +76,45 @@ function Export-GRCAssetData {
     Write-Output "GRC Asset exported successfully to: $jsonPath and $csvPath"
 }
 
-Export-ModuleMember -Function Connect-GRCEnvironment, Export-GRCAssetData
+function Connect-GRCExchange {
+    [CmdletBinding()]
+    param(
+        [Parameter(Mandatory = $false)]
+        [string]$TenantId,
+
+        [Parameter(Mandatory = $false)]
+        [string]$ClientId,
+
+        [Parameter(Mandatory = $false)]
+        [string]$CertificateBase64,
+
+        [Parameter(Mandatory = $false)]
+        [switch]$Interactive
+    )
+
+    # Import ExchangeOnlineManagement module if not loaded
+    if (-not (Get-Module -Name ExchangeOnlineManagement)) {
+        Import-Module -Name ExchangeOnlineManagement -Force
+    }
+
+    # 1. Interactive login for local Admins
+    if ($Interactive) {
+        Write-Verbose "Initiating interactive Exchange Online authentication..."
+        Connect-ExchangeOnline -ShowBanner:$false
+        return
+    }
+
+    # 2. Non-interactive certificate authentication for Cloud / Workflows
+    if ($CertificateBase64 -and $ClientId -and $TenantId) {
+        Write-Verbose "Initiating unattended Exchange Online certificate authentication..."
+        $certBytes = [System.Convert]::FromBase64String($CertificateBase64)
+        $cert = [System.Security.Cryptography.X509Certificates.X509Certificate2]::new($certBytes, "")
+        
+        Connect-ExchangeOnline -Certificate $cert -AppId $ClientId -Organization $TenantId -ShowBanner:$false
+        return
+    }
+
+    Write-Error "Invalid authentication parameters for Exchange. Specify either -Interactive or -CertificateBase64, -ClientId, and -TenantId."
+}
+
+Export-ModuleMember -Function Connect-GRCEnvironment, Connect-GRCExchange, Export-GRCAssetData

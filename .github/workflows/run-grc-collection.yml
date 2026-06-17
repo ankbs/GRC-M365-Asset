@@ -18,10 +18,11 @@ jobs:
     - name: Set up PowerShell modules
       shell: pwsh
       run: |
-        # Install Graph Authentication and applications modules silently
+        # Install Graph Authentication, applications, and Exchange modules silently
         $ErrorActionPreference = 'Stop'
         Install-Module -Name Microsoft.Graph.Authentication -Force -Scope CurrentUser
         Install-Module -Name Microsoft.Graph.Applications -Force -Scope CurrentUser
+        Install-Module -Name ExchangeOnlineManagement -Force -Scope CurrentUser
 
     - name: Execute GRC Collectors
       shell: pwsh
@@ -62,6 +63,21 @@ jobs:
         Write-Host "Running Defender Endpoint Collector..." -ForegroundColor Yellow
         cd ../../Defender-Devices/powershell
         ./Get-DefenderDevices.ps1 -TenantId $env:GRC_TENANT_ID -ClientId $env:GRC_CLIENT_ID -CertificateBase64 $env:GRC_CERTIFICATE
+
+        # 7. Exchange Online
+        Write-Host "Running Exchange Online Summary Collector..." -ForegroundColor Yellow
+        cd ../../../ExchangeOnline/powershell
+        ./Get-ExchangeSummary.ps1 -TenantId $env:GRC_TENANT_ID -ClientId $env:GRC_CLIENT_ID -CertificateBase64 $env:GRC_CERTIFICATE
+
+        # 8. SharePoint Online
+        Write-Host "Running SharePoint Online Summary Collector..." -ForegroundColor Yellow
+        cd ../../SharePoint/powershell
+        ./Get-SharePointSummary.ps1 -TenantId $env:GRC_TENANT_ID -ClientId $env:GRC_CLIENT_ID -CertificateBase64 $env:GRC_CERTIFICATE
+
+        # 9. Microsoft Teams
+        Write-Host "Running Microsoft Teams Summary Collector..." -ForegroundColor Yellow
+        cd ../../Teams/powershell
+        ./Get-TeamsSummary.ps1 -TenantId $env:GRC_TENANT_ID -ClientId $env:GRC_CLIENT_ID -CertificateBase64 $env:GRC_CERTIFICATE
 
     - name: Generate HTML GRC Report
       shell: pwsh

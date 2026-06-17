@@ -68,28 +68,40 @@ $rootPath = $PSScriptRoot
 
 try {
     # 1. Tenant Info
-    Write-Host "`n[1/6] Running Tenant Info Collector..." -ForegroundColor Yellow
+    Write-Host "`n[1/9] Running Tenant Info Collector..." -ForegroundColor Yellow
     & "$rootPath/services/EntraID/Users/powershell/Get-TenantInfo.ps1" @authArgs
     
     # 2. Users
-    Write-Host "`n[2/6] Running User Summary Collector..." -ForegroundColor Yellow
+    Write-Host "`n[2/9] Running User Summary Collector..." -ForegroundColor Yellow
     & "$rootPath/services/EntraID/Users/powershell/Get-UserSummary.ps1" @authArgs
     
     # 3. Groups
-    Write-Host "`n[3/6] Running Group Summary Collector..." -ForegroundColor Yellow
+    Write-Host "`n[3/9] Running Group Summary Collector..." -ForegroundColor Yellow
     & "$rootPath/services/EntraID/Groups/powershell/Get-GroupSummary.ps1" @authArgs
     
     # 4. Entra Devices
-    Write-Host "`n[4/6] Running Entra ID Devices Collector..." -ForegroundColor Yellow
+    Write-Host "`n[4/9] Running Entra ID Devices Collector..." -ForegroundColor Yellow
     & "$rootPath/services/Devices/EntraID-Devices/powershell/Get-EntraDevices.ps1" @authArgs
     
     # 5. Intune Devices
-    Write-Host "`n[5/6] Running Intune Managed Devices Collector..." -ForegroundColor Yellow
+    Write-Host "`n[5/9] Running Intune Managed Devices Collector..." -ForegroundColor Yellow
     & "$rootPath/services/Devices/Intune-Devices/powershell/Get-IntuneDevices.ps1" @authArgs
     
     # 6. Defender Devices
-    Write-Host "`n[6/6] Running Defender Endpoint Collector..." -ForegroundColor Yellow
+    Write-Host "`n[6/9] Running Defender Endpoint Collector..." -ForegroundColor Yellow
     & "$rootPath/services/Devices/Defender-Devices/powershell/Get-DefenderDevices.ps1" @authArgs
+
+    # 7. Exchange Online
+    Write-Host "`n[7/9] Running Exchange Online Summary Collector..." -ForegroundColor Yellow
+    & "$rootPath/services/ExchangeOnline/powershell/Get-ExchangeSummary.ps1" @authArgs
+
+    # 8. SharePoint Online
+    Write-Host "`n[8/9] Running SharePoint Online Summary Collector..." -ForegroundColor Yellow
+    & "$rootPath/services/SharePoint/powershell/Get-SharePointSummary.ps1" @authArgs
+
+    # 9. Microsoft Teams
+    Write-Host "`n[9/9] Running Microsoft Teams Summary Collector..." -ForegroundColor Yellow
+    & "$rootPath/services/Teams/powershell/Get-TeamsSummary.ps1" @authArgs
 
 } catch {
     Write-Error "Error during collection run: $_"

@@ -37,6 +37,9 @@ $groups     = Get-LatestJsonData -Path (Join-Path -Path $exportsRoot -ChildPath 
 $entraDev   = Get-LatestJsonData -Path (Join-Path -Path $exportsRoot -ChildPath "Devices/EntraDevices")
 $intuneDev  = Get-LatestJsonData -Path (Join-Path -Path $exportsRoot -ChildPath "Devices/IntuneDevices")
 $defDev     = Get-LatestJsonData -Path (Join-Path -Path $exportsRoot -ChildPath "Devices/DefenderDevices")
+$exchange   = Get-LatestJsonData -Path (Join-Path -Path $exportsRoot -ChildPath "ExchangeOnline/ExchangeSummary")
+$sharepoint = Get-LatestJsonData -Path (Join-Path -Path $exportsRoot -ChildPath "SharePoint/SharePointSummary")
+$teams      = Get-LatestJsonData -Path (Join-Path -Path $exportsRoot -ChildPath "Teams/TeamsSummary")
 
 # 3. Calculate Summary Metrics
 $tenantName = if ($tenantInfo) { $tenantInfo.OrgDisplayName } else { "Microsoft 365 Tenant" }
@@ -81,6 +84,23 @@ if ($groups) {
 $totalEntraDevices = if ($entraDev) { @($entraDev).Count } else { 0 }
 $totalIntuneDevices = if ($intuneDev) { @($intuneDev).Count } else { 0 }
 $totalDefenderDevices = if ($defDev) { @($defDev).Count } else { 0 }
+
+# Exchange statistics
+$exchUserMailboxes = if ($exchange) { $exchange.TotalUserMailboxes } else { 0 }
+$exchSharedMailboxes = if ($exchange) { $exchange.TotalSharedMailboxes } else { 0 }
+$exchTransportRules = if ($exchange) { $exchange.TotalTransportRules } else { 0 }
+$exchDkimDomains = if ($exchange) { $exchange.DkimEnabledDomainsCount } else { 0 }
+$exchAntiMalware = if ($exchange) { $exchange.AntimalwarePoliciesCount } else { 0 }
+
+# SharePoint statistics
+$spSites = if ($sharepoint) { $sharepoint.TotalSharepointSites } else { 0 }
+$spSharingMode = if ($sharepoint) { $sharepoint.ExternalSharingMode } else { "N/A" }
+$spSharingCap = if ($sharepoint) { $sharepoint.FileSharingCapability } else { "N/A" }
+
+# Teams statistics
+$teamsCount = if ($teams) { $teams.TotalTeams } else { 0 }
+$teamsPublic = if ($teams) { $teams.PublicTeamsCount } else { 0 }
+$teamsPrivate = if ($teams) { $teams.PrivateTeamsCount } else { 0 }
 
 # 4. Generate HTML Content (Highly styled with Outfit typography, glassmorphism, responsive grid)
 $htmlContent = @"
@@ -410,6 +430,69 @@ $htmlContent = @"
                     <span class="metric-value">
                         $(if ($totalEntraDevices -gt 0) { "{0:P1}" -f ($totalIntuneDevices / $totalEntraDevices) } else { "0%" })
                     </span>
+                </div>
+            </div>
+        </div>
+
+        <!-- M365 Collaboration & Mail GRC Row -->
+        <h2 style="margin-top: 2.5rem; margin-bottom: 1rem; font-size: 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 0.5rem; color: #ffffff;">📬 Kollaboration & E-Mail GRC-Audit</h2>
+        <div class="grid-3">
+            <!-- Exchange Online Card -->
+            <div class="card">
+                <h2>✉️ Exchange Online</h2>
+                <div class="metric-row">
+                    <span class="metric-label">Benutzer-Postfächer</span>
+                    <span class="metric-value">$exchUserMailboxes</span>
+                </div>
+                <div class="metric-row">
+                    <span class="metric-label">Gemeinsame Postfächer (Shared)</span>
+                    <span class="metric-value">$exchSharedMailboxes</span>
+                </div>
+                <div class="metric-row">
+                    <span class="metric-label">Mailflow Transport-Regeln</span>
+                    <span class="metric-value warning">$exchTransportRules</span>
+                </div>
+                <div class="metric-row">
+                    <span class="metric-label">DKIM-geschützte Domains</span>
+                    <span class="metric-value success">$exchDkimDomains</span>
+                </div>
+                <div class="metric-row">
+                    <span class="metric-label">Anti-Malware Richtlinien</span>
+                    <span class="metric-value">$exchAntiMalware</span>
+                </div>
+            </div>
+
+            <!-- SharePoint & OneDrive Card -->
+            <div class="card">
+                <h2>🌐 SharePoint & OneDrive</h2>
+                <div class="metric-row">
+                    <span class="metric-label">Aktive SharePoint-Sites</span>
+                    <span class="metric-value">$spSites</span>
+                </div>
+                <div class="metric-row">
+                    <span class="metric-label">Externer Freigabe-Modus</span>
+                    <span class="metric-value" style="font-size: 0.85rem; font-family: monospace;">$spSharingMode</span>
+                </div>
+                <div class="metric-row">
+                    <span class="metric-label">Freigabe-Berechtigung</span>
+                    <span class="metric-value" style="font-size: 0.85rem; font-family: monospace;">$spSharingCap</span>
+                </div>
+            </div>
+
+            <!-- Microsoft Teams Card -->
+            <div class="card">
+                <h2>💬 Microsoft Teams</h2>
+                <div class="metric-row">
+                    <span class="metric-label">Teams gesamt</span>
+                    <span class="metric-value">$teamsCount</span>
+                </div>
+                <div class="metric-row">
+                    <span class="metric-label">Öffentliche Teams (Risiko)</span>
+                    <span class="metric-value $(if ($teamsPublic -gt 0) { 'warning' } else { '' })">$teamsPublic</span>
+                </div>
+                <div class="metric-row">
+                    <span class="metric-label">Private Teams</span>
+                    <span class="metric-value success">$teamsPrivate</span>
                 </div>
             </div>
         </div>
