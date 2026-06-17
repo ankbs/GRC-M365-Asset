@@ -34,9 +34,9 @@ $exportsRoot = Join-Path -Path $PSScriptRoot -ChildPath "../exports"
 $tenantInfo = Get-LatestJsonData -Path (Join-Path -Path $exportsRoot -ChildPath "EntraID/TenantInfo")
 $users      = Get-LatestJsonData -Path (Join-Path -Path $exportsRoot -ChildPath "EntraID/Users")
 $groups     = Get-LatestJsonData -Path (Join-Path -Path $exportsRoot -ChildPath "EntraID/Groups")
-$entraDev   = Get-LatestJsonData -Path (Join-Path -Path $exportsRoot -ChildPath "Devices/EntraID-Devices")
-$intuneDev  = Get-LatestJsonData -Path (Join-Path -Path $exportsRoot -ChildPath "Devices/Intune-Devices")
-$defDev     = Get-LatestJsonData -Path (Join-Path -Path $exportsRoot -ChildPath "Devices/Defender-Devices")
+$entraDev   = Get-LatestJsonData -Path (Join-Path -Path $exportsRoot -ChildPath "Devices/EntraDevices")
+$intuneDev  = Get-LatestJsonData -Path (Join-Path -Path $exportsRoot -ChildPath "Devices/IntuneDevices")
+$defDev     = Get-LatestJsonData -Path (Join-Path -Path $exportsRoot -ChildPath "Devices/DefenderDevices")
 
 # 3. Calculate Summary Metrics
 $tenantName = if ($tenantInfo) { $tenantInfo.OrgDisplayName } else { "Microsoft 365 Tenant" }
