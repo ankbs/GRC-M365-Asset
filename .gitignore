@@ -1,0 +1,15 @@
+# GRC M365 Asset Exporter ignored files
+.env
+.env.*
+*.pem
+*.pfx
+*.cer
+*.key
+_Assessment-Log_*
+_Assessment-Summary_*
+_Assessment-Issues_*
+reports/
+exports/
+_tmp*.ps1
+_run*.ps1
+*.tmp
