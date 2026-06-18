@@ -136,8 +136,6 @@ function Connect-GrcComplianceSession {
     Write-Host "ExchangeOnlineManagement version: $($module.Version)"
     Write-Host "Connecting to Security & Compliance PowerShell for organization '$Organization'."
 
-    # Required workaround for some non-Windows IPPS app-only sessions that otherwise show an interactive prompt
-    # or fail during the internal EXO module creation.
     if (-not $IsWindows) {
         $Global:IsWindows = $true
     }
