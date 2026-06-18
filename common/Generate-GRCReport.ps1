@@ -40,6 +40,8 @@ $defDev     = Get-LatestJsonData -Path (Join-Path -Path $exportsRoot -ChildPath 
 $exchange   = Get-LatestJsonData -Path (Join-Path -Path $exportsRoot -ChildPath "ExchangeOnline/ExchangeSummary")
 $sharepoint = Get-LatestJsonData -Path (Join-Path -Path $exportsRoot -ChildPath "SharePoint/SharePointSummary")
 $teams      = Get-LatestJsonData -Path (Join-Path -Path $exportsRoot -ChildPath "Teams/TeamsSummary")
+$governance = Get-LatestJsonData -Path (Join-Path -Path $exportsRoot -ChildPath "EntraID/EntraGovernanceSummary")
+$purview    = Get-LatestJsonData -Path (Join-Path -Path $exportsRoot -ChildPath "Purview/PurviewSummary")
 
 # 3. Calculate Summary Metrics
 $tenantName = if ($tenantInfo) { $tenantInfo.OrgDisplayName } else { "Microsoft 365 Tenant" }
@@ -101,6 +103,30 @@ $spSharingCap = if ($sharepoint) { $sharepoint.FileSharingCapability } else { "N
 $teamsCount = if ($teams) { $teams.TotalTeams } else { 0 }
 $teamsPublic = if ($teams) { $teams.PublicTeamsCount } else { 0 }
 $teamsPrivate = if ($teams) { $teams.PrivateTeamsCount } else { 0 }
+
+# Governance statistics
+$caCount = if ($governance) { $governance.TotalConditionalAccessPolicies } else { 0 }
+$caEnabled = if ($governance) { $governance.EnabledCAPoliciesCount } else { 0 }
+$caReportOnly = if ($governance) { $governance.ReportOnlyCAPoliciesCount } else { 0 }
+$apCount = if ($governance) { $governance.TotalAccessPackages } else { 0 }
+$arCount = if ($governance) { $governance.TotalAccessReviews } else { 0 }
+
+# Purview statistics
+$purviewLabels = if ($purview) { $purview.TotalSensitivityLabels } else { 0 }
+$purviewLabelsNames = if ($purview -and $purview.SensitivityLabelNames) { $purview.SensitivityLabelNames } else { "Keine" }
+$purviewDlp = if ($purview) { $purview.TotalDlpPolicies } else { 0 }
+$purviewDlpNames = if ($purview -and $purview.DlpPolicyNames) { $purview.DlpPolicyNames } else { "Keine" }
+$purviewRetention = if ($purview -and $purview.TotalRetentionLabels) { $purview.TotalRetentionLabels } else { 0 }
+
+# Policy settings
+$mandatoryLabeling = "Nein"
+$defaultLabel = "Keins"
+$justificationReq = "Nein"
+if ($purview -and $purview.LabelPolicySettings) {
+    $mandatoryLabeling = if ($purview.LabelPolicySettings.IsMandatory -eq $true -or $purview.LabelPolicySettings.IsMandatory -eq "True") { "Ja" } else { "Nein" }
+    $defaultLabel = if ($purview.LabelPolicySettings.DefaultLabelId) { $purview.LabelPolicySettings.DefaultLabelId } else { "Keins" }
+    $justificationReq = if ($purview.LabelPolicySettings.DowngradeJustificationRequired -eq $true -or $purview.LabelPolicySettings.DowngradeJustificationRequired -eq "True") { "Ja" } else { "Nein" }
+}
 
 # 4. Generate HTML Content (Highly styled with Outfit typography, glassmorphism, responsive grid)
 $htmlContent = @"
@@ -493,6 +519,72 @@ $htmlContent = @"
                 <div class="metric-row">
                     <span class="metric-label">Private Teams</span>
                     <span class="metric-value success">$teamsPrivate</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- M365 Governance & Purview GRC Row -->
+        <h2 style="margin-top: 2.5rem; margin-bottom: 1rem; font-size: 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 0.5rem; color: #ffffff;">🛡️ Identity Governance & Compliance GRC-Audit</h2>
+        <div class="grid-2">
+            <!-- Entra ID Governance Card -->
+            <div class="card">
+                <h2>🔑 Identity Governance (Entra ID)</h2>
+                <div class="metric-row">
+                    <span class="metric-label">Bedingter Zugriff (CA-Richtlinien)</span>
+                    <span class="metric-value">$caCount Richtlinien</span>
+                </div>
+                <div class="metric-row">
+                    <span class="metric-label">CA Richtlinien Aktiviert</span>
+                    <span class="metric-value success">$caEnabled</span>
+                </div>
+                <div class="metric-row">
+                    <span class="metric-label">CA Richtlinien im Report-only Modus</span>
+                    <span class="metric-value warning">$caReportOnly</span>
+                </div>
+                <div class="metric-row">
+                    <span class="metric-label">Zugriffspakete (Access Packages)</span>
+                    <span class="metric-value">$apCount</span>
+                </div>
+                <div class="metric-row">
+                    <span class="metric-label">Zugriffsüberprüfungen (Access Reviews)</span>
+                    <span class="metric-value">$arCount</span>
+                </div>
+            </div>
+
+            <!-- Purview Information Protection Card -->
+            <div class="card">
+                <h2>🔒 Microsoft Purview Compliance & Information Protection</h2>
+                <div class="metric-row">
+                    <span class="metric-label">Vertraulichkeitslabels (Sensitivity Labels)</span>
+                    <span class="metric-value">$purviewLabels</span>
+                </div>
+                <div class="metric-row" style="flex-direction: column; gap: 0.25rem;">
+                    <span class="metric-label">Labelnamen:</span>
+                    <span class="metric-value" style="font-size: 0.85rem; color: var(--text-muted);">$purviewLabelsNames</span>
+                </div>
+                <div class="metric-row">
+                    <span class="metric-label">DLP Richtlinien (Data Loss Prevention)</span>
+                    <span class="metric-value">$purviewDlp</span>
+                </div>
+                <div class="metric-row" style="flex-direction: column; gap: 0.25rem;">
+                    <span class="metric-label">DLP Richtliniennamen:</span>
+                    <span class="metric-value" style="font-size: 0.85rem; color: var(--text-muted);">$purviewDlpNames</span>
+                </div>
+                <div class="metric-row">
+                    <span class="metric-label">Aufbewahrungsbezeichnungen (Retention Labels)</span>
+                    <span class="metric-value">$purviewRetention</span>
+                </div>
+                <div class="metric-row">
+                    <span class="metric-label">Labeling Pflicht (Mandatory)</span>
+                    <span class="metric-value $(if ($mandatoryLabeling -eq 'Ja') { 'success' } else { '' })">$mandatoryLabeling</span>
+                </div>
+                <div class="metric-row">
+                    <span class="metric-label">Standard-Label</span>
+                    <span class="metric-value" style="font-size: 0.85rem; font-family: monospace;">$defaultLabel</span>
+                </div>
+                <div class="metric-row">
+                    <span class="metric-label">Begründungspflicht bei Herabstufung</span>
+                    <span class="metric-value $(if ($justificationReq -eq 'Ja') { 'success' } else { '' })">$justificationReq</span>
                 </div>
             </div>
         </div>
