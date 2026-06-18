@@ -59,6 +59,11 @@ $reportData = [Ordered]@{
     TotalRetentionLabels     = 0
     RetentionLabelsDetails   = @()
     UserSensitivityLabels    = @()
+    LabelPolicySettings      = [Ordered]@{
+        IsMandatory                    = $false
+        DefaultLabelId                 = ""
+        DowngradeJustificationRequired = $false
+    }
 }
 
 try {
@@ -141,6 +146,16 @@ try {
                 UserId            = $u.id
                 AvailableLabels   = ($userLabels -join '; ')
             }
+        }
+    }
+
+    # Query Label Policy Settings (Classification policies)
+    $policySettings = Invoke-MgGraphRequest -Method GET -Uri "https://graph.microsoft.com/beta/security/informationProtection/labelPolicySettings" -ErrorAction SilentlyContinue
+    if ($policySettings) {
+        $reportData.LabelPolicySettings = [Ordered]@{
+            IsMandatory                    = $policySettings.isMandatory
+            DefaultLabelId                 = $policySettings.defaultLabelId
+            DowngradeJustificationRequired = $policySettings.downgradeSensitivityLabelJustificationRequired
         }
     }
 
