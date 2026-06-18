@@ -185,6 +185,7 @@ function Invoke-GrcStep {
             FinishedAtUtc = $finishedAt.ToUniversalTime().ToString('o')
             ErrorType     = $null
             ErrorMessage  = $null
+            ScriptTrace   = $null
             Result        = $result
         }
     }
@@ -259,30 +260,11 @@ function Get-GrcAppRegistrationDiagnostics {
 
     $assignments = @(Get-MgServicePrincipalAppRoleAssignment -ServicePrincipalId $servicePrincipal.Id -All)
 
-    $directoryRoles = @(Get-MgDirectoryRole -All)
-    $roleMemberships = foreach ($role in $directoryRoles) {
-        try {
-            $members = @(Get-MgDirectoryRoleMember -DirectoryRoleId $role.Id -All)
-            foreach ($member in $members) {
-                if ($member.Id -eq $servicePrincipal.Id) {
-                    [pscustomobject]@{
-                        RoleDisplayName = $role.DisplayName
-                        RoleTemplateId  = $role.RoleTemplateId
-                    }
-                }
-            }
-        }
-        catch {
-            # Ignore roles that cannot be expanded by the current app permissions.
-        }
-    }
-
     [pscustomobject]@{
         ServicePrincipalId = $servicePrincipal.Id
         AppId              = $servicePrincipal.AppId
         DisplayName        = $servicePrincipal.DisplayName
         AppRoleAssignments = $assignments | Select-Object ResourceDisplayName, AppRoleId, PrincipalDisplayName
-        DirectoryRoles     = @($roleMemberships)
     }
 }
 
