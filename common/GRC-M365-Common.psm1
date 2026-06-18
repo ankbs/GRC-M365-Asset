@@ -144,7 +144,26 @@ function Connect-GRCCompliance {
         $certBytes = [System.Convert]::FromBase64String($CertificateBase64)
         $cert = [System.Security.Cryptography.X509Certificates.X509Certificate2]::new($certBytes, "")
         
-        Connect-IPPSSession -Certificate $cert -AppId $ClientId -Organization $TenantId -ShowBanner:$false
+        # Connect-IPPSSession requires the primary domain name (e.g. *.onmicrosoft.com) for -Organization.
+        # If a Tenant ID GUID is passed, it throws a NullReferenceException ("Object reference not set to an instance of an object").
+        $orgDomain = $TenantId
+        if ($TenantId -match '^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$') {
+            try {
+                Write-Verbose "Resolving primary organization domain from Graph for IPPS connection..."
+                $orgResponse = Invoke-MgGraphRequest -Method GET -Uri "https://graph.microsoft.com/v1.0/organization" -ErrorAction SilentlyContinue
+                if ($orgResponse -and $orgResponse.value) {
+                    $defaultDomain = $orgResponse.value[0].verifiedDomains | Where-Object { $_.isDefault } | Select-Object -ExpandProperty name
+                    if ($defaultDomain) {
+                        $orgDomain = $defaultDomain
+                        Write-Verbose "Resolved organization domain: $orgDomain"
+                    }
+                }
+            } catch {
+                Write-Warning "Failed to resolve organization domain name: $_"
+            }
+        }
+        
+        Connect-IPPSSession -Certificate $cert -AppId $ClientId -Organization $orgDomain -ShowBanner:$false
         return
     }
 
