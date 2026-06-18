@@ -59,6 +59,14 @@ try {
     $ippsConnected = $true
 } catch {
     Write-Warning "Security & Compliance Center authentication failed (DLP policies won't be collected): $_"
+    if ($_.Exception) {
+        Write-Warning "Exception Type: $($_.Exception.GetType().FullName)"
+        Write-Warning "Exception Message: $($_.Exception.Message)"
+        Write-Warning "Exception StackTrace: $($_.Exception.StackTrace)"
+        if ($_.Exception.InnerException) {
+            Write-Warning "Inner Exception: $($_.Exception.InnerException.Message)"
+        }
+    }
 }
 
 # 2. Query Purview Settings using REST calls
