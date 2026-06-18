@@ -59,16 +59,33 @@ $reportData = [Ordered]@{
 }
 
 try {
-    # Query Sensitivity Labels
-    $labelsResponse = Invoke-MgGraphRequest -Method GET -Uri "https://graph.microsoft.com/v1.0/informationProtection/sensitivityLabels" -ErrorAction SilentlyContinue
+    # Query Sensitivity Labels (Try v1.0 security endpoint first, fallback to beta)
+    $labelsResponse = $null
+    $endpoints = @(
+        "https://graph.microsoft.com/v1.0/security/dataSecurityAndGovernance/sensitivityLabels",
+        "https://graph.microsoft.com/beta/security/informationProtection/sensitivityLabels"
+    )
+    foreach ($uri in $endpoints) {
+        $labelsResponse = Invoke-MgGraphRequest -Method GET -Uri $uri -ErrorAction SilentlyContinue
+        if ($labelsResponse -and $labelsResponse.value) {
+            break
+        }
+    }
+
     if ($labelsResponse -and $labelsResponse.value) {
         $reportData.TotalSensitivityLabels = @($labelsResponse.value).Count
-        $reportData.SensitivityLabelNames = ($labelsResponse.value | Select-Object -ExpandProperty name) -join '; '
+        
+        $labelNames = $labelsResponse.value | ForEach-Object {
+            if ($_.name) { $_.name } else { $_.displayName }
+        }
+        $reportData.SensitivityLabelNames = ($labelNames | Where-Object { $_ }) -join '; '
+
         # Collect Sensitivity Label details
         $reportData.SensitivityLabelsDetails = $labelsResponse.value | ForEach-Object {
+            $labelName = if ($_.name) { $_.name } else { $_.displayName }
             [Ordered]@{
                 Id          = $_.id
-                Name        = $_.name
+                Name        = $labelName
                 Description = $_.description
                 IsActive    = $_.isActive
                 Sensitivity = $_.sensitivity
