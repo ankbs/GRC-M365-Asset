@@ -79,6 +79,16 @@ jobs:
         cd ../../Teams/powershell
         ./Get-TeamsSummary.ps1 -TenantId $env:GRC_TENANT_ID -ClientId $env:GRC_CLIENT_ID -CertificateBase64 $env:GRC_CERTIFICATE
 
+        # 10. Entra ID Governance
+        Write-Host "Running Entra ID Governance Summary Collector..." -ForegroundColor Yellow
+        cd ../../EntraID/Governance/powershell
+        ./Get-EntraGovernanceSummary.ps1 -TenantId $env:GRC_TENANT_ID -ClientId $env:GRC_CLIENT_ID -CertificateBase64 $env:GRC_CERTIFICATE
+
+        # 11. Microsoft Purview
+        Write-Host "Running Purview Summary Collector..." -ForegroundColor Yellow
+        cd ../../../Purview/powershell
+        ./Get-PurviewSummary.ps1 -TenantId $env:GRC_TENANT_ID -ClientId $env:GRC_CLIENT_ID -CertificateBase64 $env:GRC_CERTIFICATE
+
     - name: Generate HTML GRC Report
       shell: pwsh
       run: |
