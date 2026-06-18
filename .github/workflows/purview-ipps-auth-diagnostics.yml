@@ -1,0 +1,60 @@
+name: Purview IPPS Auth Diagnostics
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  diagnose-ipps-auth:
+    name: Diagnose EXO and IPPS app-only auth
+    runs-on: windows-latest
+
+    env:
+      GRC_CLIENT_ID: ${{ secrets.GRC_CLIENT_ID }}
+      GRC_TENANT_ID: ${{ secrets.GRC_TENANT_ID }}
+      GRC_ORGANIZATION: ${{ secrets.GRC_ORGANIZATION }}
+      GRC_CERTIFICATE: ${{ secrets.GRC_CERTIFICATE }}
+      GRC_CERTIFICATE_PASSWORD: ${{ secrets.GRC_CERTIFICATE_PASSWORD }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install pinned PowerShell modules
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+          Set-PSRepository -Name PSGallery -InstallationPolicy Trusted
+
+          # Pinning avoids testing against a newly released EXO module while troubleshooting.
+          Install-Module -Name ExchangeOnlineManagement -RequiredVersion 3.9.0 -Scope CurrentUser -Force -AllowClobber
+          Install-Module -Name Microsoft.Graph.Authentication -Scope CurrentUser -Force -AllowClobber
+          Install-Module -Name Microsoft.Graph.Applications -Scope CurrentUser -Force -AllowClobber
+          Install-Module -Name Microsoft.Graph.Identity.DirectoryManagement -Scope CurrentUser -Force -AllowClobber
+
+          Import-Module ExchangeOnlineManagement -RequiredVersion 3.9.0 -ErrorAction Stop
+
+          Get-Module ExchangeOnlineManagement -ListAvailable |
+            Sort-Object Version -Descending |
+            Select-Object Name, Version, Path -First 5 |
+            Format-List
+
+          Get-InstalledModule PackageManagement -AllVersions | Select-Object Name, Version | Format-Table
+          Get-InstalledModule PowerShellGet -AllVersions | Select-Object Name, Version | Format-Table
+
+      - name: Diagnose app-only Exchange and IPPS authentication
+        shell: pwsh
+        run: |
+          ./scripts/Test-PurviewIppsAppOnlyAuth.ps1 `
+            -OutputDirectory './output'
+
+      - name: Upload diagnostics output
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: purview-ipps-auth-diagnostics
+          path: output/
+          if-no-files-found: warn
+          retention-days: 14
