@@ -169,7 +169,7 @@ function Connect-GRCCompliance {
         # Ensure any existing Exchange/Compliance sessions are cleaned up first to avoid session conflicts
         Disconnect-ExchangeOnline -Confirm:$false -ErrorAction SilentlyContinue | Out-Null
         
-        Connect-IPPSSession -Certificate $cert -AppId $ClientId -Organization $orgDomain -ShowBanner:$false
+        Connect-IPPSSession -Certificate $cert -AppId $ClientId -Organization $orgDomain -CommandName Get-ComplianceTag, Get-DlpCompliancePolicy -ShowBanner:$false
         return
     }
 
