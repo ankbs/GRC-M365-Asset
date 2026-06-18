@@ -1,0 +1,52 @@
+name: Purview DLP Labels Only Working
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  read-purview-labels:
+    name: Read Purview labels via IPPS
+    runs-on: windows-latest
+
+    env:
+      GRC_CLIENT_ID: ${{ secrets.GRC_CLIENT_ID }}
+      GRC_TENANT_ID: ${{ secrets.GRC_TENANT_ID }}
+      GRC_ORGANIZATION: ${{ secrets.GRC_ORGANIZATION }}
+      GRC_CERTIFICATE: ${{ secrets.GRC_CERTIFICATE }}
+      GRC_CERTIFICATE_PASSWORD: ${{ secrets.GRC_CERTIFICATE_PASSWORD }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install pinned PowerShell module
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+          Set-PSRepository -Name PSGallery -InstallationPolicy Trusted
+
+          Install-Module -Name ExchangeOnlineManagement -RequiredVersion 3.9.0 -Scope CurrentUser -Force -AllowClobber
+          Import-Module ExchangeOnlineManagement -RequiredVersion 3.9.0 -ErrorAction Stop
+
+          Get-Module ExchangeOnlineManagement -ListAvailable |
+            Sort-Object Version -Descending |
+            Select-Object Name, Version, Path -First 5 |
+            Format-List
+
+      - name: Read Purview labels
+        shell: pwsh
+        run: |
+          ./scripts/Export-PurviewDlpLabelsOnly-Working.ps1 `
+            -OutputDirectory './output'
+
+      - name: Upload Purview label output and logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: purview-dlp-labels-only-working
+          path: output/
+          if-no-files-found: warn
+          retention-days: 14
