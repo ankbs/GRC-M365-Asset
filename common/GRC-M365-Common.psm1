@@ -108,9 +108,23 @@ function Connect-GRCExchange {
     if ($CertificateBase64 -and $ClientId -and $TenantId) {
         Write-Verbose "Initiating unattended Exchange Online certificate authentication..."
         $certBytes = [System.Convert]::FromBase64String($CertificateBase64)
-        $cert = [System.Security.Cryptography.X509Certificates.X509Certificate2]::new($certBytes, "")
         
-        Connect-ExchangeOnline -Certificate $cert -AppId $ClientId -Organization $TenantId -ShowBanner:$false
+        if (-not $IsWindows) {
+            Write-Verbose "Non-Windows environment detected. Writing certificate to a temporary file for authentication..."
+            $tempCertPath = [System.IO.Path]::GetTempFileName() + ".pfx"
+            try {
+                [System.IO.File]::WriteAllBytes($tempCertPath, $certBytes)
+                $securePassword = ConvertTo-SecureString -String "" -AsPlainText -Force
+                Connect-ExchangeOnline -CertificateFilePath $tempCertPath -CertificatePassword $securePassword -AppId $ClientId -Organization $TenantId -ShowBanner:$false
+            } finally {
+                if (Test-Path $tempCertPath) {
+                    Remove-Item $tempCertPath -Force -ErrorAction SilentlyContinue
+                }
+            }
+        } else {
+            $cert = [System.Security.Cryptography.X509Certificates.X509Certificate2]::new($certBytes, "")
+            Connect-ExchangeOnline -Certificate $cert -AppId $ClientId -Organization $TenantId -ShowBanner:$false
+        }
         return
     }
 
@@ -142,7 +156,6 @@ function Connect-GRCCompliance {
     if ($CertificateBase64 -and $ClientId -and $TenantId) {
         Write-Verbose "Initiating unattended Security & Compliance Center certificate authentication..."
         $certBytes = [System.Convert]::FromBase64String($CertificateBase64)
-        $cert = [System.Security.Cryptography.X509Certificates.X509Certificate2]::new($certBytes, "")
         
         # Connect-IPPSSession requires the primary domain name (e.g. *.onmicrosoft.com) for -Organization.
         # If a Tenant ID GUID is passed, it throws a NullReferenceException ("Object reference not set to an instance of an object").
@@ -163,7 +176,22 @@ function Connect-GRCCompliance {
             }
         }
         
-        Connect-IPPSSession -Certificate $cert -AppId $ClientId -Organization $orgDomain -ShowBanner:$false
+        if (-not $IsWindows) {
+            Write-Verbose "Non-Windows environment detected. Writing certificate to a temporary file for IPPS authentication..."
+            $tempCertPath = [System.IO.Path]::GetTempFileName() + ".pfx"
+            try {
+                [System.IO.File]::WriteAllBytes($tempCertPath, $certBytes)
+                $securePassword = ConvertTo-SecureString -String "" -AsPlainText -Force
+                Connect-IPPSSession -CertificateFilePath $tempCertPath -CertificatePassword $securePassword -AppId $ClientId -Organization $orgDomain -ShowBanner:$false
+            } finally {
+                if (Test-Path $tempCertPath) {
+                    Remove-Item $tempCertPath -Force -ErrorAction SilentlyContinue
+                }
+            }
+        } else {
+            $cert = [System.Security.Cryptography.X509Certificates.X509Certificate2]::new($certBytes, "")
+            Connect-IPPSSession -Certificate $cert -AppId $ClientId -Organization $orgDomain -ShowBanner:$false
+        }
         return
     }
 
