@@ -135,15 +135,32 @@ try {
     }
 
     # Query Retention Labels (Records Management)
-    $retResponse = Invoke-MgGraphRequest -Method GET -Uri "https://graph.microsoft.com/v1.0/security/labels/retentionLabels" -ErrorAction SilentlyContinue
-    if ($retResponse -and $retResponse.value) {
-        $reportData.TotalRetentionLabels = @($retResponse.value).Count
-        $reportData.RetentionLabelsDetails = $retResponse.value | ForEach-Object {
-            [Ordered]@{
-                Id             = $_.id
-                DisplayName    = $_.displayName
-                BehaviorDuringRetentionPeriod = $_.behaviorDuringRetentionPeriod
-                ActionAfterRetentionPeriod    = $_.actionAfterRetentionPeriod
+    if ($ippsConnected) {
+        try {
+            $retentionLabels = Get-ComplianceTag -ErrorAction Stop
+            $reportData.TotalRetentionLabels = @($retentionLabels).Count
+            $reportData.RetentionLabelsDetails = $retentionLabels | ForEach-Object {
+                [Ordered]@{
+                    Id                            = $_.Identity.ToString()
+                    DisplayName                   = $_.Name
+                    BehaviorDuringRetentionPeriod = $_.RetentionType
+                    ActionAfterRetentionPeriod    = $_.RetentionAction
+                }
+            }
+        } catch {
+            Write-Warning "Could not query retention labels via Security & Compliance: $_"
+        }
+    } else {
+        $retResponse = Invoke-MgGraphRequest -Method GET -Uri "https://graph.microsoft.com/v1.0/security/labels/retentionLabels" -ErrorAction SilentlyContinue
+        if ($retResponse -and $retResponse.value) {
+            $reportData.TotalRetentionLabels = @($retResponse.value).Count
+            $reportData.RetentionLabelsDetails = $retResponse.value | ForEach-Object {
+                [Ordered]@{
+                    Id                            = $_.id
+                    DisplayName                   = $_.displayName
+                    BehaviorDuringRetentionPeriod = $_.behaviorDuringRetentionPeriod
+                    ActionAfterRetentionPeriod    = $_.actionAfterRetentionPeriod
+                }
             }
         }
     }
