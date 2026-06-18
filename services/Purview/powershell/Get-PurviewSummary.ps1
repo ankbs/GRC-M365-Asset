@@ -56,6 +56,9 @@ $reportData = [Ordered]@{
     TotalDlpPolicies         = 0
     DlpPolicyNames           = ""
     DlpPoliciesDetails       = @()
+    TotalRetentionLabels     = 0
+    RetentionLabelsDetails   = @()
+    UserSensitivityLabels    = @()
 }
 
 try {
@@ -108,6 +111,39 @@ try {
             }
         }
     }
+
+    # Query Retention Labels (Records Management)
+    $retResponse = Invoke-MgGraphRequest -Method GET -Uri "https://graph.microsoft.com/v1.0/security/labels/retentionLabels" -ErrorAction SilentlyContinue
+    if ($retResponse -and $retResponse.value) {
+        $reportData.TotalRetentionLabels = @($retResponse.value).Count
+        $reportData.RetentionLabelsDetails = $retResponse.value | ForEach-Object {
+            [Ordered]@{
+                Id             = $_.id
+                DisplayName    = $_.displayName
+                BehaviorDuringRetentionPeriod = $_.behaviorDuringRetentionPeriod
+                ActionAfterRetentionPeriod    = $_.actionAfterRetentionPeriod
+            }
+        }
+    }
+
+    # Query User-Specific Sensitivity Labels (for the first 5 active users)
+    $usersResponse = Invoke-MgGraphRequest -Method GET -Uri "https://graph.microsoft.com/v1.0/users?`$top=5&`$select=id,userPrincipalName" -ErrorAction SilentlyContinue
+    if ($usersResponse -and $usersResponse.value) {
+        $reportData.UserSensitivityLabels = $usersResponse.value | ForEach-Object {
+            $u = $_
+            $userLabels = @()
+            $userLabelsRes = Invoke-MgGraphRequest -Method GET -Uri "https://graph.microsoft.com/beta/users/$($u.id)/security/informationProtection/sensitivityLabels" -ErrorAction SilentlyContinue
+            if ($userLabelsRes -and $userLabelsRes.value) {
+                $userLabels = $userLabelsRes.value | ForEach-Object { if ($_.name) { $_.name } else { $_.displayName } }
+            }
+            [Ordered]@{
+                UserPrincipalName = $u.userPrincipalName
+                UserId            = $u.id
+                AvailableLabels   = ($userLabels -join '; ')
+            }
+        }
+    }
+
 } catch {
     Write-Warning "Could not query all Microsoft Purview endpoints: $_"
 }
