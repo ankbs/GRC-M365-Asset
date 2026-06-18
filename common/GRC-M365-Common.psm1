@@ -114,7 +114,7 @@ function Connect-GRCExchange {
             $tempCertPath = [System.IO.Path]::GetTempFileName() + ".pfx"
             try {
                 [System.IO.File]::WriteAllBytes($tempCertPath, $certBytes)
-                $securePassword = ConvertTo-SecureString -String "" -AsPlainText -Force
+                $securePassword = [System.Security.SecureString]::new()
                 Connect-ExchangeOnline -CertificateFilePath $tempCertPath -CertificatePassword $securePassword -AppId $ClientId -Organization $TenantId -ShowBanner:$false
             } finally {
                 if (Test-Path $tempCertPath) {
@@ -181,7 +181,7 @@ function Connect-GRCCompliance {
             $tempCertPath = [System.IO.Path]::GetTempFileName() + ".pfx"
             try {
                 [System.IO.File]::WriteAllBytes($tempCertPath, $certBytes)
-                $securePassword = ConvertTo-SecureString -String "" -AsPlainText -Force
+                $securePassword = [System.Security.SecureString]::new()
                 Connect-IPPSSession -CertificateFilePath $tempCertPath -CertificatePassword $securePassword -AppId $ClientId -Organization $orgDomain -ShowBanner:$false
             } finally {
                 if (Test-Path $tempCertPath) {
