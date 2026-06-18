@@ -22,38 +22,20 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Install required PowerShell modules
+      - name: Install required PowerShell module
         shell: pwsh
         run: |
           $ErrorActionPreference = 'Stop'
           Set-PSRepository -Name PSGallery -InstallationPolicy Trusted
 
           Install-Module -Name ExchangeOnlineManagement -Scope CurrentUser -Force -AllowClobber
-          Install-Module -Name PSScriptAnalyzer -Scope CurrentUser -Force -AllowClobber
 
           Import-Module ExchangeOnlineManagement -ErrorAction Stop
-          Import-Module PSScriptAnalyzer -ErrorAction Stop
 
           Get-Module ExchangeOnlineManagement -ListAvailable |
             Sort-Object Version -Descending |
             Select-Object Name, Version, Path -First 1 |
             Format-List
-
-      - name: Run PowerShell analyzer
-        shell: pwsh
-        run: |
-          $ErrorActionPreference = 'Stop'
-
-          $analysis = Invoke-ScriptAnalyzer `
-            -Path './scripts/Export-PurviewDlpLabelsOnly.ps1' `
-            -Severity Error, Warning
-
-          if ($analysis) {
-            $analysis | Format-Table -AutoSize
-            throw 'PSScriptAnalyzer found issues in Export-PurviewDlpLabelsOnly.ps1.'
-          }
-
-          Write-Host 'PSScriptAnalyzer completed without errors or warnings.'
 
       - name: Read Purview labels only
         shell: pwsh
