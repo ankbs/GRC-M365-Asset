@@ -232,7 +232,7 @@ if ($AiAgentMode) {
     $usersList.ToArray() | ConvertTo-Json -Depth 5
 } else {
     # Custom save to match SensitivityLabelsFullDetails pattern
-    $exportDir = Join-Path -Path $PSScriptRoot -ChildPath "../../../../exports/EntraID/UsersFullDetails"
+    $exportDir = Join-Path -Path $PSScriptRoot -ChildPath "../../../../exports/EntraID/Users/UsersFullDetails"
     if (!(Test-Path $exportDir)) {
         New-Item -ItemType Directory -Path $exportDir -Force | Out-Null
     }

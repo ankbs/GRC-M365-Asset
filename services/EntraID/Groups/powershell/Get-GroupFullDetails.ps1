@@ -140,7 +140,7 @@ foreach ($g in $groupsList) {
 if ($AiAgentMode) {
     $groupsList.ToArray() | ConvertTo-Json -Depth 5
 } else {
-    $exportDir = Join-Path -Path $PSScriptRoot -ChildPath "../../../../exports/EntraID/GroupsFullDetails"
+    $exportDir = Join-Path -Path $PSScriptRoot -ChildPath "../../../../exports/EntraID/Groups/GroupsFullDetails"
     if (!(Test-Path $exportDir)) {
         New-Item -ItemType Directory -Path $exportDir -Force | Out-Null
     }
