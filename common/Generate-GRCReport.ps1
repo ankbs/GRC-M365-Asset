@@ -1443,9 +1443,9 @@ $htmlContent = @"
             const curr = parts[1];
             const max = parts[2];
             if (lang === "de") {
-              elem.innerHTML = `Ihr aktueller Sicherheitsindex liegt bei <strong style="color: #ffffff;">${pct}%</strong>. Das entspricht <strong style="color: #ffffff;">${curr} von ${max}</strong> möglichen Punkten.`;
+              elem.innerHTML = 'Ihr aktueller Sicherheitsindex liegt bei <strong style="color: #ffffff;">' + pct + '%</strong>. Das entspricht <strong style="color: #ffffff;">' + curr + ' von ' + max + '</strong> möglichen Punkten.';
             } else {
-              elem.innerHTML = `Your current security index is <strong style="color: #ffffff;">${pct}%</strong>. This represents <strong style="color: #ffffff;">${curr} of ${max}</strong> possible points.`;
+              elem.innerHTML = 'Your current security index is <strong style="color: #ffffff;">' + pct + '%</strong>. This represents <strong style="color: #ffffff;">' + curr + ' of ' + max + '</strong> possible points.';
             }
           });
 
@@ -1453,9 +1453,9 @@ $htmlContent = @"
             const diffVal = parseFloat(elem.getAttribute("data-i18n-diff"));
             const absDiff = Math.abs(diffVal);
             if (lang === "de") {
-              elem.textContent = diffVal >= 0 ? `${absDiff} Pkt. über dem Durchschnitt` : `${absDiff} Pkt. unter dem Durchschnitt`;
+              elem.textContent = diffVal >= 0 ? absDiff + ' Pkt. über dem Durchschnitt' : absDiff + ' Pkt. unter dem Durchschnitt';
             } else {
-              elem.textContent = diffVal >= 0 ? `${absDiff} pts above global average` : `${absDiff} pts below global average`;
+              elem.textContent = diffVal >= 0 ? absDiff + ' pts above global average' : absDiff + ' pts below global average';
             }
           });
 
