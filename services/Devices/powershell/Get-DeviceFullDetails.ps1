@@ -74,7 +74,7 @@ try {
 Write-Verbose "Querying Intune Managed Devices..."
 $intuneDevices = @{}
 try {
-    $intuneUri = "https://graph.microsoft.com/v1.0/deviceManagement/managedDevices?`$select=id,azureADDeviceId,deviceName,operatingSystem,operatingSystemVersion,isCompliant,enrollmentType,lastSyncDateTime,serialNumber,model,manufacturer,userPrincipalName,partnerThreatProtectionConnectionStatus,managementAgent"
+    $intuneUri = "https://graph.microsoft.com/v1.0/deviceManagement/managedDevices?`$select=id,azureADDeviceId,deviceName,operatingSystem,osVersion,isCompliant,enrollmentType,lastSyncDateTime,serialNumber,model,manufacturer,userPrincipalName,partnerThreatProtectionConnectionStatus,managementAgent"
     while ($intuneUri) {
         $intuneResponse = Invoke-MgGraphRequest -Method GET -Uri $intuneUri -ErrorAction Stop
         if ($intuneResponse -and $intuneResponse.value) {
@@ -103,7 +103,7 @@ foreach ($dId in $allDeviceIds) {
     # Retrieve matching names/OS
     $displayName = if ($eDev) { $eDev.displayName } else { $iDev.deviceName }
     $os = if ($eDev) { $eDev.operatingSystem } else { $iDev.operatingSystem }
-    $osVer = if ($eDev) { $eDev.operatingSystemVersion } else { $iDev.operatingSystemVersion }
+    $osVer = if ($eDev) { $eDev.operatingSystemVersion } else { $iDev.osVersion }
     
     # Trust type & active status
     $trustType = if ($eDev) { $eDev.trustType } else { "Unknown" }

@@ -139,7 +139,7 @@ if ($secureScoreResponse -and $secureScoreResponse.value -and $secureScoreRespon
 # 4. Retrieve Secure Control Profiles (Detailed Recommendations)
 Write-Host "Querying Microsoft Secure Control Profiles (Recommendations)..." -ForegroundColor Cyan
 $profilesList = [System.Collections.Generic.List[PSCustomObject]]::new()
-$nextLink = "https://graph.microsoft.com/v1.0/security/secureControlProfiles"
+$nextLink = "https://graph.microsoft.com/v1.0/security/secureScoreControlProfiles"
 
 try {
     while ($nextLink) {
