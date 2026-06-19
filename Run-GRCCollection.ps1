@@ -125,6 +125,10 @@ try {
     Write-Host "`nRunning Purview Sensitivity Labels Full Details Collector..." -ForegroundColor Yellow
     & "$rootPath/services/Purview/powershell/Get-PurviewSensitivityLabelsFullDetails.ps1" @authArgs
 
+    # 12. Security Score & Recommendations
+    Write-Host "`nRunning Security Score & Recommendations Collector..." -ForegroundColor Yellow
+    & "$rootPath/services/SecurityScore/powershell/Get-SecurityScoreDetails.ps1" @authArgs
+
 } catch {
     Write-Error "Error during collection run: $_"
     return

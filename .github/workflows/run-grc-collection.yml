@@ -129,6 +129,11 @@ jobs:
         cd ../../EntraID/Governance/powershell
         ./Get-EntraGovernanceSummary.ps1 -TenantId $env:GRC_TENANT_ID -ClientId $env:GRC_CLIENT_ID -CertificateBase64 $env:GRC_CERTIFICATE
 
+        # 11. Security Score & Recommendations
+        Write-Host "Running Security Score & Recommendations Collector..." -ForegroundColor Yellow
+        cd ../../../SecurityScore/powershell
+        ./Get-SecurityScoreDetails.ps1 -TenantId $env:GRC_TENANT_ID -ClientId $env:GRC_CLIENT_ID -CertificateBase64 $env:GRC_CERTIFICATE
+
         # NOTE: Purview (DLP + Retention Labels) runs in a separate Windows job.
         # See: .github/workflows/purview-collection.yml
 
@@ -137,7 +142,7 @@ jobs:
         git config --global user.name "github-actions[bot]"
         git config --global user.email "github-actions[bot]@users.noreply.github.com"
         git pull --rebase origin ${{ github.ref_name }}
-        git add -f exports/EntraID/ exports/Devices/ exports/ExchangeOnline/ exports/SharePoint/ exports/Teams/
+        git add -f exports/EntraID/ exports/Devices/ exports/ExchangeOnline/ exports/SharePoint/ exports/Teams/ exports/SecurityScore/
         git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-update Asset exports [skip ci]" && git push)
 
 

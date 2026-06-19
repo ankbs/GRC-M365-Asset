@@ -50,7 +50,9 @@ $devicesFull    = Get-LatestJsonData -Path (Join-Path -Path $exportsRoot -ChildP
 $exchangeFull   = Get-LatestJsonData -Path (Join-Path -Path $exportsRoot -ChildPath "ExchangeOnline/ExchangeFullDetails")
 $sharepointFull = Get-LatestJsonData -Path (Join-Path -Path $exportsRoot -ChildPath "SharePoint/SharePointFullDetails")
 $teamsFull      = Get-LatestJsonData -Path (Join-Path -Path $exportsRoot -ChildPath "Teams/TeamsFullDetails")
-$purviewFull    = Get-LatestJsonData -Path (Join-Path -Path $exportsRoot -ChildPath "Purview/SensitivityLabelsFullDetails")
+$purviewFull          = Get-LatestJsonData -Path (Join-Path -Path $exportsRoot -ChildPath "Purview/SensitivityLabelsFullDetails")
+$securityScoreSummary = Get-LatestJsonData -Path (Join-Path -Path $exportsRoot -ChildPath "SecurityScore/SecurityScoreSummary")
+$securityScoreDetails = Get-LatestJsonData -Path (Join-Path -Path $exportsRoot -ChildPath "SecurityScore/SecurityScoreDetails")
 
 # 3. Calculate Summary Metrics
 $tenantName = if ($tenantInfo) { $tenantInfo.OrgDisplayName } else { "Microsoft 365 Tenant" }
@@ -334,6 +336,159 @@ function Get-GrcPurviewTable {
     return $sb.ToString()
 }
 
+# Dedicated function to render Microsoft Secure Score and grouped recommendations
+function Get-GrcSecureScoreSectionHtml {
+    param(
+        $Summary,
+        $Details
+    )
+    if ($null -eq $Summary -and ($null -eq $Details -or @($Details).Count -eq 0)) {
+        return "<p style='color: var(--text-muted); padding: 1rem;'>Keine Secure Score Daten verfügbar.</p>"
+    }
+
+    $sb = [System.Text.StringBuilder]::new()
+
+    # 1. Add Summary Overview Grid if Summary is available
+    if ($Summary) {
+        $pct = $Summary.Percentage
+        $curr = $Summary.CurrentScore
+        $max = $Summary.MaxScore
+        $avg = $Summary.M365Average
+        $diff = $curr - $avg
+        $diffText = if ($diff -ge 0) { "$($diff) Pkt. über dem Durchschnitt" } else { "$([Math]::Abs($diff)) Pkt. unter dem Durchschnitt" }
+        $diffClass = if ($diff -ge 0) { "success-text" } else { "danger-text" }
+        
+        # Donut Chart SVG math: circumference of r=53 is 333.01
+        $dashArray = 333.01
+        $dashOffset = [Math]::Round($dashArray * (1 - ($pct / 100)), 2)
+        $donutColorClass = if ($pct -ge 80) { "donut-success" } elseif ($pct -ge 50) { "donut-warning" } else { "donut-danger" }
+
+        $null = $sb.Append(@"
+        <!-- Secure Score Overview Dash -->
+        <div class="grid-2" style="margin-top: 1rem; margin-bottom: 2rem;">
+            <!-- Left: Donut Chart -->
+            <div class="card" style="display: flex; align-items: center; justify-content: center; gap: 2rem; padding: 2rem;">
+                <div class="id-donut-chart">
+                    <svg class="donut-chart" width="140" height="140" viewBox="0 0 130 130">
+                        <circle class="donut-track" cx="65" cy="65" r="53" fill="none" stroke-width="10"/>
+                        <circle class="donut-fill $donutColorClass" cx="65" cy="65" r="53" fill="none" stroke-width="10"
+                                stroke-dasharray="$dashArray" stroke-dashoffset="$dashOffset" stroke-linecap="round" transform="rotate(-90 65 65)"/>
+                        <text class="donut-text" x="65" y="65" text-anchor="middle" dominant-baseline="central">$pct%</text>
+                    </svg>
+                </div>
+                <div style="flex: 1; min-width: 200px;">
+                    <h3 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; color: #ffffff;">Secure Score Status</h3>
+                    <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.4;">
+                        Ihr aktueller Sicherheitsindex liegt bei <strong style="color: #ffffff;">$pct%</strong>. 
+                        Das entspricht <strong style="color: #ffffff;">$curr von $max</strong> möglichen Punkten.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Right: Comparisons & Metrics -->
+            <div class="card" style="display: flex; flex-direction: column; justify-content: space-between; padding: 1.5rem;">
+                <div class="id-donut-stack">
+                    <div class="id-donut-item">
+                        <span style="font-size: 1.25rem;">📊</span>
+                        <div class="id-donut-info">
+                            <div class="id-donut-title">M365 globaler Durchschnitt</div>
+                            <div class="id-donut-detail">$avg Pkt. ($([Math]::Round(($avg / $max) * 100, 2))% von max. $max Pkt.)</div>
+                        </div>
+                    </div>
+                    <div class="id-donut-item">
+                        <span style="font-size: 1.25rem;">⚖️</span>
+                        <div class="id-donut-info">
+                            <div class="id-donut-title">Abweichung zum Durchschnitt</div>
+                            <div class="id-donut-detail $diffClass" style="font-weight: 600;">$diffText</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+"@)
+    }
+
+    # 2. Group Details by Microsoft Product / Category
+    if ($Details -and @($Details).Count -gt 0) {
+        # Grouping dictionary
+        $groups = [ordered]@{
+            "🔑 Microsoft Entra ID (Identität & Zugriff)" = [System.Collections.Generic.List[object]]::new()
+            "💻 Microsoft Intune & Geräteverwaltung"     = [System.Collections.Generic.List[object]]::new()
+            "🛡️ Microsoft Defender (Bedrohungsschutz)"   = [System.Collections.Generic.List[object]]::new()
+            "🔒 Microsoft Purview (Compliance & DLP)"    = [System.Collections.Generic.List[object]]::new()
+            "📬 Exchange, SharePoint & Teams (Kollaboration)" = [System.Collections.Generic.List[object]]::new()
+            "⚙️ Sonstige M365 Sicherheitsdienste"         = [System.Collections.Generic.List[object]]::new()
+        }
+
+        foreach ($rec in $Details) {
+            $svc = $rec.Service
+            $title = $rec.Title
+            $targetList = $groups["⚙️ Sonstige M365 Sicherheitsdienste"]
+
+            if ($svc -match "Azure Active Directory" -or $svc -match "Entra" -or $title -match "MFA" -or $title -match "Conditional Access") {
+                $targetList = $groups["🔑 Microsoft Entra ID (Identität & Zugriff)"]
+            } elseif ($svc -match "Intune" -or $svc -match "Device" -or $rec.Category -match "Device") {
+                $targetList = $groups["💻 Microsoft Intune & Geräteverwaltung"]
+            } elseif ($svc -match "Defender" -or $svc -match "Endpoint" -or $svc -match "Threat" -or $title -match "malware" -or $title -match "phishing") {
+                $targetList = $groups["🛡️ Microsoft Defender (Bedrohungsschutz)"]
+            } elseif ($svc -match "Purview" -or $svc -match "DLP" -or $svc -match "Compliance" -or $svc -match "Retention" -or $title -match "DLP") {
+                $targetList = $groups["🔒 Microsoft Purview (Compliance & DLP)"]
+            } elseif ($svc -match "Exchange" -or $svc -match "SharePoint" -or $svc -match "Teams" -or $svc -match "Yammer" -or $svc -match "Skype") {
+                $targetList = $groups["📬 Exchange, SharePoint & Teams (Kollaboration)"]
+            }
+
+            $targetList.Add($rec)
+        }
+
+        # Render each group as a collapsible details section with a sub-table
+        foreach ($groupName in $groups.Keys) {
+            $list = $groups[$groupName]
+            if ($list.Count -eq 0) { continue }
+
+            $null = $sb.Append("<details class='collector-detail'><summary>$groupName ($($list.Count) Empfehlungen)</summary>")
+            $null = $sb.Append("<div class='table-wrapper'><table class='data-table'>")
+            $null = $sb.Append("<thead><tr><th>Empfehlung</th><th>Max. Punkte</th><th>Auswirkung</th><th>Status</th><th>Lizenzbedarf</th><th>Handlungsanweisung</th></tr></thead><tbody>")
+
+            foreach ($item in $list) {
+                # Format status badge
+                $status = $item.ImplementationStatus
+                $badgeClass = "badge danger"
+                $badgeText = "Nicht umgesetzt"
+                if ($status -ieq "implemented" -or $status -ieq "completed") {
+                    $badgeClass = "badge success"
+                    $badgeText = "Umgesetzt"
+                } elseif ($status -match "alternative" -or $status -match "planned" -or $status -match "thirdParty") {
+                    $badgeClass = "badge warning"
+                    $badgeText = "Teilweise / Alternativ"
+                }
+
+                $titleStr = $item.Title.ToString().Replace('&','&amp;').Replace('<','&lt;').Replace('>','&gt;')
+                $maxScoreStr = $item.MaxScore
+                $impactStr = $item.UserImpact
+                $licenseStr = $item.LicenseRequired.ToString().Replace('&','&amp;').Replace('<','&lt;').Replace('>','&gt;')
+                $remediationStr = if ($item.Remediation) { 
+                    $item.Remediation.ToString().Replace('&','&amp;').Replace('<','&lt;').Replace('>','&gt;') 
+                } else { 
+                    "-" 
+                }
+
+                $null = $sb.Append("<tr>")
+                $null = $sb.Append("<td style='font-weight: 500;'>$titleStr</td>")
+                $null = $sb.Append("<td>$maxScoreStr</td>")
+                $null = $sb.Append("<td>$impactStr</td>")
+                $null = $sb.Append("<td><span class='$badgeClass'>$badgeText</span></td>")
+                $null = $sb.Append("<td style='font-size: 0.85rem; color: #a5b4fc; font-weight: 500;'>$licenseStr</td>")
+                $null = $sb.Append("<td style='font-size: 0.85rem; max-width: 320px; white-space: normal; line-height: 1.45; color: var(--text-muted);'>$remediationStr</td>")
+                $null = $sb.Append("</tr>")
+            }
+
+            $null = $sb.Append("</tbody></table></div></details>")
+        }
+    }
+
+    return $sb.ToString()
+}
+
 # Pre-generate detailed tables for HTML interpolation
 $usersTableHtml      = Get-GrcHtmlTable -Data $usersFull -Properties @("DisplayName", "UserPrincipalName", "AccountEnabled", "IsMfaRegistered", "DirectoryRoles", "ManagerName") -Headers @("Name", "UPN", "Aktiv", "MFA", "Admin-Rollen", "Vorgesetzter")
 $groupsTableHtml     = Get-GrcHtmlTable -Data $groupsFull -Properties @("DisplayName", "GroupClassification", "Visibility", "Owners", "MemberCount") -Headers @("Gruppenname", "Klassifizierung", "Sichtbarkeit", "Besitzer", "Mitglieder")
@@ -342,6 +497,7 @@ $exchangeTableHtml   = Get-GrcHtmlTable -Data $exchangeFull -Properties @("Mailb
 $sharepointTableHtml = Get-GrcHtmlTable -Data $sharepointFull -Properties @("DisplayName", "WebUrl", "SiteOwners", "StorageUsedBytes") -Headers @("Website-Name", "URL", "Administratoren", "Speicher (Bytes)")
 $teamsTableHtml      = Get-GrcHtmlTable -Data $teamsFull -Properties @("DisplayName", "Visibility", "Owners", "MemberCount", "GuestCount", "Channels") -Headers @("Teamname", "Typ", "Besitzer", "Mitglieder", "Gäste", "Kanäle")
 $purviewTableHtml    = Get-GrcPurviewTable -Data $purviewFull
+$secureScoreHtml     = Get-GrcSecureScoreSectionHtml -Summary $securityScoreSummary -Details $securityScoreDetails
 
 # 4. Generate HTML Content (Highly styled with Outfit typography, glassmorphism, responsive grid)
 $htmlContent = @"
@@ -648,6 +804,50 @@ $htmlContent = @"
             border: 1px solid rgba(239, 68, 68, 0.3);
         }
 
+        .badge.warning {
+            background-color: rgba(245, 158, 11, 0.15);
+            color: #fbbf24;
+            border: 1px solid rgba(245, 158, 11, 0.3);
+        }
+
+        /* Secure Score Donut & Layout Styles */
+        .id-donut-stack {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        .id-donut-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 0.75rem 1rem;
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 8px;
+            border: 1px solid var(--card-border);
+        }
+        .id-donut-chart { flex-shrink: 0; }
+        .id-donut-info { min-width: 0; }
+        .id-donut-title {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: #ffffff;
+        }
+        .id-donut-detail {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-top: 0.25rem;
+        }
+        .donut-chart { display: block; margin: 0 auto; }
+        .donut-track { stroke: rgba(255, 255, 255, 0.08); }
+        .donut-fill { transition: stroke-dashoffset 0.6s ease; }
+        .donut-success { stroke: var(--success); }
+        .donut-warning { stroke: var(--warning); }
+        .donut-danger { stroke: var(--danger); }
+        .donut-text { font-size: 20px; font-weight: 700; fill: #ffffff; font-family: inherit; }
+        .success-text { color: var(--success) !important; }
+        .danger-text { color: var(--danger) !important; }
+        .warning-text { color: var(--warning) !important; }
+
         @media(max-width: 600px) {
             body { padding: 1rem; }
             .grid-2 { grid-template-columns: 1fr; }
@@ -790,6 +990,10 @@ $htmlContent = @"
             <summary>💻 Geräte-Details (Hardware & Compliance)</summary>
             $devicesTableHtml
         </details>
+
+        <!-- Microsoft Secure Score & Recommendations -->
+        <h2 style="margin-top: 2.5rem; margin-bottom: 1rem; font-size: 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 0.5rem; color: #ffffff;">🎯 Microsoft Secure Score & Handlungsempfehlungen</h2>
+        $secureScoreHtml
 
         <!-- M365 Collaboration & Mail GRC Row -->
         <h2 style="margin-top: 2.5rem; margin-bottom: 1rem; font-size: 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 0.5rem; color: #ffffff;">📬 Kollaboration & E-Mail GRC-Audit</h2>

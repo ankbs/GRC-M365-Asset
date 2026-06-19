@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>M365 GRC Asset Audit Report - Microsoft 365 Tenant</title>
+    <title>M365 GRC Asset Audit Report - mycloudofficedev</title>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
@@ -301,6 +301,50 @@
             border: 1px solid rgba(239, 68, 68, 0.3);
         }
 
+        .badge.warning {
+            background-color: rgba(245, 158, 11, 0.15);
+            color: #fbbf24;
+            border: 1px solid rgba(245, 158, 11, 0.3);
+        }
+
+        /* Secure Score Donut & Layout Styles */
+        .id-donut-stack {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        .id-donut-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 0.75rem 1rem;
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 8px;
+            border: 1px solid var(--card-border);
+        }
+        .id-donut-chart { flex-shrink: 0; }
+        .id-donut-info { min-width: 0; }
+        .id-donut-title {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: #ffffff;
+        }
+        .id-donut-detail {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-top: 0.25rem;
+        }
+        .donut-chart { display: block; margin: 0 auto; }
+        .donut-track { stroke: rgba(255, 255, 255, 0.08); }
+        .donut-fill { transition: stroke-dashoffset 0.6s ease; }
+        .donut-success { stroke: var(--success); }
+        .donut-warning { stroke: var(--warning); }
+        .donut-danger { stroke: var(--danger); }
+        .donut-text { font-size: 20px; font-weight: 700; fill: #ffffff; font-family: inherit; }
+        .success-text { color: var(--success) !important; }
+        .danger-text { color: var(--danger) !important; }
+        .warning-text { color: var(--warning) !important; }
+
         @media(max-width: 600px) {
             body { padding: 1rem; }
             .grid-2 { grid-template-columns: 1fr; }
@@ -312,33 +356,33 @@
         <header>
             <div class="header-title">
                 <h1>M365 GRC Asset Audit Report</h1>
-                <p>Mandant: <strong>Microsoft 365 Tenant</strong> (N/A)</p>
+                <p>Mandant: <strong>mycloudofficedev</strong> (33a9ca10-7495-4979-a097-cbdf74c7686f)</p>
             </div>
             <div class="timestamp-badge">
-                📅 Generiert am: 19.06.2026 15:15
+                📅 Generiert am: 19.06.2026 15:49
             </div>
         </header>
 
         <!-- Global Count Summaries -->
         <div class="stats-summary">
             <div class="stat-box">
-                <div class="num">0</div>
+                <div class="num">26</div>
                 <div class="lbl">Benutzer gesamt</div>
             </div>
             <div class="stat-box">
-                <div class="num">0</div>
+                <div class="num">26</div>
                 <div class="lbl">Aktive Konten</div>
             </div>
             <div class="stat-box">
-                <div class="num">0</div>
+                <div class="num">69</div>
                 <div class="lbl">Gruppen gesamt</div>
             </div>
             <div class="stat-box">
-                <div class="num">0</div>
+                <div class="num">6</div>
                 <div class="lbl">Entra ID Devices</div>
             </div>
             <div class="stat-box">
-                <div class="num">0</div>
+                <div class="num">5</div>
                 <div class="lbl">Intune Managed</div>
             </div>
             <div class="stat-box">
@@ -353,21 +397,21 @@
                 <h2>🏢 Mandanten-Details</h2>
                 <div class="metric-row">
                     <span class="metric-label">Name</span>
-                    <span class="metric-value">Microsoft 365 Tenant</span>
+                    <span class="metric-value">mycloudofficedev</span>
                 </div>
                 <div class="metric-row">
                     <span class="metric-label">Tenant ID</span>
-                    <span class="metric-value" style="font-size: 0.8rem; font-family: monospace;">N/A</span>
+                    <span class="metric-value" style="font-size: 0.8rem; font-family: monospace;">33a9ca10-7495-4979-a097-cbdf74c7686f</span>
                 </div>
                 <div class="metric-row">
                     <span class="metric-label">Identity Security Defaults</span>
                     <span class="metric-value danger">
-                        N/A
+                        Deaktiviert
                     </span>
                 </div>
                 <div class="metric-row" style="flex-direction: column; gap: 0.25rem;">
                     <span class="metric-label">Verifizierte Domains:</span>
-                    <span class="metric-value" style="font-size: 0.8rem; color: var(--text-muted); word-break: break-all; margin-top: 0.25rem;">N/A</span>
+                    <span class="metric-value" style="font-size: 0.8rem; color: var(--text-muted); word-break: break-all; margin-top: 0.25rem;">mycloudofficedev.mail.onmicrosoft.com; mycloudofficedev.onmicrosoft.com</span>
                 </div>
             </div>
 
@@ -388,22 +432,22 @@
                 </div>
                 <div class="metric-row">
                     <span class="metric-label">Sicherheitsgruppen</span>
-                    <span class="metric-value">0</span>
+                    <span class="metric-value">69</span>
                 </div>
                 <div class="metric-row">
                     <span class="metric-label">Gruppen gesamt</span>
-                    <span class="metric-value">0</span>
+                    <span class="metric-value">69</span>
                 </div>
             </div>
         </div>
 
         <details class="collector-detail">
             <summary>👤 Benutzer-Details (Entra ID Users)</summary>
-            <p style='color: var(--text-muted); padding: 1rem;'>Keine Daten verfügbar.</p>
+            <div class='table-wrapper'><table class='data-table'><thead><tr><th>Name</th><th>UPN</th><th>Aktiv</th><th>MFA</th><th>Admin-Rollen</th><th>Vorgesetzter</th></tr></thead><tbody><tr><td>_CloudDemoUser01</td><td>_CloudDemoUser01@mycloudofficedev.onmicrosoft.com</td><td><span class='badge success'>Ja</span></td><td><span class='badge danger'>Nein</span></td><td>-</td><td>Michael Kirst-Neshva</td></tr><tr><td>_CloudDemoUser02</td><td>_CloudDemoUser02@mycloudofficedev.onmicrosoft.com</td><td><span class='badge success'>Ja</span></td><td><span class='badge danger'>Nein</span></td><td>-</td><td>Michael Kirst-Neshva</td></tr><tr><td>Adele Vance</td><td>AdeleV@mycloudofficedev.onmicrosoft.com</td><td><span class='badge success'>Ja</span></td><td><span class='badge danger'>Nein</span></td><td>-</td><td>Miriam Graham</td></tr><tr><td>On-Premises Directory Synchronization Service Account</td><td>ADToAADSyncServiceAccount@mycloudofficedev.onmicrosoft.com</td><td><span class='badge success'>Ja</span></td><td><span class='badge danger'>Nein</span></td><td>Directory Synchronization Accounts</td><td></td></tr><tr><td>Alex Wilber - Michael Kirst-Neshva</td><td>AlexW@mycloudofficedev.onmicrosoft.com</td><td><span class='badge success'>Ja</span></td><td><span class='badge success'>Ja</span></td><td>-</td><td>Miriam Graham</td></tr><tr><td>Demo Support CIPP SA</td><td>Demo-Support-CIPP-SA@mycloudofficedev.onmicrosoft.com</td><td><span class='badge success'>Ja</span></td><td><span class='badge success'>Ja</span></td><td>Teams Administrator; Usage Summary Reports Reader; Hybrid Identity Administrator; Security Administrator; Skype for Business Administrator; Printer Administrator; Billing Administrator; Guest Inviter; SharePoint Administrator; Office Apps Administrator; AI Administrator; Security Operator; Application Developer; Search Administrator; Conditional Access Administrator; SharePoint Embedded Administrator; Message Center Reader; Windows 365 Administrator; Teams Devices Administrator; Authentication Administrator; User Administrator; Windows Update Deployment Administrator; Cloud App Security Administrator; Exchange Administrator; Attribute Assignment Administrator; Intune Administrator; Compliance Data Administrator; Edge Administrator; Identity Governance Administrator; Security Reader; Privileged Role Administrator; Cloud Application Administrator; SharePoint Advanced Management Administrator; Authentication Policy Administrator; Reports Reader; Teams Telephony Administrator; Organizational Branding Administrator; Message Center Privacy Reader; Compliance Administrator; Cloud Device Administrator; Password Administrator; Azure Information Protection Administrator; Service Support Administrator; License Administrator; Application Administrator; Global Reader; Helpdesk Administrator; Privileged Authentication Administrator; Groups Administrator</td><td></td></tr><tr><td>Demo Support Tier0</td><td>demo-support-Tier0@mycloudofficedev.onmicrosoft.com</td><td><span class='badge success'>Ja</span></td><td><span class='badge success'>Ja</span></td><td>-</td><td>Michael Kirst-Neshva</td></tr><tr><td>Demo OnPrem User 02</td><td>demoonpremuser02@mycloudofficedev.onmicrosoft.com</td><td><span class='badge success'>Ja</span></td><td><span class='badge danger'>Nein</span></td><td>-</td><td></td></tr><tr><td>Demo OnPrem User 03</td><td>demoonpremuser03@mycloudofficedev.onmicrosoft.com</td><td><span class='badge success'>Ja</span></td><td><span class='badge danger'>Nein</span></td><td>-</td><td></td></tr><tr><td>Demo OnPrem User 04</td><td>demoonpremuser04@mycloudofficedev.onmicrosoft.com</td><td><span class='badge success'>Ja</span></td><td><span class='badge danger'>Nein</span></td><td>-</td><td></td></tr><tr><td>Diego Siciliani</td><td>DiegoS@mycloudofficedev.onmicrosoft.com</td><td><span class='badge success'>Ja</span></td><td><span class='badge danger'>Nein</span></td><td>-</td><td>Nestor Wilke</td></tr><tr><td>Grady Archie</td><td>GradyA@mycloudofficedev.onmicrosoft.com</td><td><span class='badge success'>Ja</span></td><td><span class='badge danger'>Nein</span></td><td>-</td><td>Lee Gu</td></tr><tr><td>Henrietta Mueller</td><td>HenriettaM@mycloudofficedev.onmicrosoft.com</td><td><span class='badge success'>Ja</span></td><td><span class='badge danger'>Nein</span></td><td>-</td><td>Lee Gu</td></tr><tr><td>Isaiah Langer</td><td>IsaiahL@mycloudofficedev.onmicrosoft.com</td><td><span class='badge success'>Ja</span></td><td><span class='badge danger'>Nein</span></td><td>-</td><td>Miriam Graham</td></tr><tr><td>Johanna Lorenz</td><td>JohannaL@mycloudofficedev.onmicrosoft.com</td><td><span class='badge success'>Ja</span></td><td><span class='badge danger'>Nein</span></td><td>-</td><td>Lee Gu</td></tr><tr><td>Joni Sherman</td><td>JoniS@mycloudofficedev.onmicrosoft.com</td><td><span class='badge success'>Ja</span></td><td><span class='badge danger'>Nein</span></td><td>-</td><td>Nestor Wilke</td></tr><tr><td>Lee Gu</td><td>LeeG@mycloudofficedev.onmicrosoft.com</td><td><span class='badge success'>Ja</span></td><td><span class='badge danger'>Nein</span></td><td>-</td><td>Patti Fernandez</td></tr><tr><td>Lidia Holloway</td><td>LidiaH@mycloudofficedev.onmicrosoft.com</td><td><span class='badge success'>Ja</span></td><td><span class='badge danger'>Nein</span></td><td>-</td><td>Lee Gu</td></tr><tr><td>Lynne Robbins</td><td>LynneR@mycloudofficedev.onmicrosoft.com</td><td><span class='badge success'>Ja</span></td><td><span class='badge danger'>Nein</span></td><td>-</td><td>Miriam Graham</td></tr><tr><td>Megan Bowen</td><td>MeganB@mycloudofficedev.onmicrosoft.com</td><td><span class='badge success'>Ja</span></td><td><span class='badge danger'>Nein</span></td><td>-</td><td>Miriam Graham</td></tr><tr><td>Miriam Graham</td><td>MiriamG@mycloudofficedev.onmicrosoft.com</td><td><span class='badge success'>Ja</span></td><td><span class='badge danger'>Nein</span></td><td>-</td><td>Patti Fernandez</td></tr><tr><td>Michael Kirst-Neshva</td><td>mkn@mycloudofficedev.onmicrosoft.com</td><td><span class='badge success'>Ja</span></td><td><span class='badge success'>Ja</span></td><td>Security Administrator; Purview Workload Content Administrator; Tenant Creator; Azure AD Joined Device Local Administrator; Authentication Administrator; Global Administrator; Authentication Policy Administrator; Compliance Administrator; Cloud Device Administrator; Azure Information Protection Administrator</td><td></td></tr><tr><td>Nestor Wilke</td><td>NestorW@mycloudofficedev.onmicrosoft.com</td><td><span class='badge success'>Ja</span></td><td><span class='badge danger'>Nein</span></td><td>-</td><td>Patti Fernandez</td></tr><tr><td>Patti Fernandez</td><td>PattiF@mycloudofficedev.onmicrosoft.com</td><td><span class='badge success'>Ja</span></td><td><span class='badge danger'>Nein</span></td><td>-</td><td></td></tr><tr><td>Pradeep Gupta</td><td>PradeepG@mycloudofficedev.onmicrosoft.com</td><td><span class='badge success'>Ja</span></td><td><span class='badge danger'>Nein</span></td><td>-</td><td>Nestor Wilke</td></tr><tr><td>TestMailbox</td><td>TestMailbox@mycloudofficedev.onmicrosoft.com</td><td><span class='badge success'>Ja</span></td><td><span class='badge danger'>Nein</span></td><td>-</td><td></td></tr></tbody></table></div>
         </details>
         <details class="collector-detail">
             <summary>👥 Gruppen-Details (Entra ID Groups)</summary>
-            <p style='color: var(--text-muted); padding: 1rem;'>Keine Daten verfügbar.</p>
+            <div class='table-wrapper'><table class='data-table'><thead><tr><th>Gruppenname</th><th>Klassifizierung</th><th>Sichtbarkeit</th><th>Besitzer</th><th>Mitglieder</th></tr></thead><tbody><tr><td>M365 GDAP Advanced</td><td>Security Group</td><td>Private</td><td></td><td>0</td></tr><tr><td>M365 GDAP Custom Application Developer 19ae3a92</td><td>Security Group</td><td>Private</td><td></td><td>0</td></tr><tr><td>M365 GDAP Advanced Helpdesk Group</td><td>Security Group</td><td>Private</td><td></td><td>0</td></tr><tr><td>M365 GDAP Intune Administrator</td><td>Security Group</td><td>-</td><td></td><td>0</td></tr><tr><td>Excluded from Legacy Authentication Block</td><td>Security Group</td><td>Private</td><td></td><td>0</td></tr><tr><td>DemoWebsite02</td><td>Microsoft 365 Group</td><td>Private</td><td>mkn@mycloudofficedev.onmicrosoft.com</td><td>1</td></tr><tr><td>Demo-GSA-M365_ClientAccess</td><td>Security Group</td><td>-</td><td>mkn@mycloudofficedev.onmicrosoft.com</td><td>1</td></tr><tr><td>Demo OnPrem Gruppe 02</td><td>Security Group</td><td>-</td><td></td><td>2</td></tr><tr><td>M365 GDAP Billing Administrator</td><td>Security Group</td><td>-</td><td></td><td>0</td></tr><tr><td>GRP - Dyn - SRV 2022 AD DC</td><td>Security Group</td><td>-</td><td>mkn@mycloudofficedev.onmicrosoft.com</td><td>1</td></tr><tr><td>Excluded from Conditional Access</td><td>Security Group</td><td>Private</td><td></td><td>1</td></tr><tr><td>M365 GDAP Helpdesk Group</td><td>Security Group</td><td>Private</td><td></td><td>0</td></tr><tr><td>M365 GDAP Custom 19ae3a92 Demo 15</td><td>Security Group</td><td>Private</td><td></td><td>0</td></tr><tr><td>Device - Demo - Admin Registrierte Geräte</td><td>Security Group</td><td>-</td><td>mkn@mycloudofficedev.onmicrosoft.com</td><td>0</td></tr><tr><td>Demo-Deleted-Identity-Recovery</td><td>Security Group</td><td>-</td><td></td><td>1</td></tr><tr><td>M365 GDAP Authentication Policy Administrator</td><td>Security Group</td><td>-</td><td></td><td>0</td></tr><tr><td>M365 GDAP Security Administrator</td><td>Security Group</td><td>-</td><td></td><td>0</td></tr><tr><td>Group for Answers in Viva Engage – DO NOT DELETE 11804614657</td><td>Microsoft 365 Group</td><td>Public</td><td>mkn@mycloudofficedev.onmicrosoft.com</td><td>0</td></tr><tr><td>M365 GDAP Custom f3ffabf7 Finance</td><td>Security Group</td><td>Private</td><td>mkn@mycloudofficedev.onmicrosoft.com</td><td>1</td></tr><tr><td>M365 GDAP Custom 19ae3a92 Demo 11</td><td>Security Group</td><td>Private</td><td></td><td>0</td></tr><tr><td>M365 GDAP Helpdesk 19ae3a92 demo 08</td><td>Security Group</td><td>Private</td><td></td><td>0</td></tr><tr><td>Conditional Access Service Accounts</td><td>Security Group</td><td>Private</td><td></td><td>0</td></tr><tr><td>Demo_EntraID_Sync_User</td><td>Security Group</td><td>-</td><td>mkn@mycloudofficedev.onmicrosoft.com</td><td>1</td></tr><tr><td>M365 GDAP Custom 19ae3a92 Demo 16</td><td>Security Group</td><td>Private</td><td></td><td>0</td></tr><tr><td>M365 GDAP Custom 19ae3a92 Demo 10</td><td>Security Group</td><td>Private</td><td></td><td>0</td></tr><tr><td>M365 GDAP Domain Name Administrator</td><td>Security Group</td><td>-</td><td></td><td>0</td></tr><tr><td>DemoWebsite</td><td>Microsoft 365 Group</td><td>Private</td><td>mkn@mycloudofficedev.onmicrosoft.com</td><td>1</td></tr><tr><td>M365 GDAP Privileged Role Administrator</td><td>Security Group</td><td>-</td><td></td><td>0</td></tr><tr><td>M365 GDAP Privileged Authentication Administrator</td><td>Security Group</td><td>-</td><td></td><td>0</td></tr><tr><td>M365 GDAP Cloud App Security Administrator</td><td>Security Group</td><td>-</td><td></td><td>0</td></tr><tr><td>Device - Demo - Registrierte Geräte</td><td>Security Group</td><td>-</td><td>mkn@mycloudofficedev.onmicrosoft.com</td><td>0</td></tr><tr><td>M365 GDAP Custom 19ae3a92 Demo 14</td><td>Security Group</td><td>Private</td><td></td><td>0</td></tr><tr><td>M365 GDAP Cloud Device Administrator</td><td>Security Group</td><td>-</td><td></td><td>0</td></tr><tr><td>M365 GDAP Teams Administrator</td><td>Security Group</td><td>-</td><td></td><td>0</td></tr><tr><td>MyCloudOfficeDEV GOV01</td><td>Security Group</td><td>-</td><td></td><td>0</td></tr><tr><td>mycloudofficedev</td><td>Microsoft 365 Group</td><td>Public</td><td>mkn@mycloudofficedev.onmicrosoft.com; Demo-Support-CIPP-SA@mycloudofficedev.onmicrosoft.com</td><td>25</td></tr><tr><td>M365 GDAP Custom Attack Simulation Administrator 19ae3a92</td><td>Security Group</td><td>Private</td><td></td><td>0</td></tr><tr><td>Excluded from Country Block List</td><td>Security Group</td><td>Private</td><td></td><td>0</td></tr><tr><td>M365 GDAP Application Administrator</td><td>Security Group</td><td>-</td><td></td><td>0</td></tr><tr><td>M365 GDAP Helpdesk 1063fe67 Demo 09</td><td>Security Group</td><td>Private</td><td></td><td>0</td></tr><tr><td>M365 GDAP Custom f3ffabf7</td><td>Security Group</td><td>Private</td><td></td><td>0</td></tr><tr><td>ComplianceShield - Demo - Webarchive</td><td>Microsoft 365 Group</td><td>Private</td><td>mkn@mycloudofficedev.onmicrosoft.com</td><td>1</td></tr><tr><td>GRP - Dyn - SRV 2025 AD Member</td><td>Security Group</td><td>-</td><td>mkn@mycloudofficedev.onmicrosoft.com</td><td>1</td></tr><tr><td>Device - Demo - EntraID Joined Geräte</td><td>Security Group</td><td>-</td><td>mkn@mycloudofficedev.onmicrosoft.com</td><td>0</td></tr><tr><td>M365 GDAP Helpdesk demo03</td><td>Security Group</td><td>Private</td><td></td><td>0</td></tr><tr><td>M365 GDAP Custom 19ae3a92 Demo 21</td><td>Security Group</td><td>Private</td><td></td><td>0</td></tr><tr><td>M365 GDAP Custom 19ae3a92 Demo 12</td><td>Security Group</td><td>Private</td><td></td><td>0</td></tr><tr><td>M365 GDAP Custom 19ae3a92 Demo 19</td><td>Security Group</td><td>Private</td><td></td><td>0</td></tr><tr><td>M365 GDAP Custom Attribute Assignment Administrator 19ae3a92</td><td>Security Group</td><td>Private</td><td></td><td>0</td></tr><tr><td>M365 GDAP Custom 90a824f3 Finance</td><td>Security Group</td><td>Private</td><td></td><td>0</td></tr><tr><td>Excluded from Device Code Auth Flow Block</td><td>Security Group</td><td>Private</td><td></td><td>0</td></tr><tr><td>Opal-UserGroup</td><td>Security Group</td><td>Private</td><td>mkn@mycloudofficedev.onmicrosoft.com</td><td>1</td></tr><tr><td>M365 GDAP Global Reader</td><td>Security Group</td><td>-</td><td></td><td>0</td></tr><tr><td>M365 GDAP SharePoint Administrator</td><td>Security Group</td><td>-</td><td></td><td>0</td></tr><tr><td>M365 GDAP Exchange Administrator</td><td>Security Group</td><td>-</td><td></td><td>0</td></tr><tr><td>SG - Windows Autopilot Geräte Vorbereitung</td><td>Security Group</td><td>-</td><td></td><td>1</td></tr><tr><td>M365 GDAP Custom - demo01</td><td>Security Group</td><td>Private</td><td></td><td>0</td></tr><tr><td>M365 GDAP Simple Group</td><td>Security Group</td><td>Private</td><td></td><td>0</td></tr><tr><td>M365 GDAP Billing Administrator f3ffabf7 Finance</td><td>Security Group</td><td>Private</td><td></td><td>0</td></tr><tr><td>All Company</td><td>Microsoft 365 Group</td><td>Public</td><td></td><td>0</td></tr><tr><td>SG - AutoPilot V2 User</td><td>Security Group</td><td>-</td><td>mkn@mycloudofficedev.onmicrosoft.com</td><td>1</td></tr><tr><td>M365 GDAP Advanced Administration demo03</td><td>Security Group</td><td>Private</td><td></td><td>0</td></tr><tr><td>M365 GDAP Custom Attack Payload Author 19ae3a92</td><td>Security Group</td><td>Private</td><td></td><td>0</td></tr><tr><td>MyCloudOfficeDEV GOV02</td><td>Security Group</td><td>Private</td><td>mkn@mycloudofficedev.onmicrosoft.com</td><td>3</td></tr><tr><td>M365 GDAP Helpdesk</td><td>Security Group</td><td>Private</td><td></td><td>0</td></tr><tr><td>M365 GDAP User Administrator</td><td>Security Group</td><td>-</td><td></td><td>0</td></tr><tr><td>M365 GDAP Custom 19ae3a92</td><td>Security Group</td><td>Private</td><td></td><td>0</td></tr><tr><td>M365 GDAP Advanced Administration 19ae3a92 demo 08</td><td>Security Group</td><td>Private</td><td></td><td>0</td></tr><tr><td>M365 GDAP Advanced f41a0bce Demo 10</td><td>Security Group</td><td>Private</td><td></td><td>0</td></tr></tbody></table></div>
         </details>
 
         <div class="grid-2">
@@ -420,11 +464,11 @@
                 <h2>💻 Endgeräte GRC-Audit</h2>
                 <div class="metric-row">
                     <span class="metric-label">In Entra ID registriert/joined (Hardware Asset)</span>
-                    <span class="metric-value">0</span>
+                    <span class="metric-value">6</span>
                 </div>
                 <div class="metric-row">
                     <span class="metric-label">In Intune verwaltet (Compliance erzwingbar)</span>
-                    <span class="metric-value" style="color: var(--accent-secondary);">0</span>
+                    <span class="metric-value" style="color: var(--accent-secondary);">5</span>
                 </div>
                 <div class="metric-row">
                     <span class="metric-label">In Defender for Endpoint erfasst (EDR Abdeckung)</span>
@@ -433,7 +477,7 @@
                 <div class="metric-row">
                     <span class="metric-label">Intune-Abdeckung (relativ to Entra ID)</span>
                     <span class="metric-value">
-                        0%
+                        83,3 %
                     </span>
                 </div>
             </div>
@@ -441,8 +485,52 @@
 
         <details class="collector-detail">
             <summary>💻 Geräte-Details (Hardware & Compliance)</summary>
-            <p style='color: var(--text-muted); padding: 1rem;'>Keine Daten verfügbar.</p>
+            <div class='table-wrapper'><table class='data-table'><thead><tr><th>Gerätename</th><th>Betriebssystem</th><th>OS-Version</th><th>Trust-Typ</th><th>Konform</th><th>Intune MDM</th><th>Defender Status</th></tr></thead><tbody><tr><td>DESKTOP-6UB0RPT</td><td>Windows</td><td>10.0.28000.1643</td><td>AzureAd</td><td><span class='badge danger'>Nein</span></td><td><span class='badge danger'>Nein</span></td><td>Not Enrolled</td></tr><tr><td>Studio-MKN</td><td>Windows</td><td>10.0.26200.8524</td><td>Workplace</td><td><span class='badge danger'>Nein</span></td><td><span class='badge danger'>Nein</span></td><td>Not Enrolled</td></tr><tr><td>SRV-DC1-W2022</td><td>Windows Server</td><td>10.0.20348.4773</td><td>-</td><td><span class='badge danger'>Nein</span></td><td><span class='badge danger'>Nein</span></td><td>Not Enrolled</td></tr><tr><td>STUDIO-MKN</td><td>Windows</td><td>10.0.26200.8655</td><td>-</td><td><span class='badge danger'>Nein</span></td><td><span class='badge danger'>Nein</span></td><td>Not Enrolled</td></tr><tr><td>DESKTOP-387UMFB</td><td>Windows</td><td>10.0.28000.1450</td><td>AzureAd</td><td><span class='badge danger'>Nein</span></td><td><span class='badge danger'>Nein</span></td><td>Not Enrolled</td></tr><tr><td>SRV-MB01-W2025</td><td>Windows Server</td><td>10.0.26100.32230</td><td>-</td><td><span class='badge danger'>Nein</span></td><td><span class='badge danger'>Nein</span></td><td>Not Enrolled</td></tr></tbody></table></div>
         </details>
+
+        <!-- Microsoft Secure Score & Recommendations -->
+        <h2 style="margin-top: 2.5rem; margin-bottom: 1rem; font-size: 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 0.5rem; color: #ffffff;">🎯 Microsoft Secure Score & Handlungsempfehlungen</h2>
+                <!-- Secure Score Overview Dash -->
+        <div class="grid-2" style="margin-top: 1rem; margin-bottom: 2rem;">
+            <!-- Left: Donut Chart -->
+            <div class="card" style="display: flex; align-items: center; justify-content: center; gap: 2rem; padding: 2rem;">
+                <div class="id-donut-chart">
+                    <svg class="donut-chart" width="140" height="140" viewBox="0 0 130 130">
+                        <circle class="donut-track" cx="65" cy="65" r="53" fill="none" stroke-width="10"/>
+                        <circle class="donut-fill donut-warning" cx="65" cy="65" r="53" fill="none" stroke-width="10"
+                                stroke-dasharray="333.01" stroke-dashoffset="135.83" stroke-linecap="round" transform="rotate(-90 65 65)"/>
+                        <text class="donut-text" x="65" y="65" text-anchor="middle" dominant-baseline="central">59.21%</text>
+                    </svg>
+                </div>
+                <div style="flex: 1; min-width: 200px;">
+                    <h3 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; color: #ffffff;">Secure Score Status</h3>
+                    <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.4;">
+                        Ihr aktueller Sicherheitsindex liegt bei <strong style="color: #ffffff;">59.21%</strong>. 
+                        Das entspricht <strong style="color: #ffffff;">485.5 von 820</strong> möglichen Punkten.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Right: Comparisons & Metrics -->
+            <div class="card" style="display: flex; flex-direction: column; justify-content: space-between; padding: 1.5rem;">
+                <div class="id-donut-stack">
+                    <div class="id-donut-item">
+                        <span style="font-size: 1.25rem;">📊</span>
+                        <div class="id-donut-info">
+                            <div class="id-donut-title">M365 globaler Durchschnitt</div>
+                            <div class="id-donut-detail">412.3 Pkt. (50.28% von max. 820 Pkt.)</div>
+                        </div>
+                    </div>
+                    <div class="id-donut-item">
+                        <span style="font-size: 1.25rem;">⚖️</span>
+                        <div class="id-donut-info">
+                            <div class="id-donut-title">Abweichung zum Durchschnitt</div>
+                            <div class="id-donut-detail success-text" style="font-weight: 600;">73.2 Pkt. über dem Durchschnitt</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><details class='collector-detail'><summary>🔑 Microsoft Entra ID (Identität & Zugriff) (3 Empfehlungen)</summary><div class='table-wrapper'><table class='data-table'><thead><tr><th>Empfehlung</th><th>Max. Punkte</th><th>Auswirkung</th><th>Status</th><th>Lizenzbedarf</th><th>Handlungsanweisung</th></tr></thead><tbody><tr><td style='font-weight: 500;'>MFA für alle Administratoren erzwingen</td><td>50</td><td>Hoch</td><td><span class='badge success'>Umgesetzt</span></td><td style='font-size: 0.85rem; color: #a5b4fc; font-weight: 500;'>Microsoft Entra ID Free / Premium P1</td><td style='font-size: 0.85rem; max-width: 320px; white-space: normal; line-height: 1.45; color: var(--text-muted);'>Aktivieren Sie Sicherheitsstandards (Security Defaults) oder erstellen Sie eine Richtlinie für bedingten Zugriff, die MFA für alle administrativen Rollen verlangt.</td></tr><tr><td style='font-weight: 500;'>Kennworthashsynchronisierung für Hybrid-Identitäten aktivieren</td><td>30</td><td>Gering</td><td><span class='badge success'>Umgesetzt</span></td><td style='font-size: 0.85rem; color: #a5b4fc; font-weight: 500;'>Microsoft Entra ID Free / Premium P1</td><td style='font-size: 0.85rem; max-width: 320px; white-space: normal; line-height: 1.45; color: var(--text-muted);'>Aktivieren Sie die Kennworthashsynchronisierung in Microsoft Entra Connect.</td></tr><tr><td style='font-weight: 500;'>Legacy-Authentifizierung blockieren</td><td>40</td><td>Mittel</td><td><span class='badge danger'>Nicht umgesetzt</span></td><td style='font-size: 0.85rem; color: #a5b4fc; font-weight: 500;'>Microsoft Entra ID Premium Plan 1 (oder M365 Business Premium / E3 / E5)</td><td style='font-size: 0.85rem; max-width: 320px; white-space: normal; line-height: 1.45; color: var(--text-muted);'>Erstellen Sie eine Richtlinie für bedingten Zugriff, um Legacy-Protokolle wie IMAP, POP3 oder ältere Office-Clients zu blockieren.</td></tr></tbody></table></div></details><details class='collector-detail'><summary>💻 Microsoft Intune & Geräteverwaltung (1 Empfehlungen)</summary><div class='table-wrapper'><table class='data-table'><thead><tr><th>Empfehlung</th><th>Max. Punkte</th><th>Auswirkung</th><th>Status</th><th>Lizenzbedarf</th><th>Handlungsanweisung</th></tr></thead><tbody><tr><td style='font-weight: 500;'>Registrierungsbeschränkungen für persönliche Geräte konfigurieren</td><td>20</td><td>Gering</td><td><span class='badge success'>Umgesetzt</span></td><td style='font-size: 0.85rem; color: #a5b4fc; font-weight: 500;'>Microsoft Intune (oder M365 Business Premium / E3 / E5)</td><td style='font-size: 0.85rem; max-width: 320px; white-space: normal; line-height: 1.45; color: var(--text-muted);'>Konfigurieren Sie die Registrierungsbeschränkungen in Intune, um die Registrierung persönlicher Windows-Geräte zu blockieren.</td></tr></tbody></table></div></details><details class='collector-detail'><summary>🛡️ Microsoft Defender (Bedrohungsschutz) (1 Empfehlungen)</summary><div class='table-wrapper'><table class='data-table'><thead><tr><th>Empfehlung</th><th>Max. Punkte</th><th>Auswirkung</th><th>Status</th><th>Lizenzbedarf</th><th>Handlungsanweisung</th></tr></thead><tbody><tr><td style='font-weight: 500;'>Sichere Anlagen für SharePoint, OneDrive und Microsoft Teams aktivieren</td><td>25</td><td>Keine</td><td><span class='badge danger'>Nicht umgesetzt</span></td><td style='font-size: 0.85rem; color: #a5b4fc; font-weight: 500;'>Microsoft Defender Plan 1/2 / Defender for Business (oder M365 Business Premium / E5)</td><td style='font-size: 0.85rem; max-width: 320px; white-space: normal; line-height: 1.45; color: var(--text-muted);'>Aktivieren Sie in Defender für Office 365 die Richtlinie für sichere Anlagen für SharePoint, OneDrive und Teams.</td></tr></tbody></table></div></details><details class='collector-detail'><summary>🔒 Microsoft Purview (Compliance & DLP) (1 Empfehlungen)</summary><div class='table-wrapper'><table class='data-table'><thead><tr><th>Empfehlung</th><th>Max. Punkte</th><th>Auswirkung</th><th>Status</th><th>Lizenzbedarf</th><th>Handlungsanweisung</th></tr></thead><tbody><tr><td style='font-weight: 500;'>DLP-Richtlinien für alle gängigen Workloads konfigurieren</td><td>45</td><td>Mittel</td><td><span class='badge warning'>Teilweise / Alternativ</span></td><td style='font-size: 0.85rem; color: #a5b4fc; font-weight: 500;'>Microsoft Purview / Information Protection Plan 1/2 (oder M365 E5 / Compliance)</td><td style='font-size: 0.85rem; max-width: 320px; white-space: normal; line-height: 1.45; color: var(--text-muted);'>Erstellen und aktivieren Sie DLP-Richtlinien für Exchange Online, SharePoint Online, OneDrive for Business und Teams.</td></tr></tbody></table></div></details>
 
         <!-- M365 Collaboration & Mail GRC Row -->
         <h2 style="margin-top: 2.5rem; margin-bottom: 1rem; font-size: 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 0.5rem; color: #ffffff;">📬 Kollaboration & E-Mail GRC-Audit</h2>
@@ -452,11 +540,11 @@
                 <h2>✉️ Exchange Online</h2>
                 <div class="metric-row">
                     <span class="metric-label">Benutzer-Postfächer</span>
-                    <span class="metric-value">0</span>
+                    <span class="metric-value">19</span>
                 </div>
                 <div class="metric-row">
                     <span class="metric-label">Gemeinsame Postfächer (Shared)</span>
-                    <span class="metric-value">0</span>
+                    <span class="metric-value">1</span>
                 </div>
                 <div class="metric-row">
                     <span class="metric-label">Mailflow Transport-Regeln</span>
@@ -468,7 +556,7 @@
                 </div>
                 <div class="metric-row">
                     <span class="metric-label">Anti-Malware Richtlinien</span>
-                    <span class="metric-value">0</span>
+                    <span class="metric-value">1</span>
                 </div>
             </div>
 
@@ -477,15 +565,15 @@
                 <h2>🌐 SharePoint & OneDrive</h2>
                 <div class="metric-row">
                     <span class="metric-label">Aktive SharePoint-Sites</span>
-                    <span class="metric-value">0</span>
+                    <span class="metric-value">25</span>
                 </div>
                 <div class="metric-row">
                     <span class="metric-label">Externer Freigabe-Modus</span>
-                    <span class="metric-value" style="font-size: 0.85rem; font-family: monospace;">N/A</span>
+                    <span class="metric-value" style="font-size: 0.85rem; font-family: monospace;">externalUserAndGuestSharing</span>
                 </div>
                 <div class="metric-row">
                     <span class="metric-label">Freigabe-Berechtigung</span>
-                    <span class="metric-value" style="font-size: 0.85rem; font-family: monospace;">N/A</span>
+                    <span class="metric-value" style="font-size: 0.85rem; font-family: monospace;">externalUserAndGuestSharing</span>
                 </div>
             </div>
 
@@ -494,11 +582,11 @@
                 <h2>💬 Microsoft Teams</h2>
                 <div class="metric-row">
                     <span class="metric-label">Teams gesamt</span>
-                    <span class="metric-value">0</span>
+                    <span class="metric-value">1</span>
                 </div>
                 <div class="metric-row">
                     <span class="metric-label">Öffentliche Teams (Risiko)</span>
-                    <span class="metric-value ">0</span>
+                    <span class="metric-value warning">1</span>
                 </div>
                 <div class="metric-row">
                     <span class="metric-label">Private Teams</span>
@@ -509,15 +597,15 @@
 
         <details class="collector-detail">
             <summary>✉️ Exchange Online Postfach-Details</summary>
-            <p style='color: var(--text-muted); padding: 1rem;'>Keine Daten verfügbar.</p>
+            <div class='table-wrapper'><table class='data-table'><thead><tr><th>Postfach-Adresse</th><th>Typ</th><th>Quota Limit</th><th>Vollzugriff (Delegiert)</th><th>Send As (Delegiert)</th><th>Weiterleitung</th></tr></thead><tbody><tr><td>AdeleV@mycloudofficedev.onmicrosoft.com</td><td>UserMailbox</td><td>99 GB (106,300,440,576 bytes)</td><td></td><td></td><td></td></tr><tr><td>AlexW@mycloudofficedev.onmicrosoft.com</td><td>UserMailbox</td><td>99 GB (106,300,440,576 bytes)</td><td></td><td></td><td></td></tr><tr><td>Demo-Support-CIPP-SA@mycloudofficedev.onmicrosoft.com</td><td>UserMailbox</td><td>99 GB (106,300,440,576 bytes)</td><td></td><td></td><td></td></tr><tr><td>demo-support-Tier0@mycloudofficedev.onmicrosoft.com</td><td>UserMailbox</td><td>99 GB (106,300,440,576 bytes)</td><td></td><td></td><td></td></tr><tr><td>DiegoS@mycloudofficedev.onmicrosoft.com</td><td>UserMailbox</td><td>99 GB (106,300,440,576 bytes)</td><td></td><td></td><td></td></tr><tr><td>DiscoverySearchMailbox{D919BA05-46A6-415f-80AD-7E09334BB852}@mycloudofficedev.onmicrosoft.com</td><td>DiscoveryMailbox</td><td>50 GB (53,687,091,200 bytes)</td><td>Discovery Management:(FullAccess)</td><td></td><td></td></tr><tr><td>GradyA@mycloudofficedev.onmicrosoft.com</td><td>UserMailbox</td><td>99 GB (106,300,440,576 bytes)</td><td></td><td></td><td></td></tr><tr><td>HenriettaM@mycloudofficedev.onmicrosoft.com</td><td>UserMailbox</td><td>99 GB (106,300,440,576 bytes)</td><td></td><td></td><td></td></tr><tr><td>IsaiahL@mycloudofficedev.onmicrosoft.com</td><td>UserMailbox</td><td>99 GB (106,300,440,576 bytes)</td><td></td><td></td><td></td></tr><tr><td>JohannaL@mycloudofficedev.onmicrosoft.com</td><td>UserMailbox</td><td>99 GB (106,300,440,576 bytes)</td><td></td><td></td><td></td></tr><tr><td>JoniS@mycloudofficedev.onmicrosoft.com</td><td>UserMailbox</td><td>99 GB (106,300,440,576 bytes)</td><td></td><td></td><td></td></tr><tr><td>LeeG@mycloudofficedev.onmicrosoft.com</td><td>UserMailbox</td><td>99 GB (106,300,440,576 bytes)</td><td></td><td></td><td></td></tr><tr><td>LidiaH@mycloudofficedev.onmicrosoft.com</td><td>UserMailbox</td><td>99 GB (106,300,440,576 bytes)</td><td></td><td></td><td></td></tr><tr><td>LynneR@mycloudofficedev.onmicrosoft.com</td><td>UserMailbox</td><td>99 GB (106,300,440,576 bytes)</td><td></td><td></td><td></td></tr><tr><td>MeganB@mycloudofficedev.onmicrosoft.com</td><td>UserMailbox</td><td>99 GB (106,300,440,576 bytes)</td><td></td><td></td><td></td></tr><tr><td>mkn@mycloudofficedev.onmicrosoft.com</td><td>UserMailbox</td><td>99 GB (106,300,440,576 bytes)</td><td></td><td></td><td></td></tr><tr><td>MiriamG@mycloudofficedev.onmicrosoft.com</td><td>UserMailbox</td><td>99 GB (106,300,440,576 bytes)</td><td></td><td></td><td></td></tr><tr><td>NestorW@mycloudofficedev.onmicrosoft.com</td><td>UserMailbox</td><td>99 GB (106,300,440,576 bytes)</td><td></td><td></td><td></td></tr><tr><td>PattiF@mycloudofficedev.onmicrosoft.com</td><td>UserMailbox</td><td>99 GB (106,300,440,576 bytes)</td><td></td><td></td><td></td></tr><tr><td>PradeepG@mycloudofficedev.onmicrosoft.com</td><td>UserMailbox</td><td>99 GB (106,300,440,576 bytes)</td><td></td><td></td><td></td></tr><tr><td>TestMailbox@mycloudofficedev.onmicrosoft.com</td><td>SharedMailbox</td><td>49.5 GB (53,150,220,288 bytes)</td><td></td><td></td><td></td></tr></tbody></table></div>
         </details>
         <details class="collector-detail">
             <summary>🌐 SharePoint Online Website-Details</summary>
-            <p style='color: var(--text-muted); padding: 1rem;'>Keine Daten verfügbar.</p>
+            <div class='table-wrapper'><table class='data-table'><thead><tr><th>Website-Name</th><th>URL</th><th>Administratoren</th><th>Speicher (Bytes)</th></tr></thead><tbody><tr><td>DemoWebsite02</td><td>https://mycloudofficedev.sharepoint.com/sites/DemoWebsite02</td><td></td><td>1568937</td></tr><tr><td>DemoWebsite</td><td>https://mycloudofficedev.sharepoint.com/sites/DemoWebsite</td><td></td><td>1852063</td></tr><tr><td>Group for Answers in Viva Engage – DO NOT DELETE 11804614657</td><td>https://mycloudofficedev.sharepoint.com/sites/groupforanswersinvivaengagedonotdelete11804614657133</td><td></td><td>1404438</td></tr><tr><td>ComplianceShield - Demo - Webarchive</td><td>https://mycloudofficedev.sharepoint.com/sites/ComplianceShield-Demo-Webarchive</td><td></td><td>1874153</td></tr><tr><td>Pradeep Gupta</td><td>https://mycloudofficedev-my.sharepoint.com/personal/pradeepg_mycloudofficedev_onmicrosoft_com</td><td></td><td>109848</td></tr><tr><td>Megan Bowen</td><td>https://mycloudofficedev-my.sharepoint.com/personal/meganb_mycloudofficedev_onmicrosoft_com</td><td></td><td>109851</td></tr><tr><td>Lynne Robbins</td><td>https://mycloudofficedev-my.sharepoint.com/personal/lynner_mycloudofficedev_onmicrosoft_com</td><td></td><td>109825</td></tr><tr><td>Lidia Holloway</td><td>https://mycloudofficedev-my.sharepoint.com/personal/lidiah_mycloudofficedev_onmicrosoft_com</td><td></td><td>109861</td></tr><tr><td>Joni Sherman</td><td>https://mycloudofficedev-my.sharepoint.com/personal/jonis_mycloudofficedev_onmicrosoft_com</td><td></td><td>109820</td></tr><tr><td>Johanna Lorenz</td><td>https://mycloudofficedev-my.sharepoint.com/personal/johannal_mycloudofficedev_onmicrosoft_com</td><td></td><td>109883</td></tr><tr><td>Isaiah Langer</td><td>https://mycloudofficedev-my.sharepoint.com/personal/isaiahl_mycloudofficedev_onmicrosoft_com</td><td></td><td>212522</td></tr><tr><td>Henrietta Mueller</td><td>https://mycloudofficedev-my.sharepoint.com/personal/henriettam_mycloudofficedev_onmicrosoft_com</td><td></td><td>109878</td></tr><tr><td>Grady Archie</td><td>https://mycloudofficedev-my.sharepoint.com/personal/gradya_mycloudofficedev_onmicrosoft_com</td><td></td><td>109833</td></tr><tr><td>Diego Siciliani</td><td>https://mycloudofficedev-my.sharepoint.com/personal/diegos_mycloudofficedev_onmicrosoft_com</td><td></td><td>109837</td></tr><tr><td>Alex Wilber - Michael Kirst-Neshva</td><td>https://mycloudofficedev-my.sharepoint.com/personal/alexw_mycloudofficedev_onmicrosoft_com</td><td></td><td>109908</td></tr><tr><td>Adele Vance</td><td>https://mycloudofficedev-my.sharepoint.com/personal/adelev_mycloudofficedev_onmicrosoft_com</td><td></td><td>109840</td></tr><tr><td>Nestor Wilke</td><td>https://mycloudofficedev-my.sharepoint.com/personal/nestorw_mycloudofficedev_onmicrosoft_com</td><td></td><td>109846</td></tr><tr><td>Miriam Graham</td><td>https://mycloudofficedev-my.sharepoint.com/personal/miriamg_mycloudofficedev_onmicrosoft_com</td><td></td><td>109859</td></tr><tr><td>Lee Gu</td><td>https://mycloudofficedev-my.sharepoint.com/personal/leeg_mycloudofficedev_onmicrosoft_com</td><td></td><td>109800</td></tr><tr><td>Patti Fernandez</td><td>https://mycloudofficedev-my.sharepoint.com/personal/pattif_mycloudofficedev_onmicrosoft_com</td><td></td><td>109866</td></tr><tr><td>Michael Kirst-Neshva</td><td>https://mycloudofficedev-my.sharepoint.com/personal/mkn_mycloudofficedev_onmicrosoft_com</td><td></td><td>39649068</td></tr><tr><td>mycloudofficedev</td><td>https://mycloudofficedev.sharepoint.com/sites/mycloudofficedev</td><td></td><td>1516014</td></tr><tr><td>Communication site</td><td>https://mycloudofficedev.sharepoint.com/</td><td></td><td>1636118</td></tr><tr><td>Team Site</td><td>https://mycloudofficedev.sharepoint.com/sites/contentTypeHub</td><td></td><td>1933713</td></tr><tr><td>-</td><td>https://mycloudofficedev.sharepoint.com/search</td><td></td><td>0</td></tr></tbody></table></div>
         </details>
         <details class="collector-detail">
             <summary>💬 Microsoft Teams-Details</summary>
-            <p style='color: var(--text-muted); padding: 1rem;'>Keine Daten verfügbar.</p>
+            <div class='table-wrapper'><table class='data-table'><thead><tr><th>Teamname</th><th>Typ</th><th>Besitzer</th><th>Mitglieder</th><th>Gäste</th><th>Kanäle</th></tr></thead><tbody><tr><td>mycloudofficedev</td><td>Public</td><td>mkn@mycloudofficedev.onmicrosoft.com; Demo-Support-CIPP-SA@mycloudofficedev.onmicrosoft.com</td><td>25</td><td>0</td><td>General:(standard)</td></tr></tbody></table></div>
         </details>
 
         <!-- M365 Governance & Purview GRC Row -->
@@ -528,19 +616,19 @@
                 <h2>🔑 Identity Governance (Entra ID)</h2>
                 <div class="metric-row">
                     <span class="metric-label">Bedingter Zugriff (CA-Richtlinien)</span>
-                    <span class="metric-value">0 Richtlinien</span>
+                    <span class="metric-value">21 Richtlinien</span>
                 </div>
                 <div class="metric-row">
                     <span class="metric-label">CA Richtlinien Aktiviert</span>
-                    <span class="metric-value success">0</span>
+                    <span class="metric-value success">2</span>
                 </div>
                 <div class="metric-row">
                     <span class="metric-label">CA Richtlinien im Report-only Modus</span>
-                    <span class="metric-value warning">0</span>
+                    <span class="metric-value warning">19</span>
                 </div>
                 <div class="metric-row">
                     <span class="metric-label">Zugriffspakete (Access Packages)</span>
-                    <span class="metric-value">0</span>
+                    <span class="metric-value">1</span>
                 </div>
                 <div class="metric-row">
                     <span class="metric-label">Zugriffsüberprüfungen (Access Reviews)</span>
@@ -553,11 +641,11 @@
                 <h2>🔒 Microsoft Purview Compliance & Information Protection</h2>
                 <div class="metric-row">
                     <span class="metric-label">Vertraulichkeitslabels (Sensitivity Labels)</span>
-                    <span class="metric-value">0</span>
+                    <span class="metric-value">35</span>
                 </div>
                 <div class="metric-row" style="flex-direction: column; gap: 0.25rem;">
                     <span class="metric-label">Labelnamen:</span>
-                    <span class="metric-value" style="font-size: 0.85rem; color: var(--text-muted);">Keine</span>
+                    <span class="metric-value" style="font-size: 0.85rem; color: var(--text-muted);">Private Informationen - 0001; Geschäftliche Informationen - 0001; Nur für internen Dienstgebrauch - 0001; Vertraulich - 0001; Streng Vertraulich - 0001; Private Informationen - 0002; Geschäftliche Informationen - 0002; Nur für internen Dienstgebrauch - 0002; Vertraulich - 0002; Streng Vertraulich - 0002; Nur für internen Dienstgebrauch - 0010; SPO Geschäftliche Informationen - 0002; Personal; Public; General; Confidential; Private Informationen - 0005; Geschäftliche Informationen - 0005; Nur für internen Dienstgebrauch - 0005; Vertraulich - 0005; Streng Vertraulich - 0005; Private Informationen - 0006; Geschäftliche Informationen - 0006; Nur für internen Dienstgebrauch - 0006; Vertraulich - 0006; Streng Vertraulich - 0006; Private Informationen - 0012; Geschäftliche Informationen - 0012; Nur für internen Dienstgebrauch - 0012; Vertraulich - 0012; Streng Vertraulich - 0012; Private Informationen - 0010; Geschäftliche Informationen - 0010; Vertraulich - 0010; Streng Vertraulich - 0010</span>
                 </div>
                 <div class="metric-row">
                     <span class="metric-label">Copilot-Ausschluss aktiv (BlockContentAnalysisServices)</span>
@@ -577,7 +665,7 @@
                 </div>
                 <div class="metric-row">
                     <span class="metric-label">Aufbewahrungsbezeichnungen (Retention Labels)</span>
-                    <span class="metric-value">0</span>
+                    <span class="metric-value">1</span>
                 </div>
                 <div class="metric-row">
                     <span class="metric-label">Labeling Pflicht (Mandatory)</span>
@@ -596,7 +684,7 @@
 
         <details class="collector-detail">
             <summary>🔒 Purview Vertraulichkeitslabels-Details</summary>
-            <p style='color: var(--text-muted); padding: 1rem;'>Keine Daten verfügbar.</p>
+            <div class='table-wrapper'><table class='data-table'><thead><tr><th>Labelname</th><th>Copilot Sperre</th><th>Scope Files</th><th>Scope Emails</th><th>Scope Sites</th><th>Verschlüsselt</th><th>Richtlinien</th></tr></thead><tbody><tr style='background-color: rgba(255,255,255,0.02); font-weight: 600; color: #ffffff;'><td>Personal</td><td><span class='badge danger'>Nein</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge danger'>Nein</span></td><td><span class='badge danger'>Nein</span></td><td></td></tr><tr style='background-color: rgba(255,255,255,0.02); font-weight: 600; color: #ffffff;'><td>Public</td><td><span class='badge danger'>Nein</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge danger'>Nein</span></td><td></td></tr><tr style='background-color: rgba(255,255,255,0.02); font-weight: 600; color: #ffffff;'><td>General</td><td><span class='badge danger'>Nein</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge danger'>Nein</span></td><td><span class='badge danger'>Nein</span></td><td></td></tr><tr style='background-color: rgba(255,255,255,0.02); font-weight: 600; color: #ffffff;'><td>Anyone (unrestricted)</td><td><span class='badge danger'>Nein</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge danger'>Nein</span></td><td><span class='badge danger'>Nein</span></td><td></td></tr><tr style='background-color: rgba(255,255,255,0.02); font-weight: 600; color: #ffffff;'><td>Confidential</td><td><span class='badge danger'>Nein</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge danger'>Nein</span></td><td><span class='badge danger'>Nein</span></td><td></td></tr><tr style='background-color: rgba(255,255,255,0.02); font-weight: 600; color: #ffffff;'><td>Anyone (unrestricted)</td><td><span class='badge danger'>Nein</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge danger'>Nein</span></td><td><span class='badge danger'>Nein</span></td><td></td></tr><tr style='background-color: rgba(255,255,255,0.02); font-weight: 600; color: #ffffff;'><td>All Employees</td><td><span class='badge danger'>Nein</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge danger'>Nein</span></td><td><span class='badge success'>Ja</span></td><td></td></tr><tr style='color: var(--text-muted);'><td><span style='padding-left: 20px; color: var(--accent-secondary); font-size: 0.95em;'>↳ All Employees (unrestricted)</span></td><td><span class='badge danger'>Nein</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge danger'>Nein</span></td><td><span class='badge danger'>Nein</span></td><td></td></tr><tr style='background-color: rgba(255,255,255,0.02); font-weight: 600; color: #ffffff;'><td>Trusted People</td><td><span class='badge danger'>Nein</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge danger'>Nein</span></td><td><span class='badge success'>Ja</span></td><td></td></tr><tr style='background-color: rgba(255,255,255,0.02); font-weight: 600; color: #ffffff;'><td>Private Informationen - 0001</td><td><span class='badge danger'>Nein</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge danger'>Nein</span></td><td><span class='badge danger'>Nein</span></td><td>Standard Label Policy</td></tr><tr style='background-color: rgba(255,255,255,0.02); font-weight: 600; color: #ffffff;'><td>Geschäftliche Informationen - 0001</td><td><span class='badge danger'>Nein</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge danger'>Nein</span></td><td><span class='badge danger'>Nein</span></td><td>Standard Label Policy</td></tr><tr style='background-color: rgba(255,255,255,0.02); font-weight: 600; color: #ffffff;'><td>Nur für internen Dienstgebrauch - 0001</td><td><span class='badge danger'>Nein</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge danger'>Nein</span></td><td><span class='badge danger'>Nein</span></td><td>Standard Label Policy</td></tr><tr style='color: var(--text-muted);'><td><span style='padding-left: 20px; color: var(--accent-secondary); font-size: 0.95em;'>↳ Nur für internen Dienstgebrauch (unverschlüsselt) - 0001</span></td><td><span class='badge danger'>Nein</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge danger'>Nein</span></td><td><span class='badge danger'>Nein</span></td><td>Standard Label Policy</td></tr><tr style='color: var(--text-muted);'><td><span style='padding-left: 20px; color: var(--accent-secondary); font-size: 0.95em;'>↳ Nur für internen Dienstgebrauch (verschlüsselt) - 0001</span></td><td><span class='badge danger'>Nein</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge danger'>Nein</span></td><td><span class='badge success'>Ja</span></td><td>Standard Label Policy</td></tr><tr style='background-color: rgba(255,255,255,0.02); font-weight: 600; color: #ffffff;'><td>Vertraulich - 0001</td><td><span class='badge danger'>Nein</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge danger'>Nein</span></td><td><span class='badge danger'>Nein</span></td><td>Standard Label Policy</td></tr><tr style='color: var(--text-muted);'><td><span style='padding-left: 20px; color: var(--accent-secondary); font-size: 0.95em;'>↳ Vertraulich (unverschlüsselt) - 0001</span></td><td><span class='badge danger'>Nein</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge danger'>Nein</span></td><td><span class='badge danger'>Nein</span></td><td>Standard Label Policy</td></tr><tr style='color: var(--text-muted);'><td><span style='padding-left: 20px; color: var(--accent-secondary); font-size: 0.95em;'>↳ Vertraulich (verschlüsselt) - 0001</span></td><td><span class='badge danger'>Nein</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge danger'>Nein</span></td><td><span class='badge danger'>Nein</span></td><td>Standard Label Policy</td></tr><tr style='background-color: rgba(255,255,255,0.02); font-weight: 600; color: #ffffff;'><td>Streng Vertraulich - 0001</td><td><span class='badge danger'>Nein</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge danger'>Nein</span></td><td><span class='badge danger'>Nein</span></td><td>Standard Label Policy</td></tr><tr style='background-color: rgba(255,255,255,0.02); font-weight: 600; color: #ffffff;'><td>Private Informationen - 0002</td><td><span class='badge danger'>Nein</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge danger'>Nein</span></td><td>Abteilung 0002 - Label Policy</td></tr><tr style='background-color: rgba(255,255,255,0.02); font-weight: 600; color: #ffffff;'><td>Geschäftliche Informationen - 0002</td><td><span class='badge danger'>Nein</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge danger'>Nein</span></td><td>Abteilung 0002 - Label Policy</td></tr><tr style='background-color: rgba(255,255,255,0.02); font-weight: 600; color: #ffffff;'><td>Nur für internen Dienstgebrauch - 0002</td><td><span class='badge danger'>Nein</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge danger'>Nein</span></td><td>Abteilung 0002 - Label Policy</td></tr><tr style='color: var(--text-muted);'><td><span style='padding-left: 20px; color: var(--accent-secondary); font-size: 0.95em;'>↳ Nur für internen Dienstgebrauch (unverschlüsselt) - 0002</span></td><td><span class='badge danger'>Nein</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge success'>Ja</span></td><td>Abteilung 0002 - Label Policy</td></tr><tr style='color: var(--text-muted);'><td><span style='padding-left: 20px; color: var(--accent-secondary); font-size: 0.95em;'>↳ Nur für internen Dienstgebrauch (verschlüsselt) - 0002</span></td><td><span class='badge danger'>Nein</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge success'>Ja</span></td><td>Abteilung 0002 - Label Policy</td></tr><tr style='background-color: rgba(255,255,255,0.02); font-weight: 600; color: #ffffff;'><td>Vertraulich - 0002</td><td><span class='badge danger'>Nein</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge danger'>Nein</span></td><td>Abteilung 0002 - Label Policy</td></tr><tr style='color: var(--text-muted);'><td><span style='padding-left: 20px; color: var(--accent-secondary); font-size: 0.95em;'>↳ Vertraulich (unverschlüsselt) - 0002</span></td><td><span class='badge danger'>Nein</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge success'>Ja</span></td><td>Abteilung 0002 - Label Policy</td></tr><tr style='color: var(--text-muted);'><td><span style='padding-left: 20px; color: var(--accent-secondary); font-size: 0.95em;'>↳ Vertraulich (verschlüsselt) - 0002</span></td><td><span class='badge danger'>Nein</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge success'>Ja</span></td><td>Abteilung 0002 - Label Policy</td></tr><tr style='background-color: rgba(255,255,255,0.02); font-weight: 600; color: #ffffff;'><td>Streng Vertraulich - 0002</td><td><span class='badge danger'>Nein</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge success'>Ja</span></td><td>Abteilung 0002 - Label Policy</td></tr><tr style='background-color: rgba(255,255,255,0.02); font-weight: 600; color: #ffffff;'><td>Private Informationen - 0005</td><td><span class='badge danger'>Nein</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge danger'>Nein</span></td><td><span class='badge danger'>Nein</span></td><td></td></tr><tr style='background-color: rgba(255,255,255,0.02); font-weight: 600; color: #ffffff;'><td>Geschäftliche Informationen - 0005</td><td><span class='badge danger'>Nein</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge danger'>Nein</span></td><td><span class='badge danger'>Nein</span></td><td></td></tr><tr style='background-color: rgba(255,255,255,0.02); font-weight: 600; color: #ffffff;'><td>Nur für internen Dienstgebrauch - 0005</td><td><span class='badge danger'>Nein</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge danger'>Nein</span></td><td><span class='badge danger'>Nein</span></td><td></td></tr><tr style='color: var(--text-muted);'><td><span style='padding-left: 20px; color: var(--accent-secondary); font-size: 0.95em;'>↳ Nur für internen Dienstgebrauch (unverschlüsselt) - 0005</span></td><td><span class='badge danger'>Nein</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge danger'>Nein</span></td><td><span class='badge danger'>Nein</span></td><td></td></tr><tr style='color: var(--text-muted);'><td><span style='padding-left: 20px; color: var(--accent-secondary); font-size: 0.95em;'>↳ Nur für internen Dienstgebrauch (verschlüsselt) - 0005</span></td><td><span class='badge danger'>Nein</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge danger'>Nein</span></td><td><span class='badge danger'>Nein</span></td><td></td></tr><tr style='background-color: rgba(255,255,255,0.02); font-weight: 600; color: #ffffff;'><td>Vertraulich - 0005</td><td><span class='badge danger'>Nein</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge danger'>Nein</span></td><td><span class='badge danger'>Nein</span></td><td></td></tr><tr style='color: var(--text-muted);'><td><span style='padding-left: 20px; color: var(--accent-secondary); font-size: 0.95em;'>↳ Vertraulich (unverschlüsselt) - 0005</span></td><td><span class='badge danger'>Nein</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge danger'>Nein</span></td><td><span class='badge danger'>Nein</span></td><td></td></tr><tr style='color: var(--text-muted);'><td><span style='padding-left: 20px; color: var(--accent-secondary); font-size: 0.95em;'>↳ Vertraulich (verschlüsselt) - 0005</span></td><td><span class='badge danger'>Nein</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge danger'>Nein</span></td><td><span class='badge danger'>Nein</span></td><td></td></tr><tr style='background-color: rgba(255,255,255,0.02); font-weight: 600; color: #ffffff;'><td>Streng Vertraulich - 0005</td><td><span class='badge danger'>Nein</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge danger'>Nein</span></td><td><span class='badge danger'>Nein</span></td><td></td></tr><tr style='background-color: rgba(255,255,255,0.02); font-weight: 600; color: #ffffff;'><td>Private Informationen - 0006</td><td><span class='badge danger'>Nein</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge danger'>Nein</span></td><td><span class='badge danger'>Nein</span></td><td></td></tr><tr style='background-color: rgba(255,255,255,0.02); font-weight: 600; color: #ffffff;'><td>Geschäftliche Informationen - 0006</td><td><span class='badge danger'>Nein</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge danger'>Nein</span></td><td><span class='badge danger'>Nein</span></td><td></td></tr><tr style='background-color: rgba(255,255,255,0.02); font-weight: 600; color: #ffffff;'><td>Nur für internen Dienstgebrauch - 0006</td><td><span class='badge danger'>Nein</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge danger'>Nein</span></td><td><span class='badge danger'>Nein</span></td><td></td></tr><tr style='color: var(--text-muted);'><td><span style='padding-left: 20px; color: var(--accent-secondary); font-size: 0.95em;'>↳ Nur für internen Dienstgebrauch (unverschlüsselt) - 0006</span></td><td><span class='badge danger'>Nein</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge danger'>Nein</span></td><td><span class='badge success'>Ja</span></td><td></td></tr><tr style='color: var(--text-muted);'><td><span style='padding-left: 20px; color: var(--accent-secondary); font-size: 0.95em;'>↳ Nur für internen Dienstgebrauch (verschlüsselt) - 0006</span></td><td><span class='badge danger'>Nein</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge danger'>Nein</span></td><td><span class='badge success'>Ja</span></td><td></td></tr><tr style='background-color: rgba(255,255,255,0.02); font-weight: 600; color: #ffffff;'><td>Vertraulich - 0006</td><td><span class='badge danger'>Nein</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge danger'>Nein</span></td><td><span class='badge danger'>Nein</span></td><td></td></tr><tr style='color: var(--text-muted);'><td><span style='padding-left: 20px; color: var(--accent-secondary); font-size: 0.95em;'>↳ Vertraulich (unverschlüsselt) - 0006</span></td><td><span class='badge danger'>Nein</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge danger'>Nein</span></td><td><span class='badge success'>Ja</span></td><td></td></tr><tr style='color: var(--text-muted);'><td><span style='padding-left: 20px; color: var(--accent-secondary); font-size: 0.95em;'>↳ Vertraulich (verschlüsselt) - 0006</span></td><td><span class='badge danger'>Nein</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge danger'>Nein</span></td><td><span class='badge success'>Ja</span></td><td></td></tr><tr style='background-color: rgba(255,255,255,0.02); font-weight: 600; color: #ffffff;'><td>Streng Vertraulich - 0006</td><td><span class='badge danger'>Nein</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge danger'>Nein</span></td><td><span class='badge success'>Ja</span></td><td></td></tr><tr style='background-color: rgba(255,255,255,0.02); font-weight: 600; color: #ffffff;'><td>Private Informationen - 0012</td><td><span class='badge danger'>Nein</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge danger'>Nein</span></td><td></td></tr><tr style='background-color: rgba(255,255,255,0.02); font-weight: 600; color: #ffffff;'><td>Geschäftliche Informationen - 0012</td><td><span class='badge danger'>Nein</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge danger'>Nein</span></td><td></td></tr><tr style='background-color: rgba(255,255,255,0.02); font-weight: 600; color: #ffffff;'><td>Nur für internen Dienstgebrauch - 0012</td><td><span class='badge danger'>Nein</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge danger'>Nein</span></td><td></td></tr><tr style='color: var(--text-muted);'><td><span style='padding-left: 20px; color: var(--accent-secondary); font-size: 0.95em;'>↳ Nur für internen Dienstgebrauch (unverschlüsselt) - 0012</span></td><td><span class='badge danger'>Nein</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge success'>Ja</span></td><td></td></tr><tr style='color: var(--text-muted);'><td><span style='padding-left: 20px; color: var(--accent-secondary); font-size: 0.95em;'>↳ Nur für internen Dienstgebrauch (verschlüsselt) - 0012</span></td><td><span class='badge danger'>Nein</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge success'>Ja</span></td><td></td></tr><tr style='background-color: rgba(255,255,255,0.02); font-weight: 600; color: #ffffff;'><td>Vertraulich - 0012</td><td><span class='badge danger'>Nein</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge danger'>Nein</span></td><td></td></tr><tr style='color: var(--text-muted);'><td><span style='padding-left: 20px; color: var(--accent-secondary); font-size: 0.95em;'>↳ Vertraulich (unverschlüsselt) - 0012</span></td><td><span class='badge danger'>Nein</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge success'>Ja</span></td><td></td></tr><tr style='color: var(--text-muted);'><td><span style='padding-left: 20px; color: var(--accent-secondary); font-size: 0.95em;'>↳ Vertraulich (verschlüsselt) - 0012</span></td><td><span class='badge danger'>Nein</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge success'>Ja</span></td><td></td></tr><tr style='background-color: rgba(255,255,255,0.02); font-weight: 600; color: #ffffff;'><td>Streng Vertraulich - 0012</td><td><span class='badge danger'>Nein</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge success'>Ja</span></td><td></td></tr><tr style='background-color: rgba(255,255,255,0.02); font-weight: 600; color: #ffffff;'><td>Private Informationen - 0010</td><td><span class='badge danger'>Nein</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge danger'>Nein</span></td><td></td></tr><tr style='background-color: rgba(255,255,255,0.02); font-weight: 600; color: #ffffff;'><td>Geschäftliche Informationen - 0010</td><td><span class='badge danger'>Nein</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge danger'>Nein</span></td><td></td></tr><tr style='background-color: rgba(255,255,255,0.02); font-weight: 600; color: #ffffff;'><td>Nur für internen Dienstgebrauch - 0010</td><td><span class='badge danger'>Nein</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge danger'>Nein</span></td><td>Label Policy - 0010 - Nur interner Dienstgebrauch</td></tr><tr style='color: var(--text-muted);'><td><span style='padding-left: 20px; color: var(--accent-secondary); font-size: 0.95em;'>↳ Nur für internen Dienstgebrauch (unverschlüsselt) - 0010</span></td><td><span class='badge danger'>Nein</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge success'>Ja</span></td><td>Label Policy - 0010 - Nur interner Dienstgebrauch</td></tr><tr style='color: var(--text-muted);'><td><span style='padding-left: 20px; color: var(--accent-secondary); font-size: 0.95em;'>↳ Nur für internen Dienstgebrauch (verschlüsselt) - 0010</span></td><td><span class='badge danger'>Nein</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge success'>Ja</span></td><td>Label Policy - 0010 - Nur interner Dienstgebrauch</td></tr><tr style='background-color: rgba(255,255,255,0.02); font-weight: 600; color: #ffffff;'><td>Vertraulich - 0010</td><td><span class='badge danger'>Nein</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge danger'>Nein</span></td><td></td></tr><tr style='color: var(--text-muted);'><td><span style='padding-left: 20px; color: var(--accent-secondary); font-size: 0.95em;'>↳ Vertraulich (unverschlüsselt) - 0010</span></td><td><span class='badge danger'>Nein</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge success'>Ja</span></td><td></td></tr><tr style='color: var(--text-muted);'><td><span style='padding-left: 20px; color: var(--accent-secondary); font-size: 0.95em;'>↳ Vertraulich (verschlüsselt) - 0010</span></td><td><span class='badge danger'>Nein</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge success'>Ja</span></td><td></td></tr><tr style='background-color: rgba(255,255,255,0.02); font-weight: 600; color: #ffffff;'><td>Streng Vertraulich - 0010</td><td><span class='badge danger'>Nein</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge success'>Ja</span></td><td></td></tr><tr style='background-color: rgba(255,255,255,0.02); font-weight: 600; color: #ffffff;'><td>SPO Geschäftliche Informationen - 0002</td><td><span class='badge danger'>Nein</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge danger'>Nein</span></td><td><span class='badge success'>Ja</span></td><td><span class='badge danger'>Nein</span></td><td>Abteilung 0002 - Label Policy</td></tr></tbody></table></div>
         </details>
 
         <footer>
@@ -612,7 +700,7 @@
             data: {
                 labels: ['MFA Registriert', 'MFA Nicht registriert', 'Unbekannt'],
                 datasets: [{
-                    data: [0, 0, 0],
+                    data: [4, 22, 0],
                     backgroundColor: ['#10b981', '#ef4444', '#6b7280'],
                     borderWidth: 0
                 }]
@@ -635,7 +723,7 @@
             data: {
                 labels: ['Aktive Konten', 'Deaktivierte Konten'],
                 datasets: [{
-                    data: [0, 0],
+                    data: [26, 0],
                     backgroundColor: ['#6366f1', '#f59e0b'],
                     borderWidth: 0
                 }]
