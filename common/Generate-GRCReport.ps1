@@ -590,7 +590,7 @@ $htmlContent = @"
         </div>
 
         <footer>
-            M365 GRC Assistant Onboarding Portal · Erstellt von Antigravity AI
+            M365 GRC Assistant Onboarding Portal · Erstellt von Michael Kirst-Neshva
         </footer>
     </div>
 
