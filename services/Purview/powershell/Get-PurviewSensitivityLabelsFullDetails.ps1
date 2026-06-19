@@ -151,6 +151,30 @@ function Connect-GrcComplianceSession {
         -LogDirectoryPath     $LogDirectory
 }
 
+function Get-GrcSafeProperty {
+    param(
+        [object]$InputObject,
+        [string]$Name
+    )
+    if ($null -eq $InputObject) { return $null }
+    if ($InputObject -is [System.Collections.IDictionary]) {
+        if ($InputObject.Contains($Name)) {
+            return $InputObject[$Name]
+        }
+        foreach ($k in $InputObject.Keys) {
+            if ($k.ToString() -ieq $Name) {
+                return $InputObject[$k]
+            }
+        }
+        return $null
+    }
+    $prop = $InputObject.PSObject.Properties[$Name]
+    if ($prop) {
+        return $prop.Value
+    }
+    return $null
+}
+
 #endregion
 
 try {
@@ -234,8 +258,9 @@ try {
     foreach ($lbl in $ippsLabels) {
         # Parse settings array (Key=Value format)
         $settingsDict = @{}
-        if ($lbl.Settings) {
-            foreach ($setting in $lbl.Settings) {
+        $lblSettings = Get-GrcSafeProperty -InputObject $lbl -Name 'Settings'
+        if ($lblSettings) {
+            foreach ($setting in $lblSettings) {
                 if ($setting -match '^([^=]+)=(.*)$') {
                     $settingsDict[$Matches[1]] = $Matches[2]
                 }
@@ -243,20 +268,23 @@ try {
         }
 
         # 1. Base Properties
-        $guid = $lbl.Guid.ToString()
-        $name = $lbl.Name
-        $displayName = $lbl.DisplayName
-        $comment = $lbl.Comment
-        $isActive = $lbl.IsActive
-        $priority = $lbl.Priority
-        $color = $lbl.Color
-        $parentGuid = if ($lbl.ParentGuid) { $lbl.ParentGuid.ToString() } else { "" }
+        $guidObj = Get-GrcSafeProperty -InputObject $lbl -Name 'Guid'
+        $guid = if ($guidObj) { $guidObj.ToString() } else { "" }
+        $name = Get-GrcSafeProperty -InputObject $lbl -Name 'Name'
+        $displayName = Get-GrcSafeProperty -InputObject $lbl -Name 'DisplayName'
+        $comment = Get-GrcSafeProperty -InputObject $lbl -Name 'Comment'
+        $isActive = Get-GrcSafeProperty -InputObject $lbl -Name 'IsActive'
+        $priority = Get-GrcSafeProperty -InputObject $lbl -Name 'Priority'
+        $color = Get-GrcSafeProperty -InputObject $lbl -Name 'Color'
+        
+        $parentGuidObj = Get-GrcSafeProperty -InputObject $lbl -Name 'ParentGuid'
+        $parentGuid = if ($parentGuidObj) { $parentGuidObj.ToString() } else { "" }
 
         # 2. Copilot Protection
         $blockCopilot = $settingsDict.ContainsKey('BlockContentAnalysisServices') -and $settingsDict['BlockContentAnalysisServices'] -ieq 'True'
 
         # 3. Workload Scopes (with backwards compatibility for SchematizedData)
-        $contentType = $lbl.ContentType
+        $contentType = Get-GrcSafeProperty -InputObject $lbl -Name 'ContentType'
         $scopeFiles = $contentType -match 'File'
         $scopeEmails = $contentType -match 'Email'
         $scopeMeetings = $contentType -match 'Meeting'
@@ -271,9 +299,11 @@ try {
         if ($settingsDict.ContainsKey('ScopeSchematizedData') -and $settingsDict['ScopeSchematizedData'] -ieq 'True') {
             $scopeSchematizedData = $true
         }
-        if ($lbl.LabelActions) {
-            foreach ($action in $lbl.LabelActions) {
-                if ($action.ApplicableTo -match 'SchematizedData' -or $action.ApplicableTo -match 'Purview') {
+        $lblLabelActions = Get-GrcSafeProperty -InputObject $lbl -Name 'LabelActions'
+        if ($lblLabelActions) {
+            foreach ($action in $lblLabelActions) {
+                $applicableTo = Get-GrcSafeProperty -InputObject $action -Name 'ApplicableTo'
+                if ($applicableTo -match 'SchematizedData' -or $applicableTo -match 'Purview') {
                     $scopeSchematizedData = $true
                 }
             }
@@ -286,25 +316,30 @@ try {
         $rightsDefinitions = @()
         $flatRightsStr = ''
 
-        if ($lbl.LabelActions) {
-            foreach ($action in $lbl.LabelActions) {
+        if ($lblLabelActions) {
+            foreach ($action in $lblLabelActions) {
                 # Look for Protect or Encryption action type
-                if ($action.ActionType -eq 'Protect' -or $action.ActionType -eq 'Encryption' -or $null -ne $action.TemplateId) {
+                $actionType = Get-GrcSafeProperty -InputObject $action -Name 'ActionType'
+                $templateIdVal = Get-GrcSafeProperty -InputObject $action -Name 'TemplateId'
+                if ($actionType -eq 'Protect' -or $actionType -eq 'Encryption' -or $null -ne $templateIdVal) {
                     $encryptionEnabled = $true
-                    $templateId = $action.TemplateId
-                    $protectionType = if ($action.ProtectionType) { $action.ProtectionType } else { 'Template' }
+                    $templateId = $templateIdVal
+                    $protectionTypeObj = Get-GrcSafeProperty -InputObject $action -Name 'ProtectionType'
+                    $protectionType = if ($protectionTypeObj) { $protectionTypeObj } else { 'Template' }
 
-                    if ($action.RightsDefinitions) {
+                    $rightsDefs = Get-GrcSafeProperty -InputObject $action -Name 'RightsDefinitions'
+                    if ($rightsDefs) {
                         # RightsDefinitions is typically an array of objects/hashtables
                         # showing identities and their granted rights
                         $rightsList = @()
                         $flatRights = @()
-                        foreach ($def in $action.RightsDefinitions) {
-                            $identity = $def.Identity
-                            $rights = @($def.Rights) -join ','
+                        foreach ($def in $rightsDefs) {
+                            $identity = Get-GrcSafeProperty -InputObject $def -Name 'Identity'
+                            $rightsArr = Get-GrcSafeProperty -InputObject $def -Name 'Rights'
+                            $rights = @($rightsArr) -join ','
                             $rightsList += @{
                                 Identity = $identity
-                                Rights   = $def.Rights
+                                Rights   = $rightsArr
                             }
                             $flatRights += "$($identity):($rights)"
                         }
@@ -318,8 +353,9 @@ try {
         # 5. Locale Translations (Languages)
         $localeDict = [Ordered]@{}
         $flatLocaleList = @()
-        if ($lbl.LocaleSettings) {
-            foreach ($locSetting in $lbl.LocaleSettings) {
+        $lblLocaleSettings = Get-GrcSafeProperty -InputObject $lbl -Name 'LocaleSettings'
+        if ($lblLocaleSettings) {
+            foreach ($locSetting in $lblLocaleSettings) {
                 if ($locSetting -match '^([^=]+)_(.+?)=(.*)$') {
                     $propName = $Matches[1]
                     $langCode = $Matches[2]
