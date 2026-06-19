@@ -276,6 +276,35 @@ function Connect-GrcComplianceSession {
         -LogDirectoryPath     $LogDirectory
 }
 
+function Get-GrcSafeProperty {
+    <#
+    .SYNOPSIS
+        Safely retrieves a property value from a PSCustomObject or Hashtable key
+        without throwing PropertyNotFoundException under StrictMode Latest.
+    #>
+    param(
+        [object]$InputObject,
+        [string]$Name
+    )
+    if ($null -eq $InputObject) { return $null }
+    if ($InputObject -is [System.Collections.IDictionary]) {
+        if ($InputObject.Contains($Name)) {
+            return $InputObject[$Name]
+        }
+        foreach ($k in $InputObject.Keys) {
+            if ($k.ToString() -ieq $Name) {
+                return $InputObject[$k]
+            }
+        }
+        return $null
+    }
+    $prop = $InputObject.PSObject.Properties[$Name]
+    if ($prop) {
+        return $prop.Value
+    }
+    return $null
+}
+
 #endregion
 
 try {
@@ -389,27 +418,24 @@ try {
             $reportData.TotalSensitivityLabels = @($labelsResponse.value).Count
 
             $labelNames = $labelsResponse.value | ForEach-Object {
-                # v1.0 endpoint returns 'displayName'; beta returns 'name'
-                $n = if ($_.PSObject.Properties['displayName'] -and $_.displayName) { $_.displayName }
-                     elseif ($_.PSObject.Properties['name'] -and $_.name)           { $_.name }
-                     else                                                            { $null }
-                $n
+                $displayName = Get-GrcSafeProperty -InputObject $_ -Name 'displayName'
+                $name = Get-GrcSafeProperty -InputObject $_ -Name 'name'
+                if ($displayName) { $displayName } else { $name }
             }
             $reportData.SensitivityLabelNames = ($labelNames | Where-Object { $_ }) -join '; '
 
             $reportData.SensitivityLabelsDetails = $labelsResponse.value | ForEach-Object {
                 $item = $_
-                # Resolve label name: displayName (v1.0) takes priority over name (beta)
-                $labelName = if ($item.PSObject.Properties['displayName'] -and $item.displayName) { $item.displayName }
-                             elseif ($item.PSObject.Properties['name'] -and $item.name)            { $item.name }
-                             else                                                                   { $null }
+                $displayName = Get-GrcSafeProperty -InputObject $item -Name 'displayName'
+                $name = Get-GrcSafeProperty -InputObject $item -Name 'name'
+                $labelName = if ($displayName) { $displayName } else { $name }
                 [Ordered]@{
-                    Id          = $item.id
+                    Id          = Get-GrcSafeProperty -InputObject $item -Name 'id'
                     Name        = $labelName
-                    Description = if ($item.PSObject.Properties['description']) { $item.description } else { $null }
-                    IsActive    = if ($item.PSObject.Properties['isActive'])    { $item.isActive }    else { $null }
-                    Sensitivity = if ($item.PSObject.Properties['sensitivity']) { $item.sensitivity } else { $null }
-                    Color       = if ($item.PSObject.Properties['color'])       { $item.color }       else { $null }
+                    Description = Get-GrcSafeProperty -InputObject $item -Name 'description'
+                    IsActive    = Get-GrcSafeProperty -InputObject $item -Name 'isActive'
+                    Sensitivity = Get-GrcSafeProperty -InputObject $item -Name 'sensitivity'
+                    Color       = Get-GrcSafeProperty -InputObject $item -Name 'color'
                 }
             }
         }
@@ -493,11 +519,11 @@ try {
         $policySettings = Invoke-MgGraphRequest -Method GET -Uri 'https://graph.microsoft.com/beta/security/informationProtection/labelPolicySettings' -ErrorAction SilentlyContinue
         if ($policySettings) {
             $reportData.LabelPolicySettings = [Ordered]@{
-                IsMandatory                    = if ($policySettings.PSObject.Properties['isMandatory'])                                       { $policySettings.isMandatory }                                       else { $null }
-                DefaultLabelId                 = if ($policySettings.PSObject.Properties['defaultLabelId'])                                    { $policySettings.defaultLabelId }                                    else { $null }
-                DowngradeJustificationRequired = if ($policySettings.PSObject.Properties['downgradeSensitivityLabelJustificationRequired'])    { $policySettings.downgradeSensitivityLabelJustificationRequired }    else { $null }
-                MandatoryLabelEnabled          = if ($policySettings.PSObject.Properties['mandatoryLabelEnabled'])                             { $policySettings.mandatoryLabelEnabled }                             else { $null }
-                OutlookRecommendedLabelEnabled = if ($policySettings.PSObject.Properties['outlookRecommendedLabelEnabled'])                    { $policySettings.outlookRecommendedLabelEnabled }                    else { $null }
+                IsMandatory                    = Get-GrcSafeProperty -InputObject $policySettings -Name 'isMandatory'
+                DefaultLabelId                 = Get-GrcSafeProperty -InputObject $policySettings -Name 'defaultLabelId'
+                DowngradeJustificationRequired = Get-GrcSafeProperty -InputObject $policySettings -Name 'downgradeSensitivityLabelJustificationRequired'
+                MandatoryLabelEnabled          = Get-GrcSafeProperty -InputObject $policySettings -Name 'mandatoryLabelEnabled'
+                OutlookRecommendedLabelEnabled = Get-GrcSafeProperty -InputObject $policySettings -Name 'outlookRecommendedLabelEnabled'
             }
         }
     } catch {
