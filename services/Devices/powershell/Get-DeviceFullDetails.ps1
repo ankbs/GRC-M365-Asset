@@ -74,7 +74,7 @@ try {
 Write-Verbose "Querying Intune Managed Devices..."
 $intuneDevices = @{}
 try {
-    $intuneUri = "https://graph.microsoft.com/v1.0/deviceManagement/managedDevices?`$select=id,azureADDeviceId,deviceName,operatingSystem,osVersion,isCompliant,enrollmentType,lastSyncDateTime,serialNumber,model,manufacturer,userPrincipalName,partnerThreatProtectionConnectionStatus,managementAgent"
+    $intuneUri = "https://graph.microsoft.com/v1.0/deviceManagement/managedDevices?`$select=id,azureADDeviceId,deviceName,operatingSystem,osVersion,complianceState,enrollmentType,lastSyncDateTime,serialNumber,model,manufacturer,userPrincipalName,partnerThreatProtectionConnectionStatus,managementAgent"
     while ($intuneUri) {
         $intuneResponse = Invoke-MgGraphRequest -Method GET -Uri $intuneUri -ErrorAction Stop
         if ($intuneResponse -and $intuneResponse.value) {
@@ -111,7 +111,7 @@ foreach ($dId in $allDeviceIds) {
     # Compliance check
     $isCompliant = $false
     if ($eDev -and $eDev.isCompliant) { $isCompliant = $true }
-    if ($iDev -and $iDev.isCompliant) { $isCompliant = $true }
+    if ($iDev -and $iDev.complianceState -eq "compliant") { $isCompliant = $true }
 
     # Defender Status from threat protection status / sense agent
     $defenderStatus = "Not Enrolled"
