@@ -414,7 +414,7 @@ try {
         $publishedToGroups = $publishedToGroups | Select-Object -Unique
 
         # --- Populate JSON details ---
-        $jsonDetails += [Ordered]@{
+        $jsonDetails += [PSCustomObject][Ordered]@{
             Id                     = $guid
             Name                   = $name
             DisplayName            = $displayName
@@ -441,7 +441,7 @@ try {
         }
 
         # --- Populate CSV details (flat strings only) ---
-        $csvDetails += [Ordered]@{
+        $csvDetails += [PSCustomObject][Ordered]@{
             Id                     = $guid
             Name                   = $name
             DisplayName            = $displayName
