@@ -294,18 +294,18 @@ try {
             }
         }
 
+        # 1. Base Properties
+        $guidObj = Get-GrcSafeProperty -InputObject $lbl -Name 'Guid'
+        $guid = if ($guidObj) { $guidObj.ToString() } else { "" }
+        $name = Get-GrcSafeProperty -InputObject $lbl -Name 'Name'
+        $displayName = Get-GrcSafeProperty -InputObject $lbl -Name 'DisplayName'
+
         # Find Graph counterpart for metadata enrichment
         $gLabel = $null
         $guidLower = $guid.ToLower()
         if ($graphLabels.ContainsKey($guidLower)) {
             $gLabel = $graphLabels[$guidLower]
         }
-
-        # 1. Base Properties
-        $guidObj = Get-GrcSafeProperty -InputObject $lbl -Name 'Guid'
-        $guid = if ($guidObj) { $guidObj.ToString() } else { "" }
-        $name = Get-GrcSafeProperty -InputObject $lbl -Name 'Name'
-        $displayName = Get-GrcSafeProperty -InputObject $lbl -Name 'DisplayName'
         
         # Active status mapping (from IPPS Disabled, enhanced by Graph isEnabled)
         $disabledVal = Get-GrcSafeProperty -InputObject $lbl -Name 'Disabled'
