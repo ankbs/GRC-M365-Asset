@@ -79,6 +79,32 @@ function Get-GraphPaginatedData {
     return $results.ToArray()
 }
 
+# Helper to flatten nested objects and serialize complex types for CSV compatibility
+function Flatten-Object {
+    param(
+        $InputObject
+    )
+    if ($null -eq $InputObject) { return $null }
+    $flatObj = [ordered]@{}
+    foreach ($prop in $InputObject.PSObject.Properties) {
+        $name = $prop.Name
+        # Skip OData metadata properties
+        if ($name -like "@odata*") { continue }
+        $val = $prop.Value
+        if ($null -eq $val) {
+            $flatObj[$name] = ""
+        } elseif ($val -is [string] -or $val -is [valueType]) {
+            $flatObj[$name] = $val
+        } elseif ($val -is [array] -or $val -is [System.Collections.IEnumerable]) {
+            $flatObj[$name] = ($val | ForEach-Object { $_.ToString() }) -join "; "
+        } else {
+            # Serialize nested objects to JSON string to prevent Export-Csv from crashing
+            $flatObj[$name] = $val | ConvertTo-Json -Compress -Depth 2
+        }
+    }
+    return [PSCustomObject]$flatObj
+}
+
 # Define endpoints mapping to their GRC AssetName and ServiceName
 $endpoints = @(
     [PSCustomObject]@{ Service = "Devices"; Asset = "DeviceCompliancePolicies"; Uri = "https://graph.microsoft.com/v1.0/deviceManagement/deviceCompliancePolicies" }
@@ -98,11 +124,19 @@ foreach ($ep in $endpoints) {
     Write-Verbose "Querying $($ep.Uri)..."
     $data = Get-GraphPaginatedData -Uri $ep.Uri
     
+    # Flatten objects to prevent Export-Csv from crashing on complex nested types
+    $flattenedData = [System.Collections.Generic.List[PSCustomObject]]::new()
+    foreach ($item in $data) {
+        if ($item) {
+            $flattenedData.Add((Flatten-Object -InputObject $item))
+        }
+    }
+    
     if ($AiAgentMode) {
-        $combinedOutput[$ep.Asset] = $data
+        $combinedOutput[$ep.Asset] = $flattenedData.ToArray()
     } else {
-        if ($data.Count -gt 0) {
-            Export-GRCAssetData -ServiceName $ep.Service -AssetName $ep.Asset -Data $data
+        if ($flattenedData.Count -gt 0) {
+            Export-GRCAssetData -ServiceName $ep.Service -AssetName $ep.Asset -Data $flattenedData.ToArray()
         }
     }
 }
