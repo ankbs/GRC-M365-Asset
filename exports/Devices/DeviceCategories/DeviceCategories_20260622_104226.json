@@ -1,0 +1,9 @@
+{
+  "IsReadOnly": false,
+  "IsFixedSize": false,
+  "IsSynchronized": false,
+  "Keys": "description; id; displayName",
+  "Values": "; 1482fa4f-5ef0-459f-88ba-4c4eff1428a0; Virtual Maschine - Hyper-V",
+  "SyncRoot": "System.Collections.Hashtable",
+  "Count": 3
+}

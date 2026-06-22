@@ -1,0 +1,29 @@
+[
+  {
+    "IsReadOnly": false,
+    "IsFixedSize": false,
+    "IsSynchronized": false,
+    "Keys": "notApplicableDeviceCount; conflictDeviceCount; settingName; errorDeviceCount; setting; nonCompliantDeviceCount; compliantDeviceCount; platformType; id; unknownDeviceCount; remediatedDeviceCount",
+    "Values": "0; 0; DefaultDeviceCompliancePolicy.RequireDeviceCompliancePolicyAssigned; 0; DefaultDeviceCompliancePolicy.RequireDeviceCompliancePolicyAssigned; 0; 2; all; DefaultDeviceCompliancePolicy.RequireDeviceCompliancePolicyAssigned; 0; 0",
+    "SyncRoot": "System.Collections.Hashtable",
+    "Count": 11
+  },
+  {
+    "IsReadOnly": false,
+    "IsFixedSize": false,
+    "IsSynchronized": false,
+    "Keys": "notApplicableDeviceCount; conflictDeviceCount; settingName; errorDeviceCount; setting; nonCompliantDeviceCount; compliantDeviceCount; platformType; id; unknownDeviceCount; remediatedDeviceCount",
+    "Values": "0; 0; DefaultDeviceCompliancePolicy.RequireRemainContact; 0; DefaultDeviceCompliancePolicy.RequireRemainContact; 2; 0; all; DefaultDeviceCompliancePolicy.RequireRemainContact; 0; 0",
+    "SyncRoot": "System.Collections.Hashtable",
+    "Count": 11
+  },
+  {
+    "IsReadOnly": false,
+    "IsFixedSize": false,
+    "IsSynchronized": false,
+    "Keys": "notApplicableDeviceCount; conflictDeviceCount; settingName; errorDeviceCount; setting; nonCompliantDeviceCount; compliantDeviceCount; platformType; id; unknownDeviceCount; remediatedDeviceCount",
+    "Values": "0; 0; DefaultDeviceCompliancePolicy.RequireUserExistence; 0; DefaultDeviceCompliancePolicy.RequireUserExistence; 0; 2; all; DefaultDeviceCompliancePolicy.RequireUserExistence; 0; 0",
+    "SyncRoot": "System.Collections.Hashtable",
+    "Count": 11
+  }
+]

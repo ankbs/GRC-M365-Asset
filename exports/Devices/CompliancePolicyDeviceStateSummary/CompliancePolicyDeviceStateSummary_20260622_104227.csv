@@ -1,0 +1,2 @@
+"IsReadOnly","IsFixedSize","IsSynchronized","Keys","Values","SyncRoot","Count"
+"False","False","False","notApplicableDeviceCount; conflictDeviceCount; errorDeviceCount; @odata.context; nonCompliantDeviceCount; inGracePeriodCount; remediatedDeviceCount; compliantDeviceCount; id; unknownDeviceCount; configManagerCount","0; 0; 0; https://graph.microsoft.com/v1.0/$metadata#deviceManagement/deviceCompliancePolicyDeviceStateSummary/$entity; 2; 0; 0; 0; 25bed4ab-00f5-438c-8727-7f3bbc68bf87; 3; 0","System.Collections.Hashtable","11"
