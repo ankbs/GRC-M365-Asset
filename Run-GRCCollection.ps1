@@ -90,7 +90,10 @@ try {
     # 5. Intune Devices
     Write-Host "`nRunning Intune Managed Devices Collector..." -ForegroundColor Yellow
     & "$rootPath/services/Devices/Intune-Devices/powershell/Get-IntuneDevices.ps1" @authArgs
-    
+
+    # 5.1. Intune Compliance & Settings Extra
+    Write-Host "`nRunning Intune Compliance and Settings Extra Collector..." -ForegroundColor Yellow
+    & "$rootPath/services/Devices/Intune-Devices/powershell/Get-IntuneComplianceAndSettings.ps1" @authArgs
     # 6. Defender Devices & Combined Device Full Details
     Write-Host "`nRunning Defender Endpoint Collector..." -ForegroundColor Yellow
     & "$rootPath/services/Devices/Defender-Devices/powershell/Get-DefenderDevices.ps1" @authArgs
