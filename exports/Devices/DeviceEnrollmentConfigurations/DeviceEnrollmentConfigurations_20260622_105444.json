@@ -1,0 +1,47 @@
+[
+  {
+    "IsReadOnly": false,
+    "IsFixedSize": false,
+    "IsSynchronized": false,
+    "Keys": "priority; displayName; @odata.type; id; description; limit; createdDateTime; version; lastModifiedDateTime",
+    "Values": "0; All users and all devices; #microsoft.graph.deviceEnrollmentLimitConfiguration; 25bed4ab-00f5-438c-8727-7f3bbc68bf87_DefaultLimit; This is the default Device Limit Restriction applied with the lowest priority to all users regardless of group membership.; 5; 01/01/0001 00:00:00; 0; 02/18/2026 14:30:54",
+    "SyncRoot": "System.Collections.Hashtable",
+    "Count": 9
+  },
+  {
+    "IsReadOnly": false,
+    "IsFixedSize": false,
+    "IsSynchronized": false,
+    "Keys": "lastModifiedDateTime; @odata.type; displayName; version; androidRestriction; windowsMobileRestriction; createdDateTime; windowsRestriction; macOSRestriction; id; iosRestriction; description; priority",
+    "Values": "02/18/2026 14:30:54; #microsoft.graph.deviceEnrollmentPlatformRestrictionsConfiguration; All users and all devices; 0; System.Collections.Hashtable; System.Collections.Hashtable; 01/01/0001 00:00:00; System.Collections.Hashtable; System.Collections.Hashtable; 25bed4ab-00f5-438c-8727-7f3bbc68bf87_DefaultPlatformRestrictions; System.Collections.Hashtable; This is the default Device Type Restriction applied with the lowest priority to all users regardless of group membership.; 0",
+    "SyncRoot": "System.Collections.Hashtable",
+    "Count": 13
+  },
+  {
+    "IsReadOnly": false,
+    "IsFixedSize": false,
+    "IsSynchronized": false,
+    "Keys": "createdDateTime; lastModifiedDateTime; version; id; pinUppercaseCharactersUsage; pinSpecialCharactersUsage; pinPreviousBlockCount; pinMaximumLength; pinMinimumLength; remotePassportEnabled; pinExpirationInDays; description; priority; @odata.type; securityDeviceRequired; pinLowercaseCharactersUsage; displayName; state; enhancedBiometricsState; unlockWithBiometricsEnabled",
+    "Values": "01/01/0001 00:00:00; 02/18/2026 14:30:54; 0; 25bed4ab-00f5-438c-8727-7f3bbc68bf87_DefaultWindowsHelloForBusiness; disallowed; disallowed; 0; 127; 6; True; 0; This is the default Windows Hello for Business configuration applied with the lowest priority to all users regardless of group membership.; 0; #microsoft.graph.deviceEnrollmentWindowsHelloForBusinessConfiguration; False; disallowed; All users and all devices; enabled; notConfigured; True",
+    "SyncRoot": "System.Collections.Hashtable",
+    "Count": 20
+  },
+  {
+    "IsReadOnly": false,
+    "IsFixedSize": false,
+    "IsSynchronized": false,
+    "Keys": "priority; displayName; @odata.type; id; description; allowNonBlockingAppInstallation; createdDateTime; version; lastModifiedDateTime",
+    "Values": "0; All users and all devices; #microsoft.graph.windows10EnrollmentCompletionPageConfiguration; 25bed4ab-00f5-438c-8727-7f3bbc68bf87_DefaultWindows10EnrollmentCompletionPageConfiguration; This is the default enrollment status screen configuration applied with the lowest priority to all users and all devices regardless of group membership.; False; 01/01/0001 00:00:00; 0; 02/18/2026 14:30:54",
+    "SyncRoot": "System.Collections.Hashtable",
+    "Count": 9
+  },
+  {
+    "IsReadOnly": false,
+    "IsFixedSize": false,
+    "IsSynchronized": false,
+    "Keys": "lastModifiedDateTime; id; description; createdDateTime; displayName; priority; version",
+    "Values": "02/18/2026 14:30:54; 25bed4ab-00f5-438c-8727-7f3bbc68bf87_WindowsRestore; This is the default Windows Restore configuration applied with the lowest priority to all users and all devices regardless of group membership.; 01/01/0001 00:00:00; All users and all devices; 0; 0",
+    "SyncRoot": "System.Collections.Hashtable",
+    "Count": 7
+  }
+]
