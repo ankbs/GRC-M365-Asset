@@ -1,0 +1,375 @@
+{
+  "TotalSensitivityLabels": 35,
+  "SensitivityLabelNames": "Geschäftliche Informationen - 0001; Nur für internen Dienstgebrauch - 0010; Vertraulich - 0006; Vertraulich - 0005; Private Informationen - 0006; Streng Vertraulich - 0012; Streng Vertraulich - 0002; Geschäftliche Informationen - 0002; Streng Vertraulich - 0005; Geschäftliche Informationen - 0006; Geschäftliche Informationen - 0005; Nur für internen Dienstgebrauch - 0001; Streng Vertraulich - 0001; Geschäftliche Informationen - 0010; Vertraulich - 0010; SPO Geschäftliche Informationen - 0002; Nur für internen Dienstgebrauch - 0005; Vertraulich - 0002; Confidential; Private Informationen - 0010; Personal; Vertraulich - 0001; Private Informationen - 0012; Streng Vertraulich - 0010; Geschäftliche Informationen - 0012; General; Private Informationen - 0002; Nur für internen Dienstgebrauch - 0002; Private Informationen - 0005; Nur für internen Dienstgebrauch - 0006; Vertraulich - 0012; Private Informationen - 0001; Streng Vertraulich - 0006; Nur für internen Dienstgebrauch - 0012; Public",
+  "SensitivityLabelsDetails": [
+    {
+      "Id": "0816b12b-e21e-4b18-a915-d08aefe49286",
+      "Name": "Geschäftliche Informationen - 0001",
+      "Description": "",
+      "IsActive": null,
+      "Sensitivity": null,
+      "Color": "",
+      "BlockCopilot": false
+    },
+    {
+      "Id": "0fd196c9-216c-40ee-bd4b-f9679d374d07",
+      "Name": "Nur für internen Dienstgebrauch - 0010",
+      "Description": "",
+      "IsActive": null,
+      "Sensitivity": null,
+      "Color": "",
+      "BlockCopilot": false
+    },
+    {
+      "Id": "1ad395b1-ad88-4b50-afb0-eed0328e9a76",
+      "Name": "Vertraulich - 0006",
+      "Description": "",
+      "IsActive": null,
+      "Sensitivity": null,
+      "Color": "",
+      "BlockCopilot": false
+    },
+    {
+      "Id": "1c23f1f9-2323-4754-9460-544a593f0a9b",
+      "Name": "Vertraulich - 0005",
+      "Description": "",
+      "IsActive": null,
+      "Sensitivity": null,
+      "Color": "",
+      "BlockCopilot": false
+    },
+    {
+      "Id": "2632f553-f84a-4b31-ac0f-895b1700aa73",
+      "Name": "Private Informationen - 0006",
+      "Description": "",
+      "IsActive": null,
+      "Sensitivity": null,
+      "Color": "",
+      "BlockCopilot": false
+    },
+    {
+      "Id": "3405e3c0-d7fe-4e01-acdf-e3d4e9480e68",
+      "Name": "Streng Vertraulich - 0012",
+      "Description": "",
+      "IsActive": null,
+      "Sensitivity": null,
+      "Color": "",
+      "BlockCopilot": false
+    },
+    {
+      "Id": "36fba616-f1c0-4b4a-801e-6e283e6bf72c",
+      "Name": "Streng Vertraulich - 0002",
+      "Description": "",
+      "IsActive": null,
+      "Sensitivity": null,
+      "Color": "",
+      "BlockCopilot": false
+    },
+    {
+      "Id": "39652dfd-040b-4043-b528-3f25ab791c46",
+      "Name": "Geschäftliche Informationen - 0002",
+      "Description": "",
+      "IsActive": null,
+      "Sensitivity": null,
+      "Color": "",
+      "BlockCopilot": false
+    },
+    {
+      "Id": "3c361e77-7892-49db-a147-7bf14ebe0045",
+      "Name": "Streng Vertraulich - 0005",
+      "Description": "",
+      "IsActive": null,
+      "Sensitivity": null,
+      "Color": "",
+      "BlockCopilot": false
+    },
+    {
+      "Id": "43e24bde-9468-46d8-a656-bd1ac947a831",
+      "Name": "Geschäftliche Informationen - 0006",
+      "Description": "",
+      "IsActive": null,
+      "Sensitivity": null,
+      "Color": "",
+      "BlockCopilot": false
+    },
+    {
+      "Id": "4d1e62a7-1df2-4a8f-8be1-5aa13d1c498f",
+      "Name": "Geschäftliche Informationen - 0005",
+      "Description": "",
+      "IsActive": null,
+      "Sensitivity": null,
+      "Color": "",
+      "BlockCopilot": false
+    },
+    {
+      "Id": "508c566c-4c94-4ba5-803a-a55cbdbf9619",
+      "Name": "Nur für internen Dienstgebrauch - 0001",
+      "Description": "",
+      "IsActive": null,
+      "Sensitivity": null,
+      "Color": "",
+      "BlockCopilot": false
+    },
+    {
+      "Id": "680bab7a-daf7-474c-a519-cfedc65af35b",
+      "Name": "Streng Vertraulich - 0001",
+      "Description": "",
+      "IsActive": null,
+      "Sensitivity": null,
+      "Color": "",
+      "BlockCopilot": false
+    },
+    {
+      "Id": "6f38a302-7360-48ed-acb1-d41744356286",
+      "Name": "Geschäftliche Informationen - 0010",
+      "Description": "",
+      "IsActive": null,
+      "Sensitivity": null,
+      "Color": "",
+      "BlockCopilot": false
+    },
+    {
+      "Id": "71bf2f97-5ea4-415a-9b7c-1f1488ce2583",
+      "Name": "Vertraulich - 0010",
+      "Description": "",
+      "IsActive": null,
+      "Sensitivity": null,
+      "Color": "",
+      "BlockCopilot": false
+    },
+    {
+      "Id": "7f43bb4b-ac56-4dad-b34f-600da789ff51",
+      "Name": "SPO Geschäftliche Informationen - 0002",
+      "Description": "",
+      "IsActive": null,
+      "Sensitivity": null,
+      "Color": "#F7630C",
+      "BlockCopilot": false
+    },
+    {
+      "Id": "860ce1fa-8e9e-4915-806e-0047c2f1dd00",
+      "Name": "Nur für internen Dienstgebrauch - 0005",
+      "Description": "",
+      "IsActive": null,
+      "Sensitivity": null,
+      "Color": "",
+      "BlockCopilot": false
+    },
+    {
+      "Id": "8723b79c-57d4-4be4-adaf-0b2b1f38f3e9",
+      "Name": "Vertraulich - 0002",
+      "Description": "",
+      "IsActive": null,
+      "Sensitivity": null,
+      "Color": "",
+      "BlockCopilot": false
+    },
+    {
+      "Id": "8821213c-4663-4189-b06d-fd3569affbcd",
+      "Name": "Confidential",
+      "Description": "",
+      "IsActive": null,
+      "Sensitivity": null,
+      "Color": "",
+      "BlockCopilot": false
+    },
+    {
+      "Id": "8f4e270f-c270-4094-a408-f21fba349074",
+      "Name": "Private Informationen - 0010",
+      "Description": "",
+      "IsActive": null,
+      "Sensitivity": null,
+      "Color": "",
+      "BlockCopilot": false
+    },
+    {
+      "Id": "9aa094b9-f175-4597-8fb5-2be13942fc07",
+      "Name": "Personal",
+      "Description": "",
+      "IsActive": null,
+      "Sensitivity": null,
+      "Color": "",
+      "BlockCopilot": false
+    },
+    {
+      "Id": "a4f26d8c-40dd-4f32-80ce-feee2845f98a",
+      "Name": "Vertraulich - 0001",
+      "Description": "",
+      "IsActive": null,
+      "Sensitivity": null,
+      "Color": "",
+      "BlockCopilot": false
+    },
+    {
+      "Id": "b2e4ba3d-1f9c-45dc-b86b-33bafd22a077",
+      "Name": "Private Informationen - 0012",
+      "Description": "",
+      "IsActive": null,
+      "Sensitivity": null,
+      "Color": "",
+      "BlockCopilot": false
+    },
+    {
+      "Id": "b7203d76-a6e0-4470-a389-5f91bb28a9fc",
+      "Name": "Streng Vertraulich - 0010",
+      "Description": "",
+      "IsActive": null,
+      "Sensitivity": null,
+      "Color": "",
+      "BlockCopilot": false
+    },
+    {
+      "Id": "bfc40317-aab1-435d-be16-c17e9d1a0e1a",
+      "Name": "Geschäftliche Informationen - 0012",
+      "Description": "",
+      "IsActive": null,
+      "Sensitivity": null,
+      "Color": "",
+      "BlockCopilot": false
+    },
+    {
+      "Id": "d170626d-f3b8-4309-9ae0-225a98dcffbc",
+      "Name": "General",
+      "Description": "",
+      "IsActive": null,
+      "Sensitivity": null,
+      "Color": "",
+      "BlockCopilot": false
+    },
+    {
+      "Id": "d1707df3-8440-4cb8-82e3-904164091d21",
+      "Name": "Private Informationen - 0002",
+      "Description": "",
+      "IsActive": null,
+      "Sensitivity": null,
+      "Color": "",
+      "BlockCopilot": false
+    },
+    {
+      "Id": "d24a65c6-6510-4146-9fa0-90658b64cf34",
+      "Name": "Nur für internen Dienstgebrauch - 0002",
+      "Description": "",
+      "IsActive": null,
+      "Sensitivity": null,
+      "Color": "",
+      "BlockCopilot": false
+    },
+    {
+      "Id": "d51fe465-bd22-4b84-881a-274f3be92f9e",
+      "Name": "Private Informationen - 0005",
+      "Description": "",
+      "IsActive": null,
+      "Sensitivity": null,
+      "Color": "",
+      "BlockCopilot": false
+    },
+    {
+      "Id": "d79dfb68-b26e-4000-8b39-fc57f2aedc3a",
+      "Name": "Nur für internen Dienstgebrauch - 0006",
+      "Description": "",
+      "IsActive": null,
+      "Sensitivity": null,
+      "Color": "",
+      "BlockCopilot": false
+    },
+    {
+      "Id": "dc0f204a-68ee-439b-8ee5-ca4fd3610860",
+      "Name": "Vertraulich - 0012",
+      "Description": "",
+      "IsActive": null,
+      "Sensitivity": null,
+      "Color": "",
+      "BlockCopilot": false
+    },
+    {
+      "Id": "dc4a87cf-8e0a-465c-9bc4-ee73f5c3b617",
+      "Name": "Private Informationen - 0001",
+      "Description": "",
+      "IsActive": null,
+      "Sensitivity": null,
+      "Color": "",
+      "BlockCopilot": false
+    },
+    {
+      "Id": "e03a98e8-4830-43d5-9868-b1edf083083f",
+      "Name": "Streng Vertraulich - 0006",
+      "Description": "",
+      "IsActive": null,
+      "Sensitivity": null,
+      "Color": "",
+      "BlockCopilot": false
+    },
+    {
+      "Id": "eaea8b43-cd36-4cfa-9ccb-4fca7820ad2d",
+      "Name": "Nur für internen Dienstgebrauch - 0012",
+      "Description": "",
+      "IsActive": null,
+      "Sensitivity": null,
+      "Color": "",
+      "BlockCopilot": false
+    },
+    {
+      "Id": "ed4e900f-78e9-4aba-bbd3-e5663b454c12",
+      "Name": "Public",
+      "Description": "",
+      "IsActive": null,
+      "Sensitivity": null,
+      "Color": "",
+      "BlockCopilot": false
+    }
+  ],
+  "TotalCopilotBlockedLabels": 0,
+  "CopilotBlockedLabelNames": "",
+  "TotalDlpPolicies": 0,
+  "DlpPolicyNames": "",
+  "DlpPoliciesDetails": null,
+  "TotalRetentionLabels": 1,
+  "RetentionLabelsDetails": {
+    "Id": "FFO.extest.microsoft.com/Microsoft Exchange Hosted Organizations/mycloudofficedev.onmicrosoft.com/Configuration/Protecting data from malicious deletes",
+    "Name": "Protecting data from malicious deletes",
+    "Guid": "1c92e62c-1ce0-4fb6-9d0d-5ee8d8f5a056",
+    "RetentionAction": "Keep",
+    "RetentionDuration": "120",
+    "RetentionType": "TaggedAgeInDays",
+    "IsRecordLabel": false,
+    "Disabled": false,
+    "Workload": "Exchange, SharePoint, OneDriveForBusiness",
+    "Comment": "",
+    "WhenCreatedUtc": "2025-11-26T08:33:19Z",
+    "WhenChangedUtc": "2025-11-26T08:33:19Z"
+  },
+  "UserSensitivityLabels": [
+    {
+      "UserPrincipalName": "_CloudDemoUser01@mycloudofficedev.onmicrosoft.com",
+      "UserId": "347f6435-c622-4dfe-aad3-4f64a7bdb440",
+      "AvailableLabels": "Private Informationen - 0001; Geschäftliche Informationen - 0001; Nur für internen Dienstgebrauch - 0001; Nur für internen Dienstgebrauch (unverschlüsselt) - 0001; Nur für internen Dienstgebrauch (verschlüsselt) - 0001; Vertraulich - 0001; Vertraulich (unverschlüsselt) - 0001; Vertraulich (verschlüsselt) - 0001; Streng Vertraulich - 0001; Private Informationen - 0002; Geschäftliche Informationen - 0002; Nur für internen Dienstgebrauch - 0002; Nur für internen Dienstgebrauch (unverschlüsselt) - 0002; Nur für internen Dienstgebrauch (verschlüsselt) - 0002; Vertraulich - 0002; Vertraulich (unverschlüsselt) - 0002; Vertraulich (verschlüsselt) - 0002; Streng Vertraulich - 0002; For internal use only - 0010; For internal service use only (unencrypted) - 0010; For internal service use only (encrypted) - 0010; SPO Geschäftliche Informationen - 0002"
+    },
+    {
+      "UserPrincipalName": "_CloudDemoUser02@mycloudofficedev.onmicrosoft.com",
+      "UserId": "fe069dac-3173-423a-96ca-7f1c2077a74a",
+      "AvailableLabels": "Private Informationen - 0001; Geschäftliche Informationen - 0001; Nur für internen Dienstgebrauch - 0001; Nur für internen Dienstgebrauch (unverschlüsselt) - 0001; Nur für internen Dienstgebrauch (verschlüsselt) - 0001; Vertraulich - 0001; Vertraulich (unverschlüsselt) - 0001; Vertraulich (verschlüsselt) - 0001; Streng Vertraulich - 0001; Private Informationen - 0002; Geschäftliche Informationen - 0002; Nur für internen Dienstgebrauch - 0002; Nur für internen Dienstgebrauch (unverschlüsselt) - 0002; Nur für internen Dienstgebrauch (verschlüsselt) - 0002; Vertraulich - 0002; Vertraulich (unverschlüsselt) - 0002; Vertraulich (verschlüsselt) - 0002; Streng Vertraulich - 0002; For internal use only - 0010; For internal service use only (unencrypted) - 0010; For internal service use only (encrypted) - 0010; SPO Geschäftliche Informationen - 0002"
+    },
+    {
+      "UserPrincipalName": "AdeleV@mycloudofficedev.onmicrosoft.com",
+      "UserId": "1cd1e79b-9c64-4a67-a4d2-f958ca1750f8",
+      "AvailableLabels": "Private Informationen - 0001; Geschäftliche Informationen - 0001; Nur für internen Dienstgebrauch - 0001; Nur für internen Dienstgebrauch (unverschlüsselt) - 0001; Nur für internen Dienstgebrauch (verschlüsselt) - 0001; Vertraulich - 0001; Vertraulich (unverschlüsselt) - 0001; Vertraulich (verschlüsselt) - 0001; Streng Vertraulich - 0001; Private Informationen - 0002; Geschäftliche Informationen - 0002; Nur für internen Dienstgebrauch - 0002; Nur für internen Dienstgebrauch (unverschlüsselt) - 0002; Nur für internen Dienstgebrauch (verschlüsselt) - 0002; Vertraulich - 0002; Vertraulich (unverschlüsselt) - 0002; Vertraulich (verschlüsselt) - 0002; Streng Vertraulich - 0002; SPO Geschäftliche Informationen - 0002"
+    },
+    {
+      "UserPrincipalName": "ADToAADSyncServiceAccount@mycloudofficedev.onmicrosoft.com",
+      "UserId": "9a3f1669-cb8f-4d9f-85db-98d711fea9e2",
+      "AvailableLabels": "Private Informationen - 0001; Geschäftliche Informationen - 0001; Nur für internen Dienstgebrauch - 0001; Nur für internen Dienstgebrauch (unverschlüsselt) - 0001; Nur für internen Dienstgebrauch (verschlüsselt) - 0001; Vertraulich - 0001; Vertraulich (unverschlüsselt) - 0001; Vertraulich (verschlüsselt) - 0001; Streng Vertraulich - 0001; Private Informationen - 0002; Geschäftliche Informationen - 0002; Nur für internen Dienstgebrauch - 0002; Nur für internen Dienstgebrauch (unverschlüsselt) - 0002; Nur für internen Dienstgebrauch (verschlüsselt) - 0002; Vertraulich - 0002; Vertraulich (unverschlüsselt) - 0002; Vertraulich (verschlüsselt) - 0002; Streng Vertraulich - 0002; For internal use only - 0010; For internal service use only (unencrypted) - 0010; For internal service use only (encrypted) - 0010; SPO Geschäftliche Informationen - 0002"
+    },
+    {
+      "UserPrincipalName": "AlexW@mycloudofficedev.onmicrosoft.com",
+      "UserId": "85a83c5b-5119-42ff-8264-d54bdd69f3dd",
+      "AvailableLabels": "Private Informationen - 0001; Geschäftliche Informationen - 0001; Nur für internen Dienstgebrauch - 0001; Nur für internen Dienstgebrauch (unverschlüsselt) - 0001; Nur für internen Dienstgebrauch (verschlüsselt) - 0001; Vertraulich - 0001; Vertraulich (unverschlüsselt) - 0001; Vertraulich (verschlüsselt) - 0001; Streng Vertraulich - 0001; Private Informationen - 0002; Geschäftliche Informationen - 0002; Nur für internen Dienstgebrauch - 0002; Nur für internen Dienstgebrauch (unverschlüsselt) - 0002; Nur für internen Dienstgebrauch (verschlüsselt) - 0002; Vertraulich - 0002; Vertraulich (unverschlüsselt) - 0002; Vertraulich (verschlüsselt) - 0002; Streng Vertraulich - 0002; For internal use only - 0010; For internal service use only (unencrypted) - 0010; For internal service use only (encrypted) - 0010; SPO Geschäftliche Informationen - 0002"
+    }
+  ],
+  "LabelPolicySettings": {
+    "IsMandatory": false,
+    "DefaultLabelId": null,
+    "DowngradeJustificationRequired": null,
+    "MandatoryLabelEnabled": null,
+    "OutlookRecommendedLabelEnabled": null
+  }
+}
