@@ -1,0 +1,7 @@
+"Id","DisplayName","DeviceId","OperatingSystem","OperatingSystemVersion","IsManaged","TrustType","ApproximateLastSignInDateTime","ProfileType"
+"40f921bf-b14c-4bc7-a187-95def87b79e9","DESKTOP-387UMFB","dd0fc2da-ce79-4ea1-9437-4b637b8c89a9","Windows","10.0.28000.1450","True","AzureAd","02/18/2026 18:30:40","RegisteredDevice"
+"70b25e41-2ddb-4de1-9263-4b1968ab4ff0","DESKTOP-6UB0RPT","76996609-eed3-44ff-b74f-6e1a6f4cb920","Windows","10.0.28000.1643","True","AzureAd","02/18/2026 19:06:32","RegisteredDevice"
+"8dfb259f-1106-4800-94e3-5d948664650a","SRV-DC1-W2022","7bc40055-df1d-fedc-3041-ee87d89347c1","Windows Server","10.0.20348.4773","False","","02/17/2026 15:34:12",""
+"ca8b5afb-59e9-4940-b8a5-cc0c9c5ada96","Studio-MKN","1d9845c1-add2-493e-acbd-876eea92e8ed","Windows","10.0.26200.8524","False","Workplace","06/09/2026 10:38:00","RegisteredDevice"
+"e9ba4c18-2412-4ee0-90cc-6207a5781261","SRV-MB01-W2025","1e9e3def-483d-0533-bda6-e63d3ec064c4","Windows Server","10.0.26100.32230","False","","02/17/2026 21:08:10",""
+"f9032b84-55cd-46f4-912e-70276f90fb6f","STUDIO-MKN","bf7eadf8-181b-8cc6-a111-b800bc806dd6","Windows","10.0.26200.8655","False","","06/19/2026 11:04:39",""
