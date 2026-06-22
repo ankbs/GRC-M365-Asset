@@ -96,7 +96,7 @@ function Flatten-Object {
         } elseif ($val -is [string] -or $val -is [valueType]) {
             $flatObj[$name] = $val
         } elseif ($val -is [array] -or $val -is [System.Collections.IEnumerable]) {
-            $flatObj[$name] = ($val | ForEach-Object { $_.ToString() }) -join "; "
+            $flatObj[$name] = ($val | ForEach-Object { if ($null -ne $_) { $_.ToString() } else { "" } }) -join "; "
         } else {
             # Serialize nested objects to JSON string to prevent Export-Csv from crashing
             $flatObj[$name] = $val | ConvertTo-Json -Compress -Depth 2
