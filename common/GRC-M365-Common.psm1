@@ -44,6 +44,37 @@ function Connect-GRCEnvironment {
     Write-Error "Invalid authentication parameters. Specify either -Interactive or -CertificateBase64, -ClientId, and -TenantId."
 }
 
+function Flatten-GRCValue {
+    param(
+        $InputObject
+    )
+    if ($null -eq $InputObject) { return $null }
+    
+    $objToParse = $InputObject
+    if ($InputObject -is [System.Collections.IDictionary]) {
+        $objToParse = [PSCustomObject]$InputObject
+    }
+    
+    $flatObj = [ordered]@{}
+    foreach ($prop in $objToParse.PSObject.Properties) {
+        $name = $prop.Name
+        # Skip OData metadata properties
+        if ($name -like "@odata*") { continue }
+        $val = $prop.Value
+        if ($null -eq $val) {
+            $flatObj[$name] = ""
+        } elseif ($val -is [string] -or $val -is [valueType]) {
+            $flatObj[$name] = $val
+        } elseif ($val -is [System.Collections.IEnumerable] -and $val -isnot [System.Collections.IDictionary]) {
+            $flatObj[$name] = ($val | ForEach-Object { if ($null -ne $_) { $_.ToString() } else { "" } }) -join "; "
+        } else {
+            # Serialize nested objects to JSON string to prevent Export-Csv from crashing
+            $flatObj[$name] = $val | ConvertTo-Json -Compress -Depth 2
+        }
+    }
+    return [PSCustomObject]$flatObj
+}
+
 function Export-GRCAssetData {
     [CmdletBinding()]
     param(
@@ -55,7 +86,7 @@ function Export-GRCAssetData {
 
         [Parameter(Mandatory)]
         [AllowEmptyCollection()]
-        [PSCustomObject[]]$Data
+        [object[]]$Data
     )
 
     $exportDir = Join-Path -Path $PSScriptRoot -ChildPath "../exports/$ServiceName/$AssetName"
@@ -67,9 +98,18 @@ function Export-GRCAssetData {
     $jsonPath = Join-Path -Path $exportDir -ChildPath "${AssetName}_${timestamp}.json"
     $csvPath  = Join-Path -Path $exportDir -ChildPath "${AssetName}_${timestamp}.csv"
 
-    # Export structured JSON & CSV
+    # Export structured JSON (retains rich objects and dictionary structures)
     $Data | ConvertTo-Json -Depth 10 | Set-Content -Path $jsonPath -Encoding utf8
-    $Data | Export-Csv -Path $csvPath -NoTypeInformation -Encoding utf8
+
+    # Flat array of objects for Export-Csv compatibility
+    $flatData = [System.Collections.Generic.List[PSCustomObject]]::new()
+    foreach ($item in $Data) {
+        if ($null -ne $item) {
+            $flatData.Add((Flatten-GRCValue -InputObject $item))
+        }
+    }
+
+    $flatData.ToArray() | Export-Csv -Path $csvPath -NoTypeInformation -Encoding utf8
 
     Write-Output "GRC Asset exported successfully to: $jsonPath and $csvPath"
 }
