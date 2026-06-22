@@ -136,7 +136,7 @@ try {
 if ($defenderDevices.Count -eq 0) {
     Write-Verbose "No devices discovered from alerts. Listing general MDM devices with Defender enabled..."
     try {
-        $managedDevicesUri = "https://graph.microsoft.com/v1.0/deviceManagement/managedDevices?`$filter=contains(partnerThreatProtectionConnectionStatus, 'available') or contains(managementAgent, 'microsoftSense')"
+        $managedDevicesUri = "https://graph.microsoft.com/v1.0/deviceManagement/managedDevices?`$filter=contains(managementAgent, 'msSense') or contains(managementAgent, 'microsoftSense') or partnerReportedThreatState ne 'unknown'"
         $managedResponse = Invoke-MgGraphRequest -Method GET -Uri $managedDevicesUri -ErrorAction SilentlyContinue
         if ($managedResponse -and $managedResponse.value) {
             foreach ($dev in $managedResponse.value) {

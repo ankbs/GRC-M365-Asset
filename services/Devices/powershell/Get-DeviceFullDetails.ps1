@@ -74,7 +74,7 @@ try {
 Write-Verbose "Querying Intune Managed Devices..."
 $intuneDevices = @{}
 try {
-    $intuneUri = "https://graph.microsoft.com/v1.0/deviceManagement/managedDevices?`$select=id,azureADDeviceId,deviceName,operatingSystem,osVersion,complianceState,deviceEnrollmentType,lastSyncDateTime,serialNumber,model,manufacturer,userPrincipalName,partnerThreatProtectionConnectionStatus,managementAgent"
+    $intuneUri = "https://graph.microsoft.com/v1.0/deviceManagement/managedDevices?`$select=id,azureADDeviceId,deviceName,operatingSystem,osVersion,complianceState,deviceEnrollmentType,lastSyncDateTime,serialNumber,model,manufacturer,userPrincipalName,partnerReportedThreatState,managementAgent"
     while ($intuneUri) {
         $intuneResponse = Invoke-MgGraphRequest -Method GET -Uri $intuneUri -ErrorAction Stop
         if ($intuneResponse -and $intuneResponse.value) {
@@ -116,9 +116,9 @@ foreach ($dId in $allDeviceIds) {
     # Defender Status from threat protection status / sense agent
     $defenderStatus = "Not Enrolled"
     if ($iDev) {
-        $tpStatus = $iDev.partnerThreatProtectionConnectionStatus
+        $tpStatus = $iDev.partnerReportedThreatState
         $agent = $iDev.managementAgent
-        if ($tpStatus -eq 'activated' -or $agent -match 'microsoftSense') {
+        if ($tpStatus -eq 'secured' -or $tpStatus -eq 'low' -or $agent -match 'msSense' -or $agent -match 'microsoftSense') {
             $defenderStatus = "Active"
         } elseif ($tpStatus) {
             $defenderStatus = $tpStatus.ToString()
