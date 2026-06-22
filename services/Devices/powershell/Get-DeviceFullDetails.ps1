@@ -74,7 +74,7 @@ try {
 Write-Verbose "Querying Intune Managed Devices..."
 $intuneDevices = @{}
 try {
-    $intuneUri = "https://graph.microsoft.com/v1.0/deviceManagement/managedDevices?`$select=id,azureADDeviceId,deviceName,operatingSystem,osVersion,complianceState,enrollmentType,lastSyncDateTime,serialNumber,model,manufacturer,userPrincipalName,partnerThreatProtectionConnectionStatus,managementAgent"
+    $intuneUri = "https://graph.microsoft.com/v1.0/deviceManagement/managedDevices?`$select=id,azureADDeviceId,deviceName,operatingSystem,osVersion,complianceState,deviceEnrollmentType,lastSyncDateTime,serialNumber,model,manufacturer,userPrincipalName,partnerThreatProtectionConnectionStatus,managementAgent"
     while ($intuneUri) {
         $intuneResponse = Invoke-MgGraphRequest -Method GET -Uri $intuneUri -ErrorAction Stop
         if ($intuneResponse -and $intuneResponse.value) {
@@ -134,7 +134,7 @@ foreach ($dId in $allDeviceIds) {
         IsCompliant                  = $isCompliant
         IntuneDeviceId               = if ($iDev) { $iDev.id } else { "" }
         IntuneManaged                = if ($iDev) { $true } else { $false }
-        EnrollmentType               = if ($iDev) { $iDev.enrollmentType } else { "Unknown" }
+        EnrollmentType               = if ($iDev) { $iDev.deviceEnrollmentType } else { "Unknown" }
         LastSyncDateTime             = if ($iDev) { $iDev.lastSyncDateTime } else { if ($eDev) { $eDev.approximateLastSignInDateTime } else { "" } }
         SerialNumber                 = if ($iDev) { $iDev.serialNumber } else { "" }
         Model                        = if ($iDev) { $iDev.model } else { "" }
