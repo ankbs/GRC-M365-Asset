@@ -1,0 +1,92 @@
+[
+  {
+    "IsReadOnly": false,
+    "IsFixedSize": false,
+    "IsSynchronized": false,
+    "Keys": "description; isBuiltIn; id; displayName; rolePermissions; @odata.type",
+    "Values": "Application Managers manage mobile and managed applications, can read device information and can view device configuration profiles.; True; c1d9fcbb-cba5-40b0-bf6b-527006585f4b; Application Manager; System.Object[]; #microsoft.graph.deviceAndAppManagementRoleDefinition",
+    "SyncRoot": "System.Collections.Hashtable",
+    "Count": 6
+  },
+  {
+    "IsReadOnly": false,
+    "IsFixedSize": false,
+    "IsSynchronized": false,
+    "Keys": "description; isBuiltIn; id; displayName; rolePermissions; @odata.type",
+    "Values": "Manages security and compliance features such as security baselines, device compliance, conditional access, and Microsoft Defender ATP.; True; c56d53a2-73d0-4502-b6bd-4a9d3dba28d5; Endpoint Security Manager; System.Object[]; #microsoft.graph.deviceAndAppManagementRoleDefinition",
+    "SyncRoot": "System.Collections.Hashtable",
+    "Count": 6
+  },
+  {
+    "IsReadOnly": false,
+    "IsFixedSize": false,
+    "IsSynchronized": false,
+    "Keys": "description; isBuiltIn; id; displayName; rolePermissions; @odata.type",
+    "Values": "Endpoint Privilege Managers can manage Endpoint Privilege Management (EPM) policies in the Intune console.; True; e9a9f614-7527-44e2-a61a-1879747ccfd7; Endpoint Privilege Manager; System.Object[]; #microsoft.graph.deviceAndAppManagementRoleDefinition",
+    "SyncRoot": "System.Collections.Hashtable",
+    "Count": 6
+  },
+  {
+    "IsReadOnly": false,
+    "IsFixedSize": false,
+    "IsSynchronized": false,
+    "Keys": "description; isBuiltIn; id; displayName; rolePermissions; @odata.type",
+    "Values": "Read Only Operators view user, device, enrollment, configuration and application information and cannot make changes to Intune.; True; fa1d7878-e8cb-41a1-8254-0142355c9f84; Read Only Operator; System.Object[]; #microsoft.graph.deviceAndAppManagementRoleDefinition",
+    "SyncRoot": "System.Collections.Hashtable",
+    "Count": 6
+  },
+  {
+    "IsReadOnly": false,
+    "IsFixedSize": false,
+    "IsSynchronized": false,
+    "Keys": "description; isBuiltIn; id; displayName; rolePermissions; @odata.type",
+    "Values": "School Administrators can manage apps and settings for their groups. They can take remote actions on devices, including remotely locking them, restarting them, and retiring them from management.; True; 2f9f4f7e-2d13-427b-adf2-361a1eef7ae8; School Administrator; System.Object[]; #microsoft.graph.deviceAndAppManagementRoleDefinition",
+    "SyncRoot": "System.Collections.Hashtable",
+    "Count": 6
+  },
+  {
+    "IsReadOnly": false,
+    "IsFixedSize": false,
+    "IsSynchronized": false,
+    "Keys": "description; isBuiltIn; id; displayName; rolePermissions; @odata.type",
+    "Values": "Endpoint Privilege Readers can view Endpoint Privilege Management (EPM) policies in the Intune console.; True; 9553af24-bd83-4ac3-a339-0e58f9e5478e; Endpoint Privilege Reader; System.Object[]; #microsoft.graph.deviceAndAppManagementRoleDefinition",
+    "SyncRoot": "System.Collections.Hashtable",
+    "Count": 6
+  },
+  {
+    "IsReadOnly": false,
+    "IsFixedSize": false,
+    "IsSynchronized": false,
+    "Keys": "description; isBuiltIn; id; displayName; rolePermissions; @odata.type",
+    "Values": "Help Desk Operators perform remote tasks on users and devices and can assign applications or policies to users or devices.; True; 9e0cc482-82df-4ab2-a24c-0c23a3f52e1e; Help Desk Operator; System.Object[]; #microsoft.graph.deviceAndAppManagementRoleDefinition",
+    "SyncRoot": "System.Collections.Hashtable",
+    "Count": 6
+  },
+  {
+    "IsReadOnly": false,
+    "IsFixedSize": false,
+    "IsSynchronized": false,
+    "Keys": "description; isBuiltIn; id; displayName; rolePermissions; @odata.type",
+    "Values": "Policy and Profile Managers manage compliance policy, configuration profiles, Apple enrollment, Android Enterprise enrollment profiles and corporate device identifiers.; True; 0bd113fe-6be5-400c-a28f-ae5553f9c0be; Policy and Profile manager; System.Object[]; #microsoft.graph.deviceAndAppManagementRoleDefinition",
+    "SyncRoot": "System.Collections.Hashtable",
+    "Count": 6
+  },
+  {
+    "IsReadOnly": false,
+    "IsFixedSize": false,
+    "IsSynchronized": false,
+    "Keys": "description; isBuiltIn; id; displayName; rolePermissions; @odata.type",
+    "Values": "Multi Admin Approval Policy Manager can manage the access policies that configure Multi-admin approval including approving changes to existing policy or creating new access policies.; True; 5500eb3c-d329-45fd-b3a9-5f87c2cc5e03; Multi Admin Approval Policy Manager; System.Object[]; #microsoft.graph.deviceAndAppManagementRoleDefinition",
+    "SyncRoot": "System.Collections.Hashtable",
+    "Count": 6
+  },
+  {
+    "IsReadOnly": false,
+    "IsFixedSize": false,
+    "IsSynchronized": false,
+    "Keys": "description; isBuiltIn; id; displayName; rolePermissions; @odata.type",
+    "Values": "Intune Role Administrators manage custom Intune roles and add assignments for built-in Intune roles. It is the only Intune role that can assign permissions to Administrators.; True; fb2603eb-3c87-4be3-8b5b-d58a5b4a0bc0; Intune Role Administrator; System.Object[]; #microsoft.graph.deviceAndAppManagementRoleDefinition",
+    "SyncRoot": "System.Collections.Hashtable",
+    "Count": 6
+  }
+]

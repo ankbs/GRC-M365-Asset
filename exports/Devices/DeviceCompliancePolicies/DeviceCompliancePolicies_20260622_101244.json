@@ -1,0 +1,9 @@
+{
+  "IsReadOnly": false,
+  "IsFixedSize": false,
+  "IsSynchronized": false,
+  "Keys": "passwordExpirationDays; passwordMinutesOfInactivityBeforeLock; @odata.type; passwordPreviousPasswordBlockCount; description; passwordMinimumLength; version; createdDateTime; passwordRequired; passwordRequiredToUnlockFromIdle; secureBootEnabled; lastModifiedDateTime; id; codeIntegrityEnabled; mobileOsMinimumVersion; displayName; earlyLaunchAntiMalwareDriverEnabled; osMaximumVersion; passwordMinimumCharacterSetCount; storageRequireEncryption; requireHealthyDeviceReport; bitLockerEnabled; passwordBlockSimple; mobileOsMaximumVersion; osMinimumVersion; passwordRequiredType",
+  "Values": "; ; #microsoft.graph.windows10CompliancePolicy; ; ; ; 1; 02/25/2026 09:34:30; False; False; False; 02/25/2026 09:34:30; 39ab5dcc-88dd-4590-9a06-4ffeb30cd840; False; ; AD SRV Konformität; False; ; ; False; False; False; False; ; ; deviceDefault",
+  "SyncRoot": "System.Collections.Hashtable",
+  "Count": 26
+}

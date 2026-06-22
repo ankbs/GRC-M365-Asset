@@ -1,0 +1,2 @@
+"IsReadOnly","IsFixedSize","IsSynchronized","Keys","Values","SyncRoot","Count"
+"False","False","False","dualEnrolledDeviceCount; enrolledDeviceCount; deviceExchangeAccessStateSummary; deviceOperatingSystemSummary; @odata.context; mdmEnrolledCount; id","0; 5; System.Collections.Hashtable; System.Collections.Hashtable; https://graph.microsoft.com/v1.0/$metadata#microsoft.graph.managedDeviceOverview; 2; 0b7603e1-6fd0-438c-b485-2c1bed88b3fe","System.Collections.Hashtable","7"

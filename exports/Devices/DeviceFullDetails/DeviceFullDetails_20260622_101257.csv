@@ -1,0 +1,7 @@
+"DeviceId","DisplayName","OperatingSystem","OperatingSystemVersion","TrustType","IsCompliant","IntuneDeviceId","IntuneManaged","EnrollmentType","LastSyncDateTime","SerialNumber","Model","Manufacturer","UserPrincipalName","DefenderStatus"
+"dd0fc2da-ce79-4ea1-9437-4b637b8c89a9","DESKTOP-387UMFB","Windows","10.0.28000.1450","AzureAd","False","","False","Unknown","02/18/2026 18:30:40","","","","","Not Enrolled"
+"bf7eadf8-181b-8cc6-a111-b800bc806dd6","STUDIO-MKN","Windows","10.0.26200.8655",,"False","","False","Unknown","06/19/2026 11:04:39","","","","","Not Enrolled"
+"1d9845c1-add2-493e-acbd-876eea92e8ed","Studio-MKN","Windows","10.0.26200.8524","Workplace","False","","False","Unknown","06/09/2026 10:38:00","","","","","Not Enrolled"
+"76996609-eed3-44ff-b74f-6e1a6f4cb920","DESKTOP-6UB0RPT","Windows","10.0.28000.1643","AzureAd","False","","False","Unknown","02/18/2026 19:06:32","","","","","Not Enrolled"
+"1e9e3def-483d-0533-bda6-e63d3ec064c4","SRV-MB01-W2025","Windows Server","10.0.26100.32230",,"False","","False","Unknown","02/17/2026 21:08:10","","","","","Not Enrolled"
+"7bc40055-df1d-fedc-3041-ee87d89347c1","SRV-DC1-W2022","Windows Server","10.0.20348.4773",,"False","","False","Unknown","02/17/2026 15:34:12","","","","","Not Enrolled"

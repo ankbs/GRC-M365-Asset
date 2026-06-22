@@ -1,0 +1,9 @@
+{
+  "OrgDisplayName": "mycloudofficedev",
+  "TenantId": "33a9ca10-7495-4979-a097-cbdf74c7686f",
+  "VerifiedDomains": "mycloudofficedev.mail.onmicrosoft.com; mycloudofficedev.onmicrosoft.com",
+  "DefaultDomain": "mycloudofficedev.onmicrosoft.com",
+  "SecurityDefaultsEnabled": false,
+  "CreatedDateTime": "2020-08-03T14:54:13Z",
+  "OnPremisesSyncEnabled": true
+}
