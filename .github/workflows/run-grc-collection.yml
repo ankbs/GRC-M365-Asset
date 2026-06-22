@@ -94,6 +94,8 @@ jobs:
         Write-Host "Running Intune Managed Devices Collector..." -ForegroundColor Yellow
         cd ../../Intune-Devices/powershell
         ./Get-IntuneDevices.ps1 -TenantId $env:GRC_TENANT_ID -ClientId $env:GRC_CLIENT_ID -CertificateBase64 $env:GRC_CERTIFICATE
+        Write-Host "Running Intune Compliance & Settings Extra Collector..." -ForegroundColor Yellow
+        ./Get-IntuneComplianceAndSettings.ps1 -TenantId $env:GRC_TENANT_ID -ClientId $env:GRC_CLIENT_ID -CertificateBase64 $env:GRC_CERTIFICATE
 
         # 6. Defender Devices & Combined Device Full Details
         Write-Host "Running Defender Endpoint Collector..." -ForegroundColor Yellow
