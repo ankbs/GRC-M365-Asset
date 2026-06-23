@@ -1,0 +1,5105 @@
+[
+  {
+    "Id": "9aa094b9-f175-4597-8fb5-2be13942fc07",
+    "Name": "defa4170-0d19-0005-0000-bc88714345d2",
+    "DisplayName": "Personal",
+    "Comment": "",
+    "Tooltip": "Non-business data, for personal use only.",
+    "IsActive": false,
+    "Priority": 0,
+    "Color": "",
+    "IsDefault": false,
+    "IsEndpointProtectionEnabled": false,
+    "ParentGuid": "",
+    "BlockCopilot": false,
+    "ScopeFiles": true,
+    "ScopeEmails": true,
+    "ScopeMeetings": false,
+    "ScopeSites": false,
+    "ScopeSchematizedData": false,
+    "EncryptionEnabled": false,
+    "ProtectionType": "None",
+    "TemplateId": "",
+    "RightsDefinitions": [],
+    "LocaleSettings": {
+      "default": {
+        "displayName": "Personal",
+        "tooltip": "Non-business data, for personal use only."
+      }
+    },
+    "LabelActions": [],
+    "IsScopedToUser": false,
+    "PublishedPolicies": [],
+    "PublishedToUsers": null,
+    "PublishedToGroups": null
+  },
+  {
+    "Id": "ed4e900f-78e9-4aba-bbd3-e5663b454c12",
+    "Name": "defa4170-0d19-0005-0001-bc88714345d2",
+    "DisplayName": "Public",
+    "Comment": "",
+    "Tooltip": "Organization data that's specifically prepared and approved for public consumption.",
+    "IsActive": false,
+    "Priority": 1,
+    "Color": "",
+    "IsDefault": false,
+    "IsEndpointProtectionEnabled": false,
+    "ParentGuid": "",
+    "BlockCopilot": false,
+    "ScopeFiles": true,
+    "ScopeEmails": true,
+    "ScopeMeetings": false,
+    "ScopeSites": true,
+    "ScopeSchematizedData": false,
+    "EncryptionEnabled": false,
+    "ProtectionType": "None",
+    "TemplateId": "",
+    "RightsDefinitions": [],
+    "LocaleSettings": {
+      "default": {
+        "displayName": "Public",
+        "tooltip": "Organization data that's specifically prepared and approved for public consumption."
+      }
+    },
+    "LabelActions": [],
+    "IsScopedToUser": false,
+    "PublishedPolicies": [],
+    "PublishedToUsers": null,
+    "PublishedToGroups": null
+  },
+  {
+    "Id": "d170626d-f3b8-4309-9ae0-225a98dcffbc",
+    "Name": "defa4170-0d19-0005-0002-bc88714345d2",
+    "DisplayName": "General",
+    "Comment": "",
+    "Tooltip": "Organization data that is not intended for public consumption. However, this can be shared with external partners, as required. Examples include a company internal telephone directory, organizational charts, internal standards, and most internal communication.",
+    "IsActive": false,
+    "Priority": 2,
+    "Color": "",
+    "IsDefault": false,
+    "IsEndpointProtectionEnabled": false,
+    "ParentGuid": "",
+    "BlockCopilot": false,
+    "ScopeFiles": true,
+    "ScopeEmails": true,
+    "ScopeMeetings": false,
+    "ScopeSites": false,
+    "ScopeSchematizedData": false,
+    "EncryptionEnabled": false,
+    "ProtectionType": "None",
+    "TemplateId": "",
+    "RightsDefinitions": [],
+    "LocaleSettings": {
+      "default": {
+        "displayName": "General",
+        "tooltip": "Organization data that is not intended for public consumption. However, this can be shared with external partners, as required. Examples include a company internal telephone directory, organizational charts, internal standards, and most internal communication."
+      }
+    },
+    "LabelActions": [],
+    "IsScopedToUser": false,
+    "PublishedPolicies": [],
+    "PublishedToUsers": null,
+    "PublishedToGroups": null
+  },
+  {
+    "Id": "b5a6fa29-8aad-43ed-af4f-60b14c3b5ea1",
+    "Name": "defa4170-0d19-0005-0003-bc88714345d2",
+    "DisplayName": "Anyone (unrestricted)",
+    "Comment": "",
+    "Tooltip": "Organization data that isn't intended for public consumption but can be shared with external partners if appropriate. Examples include customer conversations that don't include sensitive info or released marketing materials.",
+    "IsActive": true,
+    "Priority": 3,
+    "Color": "",
+    "IsDefault": false,
+    "IsEndpointProtectionEnabled": false,
+    "ParentGuid": "",
+    "BlockCopilot": false,
+    "ScopeFiles": true,
+    "ScopeEmails": true,
+    "ScopeMeetings": false,
+    "ScopeSites": false,
+    "ScopeSchematizedData": false,
+    "EncryptionEnabled": false,
+    "ProtectionType": "None",
+    "TemplateId": "",
+    "RightsDefinitions": [],
+    "LocaleSettings": {
+      "default": {
+        "displayName": "Anyone (unrestricted)",
+        "tooltip": "Organization data that isn't intended for public consumption but can be shared with external partners if appropriate. Examples include customer conversations that don't include sensitive info or released marketing materials."
+      }
+    },
+    "LabelActions": [],
+    "IsScopedToUser": false,
+    "PublishedPolicies": [],
+    "PublishedToUsers": null,
+    "PublishedToGroups": null
+  },
+  {
+    "Id": "97bf84eb-231c-414a-9816-f06d04e69c75",
+    "Name": "defa4170-0d19-0005-0004-bc88714345d2",
+    "DisplayName": "All Employees (unrestricted)",
+    "Comment": "",
+    "Tooltip": "Organization data that isn't intended for public consumption. If you need to share this content with external partners, make sure it's appropriate with data owners and relabel content as General \\\\ Anyone (unrestricted). Examples include a company internal telephone directory, organizational charts, internal standards, and most internal communication.",
+    "IsActive": true,
+    "Priority": 4,
+    "Color": "",
+    "IsDefault": false,
+    "IsEndpointProtectionEnabled": false,
+    "ParentGuid": "",
+    "BlockCopilot": false,
+    "ScopeFiles": true,
+    "ScopeEmails": true,
+    "ScopeMeetings": false,
+    "ScopeSites": false,
+    "ScopeSchematizedData": false,
+    "EncryptionEnabled": false,
+    "ProtectionType": "None",
+    "TemplateId": "",
+    "RightsDefinitions": [],
+    "LocaleSettings": {
+      "default": {
+        "displayName": "All Employees (unrestricted)",
+        "tooltip": "Organization data that isn't intended for public consumption. If you need to share this content with external partners, make sure it's appropriate with data owners and relabel content as General \\\\ Anyone (unrestricted). Examples include a company internal telephone directory, organizational charts, internal standards, and most internal communication."
+      }
+    },
+    "LabelActions": [],
+    "IsScopedToUser": false,
+    "PublishedPolicies": [],
+    "PublishedToUsers": null,
+    "PublishedToGroups": null
+  },
+  {
+    "Id": "8821213c-4663-4189-b06d-fd3569affbcd",
+    "Name": "defa4170-0d19-0005-0005-bc88714345d2",
+    "DisplayName": "Confidential",
+    "Comment": "",
+    "Tooltip": "Sensitive business data that could cause damage to the business if shared with unauthorized people. Examples include contracts, security reports, forecast summaries, and sales account data.",
+    "IsActive": false,
+    "Priority": 5,
+    "Color": "",
+    "IsDefault": false,
+    "IsEndpointProtectionEnabled": false,
+    "ParentGuid": "",
+    "BlockCopilot": false,
+    "ScopeFiles": true,
+    "ScopeEmails": true,
+    "ScopeMeetings": false,
+    "ScopeSites": false,
+    "ScopeSchematizedData": false,
+    "EncryptionEnabled": false,
+    "ProtectionType": "None",
+    "TemplateId": "",
+    "RightsDefinitions": [],
+    "LocaleSettings": {
+      "default": {
+        "displayName": "Confidential",
+        "tooltip": "Sensitive business data that could cause damage to the business if shared with unauthorized people. Examples include contracts, security reports, forecast summaries, and sales account data."
+      }
+    },
+    "LabelActions": [],
+    "IsScopedToUser": false,
+    "PublishedPolicies": [],
+    "PublishedToUsers": null,
+    "PublishedToGroups": null
+  },
+  {
+    "Id": "7e3b72c4-92aa-4953-bfef-901d673047ae",
+    "Name": "defa4170-0d19-0005-0006-bc88714345d2",
+    "DisplayName": "Anyone (unrestricted)",
+    "Comment": "",
+    "Tooltip": "Confidential data that doesn't need to be encrypted. Use this option with care and with appropriate business justification. Make sure to protect the data through other means like DLP.",
+    "IsActive": true,
+    "Priority": 6,
+    "Color": "",
+    "IsDefault": false,
+    "IsEndpointProtectionEnabled": false,
+    "ParentGuid": "",
+    "BlockCopilot": false,
+    "ScopeFiles": true,
+    "ScopeEmails": true,
+    "ScopeMeetings": false,
+    "ScopeSites": false,
+    "ScopeSchematizedData": false,
+    "EncryptionEnabled": false,
+    "ProtectionType": "None",
+    "TemplateId": "",
+    "RightsDefinitions": [],
+    "LocaleSettings": {
+      "default": {
+        "displayName": "Anyone (unrestricted)",
+        "tooltip": "Confidential data that doesn't need to be encrypted. Use this option with care and with appropriate business justification. Make sure to protect the data through other means like DLP."
+      }
+    },
+    "LabelActions": [
+      {
+        "Type": "applycontentmarking",
+        "SubType": "footer",
+        "Settings": {
+          "text": "Classified as Confidential",
+          "fontsize": "8",
+          "fontcolor": "#000000",
+          "alignment": "Left",
+          "margin": "5",
+          "placement": "Footer"
+        }
+      }
+    ],
+    "IsScopedToUser": false,
+    "PublishedPolicies": [],
+    "PublishedToUsers": null,
+    "PublishedToGroups": null
+  },
+  {
+    "Id": "6a8f2447-ca94-4ba6-bfef-689e17dd9c10",
+    "Name": "defa4170-0d19-0005-0007-bc88714345d2",
+    "DisplayName": "All Employees",
+    "Comment": "",
+    "Tooltip": "Confidential data that requires protection, which allows all employees full permission. Data owners can track and revoke content.",
+    "IsActive": true,
+    "Priority": 7,
+    "Color": "",
+    "IsDefault": false,
+    "IsEndpointProtectionEnabled": false,
+    "ParentGuid": "",
+    "BlockCopilot": false,
+    "ScopeFiles": true,
+    "ScopeEmails": true,
+    "ScopeMeetings": false,
+    "ScopeSites": false,
+    "ScopeSchematizedData": false,
+    "EncryptionEnabled": true,
+    "ProtectionType": "Template",
+    "TemplateId": "0199194d-aaa8-45ba-8d88-dcc4f5c6ca96",
+    "RightsDefinitions": [],
+    "LocaleSettings": {
+      "default": {
+        "displayName": "All Employees",
+        "tooltip": "Confidential data that requires protection, which allows all employees full permission. Data owners can track and revoke content."
+      }
+    },
+    "LabelActions": [
+      {
+        "Type": "encrypt",
+        "SubType": null,
+        "Settings": {
+          "protectiontype": "template",
+          "linkedtemplateid": "0199194d-aaa8-45ba-8d88-dcc4f5c6ca96",
+          "disabled": "false",
+          "templateid": "0199194d-aaa8-45ba-8d88-dcc4f5c6ca96",
+          "templatearchived": "True"
+        }
+      },
+      {
+        "Type": "applycontentmarking",
+        "SubType": "footer",
+        "Settings": {
+          "text": "Classified as Confidential",
+          "fontsize": "8",
+          "fontcolor": "#000000",
+          "alignment": "Left",
+          "margin": "5",
+          "placement": "Footer"
+        }
+      }
+    ],
+    "IsScopedToUser": false,
+    "PublishedPolicies": [],
+    "PublishedToUsers": null,
+    "PublishedToGroups": null
+  },
+  {
+    "Id": "e69d3e57-030f-4608-8346-e33e93387e74",
+    "Name": "defa4170-0d19-0005-0008-bc88714345d2",
+    "DisplayName": "Trusted People",
+    "Comment": "",
+    "Tooltip": "Confidential data for internal/external sharing that can be reshared by trusted recipients.",
+    "IsActive": true,
+    "Priority": 8,
+    "Color": "",
+    "IsDefault": false,
+    "IsEndpointProtectionEnabled": false,
+    "ParentGuid": "",
+    "BlockCopilot": false,
+    "ScopeFiles": true,
+    "ScopeEmails": true,
+    "ScopeMeetings": false,
+    "ScopeSites": false,
+    "ScopeSchematizedData": false,
+    "EncryptionEnabled": true,
+    "ProtectionType": "UserDefined",
+    "TemplateId": "",
+    "RightsDefinitions": [],
+    "LocaleSettings": {
+      "default": {
+        "displayName": "Trusted People",
+        "tooltip": "Confidential data for internal/external sharing that can be reshared by trusted recipients."
+      }
+    },
+    "LabelActions": [
+      {
+        "Type": "encrypt",
+        "SubType": null,
+        "Settings": {
+          "donotforward": "false",
+          "protectiontype": "userdefined",
+          "encryptonly": "true",
+          "disabled": "false",
+          "promptuser": "true"
+        }
+      },
+      {
+        "Type": "applycontentmarking",
+        "SubType": "footer",
+        "Settings": {
+          "text": "Classified as Confidential",
+          "fontsize": "10",
+          "fontcolor": "#000000",
+          "alignment": "Left",
+          "margin": "5",
+          "placement": "Footer"
+        }
+      }
+    ],
+    "IsScopedToUser": false,
+    "PublishedPolicies": [],
+    "PublishedToUsers": null,
+    "PublishedToGroups": null
+  },
+  {
+    "Id": "dc4a87cf-8e0a-465c-9bc4-ee73f5c3b617",
+    "Name": "Private Informationen - 0001",
+    "DisplayName": "Private Informationen - 0001",
+    "Comment": "",
+    "Tooltip": "Private Informationen - Global Tech Holding GmbH",
+    "IsActive": true,
+    "Priority": 9,
+    "Color": "",
+    "IsDefault": false,
+    "IsEndpointProtectionEnabled": false,
+    "ParentGuid": "",
+    "BlockCopilot": false,
+    "ScopeFiles": true,
+    "ScopeEmails": true,
+    "ScopeMeetings": false,
+    "ScopeSites": false,
+    "ScopeSchematizedData": false,
+    "EncryptionEnabled": false,
+    "ProtectionType": "None",
+    "TemplateId": "",
+    "RightsDefinitions": [],
+    "LocaleSettings": {
+      "default": {
+        "displayName": "Private Informationen - 0001",
+        "tooltip": "Private Informationen - Global Tech Holding GmbH"
+      }
+    },
+    "LabelActions": [],
+    "IsScopedToUser": false,
+    "PublishedPolicies": [
+      "Standard Label Policy"
+    ],
+    "PublishedToUsers": null,
+    "PublishedToGroups": {
+      "DisplayName": "All",
+      "Name": "All",
+      "ImmutableIdentity": "All",
+      "Type": {
+        "value": 1,
+        "Value": "Tenant"
+      },
+      "Status": {
+        "value": 2,
+        "Value": "Success"
+      },
+      "Workload": {
+        "value": 512,
+        "Value": "ModernGroup"
+      },
+      "SourceType": null,
+      "SourceTypeDisplayName": null,
+      "SourceProvider": {
+        "value": 0,
+        "Value": "Unknown"
+      },
+      "SourceEntryType": {
+        "value": 0,
+        "Value": "Unknown"
+      },
+      "SchemaVersion": 2,
+      "Resources": null,
+      "ScopingGroup": {
+        "value": 0,
+        "Value": "Unknown"
+      },
+      "GroupSet": "Default"
+    }
+  },
+  {
+    "Id": "0816b12b-e21e-4b18-a915-d08aefe49286",
+    "Name": "Geschäftliche Informationen - 0001",
+    "DisplayName": "Geschäftliche Informationen - 0001",
+    "Comment": "",
+    "Tooltip": "Geschäftliche Informationen - Global Tech Holding GmbH",
+    "IsActive": true,
+    "Priority": 10,
+    "Color": "",
+    "IsDefault": false,
+    "IsEndpointProtectionEnabled": false,
+    "ParentGuid": "",
+    "BlockCopilot": false,
+    "ScopeFiles": true,
+    "ScopeEmails": true,
+    "ScopeMeetings": false,
+    "ScopeSites": false,
+    "ScopeSchematizedData": false,
+    "EncryptionEnabled": false,
+    "ProtectionType": "None",
+    "TemplateId": "",
+    "RightsDefinitions": [],
+    "LocaleSettings": {
+      "default": {
+        "displayName": "Geschäftliche Informationen - 0001",
+        "tooltip": "Geschäftliche Informationen - Global Tech Holding GmbH"
+      }
+    },
+    "LabelActions": [],
+    "IsScopedToUser": false,
+    "PublishedPolicies": [
+      "Standard Label Policy"
+    ],
+    "PublishedToUsers": null,
+    "PublishedToGroups": {
+      "DisplayName": "All",
+      "Name": "All",
+      "ImmutableIdentity": "All",
+      "Type": {
+        "value": 1,
+        "Value": "Tenant"
+      },
+      "Status": {
+        "value": 2,
+        "Value": "Success"
+      },
+      "Workload": {
+        "value": 512,
+        "Value": "ModernGroup"
+      },
+      "SourceType": null,
+      "SourceTypeDisplayName": null,
+      "SourceProvider": {
+        "value": 0,
+        "Value": "Unknown"
+      },
+      "SourceEntryType": {
+        "value": 0,
+        "Value": "Unknown"
+      },
+      "SchemaVersion": 2,
+      "Resources": null,
+      "ScopingGroup": {
+        "value": 0,
+        "Value": "Unknown"
+      },
+      "GroupSet": "Default"
+    }
+  },
+  {
+    "Id": "508c566c-4c94-4ba5-803a-a55cbdbf9619",
+    "Name": "Nur für internen Dienstgebrauch - 0001",
+    "DisplayName": "Nur für internen Dienstgebrauch - 0001",
+    "Comment": "",
+    "Tooltip": "Nur für internen Dienstgebrauch - Global Tech Holding GmbH",
+    "IsActive": true,
+    "Priority": 11,
+    "Color": "",
+    "IsDefault": false,
+    "IsEndpointProtectionEnabled": false,
+    "ParentGuid": "",
+    "BlockCopilot": false,
+    "ScopeFiles": true,
+    "ScopeEmails": true,
+    "ScopeMeetings": false,
+    "ScopeSites": false,
+    "ScopeSchematizedData": false,
+    "EncryptionEnabled": false,
+    "ProtectionType": "None",
+    "TemplateId": "",
+    "RightsDefinitions": [],
+    "LocaleSettings": {
+      "default": {
+        "displayName": "Nur für internen Dienstgebrauch - 0001",
+        "tooltip": "Nur für internen Dienstgebrauch - Global Tech Holding GmbH"
+      }
+    },
+    "LabelActions": [],
+    "IsScopedToUser": false,
+    "PublishedPolicies": [
+      "Standard Label Policy"
+    ],
+    "PublishedToUsers": null,
+    "PublishedToGroups": {
+      "DisplayName": "All",
+      "Name": "All",
+      "ImmutableIdentity": "All",
+      "Type": {
+        "value": 1,
+        "Value": "Tenant"
+      },
+      "Status": {
+        "value": 2,
+        "Value": "Success"
+      },
+      "Workload": {
+        "value": 512,
+        "Value": "ModernGroup"
+      },
+      "SourceType": null,
+      "SourceTypeDisplayName": null,
+      "SourceProvider": {
+        "value": 0,
+        "Value": "Unknown"
+      },
+      "SourceEntryType": {
+        "value": 0,
+        "Value": "Unknown"
+      },
+      "SchemaVersion": 2,
+      "Resources": null,
+      "ScopingGroup": {
+        "value": 0,
+        "Value": "Unknown"
+      },
+      "GroupSet": "Default"
+    }
+  },
+  {
+    "Id": "91c46027-43ca-42a7-a9cd-66ffcdfa261e",
+    "Name": "Nur für internen Dienstgebrauch (unverschlüsselt) - 0001",
+    "DisplayName": "Nur für internen Dienstgebrauch (unverschlüsselt) - 0001",
+    "Comment": "",
+    "Tooltip": "Nur für internen Dienstgebrauch (unverschlüsselt) - Global Tech Holding GmbH",
+    "IsActive": true,
+    "Priority": 12,
+    "Color": "",
+    "IsDefault": false,
+    "IsEndpointProtectionEnabled": false,
+    "ParentGuid": "",
+    "BlockCopilot": false,
+    "ScopeFiles": true,
+    "ScopeEmails": true,
+    "ScopeMeetings": false,
+    "ScopeSites": false,
+    "ScopeSchematizedData": false,
+    "EncryptionEnabled": false,
+    "ProtectionType": "None",
+    "TemplateId": "",
+    "RightsDefinitions": [],
+    "LocaleSettings": {
+      "default": {
+        "displayName": "Nur für internen Dienstgebrauch (unverschlüsselt) - 0001",
+        "tooltip": "Nur für internen Dienstgebrauch (unverschlüsselt) - Global Tech Holding GmbH"
+      }
+    },
+    "LabelActions": [],
+    "IsScopedToUser": false,
+    "PublishedPolicies": [
+      "Standard Label Policy"
+    ],
+    "PublishedToUsers": null,
+    "PublishedToGroups": {
+      "DisplayName": "All",
+      "Name": "All",
+      "ImmutableIdentity": "All",
+      "Type": {
+        "value": 1,
+        "Value": "Tenant"
+      },
+      "Status": {
+        "value": 2,
+        "Value": "Success"
+      },
+      "Workload": {
+        "value": 512,
+        "Value": "ModernGroup"
+      },
+      "SourceType": null,
+      "SourceTypeDisplayName": null,
+      "SourceProvider": {
+        "value": 0,
+        "Value": "Unknown"
+      },
+      "SourceEntryType": {
+        "value": 0,
+        "Value": "Unknown"
+      },
+      "SchemaVersion": 2,
+      "Resources": null,
+      "ScopingGroup": {
+        "value": 0,
+        "Value": "Unknown"
+      },
+      "GroupSet": "Default"
+    }
+  },
+  {
+    "Id": "1ddde4ef-b23c-4baf-9ab9-b95933129517",
+    "Name": "Nur für internen Dienstgebrauch (verschlüsselt) - 0001",
+    "DisplayName": "Nur für internen Dienstgebrauch (verschlüsselt) - 0001",
+    "Comment": "",
+    "Tooltip": "Nur für internen Dienstgebrauch (verschlüsselt) - Global Tech Holding GmbH",
+    "IsActive": true,
+    "Priority": 13,
+    "Color": "",
+    "IsDefault": false,
+    "IsEndpointProtectionEnabled": false,
+    "ParentGuid": "",
+    "BlockCopilot": false,
+    "ScopeFiles": true,
+    "ScopeEmails": true,
+    "ScopeMeetings": false,
+    "ScopeSites": false,
+    "ScopeSchematizedData": false,
+    "EncryptionEnabled": true,
+    "ProtectionType": "Template",
+    "TemplateId": "63473024-6d62-406a-90c6-edebd10c5906",
+    "RightsDefinitions": [],
+    "LocaleSettings": {
+      "default": {
+        "displayName": "Nur für internen Dienstgebrauch (verschlüsselt) - 0001",
+        "tooltip": "Nur für internen Dienstgebrauch (verschlüsselt) - Global Tech Holding GmbH"
+      }
+    },
+    "LabelActions": [
+      {
+        "Type": "encrypt",
+        "SubType": null,
+        "Settings": {
+          "protectiontype": "template",
+          "linkedtemplateid": "63473024-6d62-406a-90c6-edebd10c5906",
+          "disabled": "false",
+          "templateid": "63473024-6d62-406a-90c6-edebd10c5906",
+          "templatearchived": "False"
+        }
+      }
+    ],
+    "IsScopedToUser": false,
+    "PublishedPolicies": [
+      "Standard Label Policy"
+    ],
+    "PublishedToUsers": null,
+    "PublishedToGroups": {
+      "DisplayName": "All",
+      "Name": "All",
+      "ImmutableIdentity": "All",
+      "Type": {
+        "value": 1,
+        "Value": "Tenant"
+      },
+      "Status": {
+        "value": 2,
+        "Value": "Success"
+      },
+      "Workload": {
+        "value": 512,
+        "Value": "ModernGroup"
+      },
+      "SourceType": null,
+      "SourceTypeDisplayName": null,
+      "SourceProvider": {
+        "value": 0,
+        "Value": "Unknown"
+      },
+      "SourceEntryType": {
+        "value": 0,
+        "Value": "Unknown"
+      },
+      "SchemaVersion": 2,
+      "Resources": null,
+      "ScopingGroup": {
+        "value": 0,
+        "Value": "Unknown"
+      },
+      "GroupSet": "Default"
+    }
+  },
+  {
+    "Id": "a4f26d8c-40dd-4f32-80ce-feee2845f98a",
+    "Name": "Vertraulich - 0001",
+    "DisplayName": "Vertraulich - 0001",
+    "Comment": "",
+    "Tooltip": "Vertraulich - Global Tech Holding GmbH",
+    "IsActive": true,
+    "Priority": 14,
+    "Color": "",
+    "IsDefault": false,
+    "IsEndpointProtectionEnabled": false,
+    "ParentGuid": "",
+    "BlockCopilot": false,
+    "ScopeFiles": true,
+    "ScopeEmails": true,
+    "ScopeMeetings": false,
+    "ScopeSites": false,
+    "ScopeSchematizedData": false,
+    "EncryptionEnabled": false,
+    "ProtectionType": "None",
+    "TemplateId": "",
+    "RightsDefinitions": [],
+    "LocaleSettings": {
+      "default": {
+        "displayName": "Vertraulich - 0001",
+        "tooltip": "Vertraulich - Global Tech Holding GmbH"
+      }
+    },
+    "LabelActions": [],
+    "IsScopedToUser": false,
+    "PublishedPolicies": [
+      "Standard Label Policy"
+    ],
+    "PublishedToUsers": null,
+    "PublishedToGroups": {
+      "DisplayName": "All",
+      "Name": "All",
+      "ImmutableIdentity": "All",
+      "Type": {
+        "value": 1,
+        "Value": "Tenant"
+      },
+      "Status": {
+        "value": 2,
+        "Value": "Success"
+      },
+      "Workload": {
+        "value": 512,
+        "Value": "ModernGroup"
+      },
+      "SourceType": null,
+      "SourceTypeDisplayName": null,
+      "SourceProvider": {
+        "value": 0,
+        "Value": "Unknown"
+      },
+      "SourceEntryType": {
+        "value": 0,
+        "Value": "Unknown"
+      },
+      "SchemaVersion": 2,
+      "Resources": null,
+      "ScopingGroup": {
+        "value": 0,
+        "Value": "Unknown"
+      },
+      "GroupSet": "Default"
+    }
+  },
+  {
+    "Id": "25dad890-309f-4dd6-b491-156c2304b21b",
+    "Name": "Vertraulich (unverschlüsselt) - 0001",
+    "DisplayName": "Vertraulich (unverschlüsselt) - 0001",
+    "Comment": "",
+    "Tooltip": "Vertraulich (unverschlüsselt) - Global Tech Holding GmbH",
+    "IsActive": true,
+    "Priority": 15,
+    "Color": "",
+    "IsDefault": false,
+    "IsEndpointProtectionEnabled": false,
+    "ParentGuid": "",
+    "BlockCopilot": false,
+    "ScopeFiles": true,
+    "ScopeEmails": true,
+    "ScopeMeetings": false,
+    "ScopeSites": false,
+    "ScopeSchematizedData": false,
+    "EncryptionEnabled": false,
+    "ProtectionType": "None",
+    "TemplateId": "",
+    "RightsDefinitions": [],
+    "LocaleSettings": {
+      "default": {
+        "displayName": "Vertraulich (unverschlüsselt) - 0001",
+        "tooltip": "Vertraulich (unverschlüsselt) - Global Tech Holding GmbH"
+      }
+    },
+    "LabelActions": [],
+    "IsScopedToUser": false,
+    "PublishedPolicies": [
+      "Standard Label Policy"
+    ],
+    "PublishedToUsers": null,
+    "PublishedToGroups": {
+      "DisplayName": "All",
+      "Name": "All",
+      "ImmutableIdentity": "All",
+      "Type": {
+        "value": 1,
+        "Value": "Tenant"
+      },
+      "Status": {
+        "value": 2,
+        "Value": "Success"
+      },
+      "Workload": {
+        "value": 512,
+        "Value": "ModernGroup"
+      },
+      "SourceType": null,
+      "SourceTypeDisplayName": null,
+      "SourceProvider": {
+        "value": 0,
+        "Value": "Unknown"
+      },
+      "SourceEntryType": {
+        "value": 0,
+        "Value": "Unknown"
+      },
+      "SchemaVersion": 2,
+      "Resources": null,
+      "ScopingGroup": {
+        "value": 0,
+        "Value": "Unknown"
+      },
+      "GroupSet": "Default"
+    }
+  },
+  {
+    "Id": "87e4a141-4817-4058-a0b0-075ca75a46f3",
+    "Name": "Vertraulich (verschlüsselt) - 0001",
+    "DisplayName": "Vertraulich (verschlüsselt) - 0001",
+    "Comment": "",
+    "Tooltip": "Vertraulich (verschlüsselt) - Global Tech Holding GmbH",
+    "IsActive": true,
+    "Priority": 16,
+    "Color": "",
+    "IsDefault": false,
+    "IsEndpointProtectionEnabled": false,
+    "ParentGuid": "",
+    "BlockCopilot": false,
+    "ScopeFiles": true,
+    "ScopeEmails": true,
+    "ScopeMeetings": false,
+    "ScopeSites": false,
+    "ScopeSchematizedData": false,
+    "EncryptionEnabled": false,
+    "ProtectionType": "None",
+    "TemplateId": "",
+    "RightsDefinitions": [],
+    "LocaleSettings": {
+      "default": {
+        "displayName": "Vertraulich (verschlüsselt) - 0001",
+        "tooltip": "Vertraulich (verschlüsselt) - Global Tech Holding GmbH"
+      }
+    },
+    "LabelActions": [],
+    "IsScopedToUser": false,
+    "PublishedPolicies": [
+      "Standard Label Policy"
+    ],
+    "PublishedToUsers": null,
+    "PublishedToGroups": {
+      "DisplayName": "All",
+      "Name": "All",
+      "ImmutableIdentity": "All",
+      "Type": {
+        "value": 1,
+        "Value": "Tenant"
+      },
+      "Status": {
+        "value": 2,
+        "Value": "Success"
+      },
+      "Workload": {
+        "value": 512,
+        "Value": "ModernGroup"
+      },
+      "SourceType": null,
+      "SourceTypeDisplayName": null,
+      "SourceProvider": {
+        "value": 0,
+        "Value": "Unknown"
+      },
+      "SourceEntryType": {
+        "value": 0,
+        "Value": "Unknown"
+      },
+      "SchemaVersion": 2,
+      "Resources": null,
+      "ScopingGroup": {
+        "value": 0,
+        "Value": "Unknown"
+      },
+      "GroupSet": "Default"
+    }
+  },
+  {
+    "Id": "680bab7a-daf7-474c-a519-cfedc65af35b",
+    "Name": "Streng Vertraulich - 0001",
+    "DisplayName": "Streng Vertraulich - 0001",
+    "Comment": "",
+    "Tooltip": "Streng Vertraulich - Global Tech Holding GmbH",
+    "IsActive": true,
+    "Priority": 17,
+    "Color": "",
+    "IsDefault": false,
+    "IsEndpointProtectionEnabled": false,
+    "ParentGuid": "",
+    "BlockCopilot": false,
+    "ScopeFiles": true,
+    "ScopeEmails": true,
+    "ScopeMeetings": false,
+    "ScopeSites": false,
+    "ScopeSchematizedData": false,
+    "EncryptionEnabled": false,
+    "ProtectionType": "None",
+    "TemplateId": "",
+    "RightsDefinitions": [],
+    "LocaleSettings": {
+      "default": {
+        "displayName": "Streng Vertraulich - 0001",
+        "tooltip": "Streng Vertraulich - Global Tech Holding GmbH"
+      }
+    },
+    "LabelActions": [],
+    "IsScopedToUser": false,
+    "PublishedPolicies": [
+      "Standard Label Policy"
+    ],
+    "PublishedToUsers": null,
+    "PublishedToGroups": {
+      "DisplayName": "All",
+      "Name": "All",
+      "ImmutableIdentity": "All",
+      "Type": {
+        "value": 1,
+        "Value": "Tenant"
+      },
+      "Status": {
+        "value": 2,
+        "Value": "Success"
+      },
+      "Workload": {
+        "value": 512,
+        "Value": "ModernGroup"
+      },
+      "SourceType": null,
+      "SourceTypeDisplayName": null,
+      "SourceProvider": {
+        "value": 0,
+        "Value": "Unknown"
+      },
+      "SourceEntryType": {
+        "value": 0,
+        "Value": "Unknown"
+      },
+      "SchemaVersion": 2,
+      "Resources": null,
+      "ScopingGroup": {
+        "value": 0,
+        "Value": "Unknown"
+      },
+      "GroupSet": "Default"
+    }
+  },
+  {
+    "Id": "d1707df3-8440-4cb8-82e3-904164091d21",
+    "Name": "Private Informationen - 0002",
+    "DisplayName": "Private Informationen - 0002",
+    "Comment": "",
+    "Tooltip": "Private Informationen - Skyline Manufacturing South",
+    "IsActive": true,
+    "Priority": 18,
+    "Color": "",
+    "IsDefault": false,
+    "IsEndpointProtectionEnabled": false,
+    "ParentGuid": "",
+    "BlockCopilot": false,
+    "ScopeFiles": true,
+    "ScopeEmails": true,
+    "ScopeMeetings": false,
+    "ScopeSites": true,
+    "ScopeSchematizedData": false,
+    "EncryptionEnabled": false,
+    "ProtectionType": "None",
+    "TemplateId": "",
+    "RightsDefinitions": [],
+    "LocaleSettings": {
+      "default": {
+        "displayName": "Private Informationen - 0002",
+        "tooltip": "Private Informationen - Skyline Manufacturing South"
+      }
+    },
+    "LabelActions": [],
+    "IsScopedToUser": false,
+    "PublishedPolicies": [
+      "Abteilung 0002 - Label Policy"
+    ],
+    "PublishedToUsers": null,
+    "PublishedToGroups": {
+      "DisplayName": "All",
+      "Name": "All",
+      "ImmutableIdentity": "All",
+      "Type": {
+        "value": 1,
+        "Value": "Tenant"
+      },
+      "Status": {
+        "value": 2,
+        "Value": "Success"
+      },
+      "Workload": {
+        "value": 512,
+        "Value": "ModernGroup"
+      },
+      "SourceType": null,
+      "SourceTypeDisplayName": null,
+      "SourceProvider": {
+        "value": 0,
+        "Value": "Unknown"
+      },
+      "SourceEntryType": {
+        "value": 0,
+        "Value": "Unknown"
+      },
+      "SchemaVersion": 2,
+      "Resources": null,
+      "ScopingGroup": {
+        "value": 0,
+        "Value": "Unknown"
+      },
+      "GroupSet": "Default"
+    }
+  },
+  {
+    "Id": "39652dfd-040b-4043-b528-3f25ab791c46",
+    "Name": "Geschäftliche Informationen - 0002",
+    "DisplayName": "Geschäftliche Informationen - 0002",
+    "Comment": "",
+    "Tooltip": "Geschäftliche Informationen - Skyline Manufacturing South",
+    "IsActive": true,
+    "Priority": 19,
+    "Color": "",
+    "IsDefault": false,
+    "IsEndpointProtectionEnabled": false,
+    "ParentGuid": "",
+    "BlockCopilot": false,
+    "ScopeFiles": true,
+    "ScopeEmails": true,
+    "ScopeMeetings": false,
+    "ScopeSites": true,
+    "ScopeSchematizedData": false,
+    "EncryptionEnabled": false,
+    "ProtectionType": "None",
+    "TemplateId": "",
+    "RightsDefinitions": [],
+    "LocaleSettings": {
+      "default": {
+        "displayName": "Geschäftliche Informationen - 0002",
+        "tooltip": "Geschäftliche Informationen - Skyline Manufacturing South"
+      }
+    },
+    "LabelActions": [],
+    "IsScopedToUser": false,
+    "PublishedPolicies": [
+      "Abteilung 0002 - Label Policy"
+    ],
+    "PublishedToUsers": null,
+    "PublishedToGroups": {
+      "DisplayName": "All",
+      "Name": "All",
+      "ImmutableIdentity": "All",
+      "Type": {
+        "value": 1,
+        "Value": "Tenant"
+      },
+      "Status": {
+        "value": 2,
+        "Value": "Success"
+      },
+      "Workload": {
+        "value": 512,
+        "Value": "ModernGroup"
+      },
+      "SourceType": null,
+      "SourceTypeDisplayName": null,
+      "SourceProvider": {
+        "value": 0,
+        "Value": "Unknown"
+      },
+      "SourceEntryType": {
+        "value": 0,
+        "Value": "Unknown"
+      },
+      "SchemaVersion": 2,
+      "Resources": null,
+      "ScopingGroup": {
+        "value": 0,
+        "Value": "Unknown"
+      },
+      "GroupSet": "Default"
+    }
+  },
+  {
+    "Id": "d24a65c6-6510-4146-9fa0-90658b64cf34",
+    "Name": "Nur für internen Dienstgebrauch - 0002",
+    "DisplayName": "Nur für internen Dienstgebrauch - 0002",
+    "Comment": "",
+    "Tooltip": "Nur für internen Dienstgebrauch - Skyline Manufacturing South",
+    "IsActive": true,
+    "Priority": 20,
+    "Color": "",
+    "IsDefault": false,
+    "IsEndpointProtectionEnabled": true,
+    "ParentGuid": "",
+    "BlockCopilot": false,
+    "ScopeFiles": true,
+    "ScopeEmails": true,
+    "ScopeMeetings": false,
+    "ScopeSites": true,
+    "ScopeSchematizedData": false,
+    "EncryptionEnabled": false,
+    "ProtectionType": "None",
+    "TemplateId": "",
+    "RightsDefinitions": [],
+    "LocaleSettings": {
+      "default": {
+        "displayName": "Nur für internen Dienstgebrauch - 0002",
+        "tooltip": "Nur für internen Dienstgebrauch - Skyline Manufacturing South"
+      }
+    },
+    "LabelActions": [
+      {
+        "Type": "applycontentmarking",
+        "SubType": "header",
+        "Settings": {
+          "margin": "5",
+          "fontsize": "8",
+          "text": "Nur für internen Dienstgebrauch - Skyline Manufacturing South - internal use only",
+          "disabled": "false",
+          "alignment": "Center",
+          "fontcolor": "#000000",
+          "placement": "Header"
+        }
+      }
+    ],
+    "IsScopedToUser": false,
+    "PublishedPolicies": [
+      "Abteilung 0002 - Label Policy"
+    ],
+    "PublishedToUsers": null,
+    "PublishedToGroups": {
+      "DisplayName": "All",
+      "Name": "All",
+      "ImmutableIdentity": "All",
+      "Type": {
+        "value": 1,
+        "Value": "Tenant"
+      },
+      "Status": {
+        "value": 2,
+        "Value": "Success"
+      },
+      "Workload": {
+        "value": 512,
+        "Value": "ModernGroup"
+      },
+      "SourceType": null,
+      "SourceTypeDisplayName": null,
+      "SourceProvider": {
+        "value": 0,
+        "Value": "Unknown"
+      },
+      "SourceEntryType": {
+        "value": 0,
+        "Value": "Unknown"
+      },
+      "SchemaVersion": 2,
+      "Resources": null,
+      "ScopingGroup": {
+        "value": 0,
+        "Value": "Unknown"
+      },
+      "GroupSet": "Default"
+    }
+  },
+  {
+    "Id": "136535e8-6305-4f7f-942f-39ac735ae9a2",
+    "Name": "Nur für internen Dienstgebrauch (unverschlüsselt) - 0002",
+    "DisplayName": "Nur für internen Dienstgebrauch (unverschlüsselt) - 0002",
+    "Comment": "",
+    "Tooltip": "Nur für internen Dienstgebrauch (unverschlüsselt) - Skyline Manufacturing South",
+    "IsActive": true,
+    "Priority": 21,
+    "Color": "",
+    "IsDefault": false,
+    "IsEndpointProtectionEnabled": false,
+    "ParentGuid": "",
+    "BlockCopilot": false,
+    "ScopeFiles": true,
+    "ScopeEmails": true,
+    "ScopeMeetings": false,
+    "ScopeSites": true,
+    "ScopeSchematizedData": false,
+    "EncryptionEnabled": true,
+    "ProtectionType": "Template",
+    "TemplateId": "5df291f6-ee1e-4c9c-96d3-6df20af05f8d",
+    "RightsDefinitions": [],
+    "LocaleSettings": {
+      "default": {
+        "displayName": "Nur für internen Dienstgebrauch (unverschlüsselt) - 0002",
+        "tooltip": "Nur für internen Dienstgebrauch (unverschlüsselt) - Skyline Manufacturing South"
+      }
+    },
+    "LabelActions": [
+      {
+        "Type": "applycontentmarking",
+        "SubType": "header",
+        "Settings": {
+          "margin": "5",
+          "fontsize": "8",
+          "text": "Nur für internen Dienstgebrauch - Skyline Manufacturing South - internal use only",
+          "disabled": "false",
+          "alignment": "Center",
+          "fontcolor": "#000000",
+          "placement": "Header"
+        }
+      },
+      {
+        "Type": "encrypt",
+        "SubType": null,
+        "Settings": {
+          "protectiontype": "template",
+          "linkedtemplateid": "5df291f6-ee1e-4c9c-96d3-6df20af05f8d",
+          "disabled": "false",
+          "templateid": "5df291f6-ee1e-4c9c-96d3-6df20af05f8d",
+          "templatearchived": "False"
+        }
+      }
+    ],
+    "IsScopedToUser": false,
+    "PublishedPolicies": [
+      "Abteilung 0002 - Label Policy"
+    ],
+    "PublishedToUsers": null,
+    "PublishedToGroups": {
+      "DisplayName": "All",
+      "Name": "All",
+      "ImmutableIdentity": "All",
+      "Type": {
+        "value": 1,
+        "Value": "Tenant"
+      },
+      "Status": {
+        "value": 2,
+        "Value": "Success"
+      },
+      "Workload": {
+        "value": 512,
+        "Value": "ModernGroup"
+      },
+      "SourceType": null,
+      "SourceTypeDisplayName": null,
+      "SourceProvider": {
+        "value": 0,
+        "Value": "Unknown"
+      },
+      "SourceEntryType": {
+        "value": 0,
+        "Value": "Unknown"
+      },
+      "SchemaVersion": 2,
+      "Resources": null,
+      "ScopingGroup": {
+        "value": 0,
+        "Value": "Unknown"
+      },
+      "GroupSet": "Default"
+    }
+  },
+  {
+    "Id": "75d7bf4f-a589-4d86-88bd-c37878ebd554",
+    "Name": "Nur für internen Dienstgebrauch (verschlüsselt) - 0002",
+    "DisplayName": "Nur für internen Dienstgebrauch (verschlüsselt) - 0002",
+    "Comment": "",
+    "Tooltip": "Nur für internen Dienstgebrauch (verschlüsselt) - Skyline Manufacturing South",
+    "IsActive": true,
+    "Priority": 22,
+    "Color": "",
+    "IsDefault": false,
+    "IsEndpointProtectionEnabled": false,
+    "ParentGuid": "",
+    "BlockCopilot": false,
+    "ScopeFiles": true,
+    "ScopeEmails": true,
+    "ScopeMeetings": false,
+    "ScopeSites": true,
+    "ScopeSchematizedData": false,
+    "EncryptionEnabled": true,
+    "ProtectionType": "Template",
+    "TemplateId": "cd35cc70-be41-40d9-977e-584295ad87de",
+    "RightsDefinitions": [],
+    "LocaleSettings": {
+      "default": {
+        "displayName": "Nur für internen Dienstgebrauch (verschlüsselt) - 0002",
+        "tooltip": "Nur für internen Dienstgebrauch (verschlüsselt) - Skyline Manufacturing South"
+      }
+    },
+    "LabelActions": [
+      {
+        "Type": "applycontentmarking",
+        "SubType": "header",
+        "Settings": {
+          "margin": "5",
+          "fontsize": "8",
+          "text": "Nur für internen Dienstgebrauch - Skyline Manufacturing South - internal use only",
+          "disabled": "false",
+          "alignment": "Center",
+          "fontcolor": "#000000",
+          "placement": "Header"
+        }
+      },
+      {
+        "Type": "encrypt",
+        "SubType": null,
+        "Settings": {
+          "protectiontype": "template",
+          "linkedtemplateid": "cd35cc70-be41-40d9-977e-584295ad87de",
+          "disabled": "false",
+          "templateid": "cd35cc70-be41-40d9-977e-584295ad87de",
+          "templatearchived": "False"
+        }
+      }
+    ],
+    "IsScopedToUser": false,
+    "PublishedPolicies": [
+      "Abteilung 0002 - Label Policy"
+    ],
+    "PublishedToUsers": null,
+    "PublishedToGroups": {
+      "DisplayName": "All",
+      "Name": "All",
+      "ImmutableIdentity": "All",
+      "Type": {
+        "value": 1,
+        "Value": "Tenant"
+      },
+      "Status": {
+        "value": 2,
+        "Value": "Success"
+      },
+      "Workload": {
+        "value": 512,
+        "Value": "ModernGroup"
+      },
+      "SourceType": null,
+      "SourceTypeDisplayName": null,
+      "SourceProvider": {
+        "value": 0,
+        "Value": "Unknown"
+      },
+      "SourceEntryType": {
+        "value": 0,
+        "Value": "Unknown"
+      },
+      "SchemaVersion": 2,
+      "Resources": null,
+      "ScopingGroup": {
+        "value": 0,
+        "Value": "Unknown"
+      },
+      "GroupSet": "Default"
+    }
+  },
+  {
+    "Id": "8723b79c-57d4-4be4-adaf-0b2b1f38f3e9",
+    "Name": "Vertraulich - 0002",
+    "DisplayName": "Vertraulich - 0002",
+    "Comment": "",
+    "Tooltip": "Vertraulich - Skyline Manufacturing South",
+    "IsActive": true,
+    "Priority": 23,
+    "Color": "",
+    "IsDefault": false,
+    "IsEndpointProtectionEnabled": true,
+    "ParentGuid": "",
+    "BlockCopilot": false,
+    "ScopeFiles": true,
+    "ScopeEmails": true,
+    "ScopeMeetings": false,
+    "ScopeSites": true,
+    "ScopeSchematizedData": false,
+    "EncryptionEnabled": false,
+    "ProtectionType": "None",
+    "TemplateId": "",
+    "RightsDefinitions": [],
+    "LocaleSettings": {
+      "default": {
+        "displayName": "Vertraulich - 0002",
+        "tooltip": "Vertraulich - Skyline Manufacturing South"
+      }
+    },
+    "LabelActions": [
+      {
+        "Type": "applycontentmarking",
+        "SubType": "header",
+        "Settings": {
+          "margin": "5",
+          "fontsize": "8",
+          "text": "Vertraulich - Skyline Manufacturing South - confidential",
+          "disabled": "false",
+          "alignment": "Center",
+          "fontcolor": "#000000",
+          "placement": "Header"
+        }
+      },
+      {
+        "Type": "applywatermarking",
+        "SubType": null,
+        "Settings": {
+          "fontcolor": "#A2A2A2",
+          "disabled": "false",
+          "layout": "Diagonal",
+          "fontsize": "28",
+          "text": "vertraulich / confidential"
+        }
+      }
+    ],
+    "IsScopedToUser": false,
+    "PublishedPolicies": [
+      "Abteilung 0002 - Label Policy"
+    ],
+    "PublishedToUsers": null,
+    "PublishedToGroups": {
+      "DisplayName": "All",
+      "Name": "All",
+      "ImmutableIdentity": "All",
+      "Type": {
+        "value": 1,
+        "Value": "Tenant"
+      },
+      "Status": {
+        "value": 2,
+        "Value": "Success"
+      },
+      "Workload": {
+        "value": 512,
+        "Value": "ModernGroup"
+      },
+      "SourceType": null,
+      "SourceTypeDisplayName": null,
+      "SourceProvider": {
+        "value": 0,
+        "Value": "Unknown"
+      },
+      "SourceEntryType": {
+        "value": 0,
+        "Value": "Unknown"
+      },
+      "SchemaVersion": 2,
+      "Resources": null,
+      "ScopingGroup": {
+        "value": 0,
+        "Value": "Unknown"
+      },
+      "GroupSet": "Default"
+    }
+  },
+  {
+    "Id": "4ef90c3b-9f36-4f2a-9be6-5b4415a2aca0",
+    "Name": "Vertraulich (unverschlüsselt) - 0002",
+    "DisplayName": "Vertraulich (unverschlüsselt) - 0002",
+    "Comment": "",
+    "Tooltip": "Vertraulich (unverschlüsselt) - Skyline Manufacturing South",
+    "IsActive": true,
+    "Priority": 24,
+    "Color": "",
+    "IsDefault": false,
+    "IsEndpointProtectionEnabled": false,
+    "ParentGuid": "",
+    "BlockCopilot": false,
+    "ScopeFiles": true,
+    "ScopeEmails": true,
+    "ScopeMeetings": false,
+    "ScopeSites": true,
+    "ScopeSchematizedData": false,
+    "EncryptionEnabled": true,
+    "ProtectionType": "Template",
+    "TemplateId": "433ca380-02b6-4e30-8fa3-0e22a989bef3",
+    "RightsDefinitions": [],
+    "LocaleSettings": {
+      "default": {
+        "displayName": "Vertraulich (unverschlüsselt) - 0002",
+        "tooltip": "Vertraulich (unverschlüsselt) - Skyline Manufacturing South"
+      }
+    },
+    "LabelActions": [
+      {
+        "Type": "applycontentmarking",
+        "SubType": "header",
+        "Settings": {
+          "margin": "5",
+          "fontsize": "8",
+          "text": "Vertraulich - Skyline Manufacturing South - confidential",
+          "disabled": "false",
+          "alignment": "Center",
+          "fontcolor": "#000000",
+          "placement": "Header"
+        }
+      },
+      {
+        "Type": "applywatermarking",
+        "SubType": null,
+        "Settings": {
+          "fontcolor": "#A2A2A2",
+          "disabled": "false",
+          "layout": "Diagonal",
+          "fontsize": "28",
+          "text": "vertraulich / confidential"
+        }
+      },
+      {
+        "Type": "encrypt",
+        "SubType": null,
+        "Settings": {
+          "protectiontype": "template",
+          "linkedtemplateid": "433ca380-02b6-4e30-8fa3-0e22a989bef3",
+          "disabled": "false",
+          "templateid": "433ca380-02b6-4e30-8fa3-0e22a989bef3",
+          "templatearchived": "False"
+        }
+      }
+    ],
+    "IsScopedToUser": false,
+    "PublishedPolicies": [
+      "Abteilung 0002 - Label Policy"
+    ],
+    "PublishedToUsers": null,
+    "PublishedToGroups": {
+      "DisplayName": "All",
+      "Name": "All",
+      "ImmutableIdentity": "All",
+      "Type": {
+        "value": 1,
+        "Value": "Tenant"
+      },
+      "Status": {
+        "value": 2,
+        "Value": "Success"
+      },
+      "Workload": {
+        "value": 512,
+        "Value": "ModernGroup"
+      },
+      "SourceType": null,
+      "SourceTypeDisplayName": null,
+      "SourceProvider": {
+        "value": 0,
+        "Value": "Unknown"
+      },
+      "SourceEntryType": {
+        "value": 0,
+        "Value": "Unknown"
+      },
+      "SchemaVersion": 2,
+      "Resources": null,
+      "ScopingGroup": {
+        "value": 0,
+        "Value": "Unknown"
+      },
+      "GroupSet": "Default"
+    }
+  },
+  {
+    "Id": "046c328e-c361-4526-95e0-b2dac5fa630c",
+    "Name": "Vertraulich (verschlüsselt) - 0002",
+    "DisplayName": "Vertraulich (verschlüsselt) - 0002",
+    "Comment": "",
+    "Tooltip": "Vertraulich (verschlüsselt) - Skyline Manufacturing South",
+    "IsActive": true,
+    "Priority": 25,
+    "Color": "",
+    "IsDefault": false,
+    "IsEndpointProtectionEnabled": false,
+    "ParentGuid": "",
+    "BlockCopilot": false,
+    "ScopeFiles": true,
+    "ScopeEmails": true,
+    "ScopeMeetings": false,
+    "ScopeSites": true,
+    "ScopeSchematizedData": false,
+    "EncryptionEnabled": true,
+    "ProtectionType": "Template",
+    "TemplateId": "47dea9a3-a74b-4935-9ae7-d0876694bc1d",
+    "RightsDefinitions": [],
+    "LocaleSettings": {
+      "default": {
+        "displayName": "Vertraulich (verschlüsselt) - 0002",
+        "tooltip": "Vertraulich (verschlüsselt) - Skyline Manufacturing South"
+      }
+    },
+    "LabelActions": [
+      {
+        "Type": "applycontentmarking",
+        "SubType": "header",
+        "Settings": {
+          "margin": "5",
+          "fontsize": "8",
+          "text": "Vertraulich - Skyline Manufacturing South - confidential",
+          "disabled": "false",
+          "alignment": "Center",
+          "fontcolor": "#000000",
+          "placement": "Header"
+        }
+      },
+      {
+        "Type": "applywatermarking",
+        "SubType": null,
+        "Settings": {
+          "fontcolor": "#A2A2A2",
+          "disabled": "false",
+          "layout": "Diagonal",
+          "fontsize": "28",
+          "text": "vertraulich / confidential"
+        }
+      },
+      {
+        "Type": "encrypt",
+        "SubType": null,
+        "Settings": {
+          "protectiontype": "template",
+          "linkedtemplateid": "47dea9a3-a74b-4935-9ae7-d0876694bc1d",
+          "disabled": "false",
+          "templateid": "47dea9a3-a74b-4935-9ae7-d0876694bc1d",
+          "templatearchived": "False"
+        }
+      }
+    ],
+    "IsScopedToUser": false,
+    "PublishedPolicies": [
+      "Abteilung 0002 - Label Policy"
+    ],
+    "PublishedToUsers": null,
+    "PublishedToGroups": {
+      "DisplayName": "All",
+      "Name": "All",
+      "ImmutableIdentity": "All",
+      "Type": {
+        "value": 1,
+        "Value": "Tenant"
+      },
+      "Status": {
+        "value": 2,
+        "Value": "Success"
+      },
+      "Workload": {
+        "value": 512,
+        "Value": "ModernGroup"
+      },
+      "SourceType": null,
+      "SourceTypeDisplayName": null,
+      "SourceProvider": {
+        "value": 0,
+        "Value": "Unknown"
+      },
+      "SourceEntryType": {
+        "value": 0,
+        "Value": "Unknown"
+      },
+      "SchemaVersion": 2,
+      "Resources": null,
+      "ScopingGroup": {
+        "value": 0,
+        "Value": "Unknown"
+      },
+      "GroupSet": "Default"
+    }
+  },
+  {
+    "Id": "36fba616-f1c0-4b4a-801e-6e283e6bf72c",
+    "Name": "Streng Vertraulich - 0002",
+    "DisplayName": "Streng Vertraulich - 0002",
+    "Comment": "",
+    "Tooltip": "Streng Vertraulich - Skyline Manufacturing South",
+    "IsActive": true,
+    "Priority": 26,
+    "Color": "",
+    "IsDefault": false,
+    "IsEndpointProtectionEnabled": true,
+    "ParentGuid": "",
+    "BlockCopilot": false,
+    "ScopeFiles": true,
+    "ScopeEmails": true,
+    "ScopeMeetings": false,
+    "ScopeSites": true,
+    "ScopeSchematizedData": false,
+    "EncryptionEnabled": true,
+    "ProtectionType": "UserDefined",
+    "TemplateId": "",
+    "RightsDefinitions": [],
+    "LocaleSettings": {
+      "default": {
+        "displayName": "Streng Vertraulich - 0002",
+        "tooltip": "Streng Vertraulich - Skyline Manufacturing South"
+      }
+    },
+    "LabelActions": [
+      {
+        "Type": "applycontentmarking",
+        "SubType": "header",
+        "Settings": {
+          "margin": "5",
+          "fontsize": "8",
+          "text": "Streng Vertraulich - Skyline Manufacturing South - strictly confidential",
+          "disabled": "false",
+          "alignment": "Center",
+          "fontcolor": "#000000",
+          "placement": "Header"
+        }
+      },
+      {
+        "Type": "applywatermarking",
+        "SubType": null,
+        "Settings": {
+          "fontcolor": "#A2A2A2",
+          "disabled": "false",
+          "layout": "Diagonal",
+          "fontsize": "28",
+          "text": "Streng vertraulich / strictly confidential"
+        }
+      },
+      {
+        "Type": "encrypt",
+        "SubType": null,
+        "Settings": {
+          "donotforward": "true",
+          "disabled": "false",
+          "encryptonly": "false",
+          "protectiontype": "userdefined",
+          "promptuser": "true"
+        }
+      }
+    ],
+    "IsScopedToUser": false,
+    "PublishedPolicies": [
+      "Abteilung 0002 - Label Policy"
+    ],
+    "PublishedToUsers": null,
+    "PublishedToGroups": {
+      "DisplayName": "All",
+      "Name": "All",
+      "ImmutableIdentity": "All",
+      "Type": {
+        "value": 1,
+        "Value": "Tenant"
+      },
+      "Status": {
+        "value": 2,
+        "Value": "Success"
+      },
+      "Workload": {
+        "value": 512,
+        "Value": "ModernGroup"
+      },
+      "SourceType": null,
+      "SourceTypeDisplayName": null,
+      "SourceProvider": {
+        "value": 0,
+        "Value": "Unknown"
+      },
+      "SourceEntryType": {
+        "value": 0,
+        "Value": "Unknown"
+      },
+      "SchemaVersion": 2,
+      "Resources": null,
+      "ScopingGroup": {
+        "value": 0,
+        "Value": "Unknown"
+      },
+      "GroupSet": "Default"
+    }
+  },
+  {
+    "Id": "d51fe465-bd22-4b84-881a-274f3be92f9e",
+    "Name": "Private Informationen - 0005",
+    "DisplayName": "Private Informationen - 0005",
+    "Comment": "",
+    "Tooltip": "Private Informationen - E-Commerce Worldwide",
+    "IsActive": false,
+    "Priority": 27,
+    "Color": "",
+    "IsDefault": false,
+    "IsEndpointProtectionEnabled": false,
+    "ParentGuid": "",
+    "BlockCopilot": false,
+    "ScopeFiles": true,
+    "ScopeEmails": true,
+    "ScopeMeetings": false,
+    "ScopeSites": false,
+    "ScopeSchematizedData": false,
+    "EncryptionEnabled": false,
+    "ProtectionType": "None",
+    "TemplateId": "",
+    "RightsDefinitions": [],
+    "LocaleSettings": {
+      "en-us": {
+        "displayName": "Private information - 0005",
+        "tooltip": "Private information - E-Commerce Worldwide"
+      },
+      "ro-ro": {
+        "displayName": "Informații private - 0005",
+        "tooltip": "Informații private - E-Commerce Worldwide"
+      },
+      "sk-sk": {
+        "displayName": "Súkromné informácie - 0005",
+        "tooltip": "Súkromné informácie - E-Commerce Worldwide"
+      },
+      "default": {
+        "displayName": "Private Informationen - 0005",
+        "tooltip": "Private Informationen - E-Commerce Worldwide"
+      },
+      "pt-br": {
+        "displayName": "Informações privadas - 0005",
+        "tooltip": "Informações privadas - E-Commerce Worldwide"
+      },
+      "fr-fr": {
+        "displayName": "Informations privées - 0005",
+        "tooltip": "Informations privées - E-Commerce Worldwide"
+      },
+      "de-de": {
+        "displayName": "Private Informationen - 0005",
+        "tooltip": "Private Informationen - E-Commerce Worldwide"
+      },
+      "hr-hr": {
+        "displayName": "Private information - 0005",
+        "tooltip": "Private information - E-Commerce Worldwide"
+      },
+      "pl-pl": {
+        "displayName": "Informacje prywatne - 0005",
+        "tooltip": "Informacje prywatne - E-Commerce na całym świecie"
+      },
+      "cs-cz": {
+        "displayName": "Soukromé informace - 0005",
+        "tooltip": "Soukromé informace - E-Commerce Worldwide"
+      },
+      "hu-hu": {
+        "displayName": "Magánjellegű információk - 0005",
+        "tooltip": "Magáninformációk - E-Commerce Worldwide"
+      },
+      "it-it": {
+        "displayName": "Informazioni private - 0005",
+        "tooltip": "Informazioni private - Commercio elettronico nel mondo"
+      },
+      "uk-ua": {
+        "displayName": "Приватна інформація - 0005",
+        "tooltip": "Приватна інформація - Електронна комерція по всьому світу"
+      }
+    },
+    "LabelActions": [],
+    "IsScopedToUser": false,
+    "PublishedPolicies": [],
+    "PublishedToUsers": null,
+    "PublishedToGroups": null
+  },
+  {
+    "Id": "4d1e62a7-1df2-4a8f-8be1-5aa13d1c498f",
+    "Name": "Geschäftliche Informationen - 0005",
+    "DisplayName": "Geschäftliche Informationen - 0005",
+    "Comment": "",
+    "Tooltip": "Geschäftliche Informationen - E-Commerce Worldwide",
+    "IsActive": false,
+    "Priority": 28,
+    "Color": "",
+    "IsDefault": false,
+    "IsEndpointProtectionEnabled": false,
+    "ParentGuid": "",
+    "BlockCopilot": false,
+    "ScopeFiles": true,
+    "ScopeEmails": true,
+    "ScopeMeetings": false,
+    "ScopeSites": false,
+    "ScopeSchematizedData": false,
+    "EncryptionEnabled": false,
+    "ProtectionType": "None",
+    "TemplateId": "",
+    "RightsDefinitions": [],
+    "LocaleSettings": {
+      "en-us": {
+        "displayName": "Business information - 0005",
+        "tooltip": "Business information - E-Commerce Worldwide"
+      },
+      "ro-ro": {
+        "displayName": "Informații de afaceri - 0005",
+        "tooltip": "Informații de afaceri - E-Commerce Worldwide"
+      },
+      "sk-sk": {
+        "displayName": "Obchodné informácie - 0005",
+        "tooltip": "Obchodné informácie - E-Commerce Worldwide"
+      },
+      "default": {
+        "displayName": "Geschäftliche Informationen - 0005",
+        "tooltip": "Geschäftliche Informationen - E-Commerce Worldwide"
+      },
+      "pt-br": {
+        "displayName": "Informações comerciais - 0005",
+        "tooltip": "Informações comerciais - E-Commerce Worldwide"
+      },
+      "fr-fr": {
+        "displayName": "Informations commerciales - 0005",
+        "tooltip": "Informations commerciales - E-Commerce Worldwide"
+      },
+      "de-de": {
+        "displayName": "Geschäftliche Informationen - 0005",
+        "tooltip": "Geschäftliche Informationen - E-Commerce Worldwide"
+      },
+      "hr-hr": {
+        "displayName": "Business information - 0005",
+        "tooltip": "Business information - E-Commerce Worldwide"
+      },
+      "pl-pl": {
+        "displayName": "Informacje biznesowe - 0005",
+        "tooltip": "Informacje biznesowe - E-Commerce na całym świecie"
+      },
+      "cs-cz": {
+        "displayName": "Obchodní informace - 0005",
+        "tooltip": "Obchodní informace - E-Commerce Worldwide"
+      },
+      "hu-hu": {
+        "displayName": "Üzleti információk - 0005",
+        "tooltip": "Üzleti információk - E-Commerce Worldwide"
+      },
+      "it-it": {
+        "displayName": "Informazioni commerciali - 0005",
+        "tooltip": "Informazioni commerciali - Commercio elettronico in tutto il mondo"
+      },
+      "uk-ua": {
+        "displayName": "Бізнес-інформація - 0005",
+        "tooltip": "Бізнес-інформація - Електронна комерція по всьому світу"
+      }
+    },
+    "LabelActions": [],
+    "IsScopedToUser": false,
+    "PublishedPolicies": [],
+    "PublishedToUsers": null,
+    "PublishedToGroups": null
+  },
+  {
+    "Id": "860ce1fa-8e9e-4915-806e-0047c2f1dd00",
+    "Name": "Nur für internen Dienstgebrauch - 0005",
+    "DisplayName": "Nur für internen Dienstgebrauch - 0005",
+    "Comment": "",
+    "Tooltip": "Nur für internen Dienstgebrauch - E-Commerce Worldwide",
+    "IsActive": false,
+    "Priority": 29,
+    "Color": "",
+    "IsDefault": false,
+    "IsEndpointProtectionEnabled": false,
+    "ParentGuid": "",
+    "BlockCopilot": false,
+    "ScopeFiles": true,
+    "ScopeEmails": true,
+    "ScopeMeetings": false,
+    "ScopeSites": false,
+    "ScopeSchematizedData": false,
+    "EncryptionEnabled": false,
+    "ProtectionType": "None",
+    "TemplateId": "",
+    "RightsDefinitions": [],
+    "LocaleSettings": {
+      "en-us": {
+        "displayName": "For internal use only - 0005",
+        "tooltip": "For internal use only - E-Commerce Worldwide"
+      },
+      "ro-ro": {
+        "displayName": "Numai pentru uz intern - 0005",
+        "tooltip": "Numai pentru uz intern - E-Commerce Worldwide"
+      },
+      "sk-sk": {
+        "displayName": "Len na interné použitie - 0005",
+        "tooltip": "Len na interné použitie - E-Commerce Worldwide"
+      },
+      "default": {
+        "displayName": "Nur für internen Dienstgebrauch - 0005",
+        "tooltip": "Nur für internen Dienstgebrauch - E-Commerce Worldwide"
+      },
+      "pt-br": {
+        "displayName": "Apenas para uso interno - 0005",
+        "tooltip": "Apenas para uso interno - E-Commerce Worldwide"
+      },
+      "fr-fr": {
+        "displayName": "Réservé à un usage interne - 0005",
+        "tooltip": "Usage interne uniquement - E-Commerce Worldwide"
+      },
+      "de-de": {
+        "displayName": "Nur für internen Dienstgebrauch - 0005",
+        "tooltip": "Nur für internen Dienstgebrauch - E-Commerce Worldwide"
+      },
+      "hr-hr": {
+        "displayName": "For internal use only - 0005",
+        "tooltip": "For internal use only - E-Commerce Worldwide"
+      },
+      "pl-pl": {
+        "displayName": "Tylko do użytku wewnętrznego - 0005",
+        "tooltip": "Tylko do użytku wewnętrznego - E-Commerce Worldwide"
+      },
+      "cs-cz": {
+        "displayName": "Pouze pro interní použití - 0005",
+        "tooltip": "Pouze pro interní použití - E-Commerce Worldwide"
+      },
+      "hu-hu": {
+        "displayName": "Csak belső használatra - 0005",
+        "tooltip": "Csak belső használatra - E-Commerce Worldwide"
+      },
+      "it-it": {
+        "displayName": "Solo per uso interno - 0005",
+        "tooltip": "Solo per uso interno - E-Commerce Worldwide"
+      },
+      "uk-ua": {
+        "displayName": "Тільки для внутрішнього використання - 0005",
+        "tooltip": "Тільки для внутрішнього користування - Електронна комерція по всьому світу"
+      }
+    },
+    "LabelActions": [],
+    "IsScopedToUser": false,
+    "PublishedPolicies": [],
+    "PublishedToUsers": null,
+    "PublishedToGroups": null
+  },
+  {
+    "Id": "577fae7e-b864-4280-902a-4f7484b4e202",
+    "Name": "Nur für internen Dienstgebrauch (unverschlüsselt) - 0005",
+    "DisplayName": "Nur für internen Dienstgebrauch (unverschlüsselt) - 0005",
+    "Comment": "",
+    "Tooltip": "Nur für internen Dienstgebrauch (unverschlüsselt) - E-Commerce Worldwide",
+    "IsActive": true,
+    "Priority": 30,
+    "Color": "",
+    "IsDefault": false,
+    "IsEndpointProtectionEnabled": false,
+    "ParentGuid": "",
+    "BlockCopilot": false,
+    "ScopeFiles": true,
+    "ScopeEmails": true,
+    "ScopeMeetings": false,
+    "ScopeSites": false,
+    "ScopeSchematizedData": false,
+    "EncryptionEnabled": false,
+    "ProtectionType": "None",
+    "TemplateId": "",
+    "RightsDefinitions": [],
+    "LocaleSettings": {
+      "en-us": {
+        "displayName": "For internal service use only (unencrypted) - 0005",
+        "tooltip": "For internal service use only (unencrypted) - E-Commerce Worldwide"
+      },
+      "ro-ro": {
+        "displayName": "Numai pentru uzul serviciilor interne (necriptat) - 0005",
+        "tooltip": "Numai pentru uzul serviciilor interne (necriptat) - Comerț electronic în întreaga lume"
+      },
+      "sk-sk": {
+        "displayName": "Len na interné použitie (nezašifrované) - 0005",
+        "tooltip": "Len na interné použitie (nešifrované) - E-Commerce Worldwide"
+      },
+      "default": {
+        "displayName": "Nur für internen Dienstgebrauch (unverschlüsselt) - 0005",
+        "tooltip": "Nur für internen Dienstgebrauch (unverschlüsselt) - E-Commerce Worldwide"
+      },
+      "pt-br": {
+        "displayName": "Apenas para uso interno do serviço (não criptografado) - 0005",
+        "tooltip": "Apenas para uso interno do serviço (não criptografado) - E-Commerce Worldwide"
+      },
+      "fr-fr": {
+        "displayName": "Réservé à un usage interne (non crypté) - 0005",
+        "tooltip": "Réservé à un usage interne (non crypté) - E-Commerce Worldwide"
+      },
+      "de-de": {
+        "displayName": "Nur für internen Dienstgebrauch (unverschlüsselt) - 0005",
+        "tooltip": "Nur für internen Dienstgebrauch (unverschlüsselt) - E-Commerce Worldwide"
+      },
+      "hr-hr": {
+        "displayName": "For internal service use only (unencrypted) - 0005",
+        "tooltip": "For internal service use only (unencrypted) - E-Commerce Worldwide"
+      },
+      "pl-pl": {
+        "displayName": "Tylko do użytku wewnętrznego (niezaszyfrowane) - 0005",
+        "tooltip": "Tylko do użytku wewnętrznego (niezaszyfrowane) - E-Commerce Worldwide"
+      },
+      "cs-cz": {
+        "displayName": "Pouze pro interní použití (nešifrované) - 0005",
+        "tooltip": "Pouze pro interní použití (nešifrované) - E-Commerce Worldwide"
+      },
+      "hu-hu": {
+        "displayName": "Kizárólag belső szolgálati használatra (titkosítatlan) - 0005",
+        "tooltip": "Kizárólag belső szolgáltatási célokra (titkosítatlan) - E-Commerce Worldwide"
+      },
+      "it-it": {
+        "displayName": "Solo per uso interno (non criptato) - 0005",
+        "tooltip": "Solo per uso interno (non criptato) - E-Commerce in tutto il mondo"
+      },
+      "uk-ua": {
+        "displayName": "Тільки для внутрішнього службового використання - 0005",
+        "tooltip": "Тільки для внутрішнього використання (незашифрований) - Електронна комерція по всьому світу"
+      }
+    },
+    "LabelActions": [],
+    "IsScopedToUser": false,
+    "PublishedPolicies": [],
+    "PublishedToUsers": null,
+    "PublishedToGroups": null
+  },
+  {
+    "Id": "afb150f2-5aea-48ee-ae69-9069cc655e04",
+    "Name": "Nur für internen Dienstgebrauch (verschlüsselt) - 0005",
+    "DisplayName": "Nur für internen Dienstgebrauch (verschlüsselt) - 0005",
+    "Comment": "",
+    "Tooltip": "Nur für internen Dienstgebrauch (verschlüsselt) - E-Commerce Worldwide",
+    "IsActive": true,
+    "Priority": 31,
+    "Color": "",
+    "IsDefault": false,
+    "IsEndpointProtectionEnabled": false,
+    "ParentGuid": "",
+    "BlockCopilot": false,
+    "ScopeFiles": true,
+    "ScopeEmails": true,
+    "ScopeMeetings": false,
+    "ScopeSites": false,
+    "ScopeSchematizedData": false,
+    "EncryptionEnabled": false,
+    "ProtectionType": "None",
+    "TemplateId": "",
+    "RightsDefinitions": [],
+    "LocaleSettings": {
+      "en-us": {
+        "displayName": "For internal service use only (encrypted) - 0005",
+        "tooltip": "For internal service use only (encrypted) - E-Commerce Worldwide"
+      },
+      "ro-ro": {
+        "displayName": "Numai pentru uzul serviciului intern (criptat) - 0005",
+        "tooltip": "Numai pentru uz intern (criptat) - E-Commerce Worldwide"
+      },
+      "sk-sk": {
+        "displayName": "Len na interné použitie v rámci služby (zašifrované) - 0005",
+        "tooltip": "Len na interné použitie (zašifrované) - E-Commerce Worldwide"
+      },
+      "default": {
+        "displayName": "Nur für internen Dienstgebrauch (verschlüsselt) - 0005",
+        "tooltip": "Nur für internen Dienstgebrauch (verschlüsselt) - E-Commerce Worldwide"
+      },
+      "pt-br": {
+        "displayName": "Apenas para uso interno do serviço (criptografado) - 0005",
+        "tooltip": "Apenas para uso interno (criptografado) - E-Commerce Worldwide"
+      },
+      "fr-fr": {
+        "displayName": "Réservé à un usage interne (crypté) - 0005",
+        "tooltip": "Réservé à un usage interne (crypté) - E-Commerce Worldwide"
+      },
+      "de-de": {
+        "displayName": "Nur für internen Dienstgebrauch (verschlüsselt) - 0005",
+        "tooltip": "Nur für internen Dienstgebrauch (verschlüsselt) - E-Commerce Worldwide"
+      },
+      "hr-hr": {
+        "displayName": "For internal service use only (encrypted) - 0005",
+        "tooltip": "For internal service use only (encrypted) - E-Commerce Worldwide"
+      },
+      "pl-pl": {
+        "displayName": "Tylko do użytku wewnętrznego (zaszyfrowane) - 0005",
+        "tooltip": "Tylko do użytku wewnętrznego (szyfrowane) - E-Commerce Worldwide"
+      },
+      "cs-cz": {
+        "displayName": "Pouze pro interní použití (šifrovaně) - 0005",
+        "tooltip": "Pouze pro interní použití (šifrované) - E-Commerce Worldwide"
+      },
+      "hu-hu": {
+        "displayName": "Kizárólag belső szolgálati használatra (titkosítva) - 0005",
+        "tooltip": "Csak belső használatra (titkosítva) - E-Commerce Worldwide"
+      },
+      "it-it": {
+        "displayName": "Solo per uso interno (criptato) - 0005",
+        "tooltip": "Solo per uso interno (criptato) - E-Commerce in tutto il mondo"
+      },
+      "uk-ua": {
+        "displayName": "V2 - Тільки для внутрішнього службового використання - 0005",
+        "tooltip": "Тільки для внутрішнього користування (зашифровано) - Електронна комерція по всьому світу"
+      }
+    },
+    "LabelActions": [],
+    "IsScopedToUser": false,
+    "PublishedPolicies": [],
+    "PublishedToUsers": null,
+    "PublishedToGroups": null
+  },
+  {
+    "Id": "1c23f1f9-2323-4754-9460-544a593f0a9b",
+    "Name": "Vertraulich - 0005",
+    "DisplayName": "Vertraulich - 0005",
+    "Comment": "",
+    "Tooltip": "Vertraulich - E-Commerce Worldwide",
+    "IsActive": false,
+    "Priority": 32,
+    "Color": "",
+    "IsDefault": false,
+    "IsEndpointProtectionEnabled": false,
+    "ParentGuid": "",
+    "BlockCopilot": false,
+    "ScopeFiles": true,
+    "ScopeEmails": true,
+    "ScopeMeetings": false,
+    "ScopeSites": false,
+    "ScopeSchematizedData": false,
+    "EncryptionEnabled": false,
+    "ProtectionType": "None",
+    "TemplateId": "",
+    "RightsDefinitions": [],
+    "LocaleSettings": {
+      "en-us": {
+        "displayName": "Confidential - 0005",
+        "tooltip": "Confidential - E-Commerce Worldwide"
+      },
+      "ro-ro": {
+        "displayName": "Confidențial - 0005",
+        "tooltip": "Confidențial - E-Commerce Worldwide"
+      },
+      "sk-sk": {
+        "displayName": "Dôverné - 0005",
+        "tooltip": "Dôverné - E-Commerce Worldwide"
+      },
+      "default": {
+        "displayName": "Vertraulich - 0005",
+        "tooltip": "Vertraulich - E-Commerce Worldwide"
+      },
+      "pt-br": {
+        "displayName": "Confidencial - 0005",
+        "tooltip": "Confidencial - Comércio eletrônico mundial"
+      },
+      "fr-fr": {
+        "displayName": "Confidentiel - 0005",
+        "tooltip": "Confidentiel - E-Commerce Worldwide"
+      },
+      "de-de": {
+        "displayName": "Vertraulich - 0005",
+        "tooltip": "Vertraulich - E-Commerce Worldwide"
+      },
+      "hr-hr": {
+        "displayName": "Confidential - 0005",
+        "tooltip": "Confidential - E-Commerce Worldwide"
+      },
+      "pl-pl": {
+        "displayName": "Poufne - 0005",
+        "tooltip": "Poufne - E-Commerce na całym świecie"
+      },
+      "cs-cz": {
+        "displayName": "Důvěrné - 0005",
+        "tooltip": "Důvěrné - E-Commerce Worldwide"
+      },
+      "hu-hu": {
+        "displayName": "Bizalmas - 0005",
+        "tooltip": "Bizalmas - E-Commerce Worldwide"
+      },
+      "it-it": {
+        "displayName": "Riservato - 0005",
+        "tooltip": "Riservato - Commercio elettronico in tutto il mondo"
+      },
+      "uk-ua": {
+        "displayName": "Конфіденційно - 0005",
+        "tooltip": "Конфіденційно - Електронна комерція по всьому світу"
+      }
+    },
+    "LabelActions": [],
+    "IsScopedToUser": false,
+    "PublishedPolicies": [],
+    "PublishedToUsers": null,
+    "PublishedToGroups": null
+  },
+  {
+    "Id": "3eccc77f-2433-4c68-b5bc-3056ec1f09ee",
+    "Name": "Vertraulich (unverschlüsselt) - 0005",
+    "DisplayName": "Vertraulich (unverschlüsselt) - 0005",
+    "Comment": "",
+    "Tooltip": "Vertraulich (unverschlüsselt) - E-Commerce Worldwide",
+    "IsActive": true,
+    "Priority": 33,
+    "Color": "",
+    "IsDefault": false,
+    "IsEndpointProtectionEnabled": false,
+    "ParentGuid": "",
+    "BlockCopilot": false,
+    "ScopeFiles": true,
+    "ScopeEmails": true,
+    "ScopeMeetings": false,
+    "ScopeSites": false,
+    "ScopeSchematizedData": false,
+    "EncryptionEnabled": false,
+    "ProtectionType": "None",
+    "TemplateId": "",
+    "RightsDefinitions": [],
+    "LocaleSettings": {
+      "en-us": {
+        "displayName": "Confidential (unencrypted) - 0005",
+        "tooltip": "Confidential (unencrypted) - E-Commerce Worldwide"
+      },
+      "ro-ro": {
+        "displayName": "Confidențial (necriptat) - 0005",
+        "tooltip": "Confidențial (necriptat) - E-Commerce Worldwide"
+      },
+      "sk-sk": {
+        "displayName": "Dôverné (nezašifrované) - 0005",
+        "tooltip": "Dôverné (nezašifrované) - E-Commerce Worldwide"
+      },
+      "default": {
+        "displayName": "Vertraulich (unverschlüsselt) - 0005",
+        "tooltip": "Vertraulich (unverschlüsselt) - E-Commerce Worldwide"
+      },
+      "pt-br": {
+        "displayName": "Confidencial (não criptografado) - 0005",
+        "tooltip": "Confidencial (não criptografado) - E-Commerce Worldwide"
+      },
+      "fr-fr": {
+        "displayName": "Confidentiel (non crypté) - 0005",
+        "tooltip": "Confidentiel (non crypté) - E-Commerce Worldwide"
+      },
+      "de-de": {
+        "displayName": "Vertraulich (unverschlüsselt) - 0005",
+        "tooltip": "Vertraulich (unverschlüsselt) - E-Commerce Worldwide"
+      },
+      "hr-hr": {
+        "displayName": "Confidential (unencrypted) - 0005",
+        "tooltip": "Confidential (unencrypted) - E-Commerce Worldwide"
+      },
+      "pl-pl": {
+        "displayName": "Poufne (niezaszyfrowane) - 0005",
+        "tooltip": "Poufne (niezaszyfrowane) - E-Commerce na całym świecie"
+      },
+      "cs-cz": {
+        "displayName": "Důvěrné (nešifrované) - 0005",
+        "tooltip": "Důvěrné (nešifrované) - E-Commerce Worldwide"
+      },
+      "hu-hu": {
+        "displayName": "Bizalmas (titkosítatlan) - 0005",
+        "tooltip": "Bizalmas (nem titkosított) - E-Commerce Worldwide"
+      },
+      "it-it": {
+        "displayName": "Riservato (non criptato) - 0005",
+        "tooltip": "Riservato (non criptato) - Commercio elettronico in tutto il mondo"
+      },
+      "uk-ua": {
+        "displayName": "Конфіденційний (незашифрований) - 0005",
+        "tooltip": "Конфіденційні (незашифровані) - Електронна комерція по всьому світу"
+      }
+    },
+    "LabelActions": [],
+    "IsScopedToUser": false,
+    "PublishedPolicies": [],
+    "PublishedToUsers": null,
+    "PublishedToGroups": null
+  },
+  {
+    "Id": "45c11478-75bf-4881-96c9-2f7ffcec005b",
+    "Name": "Vertraulich (verschlüsselt) - 0005",
+    "DisplayName": "Vertraulich (verschlüsselt) - 0005",
+    "Comment": "",
+    "Tooltip": "Vertraulich (verschlüsselt) - E-Commerce Worldwide",
+    "IsActive": true,
+    "Priority": 34,
+    "Color": "",
+    "IsDefault": false,
+    "IsEndpointProtectionEnabled": false,
+    "ParentGuid": "",
+    "BlockCopilot": false,
+    "ScopeFiles": true,
+    "ScopeEmails": true,
+    "ScopeMeetings": false,
+    "ScopeSites": false,
+    "ScopeSchematizedData": false,
+    "EncryptionEnabled": false,
+    "ProtectionType": "None",
+    "TemplateId": "",
+    "RightsDefinitions": [],
+    "LocaleSettings": {
+      "en-us": {
+        "displayName": "Confidential (encrypted) - 0005",
+        "tooltip": "Confidential (encrypted) - E-Commerce Worldwide"
+      },
+      "ro-ro": {
+        "displayName": "Confidențial (criptat) - 0005",
+        "tooltip": "Confidențial (criptat) - Comerț electronic la nivel mondial"
+      },
+      "sk-sk": {
+        "displayName": "Dôverné (zašifrované) - 0005",
+        "tooltip": "Dôverné (šifrované) - E-Commerce Worldwide"
+      },
+      "default": {
+        "displayName": "Vertraulich (verschlüsselt) - 0005",
+        "tooltip": "Vertraulich (verschlüsselt) - E-Commerce Worldwide"
+      },
+      "pt-br": {
+        "displayName": "Confidencial (criptografado) - 0005",
+        "tooltip": "Confidencial (criptografado) - E-Commerce Worldwide"
+      },
+      "fr-fr": {
+        "displayName": "Confidentiel (crypté) - 0005",
+        "tooltip": "Confidentiel (crypté) - E-Commerce Worldwide"
+      },
+      "de-de": {
+        "displayName": "Vertraulich (verschlüsselt) - 0005",
+        "tooltip": "Vertraulich (verschlüsselt) - E-Commerce Worldwide"
+      },
+      "hr-hr": {
+        "displayName": "Confidential (encrypted) - 0005",
+        "tooltip": "Confidential (encrypted) - E-Commerce Worldwide"
+      },
+      "pl-pl": {
+        "displayName": "Poufne (zaszyfrowane) - 0005",
+        "tooltip": "Poufne (zaszyfrowane) - E-Commerce na całym świecie"
+      },
+      "cs-cz": {
+        "displayName": "Důvěrné (šifrované) - 0005",
+        "tooltip": "Důvěrné (šifrované) - E-Commerce Worldwide"
+      },
+      "hu-hu": {
+        "displayName": "Bizalmas (titkosított) - 0005",
+        "tooltip": "Bizalmas (titkosított) - E-Commerce Worldwide"
+      },
+      "it-it": {
+        "displayName": "Riservato (criptato) - 0005",
+        "tooltip": "Riservato (criptato) - Commercio elettronico in tutto il mondo"
+      },
+      "uk-ua": {
+        "displayName": "Конфіденційний (зашифрований) - 0005",
+        "tooltip": "Конфіденційно (зашифровано) - Електронна комерція по всьому світу"
+      }
+    },
+    "LabelActions": [],
+    "IsScopedToUser": false,
+    "PublishedPolicies": [],
+    "PublishedToUsers": null,
+    "PublishedToGroups": null
+  },
+  {
+    "Id": "3c361e77-7892-49db-a147-7bf14ebe0045",
+    "Name": "Streng Vertraulich - 0005",
+    "DisplayName": "Streng Vertraulich - 0005",
+    "Comment": "",
+    "Tooltip": "Streng Vertraulich - E-Commerce Worldwide",
+    "IsActive": false,
+    "Priority": 35,
+    "Color": "",
+    "IsDefault": false,
+    "IsEndpointProtectionEnabled": false,
+    "ParentGuid": "",
+    "BlockCopilot": false,
+    "ScopeFiles": true,
+    "ScopeEmails": true,
+    "ScopeMeetings": false,
+    "ScopeSites": false,
+    "ScopeSchematizedData": false,
+    "EncryptionEnabled": false,
+    "ProtectionType": "None",
+    "TemplateId": "",
+    "RightsDefinitions": [],
+    "LocaleSettings": {
+      "en-us": {
+        "displayName": "Strictly confidential - 0005",
+        "tooltip": "Strictly confidential - E-Commerce Worldwide"
+      },
+      "ro-ro": {
+        "displayName": "Strict confidențial - 0005",
+        "tooltip": "Strict confidențial - E-Commerce Worldwide"
+      },
+      "sk-sk": {
+        "displayName": "Prísne dôverné - 0005",
+        "tooltip": "Prísne dôverné - E-Commerce Worldwide"
+      },
+      "default": {
+        "displayName": "Streng Vertraulich - 0005",
+        "tooltip": "Streng Vertraulich - E-Commerce Worldwide"
+      },
+      "pt-br": {
+        "displayName": "Estritamente confidencial - 0005",
+        "tooltip": "Estritamente confidencial - E-Commerce Worldwide"
+      },
+      "fr-fr": {
+        "displayName": "Strictement confidentiel - 0005",
+        "tooltip": "Strictement confidentiel - E-Commerce Worldwide"
+      },
+      "de-de": {
+        "displayName": "Streng Vertraulich - 0005",
+        "tooltip": "Streng Vertraulich - E-Commerce Worldwide"
+      },
+      "hr-hr": {
+        "displayName": "Strictly confidential - 0005",
+        "tooltip": "Strictly confidential - E-Commerce Worldwide"
+      },
+      "pl-pl": {
+        "displayName": "Ściśle poufne - 0005",
+        "tooltip": "Ściśle poufne - E-Commerce na całym świecie"
+      },
+      "cs-cz": {
+        "displayName": "Přísně důvěrné - 0005",
+        "tooltip": "Přísně důvěrné - E-Commerce Worldwide"
+      },
+      "hu-hu": {
+        "displayName": "Szigorúan bizalmas - 0005",
+        "tooltip": "Szigorúan bizalmas - E-Commerce Worldwide"
+      },
+      "it-it": {
+        "displayName": "Strettamente riservato - 0005",
+        "tooltip": "Strettamente confidenziale - E-Commerce Worldwide"
+      },
+      "uk-ua": {
+        "displayName": "Суворо конфіденційно - 0005",
+        "tooltip": "Суворо конфіденційно - Електронна комерція по всьому світу"
+      }
+    },
+    "LabelActions": [],
+    "IsScopedToUser": false,
+    "PublishedPolicies": [],
+    "PublishedToUsers": null,
+    "PublishedToGroups": null
+  },
+  {
+    "Id": "2632f553-f84a-4b31-ac0f-895b1700aa73",
+    "Name": "Private Informationen - 0006",
+    "DisplayName": "Private Informationen - 0006",
+    "Comment": "",
+    "Tooltip": "Private Informationen - Advanced Research Lab",
+    "IsActive": false,
+    "Priority": 36,
+    "Color": "",
+    "IsDefault": false,
+    "IsEndpointProtectionEnabled": false,
+    "ParentGuid": "",
+    "BlockCopilot": false,
+    "ScopeFiles": true,
+    "ScopeEmails": true,
+    "ScopeMeetings": false,
+    "ScopeSites": false,
+    "ScopeSchematizedData": false,
+    "EncryptionEnabled": false,
+    "ProtectionType": "None",
+    "TemplateId": "",
+    "RightsDefinitions": [],
+    "LocaleSettings": {
+      "en-us": {
+        "displayName": "Private information - 0006",
+        "tooltip": "Private information - Advanced Research Lab"
+      },
+      "ro-ro": {
+        "displayName": "Informații private - 0006",
+        "tooltip": "Informații private - Advanced Research Lab"
+      },
+      "sk-sk": {
+        "displayName": "Súkromné informácie - 0006",
+        "tooltip": "Súkromné informácie - Pokročilé výskumné laboratórium"
+      },
+      "default": {
+        "displayName": "Private Informationen - 0006",
+        "tooltip": "Private Informationen - Advanced Research Lab"
+      },
+      "pt-br": {
+        "displayName": "Informações privadas - 0006",
+        "tooltip": "Informações privadas - Laboratório de Pesquisa Avançada"
+      },
+      "fr-fr": {
+        "displayName": "Informations privées - 0006",
+        "tooltip": "Informations privées - Advanced Research Lab"
+      },
+      "de-de": {
+        "displayName": "Private Informationen - 0006",
+        "tooltip": "Private Informationen - Advanced Research Lab"
+      },
+      "hr-hr": {
+        "displayName": "Private information - 0006",
+        "tooltip": "Private information - Advanced Research Lab"
+      },
+      "pl-pl": {
+        "displayName": "Informacje prywatne - 0006",
+        "tooltip": "Informacje prywatne - Advanced Research Lab"
+      },
+      "cs-cz": {
+        "displayName": "Soukromé informace - 0006",
+        "tooltip": "Soukromé informace - Advanced Research Lab"
+      },
+      "hu-hu": {
+        "displayName": "Magánjellegű információk - 0006",
+        "tooltip": "Magáninformációk - Advanced Research Lab"
+      },
+      "it-it": {
+        "displayName": "Informazioni private - 0006",
+        "tooltip": "Informazioni private - Laboratorio di ricerca avanzata"
+      },
+      "uk-ua": {
+        "displayName": "Приватна інформація - 0006",
+        "tooltip": "Приватна інформація - Лабораторія передових досліджень"
+      }
+    },
+    "LabelActions": [],
+    "IsScopedToUser": false,
+    "PublishedPolicies": [],
+    "PublishedToUsers": null,
+    "PublishedToGroups": null
+  },
+  {
+    "Id": "43e24bde-9468-46d8-a656-bd1ac947a831",
+    "Name": "Geschäftliche Informationen - 0006",
+    "DisplayName": "Geschäftliche Informationen - 0006",
+    "Comment": "",
+    "Tooltip": "Geschäftliche Informationen - Advanced Research Lab",
+    "IsActive": false,
+    "Priority": 37,
+    "Color": "",
+    "IsDefault": false,
+    "IsEndpointProtectionEnabled": false,
+    "ParentGuid": "",
+    "BlockCopilot": false,
+    "ScopeFiles": true,
+    "ScopeEmails": true,
+    "ScopeMeetings": false,
+    "ScopeSites": false,
+    "ScopeSchematizedData": false,
+    "EncryptionEnabled": false,
+    "ProtectionType": "None",
+    "TemplateId": "",
+    "RightsDefinitions": [],
+    "LocaleSettings": {
+      "en-us": {
+        "displayName": "Business information - 0006",
+        "tooltip": "Business information - Advanced Research Lab"
+      },
+      "ro-ro": {
+        "displayName": "Informații de afaceri - 0006",
+        "tooltip": "Informații de afaceri - Advanced Research Lab"
+      },
+      "sk-sk": {
+        "displayName": "Obchodné informácie - 0006",
+        "tooltip": "Obchodné informácie - Advanced Research Lab"
+      },
+      "default": {
+        "displayName": "Geschäftliche Informationen - 0006",
+        "tooltip": "Geschäftliche Informationen - Advanced Research Lab"
+      },
+      "pt-br": {
+        "displayName": "Informações comerciais - 0006",
+        "tooltip": "Informações comerciais - Laboratório de Pesquisas Avançadas"
+      },
+      "fr-fr": {
+        "displayName": "Informations commerciales - 0006",
+        "tooltip": "Informations commerciales - Advanced Research Lab"
+      },
+      "de-de": {
+        "displayName": "Geschäftliche Informationen - 0006",
+        "tooltip": "Geschäftliche Informationen - Advanced Research Lab"
+      },
+      "hr-hr": {
+        "displayName": "Business information - 0006",
+        "tooltip": "Business information - Advanced Research Lab"
+      },
+      "pl-pl": {
+        "displayName": "Informacje biznesowe - 0006",
+        "tooltip": "Informacje biznesowe - Advanced Research Lab"
+      },
+      "cs-cz": {
+        "displayName": "Obchodní informace - 0006",
+        "tooltip": "Obchodní informace - Advanced Research Lab"
+      },
+      "hu-hu": {
+        "displayName": "Üzleti információk - 0006",
+        "tooltip": "Üzleti információk - Advanced Research Lab"
+      },
+      "it-it": {
+        "displayName": "Informazioni commerciali - 0006",
+        "tooltip": "Informazioni commerciali - Laboratorio di ricerca avanzata"
+      },
+      "uk-ua": {
+        "displayName": "Бізнес-інформація - 0006",
+        "tooltip": "Бізнес-інформація - Advanced Research Lab"
+      }
+    },
+    "LabelActions": [],
+    "IsScopedToUser": false,
+    "PublishedPolicies": [],
+    "PublishedToUsers": null,
+    "PublishedToGroups": null
+  },
+  {
+    "Id": "d79dfb68-b26e-4000-8b39-fc57f2aedc3a",
+    "Name": "Nur für internen Dienstgebrauch - 0006",
+    "DisplayName": "Nur für internen Dienstgebrauch - 0006",
+    "Comment": "",
+    "Tooltip": "Nur für internen Dienstgebrauch - Advanced Research Lab",
+    "IsActive": false,
+    "Priority": 38,
+    "Color": "",
+    "IsDefault": false,
+    "IsEndpointProtectionEnabled": false,
+    "ParentGuid": "",
+    "BlockCopilot": false,
+    "ScopeFiles": true,
+    "ScopeEmails": true,
+    "ScopeMeetings": false,
+    "ScopeSites": false,
+    "ScopeSchematizedData": false,
+    "EncryptionEnabled": false,
+    "ProtectionType": "None",
+    "TemplateId": "",
+    "RightsDefinitions": [],
+    "LocaleSettings": {
+      "en-us": {
+        "displayName": "For internal use only - 0006",
+        "tooltip": "For internal use only - Advanced Research Lab"
+      },
+      "ro-ro": {
+        "displayName": "Numai pentru uz intern - 0006",
+        "tooltip": "Numai pentru uz intern - Advanced Research Lab"
+      },
+      "sk-sk": {
+        "displayName": "Len na interné použitie - 0006",
+        "tooltip": "Len na interné použitie - Laboratórium pokročilého výskumu"
+      },
+      "default": {
+        "displayName": "Nur für internen Dienstgebrauch - 0006",
+        "tooltip": "Nur für internen Dienstgebrauch - Advanced Research Lab"
+      },
+      "pt-br": {
+        "displayName": "Apenas para uso interno - 0006",
+        "tooltip": "Apenas para uso interno - Laboratório de Pesquisa Avançada"
+      },
+      "fr-fr": {
+        "displayName": "Réservé à un usage interne - 0006",
+        "tooltip": "Usage interne uniquement - Advanced Research Lab"
+      },
+      "de-de": {
+        "displayName": "Nur für internen Dienstgebrauch - 0006",
+        "tooltip": "Nur für internen Dienstgebrauch - Advanced Research Lab"
+      },
+      "hr-hr": {
+        "displayName": "For internal use only - 0006",
+        "tooltip": "For internal use only - Advanced Research Lab"
+      },
+      "pl-pl": {
+        "displayName": "Tylko do użytku wewnętrznego - 0006",
+        "tooltip": "Tylko do użytku wewnętrznego - Advanced Research Lab"
+      },
+      "cs-cz": {
+        "displayName": "Pouze pro interní použití - 0006",
+        "tooltip": "Pouze pro interní použití - Advanced Research Lab"
+      },
+      "hu-hu": {
+        "displayName": "Csak belső használatra - 0006",
+        "tooltip": "Csak belső használatra - Advanced Research Lab"
+      },
+      "it-it": {
+        "displayName": "Solo per uso interno - 0006",
+        "tooltip": "Solo per uso interno - Laboratorio di ricerca avanzata"
+      },
+      "uk-ua": {
+        "displayName": "Тільки для внутрішнього використання - 0006",
+        "tooltip": "Тільки для внутрішнього користування - Лабораторія передових досліджень"
+      }
+    },
+    "LabelActions": [
+      {
+        "Type": "applycontentmarking",
+        "SubType": "header",
+        "Settings": {
+          "margin": "5",
+          "fontsize": "8",
+          "text": "Nur für internen Dienstgebrauch - Advanced Research Lab - internal use only",
+          "disabled": "false",
+          "alignment": "Center",
+          "fontcolor": "#000000",
+          "placement": "Header"
+        }
+      }
+    ],
+    "IsScopedToUser": false,
+    "PublishedPolicies": [],
+    "PublishedToUsers": null,
+    "PublishedToGroups": null
+  },
+  {
+    "Id": "7125c056-709e-4283-9aad-2c4dfb570411",
+    "Name": "Nur für internen Dienstgebrauch (unverschlüsselt) - 0006",
+    "DisplayName": "Nur für internen Dienstgebrauch (unverschlüsselt) - 0006",
+    "Comment": "",
+    "Tooltip": "Nur für internen Dienstgebrauch (unverschlüsselt) - Advanced Research Lab",
+    "IsActive": true,
+    "Priority": 39,
+    "Color": "",
+    "IsDefault": false,
+    "IsEndpointProtectionEnabled": false,
+    "ParentGuid": "",
+    "BlockCopilot": false,
+    "ScopeFiles": true,
+    "ScopeEmails": true,
+    "ScopeMeetings": false,
+    "ScopeSites": false,
+    "ScopeSchematizedData": false,
+    "EncryptionEnabled": true,
+    "ProtectionType": "Template",
+    "TemplateId": "3da4e90e-4c31-402e-a094-d8636b40d0f1",
+    "RightsDefinitions": [],
+    "LocaleSettings": {
+      "en-us": {
+        "displayName": "For internal service use only (unencrypted) - 0006",
+        "tooltip": "For internal use only (unencrypted) - Advanced Research Lab"
+      },
+      "ro-ro": {
+        "displayName": "Numai pentru uzul serviciilor interne (necriptat) - 0006",
+        "tooltip": "Numai pentru uz intern (necriptat) - Advanced Research Lab"
+      },
+      "sk-sk": {
+        "displayName": "Len na interné použitie (nezašifrované) - 0006",
+        "tooltip": "Len na interné použitie (nezašifrované) - Advanced Research Lab"
+      },
+      "default": {
+        "displayName": "Nur für internen Dienstgebrauch (unverschlüsselt) - 0006",
+        "tooltip": "Nur für internen Dienstgebrauch (unverschlüsselt) - Advanced Research Lab"
+      },
+      "pt-br": {
+        "displayName": "Apenas para uso interno do serviço (não criptografado) - 0006",
+        "tooltip": "Apenas para uso interno (não criptografado) - Laboratório de Pesquisa Avançada"
+      },
+      "fr-fr": {
+        "displayName": "Réservé à un usage interne (non crypté) - 0006",
+        "tooltip": "Réservé à un usage interne (non crypté) - Advanced Research Lab"
+      },
+      "de-de": {
+        "displayName": "Nur für internen Dienstgebrauch (unverschlüsselt) - 0006",
+        "tooltip": "Nur für internen Dienstgebrauch (unverschlüsselt) - Advanced Research Lab"
+      },
+      "hr-hr": {
+        "displayName": "For internal service use only (unencrypted) - 0006",
+        "tooltip": "For internal use only (unencrypted) - Advanced Research Lab"
+      },
+      "pl-pl": {
+        "displayName": "Tylko do użytku wewnętrznego (niezaszyfrowane) - 0006",
+        "tooltip": "Tylko do użytku wewnętrznego (niezaszyfrowane) - Advanced Research Lab"
+      },
+      "cs-cz": {
+        "displayName": "Pouze pro interní použití (nešifrované) - 0006",
+        "tooltip": "Pouze pro interní použití (nešifrované) - Advanced Research Lab"
+      },
+      "hu-hu": {
+        "displayName": "Kizárólag belső szolgálati használatra (titkosítatlan) - 0006",
+        "tooltip": "Kizárólag belső használatra (titkosítatlan) - Advanced Research Lab"
+      },
+      "it-it": {
+        "displayName": "Solo per uso interno (non criptato) - 0006",
+        "tooltip": "Solo per uso interno (non criptato) - Laboratorio di ricerca avanzata"
+      },
+      "uk-ua": {
+        "displayName": "Тільки для внутрішнього службового використання - 0006",
+        "tooltip": "Тільки для внутрішнього використання (незашифрований) - Advanced Research Lab"
+      }
+    },
+    "LabelActions": [
+      {
+        "Type": "applycontentmarking",
+        "SubType": "header",
+        "Settings": {
+          "margin": "5",
+          "fontsize": "8",
+          "text": "Nur für internen Dienstgebrauch - Advanced Research Lab - internal use only",
+          "disabled": "false",
+          "alignment": "Center",
+          "fontcolor": "#000000",
+          "placement": "Header"
+        }
+      },
+      {
+        "Type": "encrypt",
+        "SubType": null,
+        "Settings": {
+          "protectiontype": "template",
+          "linkedtemplateid": "3da4e90e-4c31-402e-a094-d8636b40d0f1",
+          "disabled": "false",
+          "templateid": "3da4e90e-4c31-402e-a094-d8636b40d0f1",
+          "templatearchived": "True"
+        }
+      }
+    ],
+    "IsScopedToUser": false,
+    "PublishedPolicies": [],
+    "PublishedToUsers": null,
+    "PublishedToGroups": null
+  },
+  {
+    "Id": "c5a74028-b0ac-42d7-a1c1-5e18fe538856",
+    "Name": "Nur für internen Dienstgebrauch (verschlüsselt) - 0006",
+    "DisplayName": "Nur für internen Dienstgebrauch (verschlüsselt) - 0006",
+    "Comment": "",
+    "Tooltip": "Nur für internen Dienstgebrauch (verschlüsselt) - Advanced Research Lab",
+    "IsActive": true,
+    "Priority": 40,
+    "Color": "",
+    "IsDefault": false,
+    "IsEndpointProtectionEnabled": false,
+    "ParentGuid": "",
+    "BlockCopilot": false,
+    "ScopeFiles": true,
+    "ScopeEmails": true,
+    "ScopeMeetings": false,
+    "ScopeSites": false,
+    "ScopeSchematizedData": false,
+    "EncryptionEnabled": true,
+    "ProtectionType": "Template",
+    "TemplateId": "d5abdfa2-f50b-4df2-9454-9cb109599bf0",
+    "RightsDefinitions": [],
+    "LocaleSettings": {
+      "en-us": {
+        "displayName": "For internal service use only (encrypted) - 0006",
+        "tooltip": "For internal use only (encrypted) - Advanced Research Lab"
+      },
+      "ro-ro": {
+        "displayName": "Numai pentru uzul serviciului intern (criptat) - 0006",
+        "tooltip": "Numai pentru uz intern (criptat) - Advanced Research Lab"
+      },
+      "sk-sk": {
+        "displayName": "Len na interné použitie v rámci služby (zašifrované) - 0006",
+        "tooltip": "Len na interné použitie (zašifrované) - Advanced Research Lab"
+      },
+      "default": {
+        "displayName": "Nur für internen Dienstgebrauch (verschlüsselt) - 0006",
+        "tooltip": "Nur für internen Dienstgebrauch (verschlüsselt) - Advanced Research Lab"
+      },
+      "pt-br": {
+        "displayName": "Apenas para uso interno do serviço (criptografado) - 0006",
+        "tooltip": "Apenas para uso interno (criptografado) - Laboratório de Pesquisa Avançada"
+      },
+      "fr-fr": {
+        "displayName": "Réservé à un usage interne (crypté) - 0006",
+        "tooltip": "Réservé à un usage interne (crypté) - Advanced Research Lab"
+      },
+      "de-de": {
+        "displayName": "Nur für internen Dienstgebrauch (verschlüsselt) - 0006",
+        "tooltip": "Nur für internen Dienstgebrauch (verschlüsselt) - Advanced Research Lab"
+      },
+      "hr-hr": {
+        "displayName": "For internal service use only (encrypted) - 0006",
+        "tooltip": "For internal use only (encrypted) - Advanced Research Lab"
+      },
+      "pl-pl": {
+        "displayName": "Tylko do użytku wewnętrznego (zaszyfrowane) - 0006",
+        "tooltip": "Tylko do użytku wewnętrznego (zaszyfrowane) - Advanced Research Lab"
+      },
+      "cs-cz": {
+        "displayName": "Pouze pro interní použití (šifrovaně) - 0006",
+        "tooltip": "Pouze pro interní použití (šifrované) - Advanced Research Lab"
+      },
+      "hu-hu": {
+        "displayName": "Kizárólag belső szolgálati használatra (titkosítva) - 0006",
+        "tooltip": "Kizárólag belső használatra (titkosítva) - Advanced Research Lab"
+      },
+      "it-it": {
+        "displayName": "Solo per uso interno (criptato) - 0006",
+        "tooltip": "Solo per uso interno (criptato) - Laboratorio di ricerca avanzata"
+      },
+      "uk-ua": {
+        "displayName": "V2 - Тільки для внутрішнього службового використання - 0006",
+        "tooltip": "Тільки для внутрішнього користування (зашифровано) - Advanced Research Lab"
+      }
+    },
+    "LabelActions": [
+      {
+        "Type": "applycontentmarking",
+        "SubType": "header",
+        "Settings": {
+          "margin": "5",
+          "fontsize": "8",
+          "text": "Nur für internen Dienstgebrauch - Advanced Research Lab - internal use only",
+          "disabled": "false",
+          "alignment": "Center",
+          "fontcolor": "#000000",
+          "placement": "Header"
+        }
+      },
+      {
+        "Type": "encrypt",
+        "SubType": null,
+        "Settings": {
+          "protectiontype": "template",
+          "linkedtemplateid": "d5abdfa2-f50b-4df2-9454-9cb109599bf0",
+          "disabled": "false",
+          "templateid": "d5abdfa2-f50b-4df2-9454-9cb109599bf0",
+          "templatearchived": "True"
+        }
+      }
+    ],
+    "IsScopedToUser": false,
+    "PublishedPolicies": [],
+    "PublishedToUsers": null,
+    "PublishedToGroups": null
+  },
+  {
+    "Id": "1ad395b1-ad88-4b50-afb0-eed0328e9a76",
+    "Name": "Vertraulich - 0006",
+    "DisplayName": "Vertraulich - 0006",
+    "Comment": "",
+    "Tooltip": "Vertraulich - Advanced Research Lab",
+    "IsActive": false,
+    "Priority": 41,
+    "Color": "",
+    "IsDefault": false,
+    "IsEndpointProtectionEnabled": false,
+    "ParentGuid": "",
+    "BlockCopilot": false,
+    "ScopeFiles": true,
+    "ScopeEmails": true,
+    "ScopeMeetings": false,
+    "ScopeSites": false,
+    "ScopeSchematizedData": false,
+    "EncryptionEnabled": false,
+    "ProtectionType": "None",
+    "TemplateId": "",
+    "RightsDefinitions": [],
+    "LocaleSettings": {
+      "en-us": {
+        "displayName": "Confidential - 0006",
+        "tooltip": "Confidential - Advanced Research Lab"
+      },
+      "ro-ro": {
+        "displayName": "Confidențial - 0006",
+        "tooltip": "Confidențial - Laborator de cercetare avansată"
+      },
+      "sk-sk": {
+        "displayName": "Dôverné - 0006",
+        "tooltip": "Dôverné - Pokročilé výskumné laboratórium"
+      },
+      "default": {
+        "displayName": "Vertraulich - 0006",
+        "tooltip": "Vertraulich - Advanced Research Lab"
+      },
+      "pt-br": {
+        "displayName": "Confidencial - 0006",
+        "tooltip": "Confidencial - Laboratório de Pesquisa Avançada"
+      },
+      "fr-fr": {
+        "displayName": "Confidentiel - 0006",
+        "tooltip": "Confidentiel - Advanced Research Lab"
+      },
+      "de-de": {
+        "displayName": "Vertraulich - 0006",
+        "tooltip": "Vertraulich - Advanced Research Lab"
+      },
+      "hr-hr": {
+        "displayName": "Confidential - 0006",
+        "tooltip": "Confidential - Advanced Research Lab"
+      },
+      "pl-pl": {
+        "displayName": "Poufne - 0006",
+        "tooltip": "Poufne - Laboratorium Badań Zaawansowanych"
+      },
+      "cs-cz": {
+        "displayName": "Důvěrné - 0006",
+        "tooltip": "Důvěrné - Pokročilá výzkumná laboratoř"
+      },
+      "hu-hu": {
+        "displayName": "Bizalmas - 0006",
+        "tooltip": "Bizalmas - Advanced Research Lab"
+      },
+      "it-it": {
+        "displayName": "Riservato - 0006",
+        "tooltip": "Riservato - Laboratorio di ricerca avanzata"
+      },
+      "uk-ua": {
+        "displayName": "Конфіденційно - 0006",
+        "tooltip": "Конфіденційно - Лабораторія передових досліджень"
+      }
+    },
+    "LabelActions": [
+      {
+        "Type": "applycontentmarking",
+        "SubType": "header",
+        "Settings": {
+          "margin": "5",
+          "fontsize": "8",
+          "text": "Vertraulich - Advanced Research Lab - confidential",
+          "disabled": "false",
+          "alignment": "Center",
+          "fontcolor": "#000000",
+          "placement": "Header"
+        }
+      },
+      {
+        "Type": "applywatermarking",
+        "SubType": null,
+        "Settings": {
+          "fontcolor": "#A2A2A2",
+          "disabled": "false",
+          "layout": "Diagonal",
+          "fontsize": "28",
+          "text": "vertraulich / confidential"
+        }
+      }
+    ],
+    "IsScopedToUser": false,
+    "PublishedPolicies": [],
+    "PublishedToUsers": null,
+    "PublishedToGroups": null
+  },
+  {
+    "Id": "d701bf1d-c6df-4e87-9dd9-2d17e127f4f5",
+    "Name": "Vertraulich (unverschlüsselt) - 0006",
+    "DisplayName": "Vertraulich (unverschlüsselt) - 0006",
+    "Comment": "",
+    "Tooltip": "Vertraulich (unverschlüsselt) - Advanced Research Lab",
+    "IsActive": true,
+    "Priority": 42,
+    "Color": "",
+    "IsDefault": false,
+    "IsEndpointProtectionEnabled": false,
+    "ParentGuid": "",
+    "BlockCopilot": false,
+    "ScopeFiles": true,
+    "ScopeEmails": true,
+    "ScopeMeetings": false,
+    "ScopeSites": false,
+    "ScopeSchematizedData": false,
+    "EncryptionEnabled": true,
+    "ProtectionType": "Template",
+    "TemplateId": "10ed2ef0-21be-4bf7-9a25-bdd2d963f263",
+    "RightsDefinitions": [],
+    "LocaleSettings": {
+      "en-us": {
+        "displayName": "Confidential (unencrypted) - 0006",
+        "tooltip": "Confidential (unencrypted) - Advanced Research Lab"
+      },
+      "ro-ro": {
+        "displayName": "Confidențial (necriptat) - 0006",
+        "tooltip": "Confidențial (necriptat) - Advanced Research Lab"
+      },
+      "sk-sk": {
+        "displayName": "Dôverné (nezašifrované) - 0006",
+        "tooltip": "Dôverné (nezašifrované) - Pokročilé výskumné laboratórium"
+      },
+      "default": {
+        "displayName": "Vertraulich (unverschlüsselt) - 0006",
+        "tooltip": "Vertraulich (unverschlüsselt) - Advanced Research Lab"
+      },
+      "pt-br": {
+        "displayName": "Confidencial (não criptografado) - 0006",
+        "tooltip": "Confidencial (não criptografado) - Laboratório de Pesquisa Avançada"
+      },
+      "fr-fr": {
+        "displayName": "Confidentiel (non crypté) - 0006",
+        "tooltip": "Confidentiel (non crypté) - Advanced Research Lab"
+      },
+      "de-de": {
+        "displayName": "Vertraulich (unverschlüsselt) - 0006",
+        "tooltip": "Vertraulich (unverschlüsselt) - Advanced Research Lab"
+      },
+      "hr-hr": {
+        "displayName": "Confidential (unencrypted) - 0006",
+        "tooltip": "Confidential (unencrypted) - Advanced Research Lab"
+      },
+      "pl-pl": {
+        "displayName": "Poufne (niezaszyfrowane) - 0006",
+        "tooltip": "Poufne (niezaszyfrowane) - Laboratorium Badań Zaawansowanych"
+      },
+      "cs-cz": {
+        "displayName": "Důvěrné (nešifrované) - 0006",
+        "tooltip": "Důvěrné (nešifrované) - Advanced Research Lab"
+      },
+      "hu-hu": {
+        "displayName": "Bizalmas (titkosítatlan) - 0006",
+        "tooltip": "Bizalmas (nem titkosított) - Advanced Research Lab (Korszerű Kutatási Laboratórium)"
+      },
+      "it-it": {
+        "displayName": "Riservato (non criptato) - 0006",
+        "tooltip": "Riservato (non criptato) - Laboratorio di ricerca avanzata"
+      },
+      "uk-ua": {
+        "displayName": "Конфіденційний (незашифрований) - 0006",
+        "tooltip": "Конфіденційні (незашифровані) - Advanced Research Lab"
+      }
+    },
+    "LabelActions": [
+      {
+        "Type": "applycontentmarking",
+        "SubType": "header",
+        "Settings": {
+          "margin": "5",
+          "fontsize": "8",
+          "text": "Vertraulich - Advanced Research Lab - confidential",
+          "disabled": "false",
+          "alignment": "Center",
+          "fontcolor": "#000000",
+          "placement": "Header"
+        }
+      },
+      {
+        "Type": "applywatermarking",
+        "SubType": null,
+        "Settings": {
+          "fontcolor": "#A2A2A2",
+          "disabled": "false",
+          "layout": "Diagonal",
+          "fontsize": "28",
+          "text": "vertraulich / confidential"
+        }
+      },
+      {
+        "Type": "encrypt",
+        "SubType": null,
+        "Settings": {
+          "protectiontype": "template",
+          "linkedtemplateid": "10ed2ef0-21be-4bf7-9a25-bdd2d963f263",
+          "disabled": "false",
+          "templateid": "10ed2ef0-21be-4bf7-9a25-bdd2d963f263",
+          "templatearchived": "True"
+        }
+      }
+    ],
+    "IsScopedToUser": false,
+    "PublishedPolicies": [],
+    "PublishedToUsers": null,
+    "PublishedToGroups": null
+  },
+  {
+    "Id": "9d77daa8-fca8-4f60-9dbd-0f8e297b8b61",
+    "Name": "Vertraulich (verschlüsselt) - 0006",
+    "DisplayName": "Vertraulich (verschlüsselt) - 0006",
+    "Comment": "",
+    "Tooltip": "Vertraulich (verschlüsselt) - Advanced Research Lab",
+    "IsActive": true,
+    "Priority": 43,
+    "Color": "",
+    "IsDefault": false,
+    "IsEndpointProtectionEnabled": false,
+    "ParentGuid": "",
+    "BlockCopilot": false,
+    "ScopeFiles": true,
+    "ScopeEmails": true,
+    "ScopeMeetings": false,
+    "ScopeSites": false,
+    "ScopeSchematizedData": false,
+    "EncryptionEnabled": true,
+    "ProtectionType": "Template",
+    "TemplateId": "98fb18bc-3c7f-4d93-9888-8f5504c2af5b",
+    "RightsDefinitions": [],
+    "LocaleSettings": {
+      "en-us": {
+        "displayName": "Confidential (encrypted) - 0006",
+        "tooltip": "Confidential (encrypted) - Advanced Research Lab"
+      },
+      "ro-ro": {
+        "displayName": "Confidențial (criptat) - 0006",
+        "tooltip": "Confidențial (criptat) - Advanced Research Lab"
+      },
+      "sk-sk": {
+        "displayName": "Dôverné (zašifrované) - 0006",
+        "tooltip": "Dôverné (zašifrované) - Laboratórium pokročilého výskumu"
+      },
+      "default": {
+        "displayName": "Vertraulich (verschlüsselt) - 0006",
+        "tooltip": "Vertraulich (verschlüsselt) - Advanced Research Lab"
+      },
+      "pt-br": {
+        "displayName": "Confidencial (criptografado) - 0006",
+        "tooltip": "Confidencial (criptografado) - Laboratório de Pesquisa Avançada"
+      },
+      "fr-fr": {
+        "displayName": "Confidentiel (crypté) - 0006",
+        "tooltip": "Confidentiel (crypté) - Advanced Research Lab"
+      },
+      "de-de": {
+        "displayName": "Vertraulich (verschlüsselt) - 0006",
+        "tooltip": "Vertraulich (verschlüsselt) - Advanced Research Lab"
+      },
+      "hr-hr": {
+        "displayName": "Confidential (encrypted) - 0006",
+        "tooltip": "Confidential (encrypted) - Advanced Research Lab"
+      },
+      "pl-pl": {
+        "displayName": "Poufne (zaszyfrowane) - 0006",
+        "tooltip": "Poufne (zaszyfrowane) - Laboratorium Badań Zaawansowanych"
+      },
+      "cs-cz": {
+        "displayName": "Důvěrné (šifrované) - 0006",
+        "tooltip": "Důvěrné (šifrované) - Advanced Research Lab"
+      },
+      "hu-hu": {
+        "displayName": "Bizalmas (titkosított) - 0006",
+        "tooltip": "Bizalmas (titkosítva) - Advanced Research Lab (Korszerű Kutatási Laboratórium)"
+      },
+      "it-it": {
+        "displayName": "Riservato (criptato) - 0006",
+        "tooltip": "Riservato (criptato) - Laboratorio di ricerca avanzata"
+      },
+      "uk-ua": {
+        "displayName": "Конфіденційний (зашифрований) - 0006",
+        "tooltip": "Конфіденційно (зашифровано) - Advanced Research Lab"
+      }
+    },
+    "LabelActions": [
+      {
+        "Type": "applycontentmarking",
+        "SubType": "header",
+        "Settings": {
+          "margin": "5",
+          "fontsize": "8",
+          "text": "Vertraulich - Advanced Research Lab - confidential",
+          "disabled": "false",
+          "alignment": "Center",
+          "fontcolor": "#000000",
+          "placement": "Header"
+        }
+      },
+      {
+        "Type": "applywatermarking",
+        "SubType": null,
+        "Settings": {
+          "fontcolor": "#A2A2A2",
+          "disabled": "false",
+          "layout": "Diagonal",
+          "fontsize": "28",
+          "text": "vertraulich / confidential"
+        }
+      },
+      {
+        "Type": "encrypt",
+        "SubType": null,
+        "Settings": {
+          "protectiontype": "template",
+          "linkedtemplateid": "98fb18bc-3c7f-4d93-9888-8f5504c2af5b",
+          "disabled": "false",
+          "templateid": "98fb18bc-3c7f-4d93-9888-8f5504c2af5b",
+          "templatearchived": "True"
+        }
+      }
+    ],
+    "IsScopedToUser": false,
+    "PublishedPolicies": [],
+    "PublishedToUsers": null,
+    "PublishedToGroups": null
+  },
+  {
+    "Id": "e03a98e8-4830-43d5-9868-b1edf083083f",
+    "Name": "Streng Vertraulich - 0006",
+    "DisplayName": "Streng Vertraulich - 0006",
+    "Comment": "",
+    "Tooltip": "Streng Vertraulich - Advanced Research Lab",
+    "IsActive": false,
+    "Priority": 44,
+    "Color": "",
+    "IsDefault": false,
+    "IsEndpointProtectionEnabled": true,
+    "ParentGuid": "",
+    "BlockCopilot": false,
+    "ScopeFiles": true,
+    "ScopeEmails": true,
+    "ScopeMeetings": false,
+    "ScopeSites": false,
+    "ScopeSchematizedData": false,
+    "EncryptionEnabled": true,
+    "ProtectionType": "UserDefined",
+    "TemplateId": "",
+    "RightsDefinitions": [],
+    "LocaleSettings": {
+      "en-us": {
+        "displayName": "Strictly confidential - 0006",
+        "tooltip": "Strictly confidential - Advanced Research Lab"
+      },
+      "ro-ro": {
+        "displayName": "Strict confidențial - 0006",
+        "tooltip": "Strict confidențial - Advanced Research Lab"
+      },
+      "sk-sk": {
+        "displayName": "Prísne dôverné - 0006",
+        "tooltip": "Prísne dôverné - Laboratórium pokročilého výskumu"
+      },
+      "default": {
+        "displayName": "Streng Vertraulich - 0006",
+        "tooltip": "Streng Vertraulich - Advanced Research Lab"
+      },
+      "pt-br": {
+        "displayName": "Estritamente confidencial - 0006",
+        "tooltip": "Estritamente confidencial - Laboratório de Pesquisa Avançada"
+      },
+      "fr-fr": {
+        "displayName": "Strictement confidentiel - 0006",
+        "tooltip": "Strictement confidentiel - Advanced Research Lab"
+      },
+      "de-de": {
+        "displayName": "Streng Vertraulich - 0006",
+        "tooltip": "Streng Vertraulich - Advanced Research Lab"
+      },
+      "hr-hr": {
+        "displayName": "Strictly confidential - 0006",
+        "tooltip": "Strictly confidential - Advanced Research Lab"
+      },
+      "pl-pl": {
+        "displayName": "Ściśle poufne - 0006",
+        "tooltip": "Ściśle poufne - Laboratorium Badań Zaawansowanych"
+      },
+      "cs-cz": {
+        "displayName": "Přísně důvěrné - 0006",
+        "tooltip": "Přísně důvěrné - Advanced Research Lab"
+      },
+      "hu-hu": {
+        "displayName": "Szigorúan bizalmas - 0006",
+        "tooltip": "Szigorúan bizalmas - Advanced Research Lab"
+      },
+      "it-it": {
+        "displayName": "Strettamente riservato - 0006",
+        "tooltip": "Strettamente riservato - Laboratorio di ricerca avanzata"
+      },
+      "uk-ua": {
+        "displayName": "Суворо конфіденційно - 0006",
+        "tooltip": "Суворо конфіденційно - Лабораторія передових досліджень"
+      }
+    },
+    "LabelActions": [
+      {
+        "Type": "applycontentmarking",
+        "SubType": "header",
+        "Settings": {
+          "margin": "5",
+          "fontsize": "8",
+          "text": "Streng Vertraulich - Advanced Research Lab - strictly confidential",
+          "disabled": "false",
+          "alignment": "Center",
+          "fontcolor": "#000000",
+          "placement": "Header"
+        }
+      },
+      {
+        "Type": "applywatermarking",
+        "SubType": null,
+        "Settings": {
+          "fontcolor": "#A2A2A2",
+          "disabled": "false",
+          "layout": "Diagonal",
+          "fontsize": "28",
+          "text": "Streng vertraulich / strictly confidential"
+        }
+      },
+      {
+        "Type": "encrypt",
+        "SubType": null,
+        "Settings": {
+          "donotforward": "true",
+          "disabled": "false",
+          "encryptonly": "false",
+          "protectiontype": "userdefined",
+          "promptuser": "true"
+        }
+      }
+    ],
+    "IsScopedToUser": false,
+    "PublishedPolicies": [],
+    "PublishedToUsers": null,
+    "PublishedToGroups": null
+  },
+  {
+    "Id": "b2e4ba3d-1f9c-45dc-b86b-33bafd22a077",
+    "Name": "Private Informationen - 0012",
+    "DisplayName": "Private Informationen - 0012",
+    "Comment": "",
+    "Tooltip": "Private Informationen - Bio-Nutrient Systems (CRITIS)",
+    "IsActive": false,
+    "Priority": 45,
+    "Color": "",
+    "IsDefault": false,
+    "IsEndpointProtectionEnabled": false,
+    "ParentGuid": "",
+    "BlockCopilot": false,
+    "ScopeFiles": true,
+    "ScopeEmails": true,
+    "ScopeMeetings": false,
+    "ScopeSites": true,
+    "ScopeSchematizedData": false,
+    "EncryptionEnabled": false,
+    "ProtectionType": "None",
+    "TemplateId": "",
+    "RightsDefinitions": [],
+    "LocaleSettings": {
+      "default": {
+        "displayName": "Private Informationen - 0012",
+        "tooltip": "Private Informationen - Bio-Nutrient Systems (CRITIS)"
+      }
+    },
+    "LabelActions": [],
+    "IsScopedToUser": false,
+    "PublishedPolicies": [],
+    "PublishedToUsers": null,
+    "PublishedToGroups": null
+  },
+  {
+    "Id": "bfc40317-aab1-435d-be16-c17e9d1a0e1a",
+    "Name": "Geschäftliche Informationen - 0012",
+    "DisplayName": "Geschäftliche Informationen - 0012",
+    "Comment": "",
+    "Tooltip": "Geschäftliche Informationen - Bio-Nutrient Systems (CRITIS)",
+    "IsActive": false,
+    "Priority": 46,
+    "Color": "",
+    "IsDefault": false,
+    "IsEndpointProtectionEnabled": false,
+    "ParentGuid": "",
+    "BlockCopilot": false,
+    "ScopeFiles": true,
+    "ScopeEmails": true,
+    "ScopeMeetings": false,
+    "ScopeSites": true,
+    "ScopeSchematizedData": false,
+    "EncryptionEnabled": false,
+    "ProtectionType": "None",
+    "TemplateId": "",
+    "RightsDefinitions": [],
+    "LocaleSettings": {
+      "default": {
+        "displayName": "Geschäftliche Informationen - 0012",
+        "tooltip": "Geschäftliche Informationen - Bio-Nutrient Systems (CRITIS)"
+      }
+    },
+    "LabelActions": [],
+    "IsScopedToUser": false,
+    "PublishedPolicies": [],
+    "PublishedToUsers": null,
+    "PublishedToGroups": null
+  },
+  {
+    "Id": "eaea8b43-cd36-4cfa-9ccb-4fca7820ad2d",
+    "Name": "Nur für internen Dienstgebrauch - 0012",
+    "DisplayName": "Nur für internen Dienstgebrauch - 0012",
+    "Comment": "",
+    "Tooltip": "Nur für internen Dienstgebrauch - Bio-Nutrient Systems (CRITIS)",
+    "IsActive": false,
+    "Priority": 47,
+    "Color": "",
+    "IsDefault": false,
+    "IsEndpointProtectionEnabled": false,
+    "ParentGuid": "",
+    "BlockCopilot": false,
+    "ScopeFiles": true,
+    "ScopeEmails": true,
+    "ScopeMeetings": false,
+    "ScopeSites": true,
+    "ScopeSchematizedData": false,
+    "EncryptionEnabled": false,
+    "ProtectionType": "None",
+    "TemplateId": "",
+    "RightsDefinitions": [],
+    "LocaleSettings": {
+      "default": {
+        "displayName": "Nur für internen Dienstgebrauch - 0012",
+        "tooltip": "Nur für internen Dienstgebrauch - Bio-Nutrient Systems (CRITIS)"
+      }
+    },
+    "LabelActions": [
+      {
+        "Type": "applycontentmarking",
+        "SubType": "header",
+        "Settings": {
+          "margin": "5",
+          "fontsize": "8",
+          "text": "Nur für internen Dienstgebrauch - Bio-Nutrient Systems (CRITIS) - internal use only",
+          "disabled": "false",
+          "alignment": "Center",
+          "fontcolor": "#000000",
+          "placement": "Header"
+        }
+      }
+    ],
+    "IsScopedToUser": false,
+    "PublishedPolicies": [],
+    "PublishedToUsers": null,
+    "PublishedToGroups": null
+  },
+  {
+    "Id": "2a267b5a-702d-4070-8e3f-a9734d6f2775",
+    "Name": "Nur für internen Dienstgebrauch (unverschlüsselt) - 0012",
+    "DisplayName": "Nur für internen Dienstgebrauch (unverschlüsselt) - 0012",
+    "Comment": "",
+    "Tooltip": "Nur für internen Dienstgebrauch (unverschlüsselt) - Bio-Nutrient Systems (CRITIS)",
+    "IsActive": true,
+    "Priority": 48,
+    "Color": "",
+    "IsDefault": false,
+    "IsEndpointProtectionEnabled": false,
+    "ParentGuid": "",
+    "BlockCopilot": false,
+    "ScopeFiles": true,
+    "ScopeEmails": true,
+    "ScopeMeetings": false,
+    "ScopeSites": true,
+    "ScopeSchematizedData": false,
+    "EncryptionEnabled": true,
+    "ProtectionType": "Template",
+    "TemplateId": "9c852ff4-e7a8-4a30-8f18-76c713f9cdf0",
+    "RightsDefinitions": [],
+    "LocaleSettings": {
+      "default": {
+        "displayName": "Nur für internen Dienstgebrauch (unverschlüsselt) - 0012",
+        "tooltip": "Nur für internen Dienstgebrauch (unverschlüsselt) - Bio-Nutrient Systems (CRITIS)"
+      }
+    },
+    "LabelActions": [
+      {
+        "Type": "applycontentmarking",
+        "SubType": "header",
+        "Settings": {
+          "margin": "5",
+          "fontsize": "8",
+          "text": "Nur für internen Dienstgebrauch - Bio-Nutrient Systems (CRITIS) - internal use only",
+          "disabled": "false",
+          "alignment": "Center",
+          "fontcolor": "#000000",
+          "placement": "Header"
+        }
+      },
+      {
+        "Type": "encrypt",
+        "SubType": null,
+        "Settings": {
+          "protectiontype": "template",
+          "linkedtemplateid": "9c852ff4-e7a8-4a30-8f18-76c713f9cdf0",
+          "disabled": "false",
+          "templateid": "9c852ff4-e7a8-4a30-8f18-76c713f9cdf0",
+          "templatearchived": "True"
+        }
+      }
+    ],
+    "IsScopedToUser": false,
+    "PublishedPolicies": [],
+    "PublishedToUsers": null,
+    "PublishedToGroups": null
+  },
+  {
+    "Id": "71d5161d-ce6e-4bd6-b4dc-84416c4ce1dd",
+    "Name": "Nur für internen Dienstgebrauch (verschlüsselt) - 0012",
+    "DisplayName": "Nur für internen Dienstgebrauch (verschlüsselt) - 0012",
+    "Comment": "",
+    "Tooltip": "Nur für internen Dienstgebrauch (verschlüsselt) - Bio-Nutrient Systems (CRITIS)",
+    "IsActive": true,
+    "Priority": 49,
+    "Color": "",
+    "IsDefault": false,
+    "IsEndpointProtectionEnabled": false,
+    "ParentGuid": "",
+    "BlockCopilot": false,
+    "ScopeFiles": true,
+    "ScopeEmails": true,
+    "ScopeMeetings": false,
+    "ScopeSites": true,
+    "ScopeSchematizedData": false,
+    "EncryptionEnabled": true,
+    "ProtectionType": "Template",
+    "TemplateId": "26b654af-a866-47f4-b4bd-a65e3a54969d",
+    "RightsDefinitions": [],
+    "LocaleSettings": {
+      "default": {
+        "displayName": "Nur für internen Dienstgebrauch (verschlüsselt) - 0012",
+        "tooltip": "Nur für internen Dienstgebrauch (verschlüsselt) - Bio-Nutrient Systems (CRITIS)"
+      }
+    },
+    "LabelActions": [
+      {
+        "Type": "applycontentmarking",
+        "SubType": "header",
+        "Settings": {
+          "margin": "5",
+          "fontsize": "8",
+          "text": "Nur für internen Dienstgebrauch - Bio-Nutrient Systems (CRITIS) - internal use only",
+          "disabled": "false",
+          "alignment": "Center",
+          "fontcolor": "#000000",
+          "placement": "Header"
+        }
+      },
+      {
+        "Type": "encrypt",
+        "SubType": null,
+        "Settings": {
+          "protectiontype": "template",
+          "linkedtemplateid": "26b654af-a866-47f4-b4bd-a65e3a54969d",
+          "disabled": "false",
+          "templateid": "26b654af-a866-47f4-b4bd-a65e3a54969d",
+          "templatearchived": "True"
+        }
+      }
+    ],
+    "IsScopedToUser": false,
+    "PublishedPolicies": [],
+    "PublishedToUsers": null,
+    "PublishedToGroups": null
+  },
+  {
+    "Id": "dc0f204a-68ee-439b-8ee5-ca4fd3610860",
+    "Name": "Vertraulich - 0012",
+    "DisplayName": "Vertraulich - 0012",
+    "Comment": "",
+    "Tooltip": "Vertraulich - Bio-Nutrient Systems (CRITIS)",
+    "IsActive": false,
+    "Priority": 50,
+    "Color": "",
+    "IsDefault": false,
+    "IsEndpointProtectionEnabled": false,
+    "ParentGuid": "",
+    "BlockCopilot": false,
+    "ScopeFiles": true,
+    "ScopeEmails": true,
+    "ScopeMeetings": false,
+    "ScopeSites": true,
+    "ScopeSchematizedData": false,
+    "EncryptionEnabled": false,
+    "ProtectionType": "None",
+    "TemplateId": "",
+    "RightsDefinitions": [],
+    "LocaleSettings": {
+      "default": {
+        "displayName": "Vertraulich - 0012",
+        "tooltip": "Vertraulich - Bio-Nutrient Systems (CRITIS)"
+      }
+    },
+    "LabelActions": [
+      {
+        "Type": "applycontentmarking",
+        "SubType": "header",
+        "Settings": {
+          "margin": "5",
+          "fontsize": "8",
+          "text": "Vertraulich - Bio-Nutrient Systems (CRITIS) - confidential",
+          "disabled": "false",
+          "alignment": "Center",
+          "fontcolor": "#000000",
+          "placement": "Header"
+        }
+      },
+      {
+        "Type": "applywatermarking",
+        "SubType": null,
+        "Settings": {
+          "fontcolor": "#A2A2A2",
+          "disabled": "false",
+          "layout": "Diagonal",
+          "fontsize": "28",
+          "text": "vertraulich / confidential"
+        }
+      }
+    ],
+    "IsScopedToUser": false,
+    "PublishedPolicies": [],
+    "PublishedToUsers": null,
+    "PublishedToGroups": null
+  },
+  {
+    "Id": "08366852-c268-4a58-a619-fdec905af592",
+    "Name": "Vertraulich (unverschlüsselt) - 0012",
+    "DisplayName": "Vertraulich (unverschlüsselt) - 0012",
+    "Comment": "",
+    "Tooltip": "Vertraulich (unverschlüsselt) - Bio-Nutrient Systems (CRITIS)",
+    "IsActive": true,
+    "Priority": 51,
+    "Color": "",
+    "IsDefault": false,
+    "IsEndpointProtectionEnabled": false,
+    "ParentGuid": "",
+    "BlockCopilot": false,
+    "ScopeFiles": true,
+    "ScopeEmails": true,
+    "ScopeMeetings": false,
+    "ScopeSites": true,
+    "ScopeSchematizedData": false,
+    "EncryptionEnabled": true,
+    "ProtectionType": "Template",
+    "TemplateId": "3f5d3e3f-06cb-4244-845d-32d3b6879fe1",
+    "RightsDefinitions": [],
+    "LocaleSettings": {
+      "default": {
+        "displayName": "Vertraulich (unverschlüsselt) - 0012",
+        "tooltip": "Vertraulich (unverschlüsselt) - Bio-Nutrient Systems (CRITIS)"
+      }
+    },
+    "LabelActions": [
+      {
+        "Type": "applycontentmarking",
+        "SubType": "header",
+        "Settings": {
+          "margin": "5",
+          "fontsize": "8",
+          "text": "Vertraulich - Bio-Nutrient Systems (CRITIS) - confidential",
+          "disabled": "false",
+          "alignment": "Center",
+          "fontcolor": "#000000",
+          "placement": "Header"
+        }
+      },
+      {
+        "Type": "applywatermarking",
+        "SubType": null,
+        "Settings": {
+          "fontcolor": "#A2A2A2",
+          "disabled": "false",
+          "layout": "Diagonal",
+          "fontsize": "28",
+          "text": "vertraulich / confidential"
+        }
+      },
+      {
+        "Type": "encrypt",
+        "SubType": null,
+        "Settings": {
+          "protectiontype": "template",
+          "linkedtemplateid": "3f5d3e3f-06cb-4244-845d-32d3b6879fe1",
+          "disabled": "false",
+          "templateid": "3f5d3e3f-06cb-4244-845d-32d3b6879fe1",
+          "templatearchived": "True"
+        }
+      }
+    ],
+    "IsScopedToUser": false,
+    "PublishedPolicies": [],
+    "PublishedToUsers": null,
+    "PublishedToGroups": null
+  },
+  {
+    "Id": "c34e572b-3946-4d48-a914-2fb99c4eb6fc",
+    "Name": "Vertraulich (verschlüsselt) - 0012",
+    "DisplayName": "Vertraulich (verschlüsselt) - 0012",
+    "Comment": "",
+    "Tooltip": "Vertraulich (verschlüsselt) - Bio-Nutrient Systems (CRITIS)",
+    "IsActive": true,
+    "Priority": 52,
+    "Color": "",
+    "IsDefault": false,
+    "IsEndpointProtectionEnabled": false,
+    "ParentGuid": "",
+    "BlockCopilot": false,
+    "ScopeFiles": true,
+    "ScopeEmails": true,
+    "ScopeMeetings": false,
+    "ScopeSites": true,
+    "ScopeSchematizedData": false,
+    "EncryptionEnabled": true,
+    "ProtectionType": "Template",
+    "TemplateId": "f467b3dc-25be-45c8-b656-5413a1ff66ee",
+    "RightsDefinitions": [],
+    "LocaleSettings": {
+      "default": {
+        "displayName": "Vertraulich (verschlüsselt) - 0012",
+        "tooltip": "Vertraulich (verschlüsselt) - Bio-Nutrient Systems (CRITIS)"
+      }
+    },
+    "LabelActions": [
+      {
+        "Type": "applycontentmarking",
+        "SubType": "header",
+        "Settings": {
+          "margin": "5",
+          "fontsize": "8",
+          "text": "Vertraulich - Bio-Nutrient Systems (CRITIS) - confidential",
+          "disabled": "false",
+          "alignment": "Center",
+          "fontcolor": "#000000",
+          "placement": "Header"
+        }
+      },
+      {
+        "Type": "applywatermarking",
+        "SubType": null,
+        "Settings": {
+          "fontcolor": "#A2A2A2",
+          "disabled": "false",
+          "layout": "Diagonal",
+          "fontsize": "28",
+          "text": "vertraulich / confidential"
+        }
+      },
+      {
+        "Type": "encrypt",
+        "SubType": null,
+        "Settings": {
+          "protectiontype": "template",
+          "linkedtemplateid": "f467b3dc-25be-45c8-b656-5413a1ff66ee",
+          "disabled": "false",
+          "templateid": "f467b3dc-25be-45c8-b656-5413a1ff66ee",
+          "templatearchived": "True"
+        }
+      }
+    ],
+    "IsScopedToUser": false,
+    "PublishedPolicies": [],
+    "PublishedToUsers": null,
+    "PublishedToGroups": null
+  },
+  {
+    "Id": "3405e3c0-d7fe-4e01-acdf-e3d4e9480e68",
+    "Name": "Streng Vertraulich - 0012",
+    "DisplayName": "Streng Vertraulich - 0012",
+    "Comment": "",
+    "Tooltip": "Streng Vertraulich - Bio-Nutrient Systems (CRITIS)",
+    "IsActive": false,
+    "Priority": 53,
+    "Color": "",
+    "IsDefault": false,
+    "IsEndpointProtectionEnabled": true,
+    "ParentGuid": "",
+    "BlockCopilot": false,
+    "ScopeFiles": true,
+    "ScopeEmails": true,
+    "ScopeMeetings": false,
+    "ScopeSites": true,
+    "ScopeSchematizedData": false,
+    "EncryptionEnabled": true,
+    "ProtectionType": "UserDefined",
+    "TemplateId": "",
+    "RightsDefinitions": [],
+    "LocaleSettings": {
+      "default": {
+        "displayName": "Streng Vertraulich - 0012",
+        "tooltip": "Streng Vertraulich - Bio-Nutrient Systems (CRITIS)"
+      }
+    },
+    "LabelActions": [
+      {
+        "Type": "applycontentmarking",
+        "SubType": "header",
+        "Settings": {
+          "margin": "5",
+          "fontsize": "8",
+          "text": "Streng Vertraulich - Bio-Nutrient Systems (CRITIS) - strictly confidential",
+          "disabled": "false",
+          "alignment": "Center",
+          "fontcolor": "#000000",
+          "placement": "Header"
+        }
+      },
+      {
+        "Type": "applywatermarking",
+        "SubType": null,
+        "Settings": {
+          "fontcolor": "#A2A2A2",
+          "disabled": "false",
+          "layout": "Diagonal",
+          "fontsize": "28",
+          "text": "Streng vertraulich / strictly confidential"
+        }
+      },
+      {
+        "Type": "encrypt",
+        "SubType": null,
+        "Settings": {
+          "donotforward": "true",
+          "disabled": "false",
+          "encryptonly": "false",
+          "protectiontype": "userdefined",
+          "promptuser": "true"
+        }
+      }
+    ],
+    "IsScopedToUser": false,
+    "PublishedPolicies": [],
+    "PublishedToUsers": null,
+    "PublishedToGroups": null
+  },
+  {
+    "Id": "8f4e270f-c270-4094-a408-f21fba349074",
+    "Name": "Private Informationen - 0010",
+    "DisplayName": "Private Informationen - 0010",
+    "Comment": "",
+    "Tooltip": "Private Informationen - Bio-Nutrient Systems",
+    "IsActive": false,
+    "Priority": 54,
+    "Color": "",
+    "IsDefault": false,
+    "IsEndpointProtectionEnabled": false,
+    "ParentGuid": "",
+    "BlockCopilot": false,
+    "ScopeFiles": true,
+    "ScopeEmails": true,
+    "ScopeMeetings": false,
+    "ScopeSites": true,
+    "ScopeSchematizedData": false,
+    "EncryptionEnabled": false,
+    "ProtectionType": "None",
+    "TemplateId": "",
+    "RightsDefinitions": [],
+    "LocaleSettings": {
+      "en-us": {
+        "displayName": "Private information - 0010",
+        "tooltip": "Private information - Bio-Nutrient Systems"
+      },
+      "ro-ro": {
+        "displayName": "Informații private - 0010",
+        "tooltip": "Informații private - Bio-Nutrient Systems"
+      },
+      "sk-sk": {
+        "displayName": "Súkromné informácie - 0010",
+        "tooltip": "Súkromné informácie - Bio-Nutrient Systems"
+      },
+      "default": {
+        "displayName": "Private Informationen - 0010",
+        "tooltip": "Private Informationen - Bio-Nutrient Systems"
+      },
+      "pt-br": {
+        "displayName": "Informações privadas - 0010",
+        "tooltip": "Informações privadas - Bio-Nutrient Systems"
+      },
+      "fr-fr": {
+        "displayName": "Informations privées - 0010",
+        "tooltip": "Informations privées - Bio-Nutrient Systems"
+      },
+      "de-de": {
+        "displayName": "Private Informationen - 0010",
+        "tooltip": "Private Informationen - Bio-Nutrient Systems"
+      },
+      "hr-hr": {
+        "displayName": "Private information - 0010",
+        "tooltip": "Private information - Bio-Nutrient Systems"
+      },
+      "pl-pl": {
+        "displayName": "Informacje prywatne - 0010",
+        "tooltip": "Informacje prywatne - Bio-Nutrient Systems"
+      },
+      "cs-cz": {
+        "displayName": "Soukromé informace - 0010",
+        "tooltip": "Soukromé informace - Bio-Nutrient Systems"
+      },
+      "hu-hu": {
+        "displayName": "Magáninformációk - 0010",
+        "tooltip": "Magáninformációk - Bio-Nutrient Systems"
+      },
+      "it-it": {
+        "displayName": "Informazioni private - 0010",
+        "tooltip": "Informazioni private - Sistemi Bio-Nutrienti"
+      },
+      "uk-ua": {
+        "displayName": "Приватна інформація - 0010",
+        "tooltip": "Приватна інформація - Bio-Nutrient Systems"
+      }
+    },
+    "LabelActions": [],
+    "IsScopedToUser": false,
+    "PublishedPolicies": [],
+    "PublishedToUsers": null,
+    "PublishedToGroups": null
+  },
+  {
+    "Id": "6f38a302-7360-48ed-acb1-d41744356286",
+    "Name": "Geschäftliche Informationen - 0010",
+    "DisplayName": "Geschäftliche Informationen - 0010",
+    "Comment": "",
+    "Tooltip": "Geschäftliche Informationen - Bio-Nutrient Systems",
+    "IsActive": false,
+    "Priority": 55,
+    "Color": "",
+    "IsDefault": false,
+    "IsEndpointProtectionEnabled": false,
+    "ParentGuid": "",
+    "BlockCopilot": false,
+    "ScopeFiles": true,
+    "ScopeEmails": true,
+    "ScopeMeetings": false,
+    "ScopeSites": true,
+    "ScopeSchematizedData": false,
+    "EncryptionEnabled": false,
+    "ProtectionType": "None",
+    "TemplateId": "",
+    "RightsDefinitions": [],
+    "LocaleSettings": {
+      "en-us": {
+        "displayName": "Business information - 0010",
+        "tooltip": "Business information - Bio-Nutrient Systems"
+      },
+      "ro-ro": {
+        "displayName": "Informații de afaceri - 0010",
+        "tooltip": "Informații de afaceri - Bio-Nutrient Systems"
+      },
+      "sk-sk": {
+        "displayName": "Obchodné informácie - 0010",
+        "tooltip": "Obchodné informácie - Bio-Nutrient Systems"
+      },
+      "default": {
+        "displayName": "Geschäftliche Informationen - 0010",
+        "tooltip": "Geschäftliche Informationen - Bio-Nutrient Systems"
+      },
+      "pt-br": {
+        "displayName": "Informações comerciais - 0010",
+        "tooltip": "Informações comerciais - Bio-Nutrient Systems"
+      },
+      "fr-fr": {
+        "displayName": "Informations commerciales - 0010",
+        "tooltip": "Informations commerciales - Bio-Nutrient Systems"
+      },
+      "de-de": {
+        "displayName": "Geschäftliche Informationen - 0010",
+        "tooltip": "Geschäftliche Informationen - Bio-Nutrient Systems"
+      },
+      "hr-hr": {
+        "displayName": "Business information - 0010",
+        "tooltip": "Business information - Bio-Nutrient Systems"
+      },
+      "pl-pl": {
+        "displayName": "Informacje biznesowe - 0010",
+        "tooltip": "Informacje biznesowe - Bio-Nutrient Systems"
+      },
+      "cs-cz": {
+        "displayName": "Obchodní informace - 0010",
+        "tooltip": "Obchodní informace - Bio-Nutrient Systems"
+      },
+      "hu-hu": {
+        "displayName": "Üzleti információk - 0010",
+        "tooltip": "Üzleti információk - Bio-Nutrient Systems"
+      },
+      "it-it": {
+        "displayName": "Informazioni commerciali - 0010",
+        "tooltip": "Informazioni commerciali - Sistemi Bio-Nutrienti"
+      },
+      "uk-ua": {
+        "displayName": "Бізнес-інформація - 0010",
+        "tooltip": "Бізнес-інформація - Біо-поживні системи"
+      }
+    },
+    "LabelActions": [],
+    "IsScopedToUser": false,
+    "PublishedPolicies": [],
+    "PublishedToUsers": null,
+    "PublishedToGroups": null
+  },
+  {
+    "Id": "0fd196c9-216c-40ee-bd4b-f9679d374d07",
+    "Name": "Nur für internen Dienstgebrauch - 0010",
+    "DisplayName": "Nur für internen Dienstgebrauch - 0010",
+    "Comment": "",
+    "Tooltip": "Nur für internen Dienstgebrauch - Bio-Nutrient Systems",
+    "IsActive": true,
+    "Priority": 56,
+    "Color": "",
+    "IsDefault": false,
+    "IsEndpointProtectionEnabled": true,
+    "ParentGuid": "",
+    "BlockCopilot": false,
+    "ScopeFiles": true,
+    "ScopeEmails": true,
+    "ScopeMeetings": false,
+    "ScopeSites": true,
+    "ScopeSchematizedData": false,
+    "EncryptionEnabled": false,
+    "ProtectionType": "None",
+    "TemplateId": "",
+    "RightsDefinitions": [],
+    "LocaleSettings": {
+      "en-us": {
+        "displayName": "For internal use only - 0010",
+        "tooltip": "For internal use only - Bio-Nutrient Systems"
+      },
+      "ro-ro": {
+        "displayName": "Numai pentru uz intern - 0010",
+        "tooltip": "Numai pentru uz intern - Bio-Nutrient Systems"
+      },
+      "sk-sk": {
+        "displayName": "Len na interné použitie - 0010",
+        "tooltip": "Len na interné použitie - Bio-Nutrient Systems"
+      },
+      "default": {
+        "displayName": "Nur für internen Dienstgebrauch - 0010",
+        "tooltip": "Nur für internen Dienstgebrauch - Bio-Nutrient Systems"
+      },
+      "pt-br": {
+        "displayName": "Apenas para uso interno - 0010",
+        "tooltip": "Apenas para uso interno - Bio-Nutrient Systems"
+      },
+      "fr-fr": {
+        "displayName": "Réservé à un usage interne - 0010",
+        "tooltip": "Pour usage interne uniquement - Bio-Nutrient Systems"
+      },
+      "de-de": {
+        "displayName": "Nur für internen Dienstgebrauch - 0010",
+        "tooltip": "Nur für internen Dienstgebrauch - Bio-Nutrient Systems"
+      },
+      "hr-hr": {
+        "displayName": "For internal use only - 0010",
+        "tooltip": "For internal use only - Bio-Nutrient Systems"
+      },
+      "pl-pl": {
+        "displayName": "Tylko do użytku wewnętrznego - 0010",
+        "tooltip": "Tylko do użytku wewnętrznego - Bio-Nutrient Systems"
+      },
+      "cs-cz": {
+        "displayName": "Pouze pro interní použití - 0010",
+        "tooltip": "Pouze pro interní použití - Bio-Nutrient Systems"
+      },
+      "hu-hu": {
+        "displayName": "Csak belső használatra - 0010",
+        "tooltip": "Kizárólag belső használatra - Bio-Nutrient Systems"
+      },
+      "it-it": {
+        "displayName": "Solo per uso interno - 0010",
+        "tooltip": "Solo per uso interno - Sistemi Bio-Nutrienti"
+      },
+      "uk-ua": {
+        "displayName": "Тільки для внутрішнього використання - 0010",
+        "tooltip": "Тільки для внутрішнього використання - Біо-поживні системи"
+      }
+    },
+    "LabelActions": [
+      {
+        "Type": "applycontentmarking",
+        "SubType": "header",
+        "Settings": {
+          "margin": "5",
+          "fontsize": "8",
+          "text": "Nur für internen Dienstgebrauch - Bio-Nutrient Systems - internal use only",
+          "disabled": "false",
+          "alignment": "Center",
+          "fontcolor": "#000000",
+          "placement": "Header"
+        }
+      }
+    ],
+    "IsScopedToUser": false,
+    "PublishedPolicies": [
+      "Label Policy - 0010 - Nur interner Dienstgebrauch"
+    ],
+    "PublishedToUsers": null,
+    "PublishedToGroups": {
+      "DisplayName": "All",
+      "Name": "All",
+      "ImmutableIdentity": "All",
+      "Type": {
+        "value": 1,
+        "Value": "Tenant"
+      },
+      "Status": {
+        "value": 2,
+        "Value": "Success"
+      },
+      "Workload": {
+        "value": 512,
+        "Value": "ModernGroup"
+      },
+      "SourceType": null,
+      "SourceTypeDisplayName": null,
+      "SourceProvider": {
+        "value": 0,
+        "Value": "Unknown"
+      },
+      "SourceEntryType": {
+        "value": 0,
+        "Value": "Unknown"
+      },
+      "SchemaVersion": 2,
+      "Resources": null,
+      "ScopingGroup": {
+        "value": 0,
+        "Value": "Unknown"
+      },
+      "GroupSet": "Default"
+    }
+  },
+  {
+    "Id": "d67e452c-b30f-4833-bd12-8c757fd49629",
+    "Name": "Nur für internen Dienstgebrauch (unverschlüsselt) - 0010",
+    "DisplayName": "Nur für internen Dienstgebrauch (unverschlüsselt) - 0010",
+    "Comment": "",
+    "Tooltip": "Nur für internen Dienstgebrauch (unverschlüsselt) - Bio-Nutrient Systems",
+    "IsActive": true,
+    "Priority": 57,
+    "Color": "",
+    "IsDefault": false,
+    "IsEndpointProtectionEnabled": false,
+    "ParentGuid": "",
+    "BlockCopilot": false,
+    "ScopeFiles": true,
+    "ScopeEmails": true,
+    "ScopeMeetings": false,
+    "ScopeSites": true,
+    "ScopeSchematizedData": false,
+    "EncryptionEnabled": true,
+    "ProtectionType": "Template",
+    "TemplateId": "87a925a1-b297-43af-9f15-cd1012a5f618",
+    "RightsDefinitions": [],
+    "LocaleSettings": {
+      "en-us": {
+        "displayName": "For internal service use only (unencrypted) - 0010",
+        "tooltip": "For internal service use only (unencrypted) - Bio-Nutrient Systems"
+      },
+      "ro-ro": {
+        "displayName": "Numai pentru uzul serviciilor interne (necriptat) - 0010",
+        "tooltip": "Numai pentru uzul serviciului intern (necriptat) - Bio-Nutrient Systems"
+      },
+      "sk-sk": {
+        "displayName": "Len na interné použitie (nezašifrované) - 0010",
+        "tooltip": "Len na interné použitie (nezašifrované) - Bio-Nutrient Systems"
+      },
+      "default": {
+        "displayName": "Nur für internen Dienstgebrauch (unverschlüsselt) - 0010",
+        "tooltip": "Nur für internen Dienstgebrauch (unverschlüsselt) - Bio-Nutrient Systems"
+      },
+      "pt-br": {
+        "displayName": "Apenas para uso interno do serviço (não criptografado) - 0010",
+        "tooltip": "Somente para uso em serviços internos (não criptografado) - Bio-Nutrient Systems"
+      },
+      "fr-fr": {
+        "displayName": "Réservé à l'usage interne du service (non crypté) - 0010",
+        "tooltip": "Réservé à un usage interne (non crypté) - Bio-Nutrient Systems"
+      },
+      "de-de": {
+        "displayName": "Nur für internen Dienstgebrauch (unverschlüsselt) - 0010",
+        "tooltip": "Nur für internen Dienstgebrauch (unverschlüsselt) - Bio-Nutrient Systems"
+      },
+      "hr-hr": {
+        "displayName": "For internal service use only (unencrypted) - 0010",
+        "tooltip": "For internal service use only (unencrypted) - Bio-Nutrient Systems"
+      },
+      "pl-pl": {
+        "displayName": "Tylko do użytku wewnętrznego (niezaszyfrowane) - 0010",
+        "tooltip": "Tylko do użytku wewnętrznego (niezaszyfrowane) - Bio-Nutrient Systems"
+      },
+      "cs-cz": {
+        "displayName": "Pouze pro interní použití (nešifrované) - 0010",
+        "tooltip": "Pouze pro interní použití (nešifrované) - Bio-Nutrient Systems"
+      },
+      "hu-hu": {
+        "displayName": "Kizárólag belső szolgálati használatra (titkosítatlan) - 0010",
+        "tooltip": "Kizárólag belső szolgálati használatra (titkosítás nélkül) - Bio-Nutrient Systems"
+      },
+      "it-it": {
+        "displayName": "Solo per uso interno (non criptato) - 0010",
+        "tooltip": "Solo per uso interno (non criptato) - Sistemi Bio-Nutrienti"
+      },
+      "uk-ua": {
+        "displayName": "Тільки для внутрішнього службового використання - 0010",
+        "tooltip": "Тільки для внутрішнього користування (незашифрований) - Bio-Nutrient Systems"
+      }
+    },
+    "LabelActions": [
+      {
+        "Type": "applycontentmarking",
+        "SubType": "header",
+        "Settings": {
+          "margin": "5",
+          "fontsize": "8",
+          "text": "Nur für internen Dienstgebrauch - Bio-Nutrient Systems - internal use only",
+          "disabled": "false",
+          "alignment": "Center",
+          "fontcolor": "#000000",
+          "placement": "Header"
+        }
+      },
+      {
+        "Type": "encrypt",
+        "SubType": null,
+        "Settings": {
+          "protectiontype": "template",
+          "linkedtemplateid": "87a925a1-b297-43af-9f15-cd1012a5f618",
+          "disabled": "false",
+          "templateid": "87a925a1-b297-43af-9f15-cd1012a5f618",
+          "templatearchived": "False"
+        }
+      }
+    ],
+    "IsScopedToUser": false,
+    "PublishedPolicies": [
+      "Label Policy - 0010 - Nur interner Dienstgebrauch"
+    ],
+    "PublishedToUsers": null,
+    "PublishedToGroups": {
+      "DisplayName": "All",
+      "Name": "All",
+      "ImmutableIdentity": "All",
+      "Type": {
+        "value": 1,
+        "Value": "Tenant"
+      },
+      "Status": {
+        "value": 2,
+        "Value": "Success"
+      },
+      "Workload": {
+        "value": 512,
+        "Value": "ModernGroup"
+      },
+      "SourceType": null,
+      "SourceTypeDisplayName": null,
+      "SourceProvider": {
+        "value": 0,
+        "Value": "Unknown"
+      },
+      "SourceEntryType": {
+        "value": 0,
+        "Value": "Unknown"
+      },
+      "SchemaVersion": 2,
+      "Resources": null,
+      "ScopingGroup": {
+        "value": 0,
+        "Value": "Unknown"
+      },
+      "GroupSet": "Default"
+    }
+  },
+  {
+    "Id": "c84be007-3af4-4102-8443-d10ddde6105b",
+    "Name": "Nur für internen Dienstgebrauch (verschlüsselt) - 0010",
+    "DisplayName": "Nur für internen Dienstgebrauch (verschlüsselt) - 0010",
+    "Comment": "",
+    "Tooltip": "Nur für internen Dienstgebrauch (verschlüsselt) - Bio-Nutrient Systems",
+    "IsActive": true,
+    "Priority": 58,
+    "Color": "",
+    "IsDefault": false,
+    "IsEndpointProtectionEnabled": false,
+    "ParentGuid": "",
+    "BlockCopilot": false,
+    "ScopeFiles": true,
+    "ScopeEmails": true,
+    "ScopeMeetings": false,
+    "ScopeSites": true,
+    "ScopeSchematizedData": false,
+    "EncryptionEnabled": true,
+    "ProtectionType": "Template",
+    "TemplateId": "8fafd154-1e1a-448b-bc66-e6555f51ed95",
+    "RightsDefinitions": [],
+    "LocaleSettings": {
+      "en-us": {
+        "displayName": "For internal service use only (encrypted) - 0010",
+        "tooltip": "For internal use only (encrypted) - Bio-Nutrient Systems"
+      },
+      "ro-ro": {
+        "displayName": "Numai pentru uzul serviciului intern (criptat) - 0010",
+        "tooltip": "Numai pentru uz intern (criptat) - Bio-Nutrient Systems"
+      },
+      "sk-sk": {
+        "displayName": "Len na interné použitie v rámci služby (zašifrované) - 0010",
+        "tooltip": "Len na interné použitie (zašifrované) - Bio-Nutrient Systems"
+      },
+      "default": {
+        "displayName": "Nur für internen Dienstgebrauch (verschlüsselt) - 0010",
+        "tooltip": "Nur für internen Dienstgebrauch (verschlüsselt) - Bio-Nutrient Systems"
+      },
+      "pt-br": {
+        "displayName": "Apenas para uso interno do serviço (criptografado) - 0010",
+        "tooltip": "Apenas para uso interno (criptografado) - Bio-Nutrient Systems"
+      },
+      "fr-fr": {
+        "displayName": "Réservé à l'usage interne du service (crypté) - 0010",
+        "tooltip": "Réservé à un usage interne (crypté) - Bio-Nutrient Systems"
+      },
+      "de-de": {
+        "displayName": "Nur für internen Dienstgebrauch (verschlüsselt) - 0010",
+        "tooltip": "Nur für internen Dienstgebrauch (verschlüsselt) - Bio-Nutrient Systems"
+      },
+      "hr-hr": {
+        "displayName": "For internal service use only (encrypted) - 0010",
+        "tooltip": "For internal use only (encrypted) - Bio-Nutrient Systems"
+      },
+      "pl-pl": {
+        "displayName": "Tylko do użytku wewnętrznego (zaszyfrowane) - 0010",
+        "tooltip": "Tylko do użytku wewnętrznego (zaszyfrowane) - Bio-Nutrient Systems"
+      },
+      "cs-cz": {
+        "displayName": "Pouze pro interní použití (šifrovaně) - 0010",
+        "tooltip": "Pouze pro interní použití (zašifrováno) - Bio-Nutrient Systems"
+      },
+      "hu-hu": {
+        "displayName": "Kizárólag belső szolgálati használatra (titkosítva) - 0010",
+        "tooltip": "Csak belső használatra (titkosítva) - Bio-Nutrient Systems"
+      },
+      "it-it": {
+        "displayName": "Solo per uso interno (criptato) - 0010",
+        "tooltip": "Solo per uso interno (criptato) - Sistemi Bio-Nutrienti"
+      },
+      "uk-ua": {
+        "displayName": "Тільки для внутрішнього службового користування - 0010",
+        "tooltip": "Тільки для внутрішнього користування (зашифровано) - Bio-Nutrient Systems"
+      }
+    },
+    "LabelActions": [
+      {
+        "Type": "applycontentmarking",
+        "SubType": "header",
+        "Settings": {
+          "margin": "5",
+          "fontsize": "8",
+          "text": "Nur für internen Dienstgebrauch - Bio-Nutrient Systems - internal use only",
+          "disabled": "false",
+          "alignment": "Center",
+          "fontcolor": "#000000",
+          "placement": "Header"
+        }
+      },
+      {
+        "Type": "encrypt",
+        "SubType": null,
+        "Settings": {
+          "protectiontype": "template",
+          "linkedtemplateid": "8fafd154-1e1a-448b-bc66-e6555f51ed95",
+          "disabled": "false",
+          "templateid": "8fafd154-1e1a-448b-bc66-e6555f51ed95",
+          "templatearchived": "False"
+        }
+      }
+    ],
+    "IsScopedToUser": false,
+    "PublishedPolicies": [
+      "Label Policy - 0010 - Nur interner Dienstgebrauch"
+    ],
+    "PublishedToUsers": null,
+    "PublishedToGroups": {
+      "DisplayName": "All",
+      "Name": "All",
+      "ImmutableIdentity": "All",
+      "Type": {
+        "value": 1,
+        "Value": "Tenant"
+      },
+      "Status": {
+        "value": 2,
+        "Value": "Success"
+      },
+      "Workload": {
+        "value": 512,
+        "Value": "ModernGroup"
+      },
+      "SourceType": null,
+      "SourceTypeDisplayName": null,
+      "SourceProvider": {
+        "value": 0,
+        "Value": "Unknown"
+      },
+      "SourceEntryType": {
+        "value": 0,
+        "Value": "Unknown"
+      },
+      "SchemaVersion": 2,
+      "Resources": null,
+      "ScopingGroup": {
+        "value": 0,
+        "Value": "Unknown"
+      },
+      "GroupSet": "Default"
+    }
+  },
+  {
+    "Id": "71bf2f97-5ea4-415a-9b7c-1f1488ce2583",
+    "Name": "Vertraulich - 0010",
+    "DisplayName": "Vertraulich - 0010",
+    "Comment": "",
+    "Tooltip": "Vertraulich - Bio-Nutrient Systems",
+    "IsActive": false,
+    "Priority": 59,
+    "Color": "",
+    "IsDefault": false,
+    "IsEndpointProtectionEnabled": false,
+    "ParentGuid": "",
+    "BlockCopilot": false,
+    "ScopeFiles": true,
+    "ScopeEmails": true,
+    "ScopeMeetings": false,
+    "ScopeSites": true,
+    "ScopeSchematizedData": false,
+    "EncryptionEnabled": false,
+    "ProtectionType": "None",
+    "TemplateId": "",
+    "RightsDefinitions": [],
+    "LocaleSettings": {
+      "en-us": {
+        "displayName": "Confidential - 0010",
+        "tooltip": "Confidential - Bio-Nutrient Systems"
+      },
+      "ro-ro": {
+        "displayName": "Confidențial - 0010",
+        "tooltip": "Confidențial - Bio-Nutrient Systems"
+      },
+      "sk-sk": {
+        "displayName": "Dôverné - 0010",
+        "tooltip": "Dôverné - Bio-Nutrient Systems"
+      },
+      "default": {
+        "displayName": "Vertraulich - 0010",
+        "tooltip": "Vertraulich - Bio-Nutrient Systems"
+      },
+      "pt-br": {
+        "displayName": "Confidencial - 0010",
+        "tooltip": "Confidencial - Bio-Nutrient Systems"
+      },
+      "fr-fr": {
+        "displayName": "Confidentiel - 0010",
+        "tooltip": "Confidentiel - Bio-Nutrient Systems"
+      },
+      "de-de": {
+        "displayName": "Vertraulich - 0010",
+        "tooltip": "Vertraulich - Bio-Nutrient Systems"
+      },
+      "hr-hr": {
+        "displayName": "Confidential - 0010",
+        "tooltip": "Confidential - Bio-Nutrient Systems"
+      },
+      "pl-pl": {
+        "displayName": "Poufne - 0010",
+        "tooltip": "Poufne - Bio-Nutrient Systems"
+      },
+      "cs-cz": {
+        "displayName": "Důvěrné - 0010",
+        "tooltip": "Důvěrné - Bio-Nutrient Systems"
+      },
+      "hu-hu": {
+        "displayName": "Bizalmas - 0010",
+        "tooltip": "Bizalmas - Bio-Nutrient Systems"
+      },
+      "it-it": {
+        "displayName": "Riservato - 0010",
+        "tooltip": "Confidenziale - Sistemi Bio-Nutrienti"
+      },
+      "uk-ua": {
+        "displayName": "Конфіденційно - 0010",
+        "tooltip": "Конфіденційно - Біо-поживні системи"
+      }
+    },
+    "LabelActions": [
+      {
+        "Type": "applycontentmarking",
+        "SubType": "header",
+        "Settings": {
+          "margin": "5",
+          "fontsize": "8",
+          "text": "Vertraulich - Bio-Nutrient Systems - confidential",
+          "disabled": "false",
+          "alignment": "Center",
+          "fontcolor": "#000000",
+          "placement": "Header"
+        }
+      },
+      {
+        "Type": "applywatermarking",
+        "SubType": null,
+        "Settings": {
+          "fontcolor": "#A2A2A2",
+          "disabled": "false",
+          "layout": "Diagonal",
+          "fontsize": "28",
+          "text": "vertraulich / confidential"
+        }
+      }
+    ],
+    "IsScopedToUser": false,
+    "PublishedPolicies": [],
+    "PublishedToUsers": null,
+    "PublishedToGroups": null
+  },
+  {
+    "Id": "25a6eeca-6b27-4715-9c0f-55a98076fd19",
+    "Name": "Vertraulich (unverschlüsselt) - 0010",
+    "DisplayName": "Vertraulich (unverschlüsselt) - 0010",
+    "Comment": "",
+    "Tooltip": "Vertraulich (unverschlüsselt) - Bio-Nutrient Systems",
+    "IsActive": true,
+    "Priority": 60,
+    "Color": "",
+    "IsDefault": false,
+    "IsEndpointProtectionEnabled": false,
+    "ParentGuid": "",
+    "BlockCopilot": false,
+    "ScopeFiles": true,
+    "ScopeEmails": true,
+    "ScopeMeetings": false,
+    "ScopeSites": true,
+    "ScopeSchematizedData": false,
+    "EncryptionEnabled": true,
+    "ProtectionType": "Template",
+    "TemplateId": "087d3316-d869-4bef-a77b-72761ee91f5e",
+    "RightsDefinitions": [],
+    "LocaleSettings": {
+      "en-us": {
+        "displayName": "Confidential (unencrypted) - 0010",
+        "tooltip": "Confidential (unencrypted) - Bio-Nutrient Systems"
+      },
+      "ro-ro": {
+        "displayName": "Confidențial (necriptat) - 0010",
+        "tooltip": "Confidențial (necriptat) - Bio-Nutrient Systems"
+      },
+      "sk-sk": {
+        "displayName": "Dôverné (nezašifrované) - 0010",
+        "tooltip": "Dôverné (nezašifrované) - Bio-Nutrient Systems"
+      },
+      "default": {
+        "displayName": "Vertraulich (unverschlüsselt) - 0010",
+        "tooltip": "Vertraulich (unverschlüsselt) - Bio-Nutrient Systems"
+      },
+      "pt-br": {
+        "displayName": "Confidencial (não criptografado) - 0010",
+        "tooltip": "Confidencial (não criptografado) - Bio-Nutrient Systems"
+      },
+      "fr-fr": {
+        "displayName": "Confidentiel (non crypté) - 0010",
+        "tooltip": "Confidentiel (non crypté) - Bio-Nutrient Systems"
+      },
+      "de-de": {
+        "displayName": "Vertraulich (unverschlüsselt) - 0010",
+        "tooltip": "Vertraulich (unverschlüsselt) - Bio-Nutrient Systems"
+      },
+      "hr-hr": {
+        "displayName": "Confidential (unencrypted) - 0010",
+        "tooltip": "Confidential (unencrypted) - Bio-Nutrient Systems"
+      },
+      "pl-pl": {
+        "displayName": "Poufne (niezaszyfrowane) - 0010",
+        "tooltip": "Poufne (niezaszyfrowane) - Bio-Nutrient Systems"
+      },
+      "cs-cz": {
+        "displayName": "Důvěrné (nešifrované) - 0010",
+        "tooltip": "Důvěrné (nešifrované) - Bio-Nutrient Systems"
+      },
+      "hu-hu": {
+        "displayName": "Bizalmas (titkosítatlan) - 0010",
+        "tooltip": "Bizalmas (nem titkosított) - Bio-Nutrient Systems"
+      },
+      "it-it": {
+        "displayName": "Riservato (non criptato) - 0010",
+        "tooltip": "Riservato (non criptato) - Sistemi Bio-Nutrienti"
+      },
+      "uk-ua": {
+        "displayName": "Конфіденційний (незашифрований) - 0010",
+        "tooltip": "Конфіденційно (незашифровано) - Біо-поживні системи"
+      }
+    },
+    "LabelActions": [
+      {
+        "Type": "applycontentmarking",
+        "SubType": "header",
+        "Settings": {
+          "margin": "5",
+          "fontsize": "8",
+          "text": "Vertraulich - Bio-Nutrient Systems - confidential",
+          "disabled": "false",
+          "alignment": "Center",
+          "fontcolor": "#000000",
+          "placement": "Header"
+        }
+      },
+      {
+        "Type": "applywatermarking",
+        "SubType": null,
+        "Settings": {
+          "fontcolor": "#A2A2A2",
+          "disabled": "false",
+          "layout": "Diagonal",
+          "fontsize": "28",
+          "text": "vertraulich / confidential"
+        }
+      },
+      {
+        "Type": "encrypt",
+        "SubType": null,
+        "Settings": {
+          "protectiontype": "template",
+          "linkedtemplateid": "087d3316-d869-4bef-a77b-72761ee91f5e",
+          "disabled": "false",
+          "templateid": "087d3316-d869-4bef-a77b-72761ee91f5e",
+          "templatearchived": "True"
+        }
+      }
+    ],
+    "IsScopedToUser": false,
+    "PublishedPolicies": [],
+    "PublishedToUsers": null,
+    "PublishedToGroups": null
+  },
+  {
+    "Id": "9bd9f741-520b-4755-bc4b-7fbdd74b4c07",
+    "Name": "Vertraulich (verschlüsselt) - 0010",
+    "DisplayName": "Vertraulich (verschlüsselt) - 0010",
+    "Comment": "",
+    "Tooltip": "Vertraulich (verschlüsselt) - Bio-Nutrient Systems",
+    "IsActive": true,
+    "Priority": 61,
+    "Color": "",
+    "IsDefault": false,
+    "IsEndpointProtectionEnabled": false,
+    "ParentGuid": "",
+    "BlockCopilot": false,
+    "ScopeFiles": true,
+    "ScopeEmails": true,
+    "ScopeMeetings": false,
+    "ScopeSites": true,
+    "ScopeSchematizedData": false,
+    "EncryptionEnabled": true,
+    "ProtectionType": "Template",
+    "TemplateId": "f42b337f-2854-437f-b954-c8f429655c11",
+    "RightsDefinitions": [],
+    "LocaleSettings": {
+      "en-us": {
+        "displayName": "Confidential (encrypted) - 0010",
+        "tooltip": "Confidential (encrypted) - Bio-Nutrient Systems"
+      },
+      "ro-ro": {
+        "displayName": "Confidențial (criptat) - 0010",
+        "tooltip": "Confidențial (criptat) - Bio-Nutrient Systems"
+      },
+      "sk-sk": {
+        "displayName": "Dôverné (zašifrované) - 0010",
+        "tooltip": "Dôverné (zašifrované) - Bio-Nutrient Systems"
+      },
+      "default": {
+        "displayName": "Vertraulich (verschlüsselt) - 0010",
+        "tooltip": "Vertraulich (verschlüsselt) - Bio-Nutrient Systems"
+      },
+      "pt-br": {
+        "displayName": "Confidencial (criptografado) - 0010",
+        "tooltip": "Confidencial (criptografado) - Bio-Nutrient Systems"
+      },
+      "fr-fr": {
+        "displayName": "Confidentiel (crypté) - 0010",
+        "tooltip": "Confidentiel (crypté) - Bio-Nutrient Systems"
+      },
+      "de-de": {
+        "displayName": "Vertraulich (verschlüsselt) - 0010",
+        "tooltip": "Vertraulich (verschlüsselt) - Bio-Nutrient Systems"
+      },
+      "hr-hr": {
+        "displayName": "Confidential (encrypted) - 0010",
+        "tooltip": "Confidential (encrypted) - Bio-Nutrient Systems"
+      },
+      "pl-pl": {
+        "displayName": "Poufne (zaszyfrowane) - 0010",
+        "tooltip": "Poufne (zaszyfrowane) - Bio-Nutrient Systems"
+      },
+      "cs-cz": {
+        "displayName": "Důvěrné (šifrované) - 0010",
+        "tooltip": "Důvěrné (šifrované) - Bio-Nutrient Systems"
+      },
+      "hu-hu": {
+        "displayName": "Bizalmas (titkosított) - 0010",
+        "tooltip": "Bizalmas (titkosított) - Bio-Nutrient Systems"
+      },
+      "it-it": {
+        "displayName": "Riservato (criptato) - 0010",
+        "tooltip": "Riservato (criptato) - Sistemi Bio-Nutrienti"
+      },
+      "uk-ua": {
+        "displayName": "Конфіденційний (зашифрований) - 0010",
+        "tooltip": "Конфіденційно (зашифровано) - Біо-поживні системи"
+      }
+    },
+    "LabelActions": [
+      {
+        "Type": "applycontentmarking",
+        "SubType": "header",
+        "Settings": {
+          "margin": "5",
+          "fontsize": "8",
+          "text": "Vertraulich - Bio-Nutrient Systems - confidential",
+          "disabled": "false",
+          "alignment": "Center",
+          "fontcolor": "#000000",
+          "placement": "Header"
+        }
+      },
+      {
+        "Type": "applywatermarking",
+        "SubType": null,
+        "Settings": {
+          "fontcolor": "#A2A2A2",
+          "disabled": "false",
+          "layout": "Diagonal",
+          "fontsize": "28",
+          "text": "vertraulich / confidential"
+        }
+      },
+      {
+        "Type": "encrypt",
+        "SubType": null,
+        "Settings": {
+          "protectiontype": "template",
+          "linkedtemplateid": "f42b337f-2854-437f-b954-c8f429655c11",
+          "disabled": "false",
+          "templateid": "f42b337f-2854-437f-b954-c8f429655c11",
+          "templatearchived": "True"
+        }
+      }
+    ],
+    "IsScopedToUser": false,
+    "PublishedPolicies": [],
+    "PublishedToUsers": null,
+    "PublishedToGroups": null
+  },
+  {
+    "Id": "b7203d76-a6e0-4470-a389-5f91bb28a9fc",
+    "Name": "Streng Vertraulich - 0010",
+    "DisplayName": "Streng Vertraulich - 0010",
+    "Comment": "",
+    "Tooltip": "Streng Vertraulich - Bio-Nutrient Systems",
+    "IsActive": false,
+    "Priority": 62,
+    "Color": "",
+    "IsDefault": false,
+    "IsEndpointProtectionEnabled": true,
+    "ParentGuid": "",
+    "BlockCopilot": false,
+    "ScopeFiles": true,
+    "ScopeEmails": true,
+    "ScopeMeetings": false,
+    "ScopeSites": true,
+    "ScopeSchematizedData": false,
+    "EncryptionEnabled": true,
+    "ProtectionType": "UserDefined",
+    "TemplateId": "",
+    "RightsDefinitions": [],
+    "LocaleSettings": {
+      "en-us": {
+        "displayName": "Strictly confidential - 0010",
+        "tooltip": "Strictly confidential - Bio-Nutrient Systems"
+      },
+      "ro-ro": {
+        "displayName": "Strict confidențial - 0010",
+        "tooltip": "Strict confidențial - Bio-Nutrient Systems"
+      },
+      "sk-sk": {
+        "displayName": "Prísne dôverné - 0010",
+        "tooltip": "Prísne dôverné - Bio-Nutrient Systems"
+      },
+      "default": {
+        "displayName": "Streng Vertraulich - 0010",
+        "tooltip": "Streng Vertraulich - Bio-Nutrient Systems"
+      },
+      "pt-br": {
+        "displayName": "Estritamente confidencial - 0010",
+        "tooltip": "Estritamente confidencial - Bio-Nutrient Systems"
+      },
+      "fr-fr": {
+        "displayName": "Strictement confidentiel - 0010",
+        "tooltip": "Strictement confidentiel - Bio-Nutrient Systems"
+      },
+      "de-de": {
+        "displayName": "Streng Vertraulich - 0010",
+        "tooltip": "Streng Vertraulich - Bio-Nutrient Systems"
+      },
+      "hr-hr": {
+        "displayName": "Strictly confidential - 0010",
+        "tooltip": "Strictly confidential - Bio-Nutrient Systems"
+      },
+      "pl-pl": {
+        "displayName": "Ściśle poufne - 0010",
+        "tooltip": "Ściśle poufne - Bio-Nutrient Systems"
+      },
+      "cs-cz": {
+        "displayName": "Přísně důvěrné - 0010",
+        "tooltip": "Přísně důvěrné - Bio-Nutrient Systems"
+      },
+      "hu-hu": {
+        "displayName": "Szigorúan bizalmas - 0010",
+        "tooltip": "Szigorúan bizalmas - Bio-Nutrient Systems"
+      },
+      "it-it": {
+        "displayName": "Strettamente riservato - 0010",
+        "tooltip": "Strettamente confidenziale - Sistemi Bio-Nutrienti"
+      },
+      "uk-ua": {
+        "displayName": "Суворо конфіденційно - 0010",
+        "tooltip": "Суворо конфіденційно - Біо-поживні системи"
+      }
+    },
+    "LabelActions": [
+      {
+        "Type": "applycontentmarking",
+        "SubType": "header",
+        "Settings": {
+          "margin": "5",
+          "fontsize": "8",
+          "text": "Streng Vertraulich - Bio-Nutrient Systems - strictly confidential",
+          "disabled": "false",
+          "alignment": "Center",
+          "fontcolor": "#000000",
+          "placement": "Header"
+        }
+      },
+      {
+        "Type": "applywatermarking",
+        "SubType": null,
+        "Settings": {
+          "fontcolor": "#A2A2A2",
+          "disabled": "false",
+          "layout": "Diagonal",
+          "fontsize": "28",
+          "text": "Streng vertraulich / strictly confidential"
+        }
+      },
+      {
+        "Type": "encrypt",
+        "SubType": null,
+        "Settings": {
+          "donotforward": "true",
+          "disabled": "false",
+          "encryptonly": "false",
+          "protectiontype": "userdefined",
+          "promptuser": "true"
+        }
+      }
+    ],
+    "IsScopedToUser": false,
+    "PublishedPolicies": [],
+    "PublishedToUsers": null,
+    "PublishedToGroups": null
+  },
+  {
+    "Id": "7f43bb4b-ac56-4dad-b34f-600da789ff51",
+    "Name": "SPO Geschäftliche Informationen - 0002",
+    "DisplayName": "SPO Geschäftliche Informationen - 0002",
+    "Comment": "",
+    "Tooltip": "SPO Geschäftliche Informationen - 0002",
+    "IsActive": true,
+    "Priority": 63,
+    "Color": "#F7630C",
+    "IsDefault": false,
+    "IsEndpointProtectionEnabled": false,
+    "ParentGuid": "",
+    "BlockCopilot": false,
+    "ScopeFiles": true,
+    "ScopeEmails": false,
+    "ScopeMeetings": false,
+    "ScopeSites": true,
+    "ScopeSchematizedData": false,
+    "EncryptionEnabled": false,
+    "ProtectionType": "None",
+    "TemplateId": "",
+    "RightsDefinitions": [],
+    "LocaleSettings": {
+      "default": {
+        "displayName": "SPO Geschäftliche Informationen - 0002",
+        "tooltip": "SPO Geschäftliche Informationen - 0002"
+      }
+    },
+    "LabelActions": [],
+    "IsScopedToUser": false,
+    "PublishedPolicies": [
+      "Abteilung 0002 - Label Policy"
+    ],
+    "PublishedToUsers": null,
+    "PublishedToGroups": {
+      "DisplayName": "All",
+      "Name": "All",
+      "ImmutableIdentity": "All",
+      "Type": {
+        "value": 1,
+        "Value": "Tenant"
+      },
+      "Status": {
+        "value": 2,
+        "Value": "Success"
+      },
+      "Workload": {
+        "value": 512,
+        "Value": "ModernGroup"
+      },
+      "SourceType": null,
+      "SourceTypeDisplayName": null,
+      "SourceProvider": {
+        "value": 0,
+        "Value": "Unknown"
+      },
+      "SourceEntryType": {
+        "value": 0,
+        "Value": "Unknown"
+      },
+      "SchemaVersion": 2,
+      "Resources": null,
+      "ScopingGroup": {
+        "value": 0,
+        "Value": "Unknown"
+      },
+      "GroupSet": "Default"
+    }
+  }
+]
