@@ -1,0 +1,95 @@
+[
+  {
+    "limit": 5,
+    "id": "25bed4ab-00f5-438c-8727-7f3bbc68bf87_DefaultLimit",
+    "lastModifiedDateTime": "2026-02-18T14:30:54Z",
+    "displayName": "All users and all devices",
+    "createdDateTime": "0001-01-01T00:00:00Z",
+    "version": 0,
+    "description": "This is the default Device Limit Restriction applied with the lowest priority to all users regardless of group membership.",
+    "priority": 0,
+    "@odata.type": "#microsoft.graph.deviceEnrollmentLimitConfiguration"
+  },
+  {
+    "version": 0,
+    "@odata.type": "#microsoft.graph.deviceEnrollmentPlatformRestrictionsConfiguration",
+    "iosRestriction": {
+      "osMaximumVersion": "",
+      "osMinimumVersion": "",
+      "platformBlocked": true,
+      "personalDeviceEnrollmentBlocked": false
+    },
+    "androidRestriction": {
+      "osMaximumVersion": "",
+      "osMinimumVersion": "",
+      "platformBlocked": true,
+      "personalDeviceEnrollmentBlocked": false
+    },
+    "lastModifiedDateTime": "2026-02-18T14:30:54Z",
+    "windowsMobileRestriction": {
+      "osMaximumVersion": "",
+      "osMinimumVersion": "",
+      "platformBlocked": true,
+      "personalDeviceEnrollmentBlocked": false
+    },
+    "windowsRestriction": {
+      "osMaximumVersion": "",
+      "osMinimumVersion": "",
+      "platformBlocked": false,
+      "personalDeviceEnrollmentBlocked": false
+    },
+    "id": "25bed4ab-00f5-438c-8727-7f3bbc68bf87_DefaultPlatformRestrictions",
+    "description": "This is the default Device Type Restriction applied with the lowest priority to all users regardless of group membership.",
+    "priority": 0,
+    "createdDateTime": "0001-01-01T00:00:00Z",
+    "macOSRestriction": {
+      "osMaximumVersion": null,
+      "osMinimumVersion": null,
+      "platformBlocked": true,
+      "personalDeviceEnrollmentBlocked": false
+    },
+    "displayName": "All users and all devices"
+  },
+  {
+    "unlockWithBiometricsEnabled": true,
+    "@odata.type": "#microsoft.graph.deviceEnrollmentWindowsHelloForBusinessConfiguration",
+    "pinMaximumLength": 127,
+    "createdDateTime": "0001-01-01T00:00:00Z",
+    "pinLowercaseCharactersUsage": "disallowed",
+    "pinExpirationInDays": 0,
+    "state": "enabled",
+    "id": "25bed4ab-00f5-438c-8727-7f3bbc68bf87_DefaultWindowsHelloForBusiness",
+    "pinUppercaseCharactersUsage": "disallowed",
+    "pinMinimumLength": 6,
+    "displayName": "All users and all devices",
+    "enhancedBiometricsState": "notConfigured",
+    "description": "This is the default Windows Hello for Business configuration applied with the lowest priority to all users regardless of group membership.",
+    "version": 0,
+    "pinPreviousBlockCount": 0,
+    "pinSpecialCharactersUsage": "disallowed",
+    "lastModifiedDateTime": "2026-02-18T14:30:54Z",
+    "priority": 0,
+    "securityDeviceRequired": false,
+    "remotePassportEnabled": true
+  },
+  {
+    "id": "25bed4ab-00f5-438c-8727-7f3bbc68bf87_DefaultWindows10EnrollmentCompletionPageConfiguration",
+    "lastModifiedDateTime": "2026-02-18T14:30:54Z",
+    "displayName": "All users and all devices",
+    "createdDateTime": "0001-01-01T00:00:00Z",
+    "allowNonBlockingAppInstallation": false,
+    "version": 0,
+    "description": "This is the default enrollment status screen configuration applied with the lowest priority to all users and all devices regardless of group membership.",
+    "priority": 0,
+    "@odata.type": "#microsoft.graph.windows10EnrollmentCompletionPageConfiguration"
+  },
+  {
+    "version": 0,
+    "description": "This is the default Windows Restore configuration applied with the lowest priority to all users and all devices regardless of group membership.",
+    "displayName": "All users and all devices",
+    "lastModifiedDateTime": "2026-02-18T14:30:54Z",
+    "createdDateTime": "0001-01-01T00:00:00Z",
+    "id": "25bed4ab-00f5-438c-8727-7f3bbc68bf87_WindowsRestore",
+    "priority": 0
+  }
+]
