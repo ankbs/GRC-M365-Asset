@@ -1,0 +1,11 @@
+{
+  "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#deviceManagement/deviceConfigurationDeviceStateSummaries/$entity",
+  "errorDeviceCount": 0,
+  "remediatedDeviceCount": 0,
+  "nonCompliantDeviceCount": 0,
+  "compliantDeviceCount": 0,
+  "notApplicableDeviceCount": 0,
+  "unknownDeviceCount": 0,
+  "id": "25bed4ab-00f5-438c-8727-7f3bbc68bf87",
+  "conflictDeviceCount": 0
+}
