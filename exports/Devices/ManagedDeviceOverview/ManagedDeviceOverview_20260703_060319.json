@@ -1,0 +1,28 @@
+{
+  "id": "40b6c886-d1f3-4e80-9e01-bf999f92bd4e",
+  "dualEnrolledDeviceCount": 0,
+  "deviceExchangeAccessStateSummary": {
+    "quarantinedDeviceCount": 0,
+    "unavailableDeviceCount": 5,
+    "blockedDeviceCount": 0,
+    "allowedDeviceCount": 0,
+    "unknownDeviceCount": 0
+  },
+  "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#microsoft.graph.managedDeviceOverview",
+  "deviceOperatingSystemSummary": {
+    "androidWorkProfileCount": 0,
+    "androidCount": 0,
+    "unknownCount": 0,
+    "windowsMobileCount": 0,
+    "macOSCount": 0,
+    "androidDeviceAdminCount": 0,
+    "iosCount": 0,
+    "configMgrDeviceCount": 0,
+    "androidFullyManagedCount": 0,
+    "androidCorporateWorkProfileCount": 0,
+    "windowsCount": 5,
+    "androidDedicatedCount": 0
+  },
+  "enrolledDeviceCount": 5,
+  "mdmEnrolledCount": 2
+}
