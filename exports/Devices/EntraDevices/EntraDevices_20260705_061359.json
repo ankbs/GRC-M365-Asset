@@ -1,0 +1,68 @@
+[
+  {
+    "Id": "40f921bf-b14c-4bc7-a187-95def87b79e9",
+    "DisplayName": "DESKTOP-387UMFB",
+    "DeviceId": "dd0fc2da-ce79-4ea1-9437-4b637b8c89a9",
+    "OperatingSystem": "Windows",
+    "OperatingSystemVersion": "10.0.28000.1450",
+    "IsManaged": true,
+    "TrustType": "AzureAd",
+    "ApproximateLastSignInDateTime": "2026-02-18T18:30:40Z",
+    "ProfileType": "RegisteredDevice"
+  },
+  {
+    "Id": "70b25e41-2ddb-4de1-9263-4b1968ab4ff0",
+    "DisplayName": "DESKTOP-6UB0RPT",
+    "DeviceId": "76996609-eed3-44ff-b74f-6e1a6f4cb920",
+    "OperatingSystem": "Windows",
+    "OperatingSystemVersion": "10.0.28000.1643",
+    "IsManaged": true,
+    "TrustType": "AzureAd",
+    "ApproximateLastSignInDateTime": "2026-02-18T19:06:32Z",
+    "ProfileType": "RegisteredDevice"
+  },
+  {
+    "Id": "8dfb259f-1106-4800-94e3-5d948664650a",
+    "DisplayName": "SRV-DC1-W2022",
+    "DeviceId": "7bc40055-df1d-fedc-3041-ee87d89347c1",
+    "OperatingSystem": "Windows Server",
+    "OperatingSystemVersion": "10.0.20348.4773",
+    "IsManaged": false,
+    "TrustType": null,
+    "ApproximateLastSignInDateTime": "2026-02-17T15:34:12Z",
+    "ProfileType": null
+  },
+  {
+    "Id": "ca8b5afb-59e9-4940-b8a5-cc0c9c5ada96",
+    "DisplayName": "Studio-MKN",
+    "DeviceId": "1d9845c1-add2-493e-acbd-876eea92e8ed",
+    "OperatingSystem": "Windows",
+    "OperatingSystemVersion": "10.0.26200.8524",
+    "IsManaged": false,
+    "TrustType": "Workplace",
+    "ApproximateLastSignInDateTime": "2026-06-23T19:27:35Z",
+    "ProfileType": "RegisteredDevice"
+  },
+  {
+    "Id": "e9ba4c18-2412-4ee0-90cc-6207a5781261",
+    "DisplayName": "SRV-MB01-W2025",
+    "DeviceId": "1e9e3def-483d-0533-bda6-e63d3ec064c4",
+    "OperatingSystem": "Windows Server",
+    "OperatingSystemVersion": "10.0.26100.32230",
+    "IsManaged": false,
+    "TrustType": null,
+    "ApproximateLastSignInDateTime": "2026-02-17T21:08:10Z",
+    "ProfileType": null
+  },
+  {
+    "Id": "f9032b84-55cd-46f4-912e-70276f90fb6f",
+    "DisplayName": "STUDIO-MKN",
+    "DeviceId": "bf7eadf8-181b-8cc6-a111-b800bc806dd6",
+    "OperatingSystem": "Windows",
+    "OperatingSystemVersion": "10.0.26200.8737",
+    "IsManaged": false,
+    "TrustType": null,
+    "ApproximateLastSignInDateTime": "2026-06-28T16:10:08Z",
+    "ProfileType": null
+  }
+]
