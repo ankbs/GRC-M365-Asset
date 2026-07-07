@@ -1,0 +1,692 @@
+[
+  {
+    "Id": "0043ff28-a06c-4394-91b5-247e6d3d4bf6",
+    "DisplayName": "M365 GDAP Advanced",
+    "MailEnabled": false,
+    "SecurityEnabled": true,
+    "GroupClassification": "Security Group",
+    "Visibility": "Private",
+    "CreatedDateTime": "2026-02-27T12:37:14Z",
+    "OnPremisesSyncEnabled": false
+  },
+  {
+    "Id": "066e759f-422c-428b-8ac7-be7b05c28c1e",
+    "DisplayName": "M365 GDAP Custom Application Developer 19ae3a92",
+    "MailEnabled": false,
+    "SecurityEnabled": true,
+    "GroupClassification": "Security Group",
+    "Visibility": "Private",
+    "CreatedDateTime": "2026-02-27T13:06:18Z",
+    "OnPremisesSyncEnabled": false
+  },
+  {
+    "Id": "073d78ef-b0de-443b-960b-76bc25ce3234",
+    "DisplayName": "M365 GDAP Advanced Helpdesk Group",
+    "MailEnabled": false,
+    "SecurityEnabled": true,
+    "GroupClassification": "Security Group",
+    "Visibility": "Private",
+    "CreatedDateTime": "2026-02-27T12:54:30Z",
+    "OnPremisesSyncEnabled": false
+  },
+  {
+    "Id": "0995a421-5f7d-4ed8-b098-17802452ebf4",
+    "DisplayName": "M365 GDAP Intune Administrator",
+    "MailEnabled": false,
+    "SecurityEnabled": true,
+    "GroupClassification": "Security Group",
+    "Visibility": null,
+    "CreatedDateTime": "2026-05-08T15:09:04Z",
+    "OnPremisesSyncEnabled": false
+  },
+  {
+    "Id": "0cea644c-ac2b-4ce7-8429-84edff5d1b6c",
+    "DisplayName": "Excluded from Legacy Authentication Block",
+    "MailEnabled": false,
+    "SecurityEnabled": true,
+    "GroupClassification": "Security Group",
+    "Visibility": "Private",
+    "CreatedDateTime": "2025-06-24T15:34:54Z",
+    "OnPremisesSyncEnabled": false
+  },
+  {
+    "Id": "1662ae85-6011-43b6-8a81-85011bc9c932",
+    "DisplayName": "DemoWebsite02",
+    "MailEnabled": true,
+    "SecurityEnabled": false,
+    "GroupClassification": "Microsoft 365 Group",
+    "Visibility": "Private",
+    "CreatedDateTime": "2026-05-29T11:00:03Z",
+    "OnPremisesSyncEnabled": false
+  },
+  {
+    "Id": "172f9e93-d1d3-482f-bb0c-47d63552a1fe",
+    "DisplayName": "Demo-GSA-M365_ClientAccess",
+    "MailEnabled": false,
+    "SecurityEnabled": true,
+    "GroupClassification": "Security Group",
+    "Visibility": null,
+    "CreatedDateTime": "2025-06-24T15:51:16Z",
+    "OnPremisesSyncEnabled": false
+  },
+  {
+    "Id": "1ac33768-baf5-4e53-a090-4e2430b32dde",
+    "DisplayName": "Demo OnPrem Gruppe 02",
+    "MailEnabled": false,
+    "SecurityEnabled": true,
+    "GroupClassification": "Security Group",
+    "Visibility": null,
+    "CreatedDateTime": "2026-02-17T14:02:47Z",
+    "OnPremisesSyncEnabled": true
+  },
+  {
+    "Id": "1ecb2ed5-3e76-4398-bd1a-f38ebe4a80a6",
+    "DisplayName": "M365 GDAP Billing Administrator",
+    "MailEnabled": false,
+    "SecurityEnabled": true,
+    "GroupClassification": "Security Group",
+    "Visibility": null,
+    "CreatedDateTime": "2026-05-08T15:09:04Z",
+    "OnPremisesSyncEnabled": false
+  },
+  {
+    "Id": "21c36560-00ae-424b-8a55-570365262b96",
+    "DisplayName": "GRP - Dyn - SRV 2022 AD DC",
+    "MailEnabled": false,
+    "SecurityEnabled": true,
+    "GroupClassification": "Security Group",
+    "Visibility": null,
+    "CreatedDateTime": "2026-02-25T09:08:06Z",
+    "OnPremisesSyncEnabled": false
+  },
+  {
+    "Id": "22681c9f-a0d6-4b55-ba9a-8a9f2f0e341a",
+    "DisplayName": "Excluded from Conditional Access",
+    "MailEnabled": false,
+    "SecurityEnabled": true,
+    "GroupClassification": "Security Group",
+    "Visibility": "Private",
+    "CreatedDateTime": "2025-06-24T15:34:54Z",
+    "OnPremisesSyncEnabled": false
+  },
+  {
+    "Id": "23f21d0f-e6cb-4e8b-8ce4-0b76f6987a74",
+    "DisplayName": "M365 GDAP Helpdesk Group",
+    "MailEnabled": false,
+    "SecurityEnabled": true,
+    "GroupClassification": "Security Group",
+    "Visibility": "Private",
+    "CreatedDateTime": "2026-02-27T12:54:21Z",
+    "OnPremisesSyncEnabled": false
+  },
+  {
+    "Id": "245e142e-137e-40bf-891f-f2c22fa8fe18",
+    "DisplayName": "M365 GDAP Custom 19ae3a92 Demo 15",
+    "MailEnabled": false,
+    "SecurityEnabled": true,
+    "GroupClassification": "Security Group",
+    "Visibility": "Private",
+    "CreatedDateTime": "2026-02-27T13:48:56Z",
+    "OnPremisesSyncEnabled": false
+  },
+  {
+    "Id": "24e83f60-a106-444c-9409-102c7b3ebbb1",
+    "DisplayName": "Device - Demo - Admin Registrierte Geräte",
+    "MailEnabled": false,
+    "SecurityEnabled": true,
+    "GroupClassification": "Security Group",
+    "Visibility": null,
+    "CreatedDateTime": "2026-02-17T09:08:30Z",
+    "OnPremisesSyncEnabled": false
+  },
+  {
+    "Id": "26a66867-ef99-472a-8d8b-31145c067b83",
+    "DisplayName": "Demo-Deleted-Identity-Recovery",
+    "MailEnabled": false,
+    "SecurityEnabled": true,
+    "GroupClassification": "Security Group",
+    "Visibility": null,
+    "CreatedDateTime": "2026-02-10T20:51:02Z",
+    "OnPremisesSyncEnabled": false
+  },
+  {
+    "Id": "294232f4-dc8a-4c14-a2d0-5f34bc5f64c5",
+    "DisplayName": "M365 GDAP Authentication Policy Administrator",
+    "MailEnabled": false,
+    "SecurityEnabled": true,
+    "GroupClassification": "Security Group",
+    "Visibility": null,
+    "CreatedDateTime": "2026-05-08T15:09:04Z",
+    "OnPremisesSyncEnabled": false
+  },
+  {
+    "Id": "2ace62c3-9409-4279-a2d6-06c2c664f14d",
+    "DisplayName": "M365 GDAP Security Administrator",
+    "MailEnabled": false,
+    "SecurityEnabled": true,
+    "GroupClassification": "Security Group",
+    "Visibility": null,
+    "CreatedDateTime": "2026-05-08T15:09:04Z",
+    "OnPremisesSyncEnabled": false
+  },
+  {
+    "Id": "2e232ed3-e694-4f17-8a92-ad029e5ce7bf",
+    "DisplayName": "Group for Answers in Viva Engage – DO NOT DELETE 11804614657",
+    "MailEnabled": true,
+    "SecurityEnabled": false,
+    "GroupClassification": "Microsoft 365 Group",
+    "Visibility": "Public",
+    "CreatedDateTime": "2025-11-24T11:29:39Z",
+    "OnPremisesSyncEnabled": false
+  },
+  {
+    "Id": "3418588b-dc64-4689-a664-355a412c446d",
+    "DisplayName": "M365 GDAP Custom f3ffabf7 Finance",
+    "MailEnabled": false,
+    "SecurityEnabled": true,
+    "GroupClassification": "Security Group",
+    "Visibility": "Private",
+    "CreatedDateTime": "2026-03-09T09:04:04Z",
+    "OnPremisesSyncEnabled": false
+  },
+  {
+    "Id": "350ed347-6ca0-427e-85fc-54b7a15b2250",
+    "DisplayName": "M365 GDAP Custom 19ae3a92 Demo 11",
+    "MailEnabled": false,
+    "SecurityEnabled": true,
+    "GroupClassification": "Security Group",
+    "Visibility": "Private",
+    "CreatedDateTime": "2026-02-27T13:41:51Z",
+    "OnPremisesSyncEnabled": false
+  },
+  {
+    "Id": "3be8418b-9f6d-4acd-b843-bd71eda50c2d",
+    "DisplayName": "M365 GDAP Helpdesk 19ae3a92 demo 08",
+    "MailEnabled": false,
+    "SecurityEnabled": true,
+    "GroupClassification": "Security Group",
+    "Visibility": "Private",
+    "CreatedDateTime": "2026-02-27T13:19:11Z",
+    "OnPremisesSyncEnabled": false
+  },
+  {
+    "Id": "3e11b35b-603a-4935-acd1-3bdf4d1ba6c8",
+    "DisplayName": "Conditional Access Service Accounts",
+    "MailEnabled": false,
+    "SecurityEnabled": true,
+    "GroupClassification": "Security Group",
+    "Visibility": "Private",
+    "CreatedDateTime": "2025-06-24T15:35:12Z",
+    "OnPremisesSyncEnabled": false
+  },
+  {
+    "Id": "400ce0b4-3684-4c0b-b33d-8347eaa6a00b",
+    "DisplayName": "Demo_EntraID_Sync_User",
+    "MailEnabled": false,
+    "SecurityEnabled": true,
+    "GroupClassification": "Security Group",
+    "Visibility": null,
+    "CreatedDateTime": "2026-02-17T12:33:14Z",
+    "OnPremisesSyncEnabled": false
+  },
+  {
+    "Id": "4272b66d-d2d2-4091-a06f-06774e3cb455",
+    "DisplayName": "M365 GDAP Custom 19ae3a92 Demo 16",
+    "MailEnabled": false,
+    "SecurityEnabled": true,
+    "GroupClassification": "Security Group",
+    "Visibility": "Private",
+    "CreatedDateTime": "2026-02-27T13:50:28Z",
+    "OnPremisesSyncEnabled": false
+  },
+  {
+    "Id": "44188216-fbef-42cb-bf71-2445eb400438",
+    "DisplayName": "M365 GDAP Custom 19ae3a92 Demo 10",
+    "MailEnabled": false,
+    "SecurityEnabled": true,
+    "GroupClassification": "Security Group",
+    "Visibility": "Private",
+    "CreatedDateTime": "2026-02-27T13:31:47Z",
+    "OnPremisesSyncEnabled": false
+  },
+  {
+    "Id": "493b625b-a976-4a81-9895-45358864c60d",
+    "DisplayName": "M365 GDAP Domain Name Administrator",
+    "MailEnabled": false,
+    "SecurityEnabled": true,
+    "GroupClassification": "Security Group",
+    "Visibility": null,
+    "CreatedDateTime": "2026-05-08T15:09:04Z",
+    "OnPremisesSyncEnabled": false
+  },
+  {
+    "Id": "4ac67fe6-4466-4a85-ab8a-73b8c1ca7171",
+    "DisplayName": "DemoWebsite",
+    "MailEnabled": true,
+    "SecurityEnabled": false,
+    "GroupClassification": "Microsoft 365 Group",
+    "Visibility": "Private",
+    "CreatedDateTime": "2026-05-29T08:38:08Z",
+    "OnPremisesSyncEnabled": false
+  },
+  {
+    "Id": "55df8550-9dae-499e-929a-90edae6baf21",
+    "DisplayName": "M365 GDAP Privileged Role Administrator",
+    "MailEnabled": false,
+    "SecurityEnabled": true,
+    "GroupClassification": "Security Group",
+    "Visibility": null,
+    "CreatedDateTime": "2026-05-08T15:09:04Z",
+    "OnPremisesSyncEnabled": false
+  },
+  {
+    "Id": "5f089003-2cd1-435f-9a31-369572d738bc",
+    "DisplayName": "M365 GDAP Privileged Authentication Administrator",
+    "MailEnabled": false,
+    "SecurityEnabled": true,
+    "GroupClassification": "Security Group",
+    "Visibility": null,
+    "CreatedDateTime": "2026-05-08T15:09:04Z",
+    "OnPremisesSyncEnabled": false
+  },
+  {
+    "Id": "6591da39-71c9-48d0-a685-d6b587fe9bc6",
+    "DisplayName": "M365 GDAP Cloud App Security Administrator",
+    "MailEnabled": false,
+    "SecurityEnabled": true,
+    "GroupClassification": "Security Group",
+    "Visibility": null,
+    "CreatedDateTime": "2026-05-08T15:09:04Z",
+    "OnPremisesSyncEnabled": false
+  },
+  {
+    "Id": "66eb76a5-58f3-41e8-a01e-4e9605be7f99",
+    "DisplayName": "Device - Demo - Registrierte Geräte",
+    "MailEnabled": false,
+    "SecurityEnabled": true,
+    "GroupClassification": "Security Group",
+    "Visibility": null,
+    "CreatedDateTime": "2026-02-17T09:07:18Z",
+    "OnPremisesSyncEnabled": false
+  },
+  {
+    "Id": "72da35d5-2d81-4940-b5dc-bcaab12a9d9d",
+    "DisplayName": "M365 GDAP Custom 19ae3a92 Demo 14",
+    "MailEnabled": false,
+    "SecurityEnabled": true,
+    "GroupClassification": "Security Group",
+    "Visibility": "Private",
+    "CreatedDateTime": "2026-02-27T13:47:23Z",
+    "OnPremisesSyncEnabled": false
+  },
+  {
+    "Id": "7622cdc5-0726-4a60-88dc-f4445bf4f839",
+    "DisplayName": "M365 GDAP Cloud Device Administrator",
+    "MailEnabled": false,
+    "SecurityEnabled": true,
+    "GroupClassification": "Security Group",
+    "Visibility": null,
+    "CreatedDateTime": "2026-05-08T15:09:04Z",
+    "OnPremisesSyncEnabled": false
+  },
+  {
+    "Id": "773b9bb0-a45b-4ef9-861f-3630653e2883",
+    "DisplayName": "M365 GDAP Teams Administrator",
+    "MailEnabled": false,
+    "SecurityEnabled": true,
+    "GroupClassification": "Security Group",
+    "Visibility": null,
+    "CreatedDateTime": "2026-05-08T15:09:04Z",
+    "OnPremisesSyncEnabled": false
+  },
+  {
+    "Id": "7b982095-1da8-49fd-8ec0-d7a4b2f2b71e",
+    "DisplayName": "MyCloudOfficeDEV GOV01",
+    "MailEnabled": false,
+    "SecurityEnabled": true,
+    "GroupClassification": "Security Group",
+    "Visibility": null,
+    "CreatedDateTime": "2026-01-16T10:26:52Z",
+    "OnPremisesSyncEnabled": false
+  },
+  {
+    "Id": "7c18b1e7-037a-4386-af09-beb0cde4ca21",
+    "DisplayName": "mycloudofficedev",
+    "MailEnabled": true,
+    "SecurityEnabled": true,
+    "GroupClassification": "Microsoft 365 Group",
+    "Visibility": "Public",
+    "CreatedDateTime": "2024-01-24T20:26:43Z",
+    "OnPremisesSyncEnabled": false
+  },
+  {
+    "Id": "7cc99521-dc25-4437-907a-cdbff435d69e",
+    "DisplayName": "M365 GDAP Custom Attack Simulation Administrator 19ae3a92",
+    "MailEnabled": false,
+    "SecurityEnabled": true,
+    "GroupClassification": "Security Group",
+    "Visibility": "Private",
+    "CreatedDateTime": "2026-02-27T13:06:22Z",
+    "OnPremisesSyncEnabled": false
+  },
+  {
+    "Id": "81247633-9d05-4937-8a7f-f84fe46782e3",
+    "DisplayName": "Excluded from Country Block List",
+    "MailEnabled": false,
+    "SecurityEnabled": true,
+    "GroupClassification": "Security Group",
+    "Visibility": "Private",
+    "CreatedDateTime": "2025-06-24T15:35:05Z",
+    "OnPremisesSyncEnabled": false
+  },
+  {
+    "Id": "814ded00-3c27-4de1-818a-a7a10c29a0db",
+    "DisplayName": "M365 GDAP Application Administrator",
+    "MailEnabled": false,
+    "SecurityEnabled": true,
+    "GroupClassification": "Security Group",
+    "Visibility": null,
+    "CreatedDateTime": "2026-05-08T15:09:04Z",
+    "OnPremisesSyncEnabled": false
+  },
+  {
+    "Id": "898b2890-c736-4939-b190-8ea6dfb49d7b",
+    "DisplayName": "M365 GDAP Helpdesk 1063fe67 Demo 09",
+    "MailEnabled": false,
+    "SecurityEnabled": true,
+    "GroupClassification": "Security Group",
+    "Visibility": "Private",
+    "CreatedDateTime": "2026-03-06T10:02:29Z",
+    "OnPremisesSyncEnabled": false
+  },
+  {
+    "Id": "8f80a128-0d89-4fe8-8bd8-cbe774f6631b",
+    "DisplayName": "M365 GDAP Custom f3ffabf7",
+    "MailEnabled": false,
+    "SecurityEnabled": true,
+    "GroupClassification": "Security Group",
+    "Visibility": "Private",
+    "CreatedDateTime": "2026-03-09T10:45:06Z",
+    "OnPremisesSyncEnabled": false
+  },
+  {
+    "Id": "9156d01c-9f5f-48d8-8a73-e0fab926de2f",
+    "DisplayName": "ComplianceShield - Demo - Webarchive",
+    "MailEnabled": true,
+    "SecurityEnabled": false,
+    "GroupClassification": "Microsoft 365 Group",
+    "Visibility": "Private",
+    "CreatedDateTime": "2025-06-24T15:14:09Z",
+    "OnPremisesSyncEnabled": false
+  },
+  {
+    "Id": "9232f4a1-a6a9-4ce5-8370-d5274c609832",
+    "DisplayName": "GRP - Dyn - SRV 2025 AD Member",
+    "MailEnabled": false,
+    "SecurityEnabled": true,
+    "GroupClassification": "Security Group",
+    "Visibility": null,
+    "CreatedDateTime": "2026-02-25T09:06:24Z",
+    "OnPremisesSyncEnabled": false
+  },
+  {
+    "Id": "96695608-d0a5-474b-9bbe-2cf6b71ff9fa",
+    "DisplayName": "Device - Demo - EntraID Joined Geräte",
+    "MailEnabled": false,
+    "SecurityEnabled": true,
+    "GroupClassification": "Security Group",
+    "Visibility": null,
+    "CreatedDateTime": "2026-02-17T09:09:53Z",
+    "OnPremisesSyncEnabled": false
+  },
+  {
+    "Id": "a0e23a46-979b-4136-b9b0-cdc891d72233",
+    "DisplayName": "M365 GDAP Helpdesk demo03",
+    "MailEnabled": false,
+    "SecurityEnabled": true,
+    "GroupClassification": "Security Group",
+    "Visibility": "Private",
+    "CreatedDateTime": "2026-02-27T12:58:48Z",
+    "OnPremisesSyncEnabled": false
+  },
+  {
+    "Id": "a166ad68-28df-4ffd-b566-36598d05930c",
+    "DisplayName": "M365 GDAP Custom 19ae3a92 Demo 21",
+    "MailEnabled": false,
+    "SecurityEnabled": true,
+    "GroupClassification": "Security Group",
+    "Visibility": "Private",
+    "CreatedDateTime": "2026-03-05T00:05:17Z",
+    "OnPremisesSyncEnabled": false
+  },
+  {
+    "Id": "a5164a3a-c71d-4243-86af-d33985e5e491",
+    "DisplayName": "M365 GDAP Custom 19ae3a92 Demo 12",
+    "MailEnabled": false,
+    "SecurityEnabled": true,
+    "GroupClassification": "Security Group",
+    "Visibility": "Private",
+    "CreatedDateTime": "2026-02-27T13:43:35Z",
+    "OnPremisesSyncEnabled": false
+  },
+  {
+    "Id": "a9b5eda2-6d6c-41ec-9bbc-b3e48b7355af",
+    "DisplayName": "M365 GDAP Custom 19ae3a92 Demo 19",
+    "MailEnabled": false,
+    "SecurityEnabled": true,
+    "GroupClassification": "Security Group",
+    "Visibility": "Private",
+    "CreatedDateTime": "2026-02-27T14:06:16Z",
+    "OnPremisesSyncEnabled": false
+  },
+  {
+    "Id": "af797f02-9562-47bb-ac05-f50802e28e98",
+    "DisplayName": "M365 GDAP Custom Attribute Assignment Administrator 19ae3a92",
+    "MailEnabled": false,
+    "SecurityEnabled": true,
+    "GroupClassification": "Security Group",
+    "Visibility": "Private",
+    "CreatedDateTime": "2026-02-27T13:06:23Z",
+    "OnPremisesSyncEnabled": false
+  },
+  {
+    "Id": "b0a5b2a3-ae9d-4416-8902-351580a1e2ef",
+    "DisplayName": "M365 GDAP Custom 90a824f3 Finance",
+    "MailEnabled": false,
+    "SecurityEnabled": true,
+    "GroupClassification": "Security Group",
+    "Visibility": "Private",
+    "CreatedDateTime": "2026-03-09T08:42:03Z",
+    "OnPremisesSyncEnabled": false
+  },
+  {
+    "Id": "b3202590-bb23-4d55-959a-c4f346fcdb5f",
+    "DisplayName": "Excluded from Device Code Auth Flow Block",
+    "MailEnabled": false,
+    "SecurityEnabled": true,
+    "GroupClassification": "Security Group",
+    "Visibility": "Private",
+    "CreatedDateTime": "2025-06-24T15:34:58Z",
+    "OnPremisesSyncEnabled": false
+  },
+  {
+    "Id": "b54af592-2f94-4f4d-9813-41439ce5f99e",
+    "DisplayName": "Opal-UserGroup",
+    "MailEnabled": false,
+    "SecurityEnabled": true,
+    "GroupClassification": "Security Group",
+    "Visibility": "Private",
+    "CreatedDateTime": "2025-11-26T20:36:14Z",
+    "OnPremisesSyncEnabled": false
+  },
+  {
+    "Id": "be471c4e-cacc-410e-b948-8ece36f52ab1",
+    "DisplayName": "M365 GDAP Global Reader",
+    "MailEnabled": false,
+    "SecurityEnabled": true,
+    "GroupClassification": "Security Group",
+    "Visibility": null,
+    "CreatedDateTime": "2026-05-08T15:09:04Z",
+    "OnPremisesSyncEnabled": false
+  },
+  {
+    "Id": "bf0978c1-1a44-4221-9592-476aeea8ac3d",
+    "DisplayName": "M365 GDAP SharePoint Administrator",
+    "MailEnabled": false,
+    "SecurityEnabled": true,
+    "GroupClassification": "Security Group",
+    "Visibility": null,
+    "CreatedDateTime": "2026-05-08T15:09:04Z",
+    "OnPremisesSyncEnabled": false
+  },
+  {
+    "Id": "c0f601a4-8d28-468b-b757-88729f97c709",
+    "DisplayName": "M365 GDAP Exchange Administrator",
+    "MailEnabled": false,
+    "SecurityEnabled": true,
+    "GroupClassification": "Security Group",
+    "Visibility": null,
+    "CreatedDateTime": "2026-05-08T15:09:04Z",
+    "OnPremisesSyncEnabled": false
+  },
+  {
+    "Id": "c4e75213-bc23-440c-a5f1-5a9e0442fc84",
+    "DisplayName": "SG - Windows Autopilot Geräte Vorbereitung",
+    "MailEnabled": false,
+    "SecurityEnabled": true,
+    "GroupClassification": "Security Group",
+    "Visibility": null,
+    "CreatedDateTime": "2026-02-18T14:42:38Z",
+    "OnPremisesSyncEnabled": false
+  },
+  {
+    "Id": "c4ff75ab-2660-4798-a00f-0cc6c649cb2d",
+    "DisplayName": "M365 GDAP Custom - demo01",
+    "MailEnabled": false,
+    "SecurityEnabled": true,
+    "GroupClassification": "Security Group",
+    "Visibility": "Private",
+    "CreatedDateTime": "2026-02-27T12:23:32Z",
+    "OnPremisesSyncEnabled": false
+  },
+  {
+    "Id": "ceda208b-0bcb-4334-befc-1011605a7b6e",
+    "DisplayName": "M365 GDAP Simple Group",
+    "MailEnabled": false,
+    "SecurityEnabled": true,
+    "GroupClassification": "Security Group",
+    "Visibility": "Private",
+    "CreatedDateTime": "2026-02-27T12:50:42Z",
+    "OnPremisesSyncEnabled": false
+  },
+  {
+    "Id": "da46088a-efdb-4206-8b33-c55a2df1bc61",
+    "DisplayName": "M365 GDAP Billing Administrator f3ffabf7 Finance",
+    "MailEnabled": false,
+    "SecurityEnabled": true,
+    "GroupClassification": "Security Group",
+    "Visibility": "Private",
+    "CreatedDateTime": "2026-03-09T10:24:32Z",
+    "OnPremisesSyncEnabled": false
+  },
+  {
+    "Id": "dcb094b6-45cf-4d69-ab5d-38eedfe8ea9c",
+    "DisplayName": "All Company",
+    "MailEnabled": true,
+    "SecurityEnabled": false,
+    "GroupClassification": "Microsoft 365 Group",
+    "Visibility": "Public",
+    "CreatedDateTime": "2020-08-03T14:55:07Z",
+    "OnPremisesSyncEnabled": false
+  },
+  {
+    "Id": "e0c606ca-93d0-426f-bdda-990393bbd082",
+    "DisplayName": "SG - AutoPilot V2 User",
+    "MailEnabled": false,
+    "SecurityEnabled": true,
+    "GroupClassification": "Security Group",
+    "Visibility": null,
+    "CreatedDateTime": "2026-02-18T18:46:55Z",
+    "OnPremisesSyncEnabled": false
+  },
+  {
+    "Id": "ea61b9c3-61ef-4f8d-b3a5-ccbb0958fdae",
+    "DisplayName": "M365 GDAP Advanced Administration demo03",
+    "MailEnabled": false,
+    "SecurityEnabled": true,
+    "GroupClassification": "Security Group",
+    "Visibility": "Private",
+    "CreatedDateTime": "2026-02-27T12:58:50Z",
+    "OnPremisesSyncEnabled": false
+  },
+  {
+    "Id": "edae746e-b6c7-4e68-bd4c-6afeb7ed5695",
+    "DisplayName": "M365 GDAP Custom Attack Payload Author 19ae3a92",
+    "MailEnabled": false,
+    "SecurityEnabled": true,
+    "GroupClassification": "Security Group",
+    "Visibility": "Private",
+    "CreatedDateTime": "2026-02-27T13:06:20Z",
+    "OnPremisesSyncEnabled": false
+  },
+  {
+    "Id": "efd1a02c-d5d8-403b-a019-cbe329d5c5a0",
+    "DisplayName": "MyCloudOfficeDEV GOV02",
+    "MailEnabled": false,
+    "SecurityEnabled": true,
+    "GroupClassification": "Security Group",
+    "Visibility": "Private",
+    "CreatedDateTime": "2026-01-16T10:27:36Z",
+    "OnPremisesSyncEnabled": false
+  },
+  {
+    "Id": "f5aade13-27ab-421f-8505-0a780e508a1a",
+    "DisplayName": "M365 GDAP Helpdesk",
+    "MailEnabled": false,
+    "SecurityEnabled": true,
+    "GroupClassification": "Security Group",
+    "Visibility": "Private",
+    "CreatedDateTime": "2026-02-27T12:37:12Z",
+    "OnPremisesSyncEnabled": false
+  },
+  {
+    "Id": "f79bbbd5-20b3-47ef-8560-b6495141180a",
+    "DisplayName": "M365 GDAP User Administrator",
+    "MailEnabled": false,
+    "SecurityEnabled": true,
+    "GroupClassification": "Security Group",
+    "Visibility": null,
+    "CreatedDateTime": "2026-05-08T15:09:04Z",
+    "OnPremisesSyncEnabled": false
+  },
+  {
+    "Id": "faa56f11-0c2b-48c9-8e60-2c51804df39a",
+    "DisplayName": "M365 GDAP Custom 19ae3a92",
+    "MailEnabled": false,
+    "SecurityEnabled": true,
+    "GroupClassification": "Security Group",
+    "Visibility": "Private",
+    "CreatedDateTime": "2026-02-27T13:07:02Z",
+    "OnPremisesSyncEnabled": false
+  },
+  {
+    "Id": "fc1ee348-e7fe-4932-8360-7ea1a78eba1d",
+    "DisplayName": "M365 GDAP Advanced Administration 19ae3a92 demo 08",
+    "MailEnabled": false,
+    "SecurityEnabled": true,
+    "GroupClassification": "Security Group",
+    "Visibility": "Private",
+    "CreatedDateTime": "2026-02-27T13:19:14Z",
+    "OnPremisesSyncEnabled": false
+  },
+  {
+    "Id": "fd4aa9f6-8c95-4826-9588-185e410f4d75",
+    "DisplayName": "M365 GDAP Advanced f41a0bce Demo 10",
+    "MailEnabled": false,
+    "SecurityEnabled": true,
+    "GroupClassification": "Security Group",
+    "Visibility": "Private",
+    "CreatedDateTime": "2026-03-06T10:06:41Z",
+    "OnPremisesSyncEnabled": false
+  }
+]
