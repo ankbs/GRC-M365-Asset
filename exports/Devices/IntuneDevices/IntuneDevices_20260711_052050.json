@@ -1,0 +1,67 @@
+[
+  {
+    "Id": "bf7eadf8-181b-8cc6-a111-b800bc806dd6",
+    "DeviceName": "STUDIO-MKN",
+    "OperatingSystem": "Windows",
+    "OsVersion": "10.0.26200.8737",
+    "ComplianceState": "unknown",
+    "ManagementAgent": "msSense",
+    "LastSyncDateTime": "2026-07-06T05:59:12Z",
+    "UserPrincipalName": "",
+    "Model": "Blade 18 - RZ09-0509",
+    "Manufacturer": "Razer",
+    "SerialNumber": ""
+  },
+  {
+    "Id": "1e9e3def-483d-0533-bda6-e63d3ec064c4",
+    "DeviceName": "SRV-MB01-W2025",
+    "OperatingSystem": "Windows",
+    "OsVersion": "10.0.26100.32230",
+    "ComplianceState": "unknown",
+    "ManagementAgent": "msSense",
+    "LastSyncDateTime": "2026-02-25T22:40:08Z",
+    "UserPrincipalName": "",
+    "Model": "Virtual Machine",
+    "Manufacturer": "Microsoft Corporation",
+    "SerialNumber": ""
+  },
+  {
+    "Id": "7bc40055-df1d-fedc-3041-ee87d89347c1",
+    "DeviceName": "SRV-DC1-W2022",
+    "OperatingSystem": "Windows",
+    "OsVersion": "10.0.20348.4773",
+    "ComplianceState": "unknown",
+    "ManagementAgent": "msSense",
+    "LastSyncDateTime": "2026-02-25T22:27:41Z",
+    "UserPrincipalName": "",
+    "Model": "Virtual Machine",
+    "Manufacturer": "Microsoft Corporation",
+    "SerialNumber": ""
+  },
+  {
+    "Id": "e34b781a-69ad-41be-8451-3b66cffa5013",
+    "DeviceName": "DESKTOP-387UMFB",
+    "OperatingSystem": "Windows",
+    "OsVersion": "10.0.28000.1450",
+    "ComplianceState": "noncompliant",
+    "ManagementAgent": "mdm",
+    "LastSyncDateTime": "2026-02-18T19:03:05Z",
+    "UserPrincipalName": "mkn@mycloudofficedev.onmicrosoft.com",
+    "Model": "Virtual Machine",
+    "Manufacturer": "Microsoft Corporation",
+    "SerialNumber": "5669-2707-6276-0768-8813-2962-13"
+  },
+  {
+    "Id": "02831726-07da-469c-a9ad-e67e6e7708cb",
+    "DeviceName": "DESKTOP-6UB0RPT",
+    "OperatingSystem": "Windows",
+    "OsVersion": "10.0.28000.1643",
+    "ComplianceState": "noncompliant",
+    "ManagementAgent": "mdm",
+    "LastSyncDateTime": "2026-02-25T21:24:18Z",
+    "UserPrincipalName": "mkn@mycloudofficedev.onmicrosoft.com",
+    "Model": "Virtual Machine",
+    "Manufacturer": "Microsoft Corporation",
+    "SerialNumber": "7207-6351-1631-7968-4220-3241-41"
+  }
+]
