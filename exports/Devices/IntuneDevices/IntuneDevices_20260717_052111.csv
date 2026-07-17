@@ -1,0 +1,6 @@
+"Id","DeviceName","OperatingSystem","OsVersion","ComplianceState","ManagementAgent","LastSyncDateTime","UserPrincipalName","Model","Manufacturer","SerialNumber"
+"e34b781a-69ad-41be-8451-3b66cffa5013","DESKTOP-387UMFB","Windows","10.0.28000.1450","noncompliant","mdm","02/18/2026 19:03:05","mkn@mycloudofficedev.onmicrosoft.com","Virtual Machine","Microsoft Corporation","5669-2707-6276-0768-8813-2962-13"
+"bf7eadf8-181b-8cc6-a111-b800bc806dd6","STUDIO-MKN","Windows","10.0.26200.8737","unknown","msSense","07/06/2026 05:59:12","","Blade 18 - RZ09-0509","Razer",""
+"1e9e3def-483d-0533-bda6-e63d3ec064c4","SRV-MB01-W2025","Windows","10.0.26100.32230","unknown","msSense","02/25/2026 22:40:08","","Virtual Machine","Microsoft Corporation",""
+"7bc40055-df1d-fedc-3041-ee87d89347c1","SRV-DC1-W2022","Windows","10.0.20348.4773","unknown","msSense","02/25/2026 22:27:41","","Virtual Machine","Microsoft Corporation",""
+"02831726-07da-469c-a9ad-e67e6e7708cb","DESKTOP-6UB0RPT","Windows","10.0.28000.1643","noncompliant","mdm","02/25/2026 21:24:18","mkn@mycloudofficedev.onmicrosoft.com","Virtual Machine","Microsoft Corporation","7207-6351-1631-7968-4220-3241-41"
