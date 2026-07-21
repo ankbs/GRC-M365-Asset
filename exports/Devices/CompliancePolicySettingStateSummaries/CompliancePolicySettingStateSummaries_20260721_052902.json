@@ -1,0 +1,41 @@
+[
+  {
+    "errorDeviceCount": 0,
+    "nonCompliantDeviceCount": 0,
+    "conflictDeviceCount": 0,
+    "remediatedDeviceCount": 0,
+    "id": "DefaultDeviceCompliancePolicy.RequireDeviceCompliancePolicyAssigned",
+    "platformType": "all",
+    "notApplicableDeviceCount": 0,
+    "compliantDeviceCount": 2,
+    "setting": "DefaultDeviceCompliancePolicy.RequireDeviceCompliancePolicyAssigned",
+    "settingName": "DefaultDeviceCompliancePolicy.RequireDeviceCompliancePolicyAssigned",
+    "unknownDeviceCount": 0
+  },
+  {
+    "errorDeviceCount": 0,
+    "nonCompliantDeviceCount": 2,
+    "conflictDeviceCount": 0,
+    "remediatedDeviceCount": 0,
+    "id": "DefaultDeviceCompliancePolicy.RequireRemainContact",
+    "platformType": "all",
+    "notApplicableDeviceCount": 0,
+    "compliantDeviceCount": 0,
+    "setting": "DefaultDeviceCompliancePolicy.RequireRemainContact",
+    "settingName": "DefaultDeviceCompliancePolicy.RequireRemainContact",
+    "unknownDeviceCount": 0
+  },
+  {
+    "errorDeviceCount": 0,
+    "nonCompliantDeviceCount": 0,
+    "conflictDeviceCount": 0,
+    "remediatedDeviceCount": 0,
+    "id": "DefaultDeviceCompliancePolicy.RequireUserExistence",
+    "platformType": "all",
+    "notApplicableDeviceCount": 0,
+    "compliantDeviceCount": 2,
+    "setting": "DefaultDeviceCompliancePolicy.RequireUserExistence",
+    "settingName": "DefaultDeviceCompliancePolicy.RequireUserExistence",
+    "unknownDeviceCount": 0
+  }
+]
