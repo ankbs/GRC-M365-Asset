@@ -1,0 +1,4 @@
+"settingName","platformType","id","setting","conflictDeviceCount","remediatedDeviceCount","compliantDeviceCount","unknownDeviceCount","nonCompliantDeviceCount","errorDeviceCount","notApplicableDeviceCount"
+"DefaultDeviceCompliancePolicy.RequireDeviceCompliancePolicyAssigned","all","DefaultDeviceCompliancePolicy.RequireDeviceCompliancePolicyAssigned","DefaultDeviceCompliancePolicy.RequireDeviceCompliancePolicyAssigned","0","0","2","0","0","0","0"
+"DefaultDeviceCompliancePolicy.RequireRemainContact","all","DefaultDeviceCompliancePolicy.RequireRemainContact","DefaultDeviceCompliancePolicy.RequireRemainContact","0","0","0","0","2","0","0"
+"DefaultDeviceCompliancePolicy.RequireUserExistence","all","DefaultDeviceCompliancePolicy.RequireUserExistence","DefaultDeviceCompliancePolicy.RequireUserExistence","0","0","2","0","0","0","0"
