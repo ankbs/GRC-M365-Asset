@@ -1,0 +1,92 @@
+[
+  {
+    "version": "1.119.0",
+    "sizeInByte": 0,
+    "platform": "windows",
+    "deviceCount": 1,
+    "displayName": "Canva",
+    "publisher": "Canva Pty Ltd",
+    "id": "00008f9eeb54b19dda910378300d8a4a2a840000ffff"
+  },
+  {
+    "version": "16.0.19725.20078",
+    "sizeInByte": 0,
+    "platform": "windows",
+    "deviceCount": 1,
+    "displayName": "Microsoft 365 Apps for Enterprise - de-de",
+    "publisher": "Microsoft Corporation",
+    "id": "0000c8df60f6f8e0b985413269916e76a0200000ffff"
+  },
+  {
+    "version": "16.0.19725.20078",
+    "sizeInByte": 0,
+    "platform": "windows",
+    "deviceCount": 1,
+    "displayName": "Microsoft 365 Apps for enterprise - en-us",
+    "publisher": "Microsoft Corporation",
+    "id": "0000fb3a0c0e3ad64ad87da5d6a4f4fceccb0000ffff"
+  },
+  {
+    "version": "145.0.3800.70",
+    "sizeInByte": 0,
+    "platform": "windows",
+    "deviceCount": 1,
+    "displayName": "Microsoft Edge",
+    "publisher": "Microsoft Corporation",
+    "id": "0000a53a3a60cdcc3d5c6170347d90ffc59f0000ffff"
+  },
+  {
+    "version": "1.99.101.0",
+    "sizeInByte": 0,
+    "platform": "windows",
+    "deviceCount": 1,
+    "displayName": "Microsoft Intune Management Extension",
+    "publisher": "Microsoft Corporation",
+    "id": "00007588166f792c1c54d508da96ad1681f000000904"
+  },
+  {
+    "version": "26.022.0203.0006",
+    "sizeInByte": 0,
+    "platform": "windows",
+    "deviceCount": 1,
+    "displayName": "Microsoft OneDrive",
+    "publisher": "Microsoft Corporation",
+    "id": "0000367bb68ec3824725e62bd815b0b27a580000ffff"
+  },
+  {
+    "version": "16.0.19725.20078",
+    "sizeInByte": 0,
+    "platform": "windows",
+    "deviceCount": 1,
+    "displayName": "Microsoft Visio - de-de",
+    "publisher": "Microsoft Corporation",
+    "id": "00007661e62db1a36b2fc73a44cca68fc6fd0000ffff"
+  },
+  {
+    "version": "16.0.19725.20078",
+    "sizeInByte": 0,
+    "platform": "windows",
+    "deviceCount": 1,
+    "displayName": "Microsoft Visio - en-us",
+    "publisher": "Microsoft Corporation",
+    "id": "00003a7331d2937279fbd40ee13e147132310000ffff"
+  },
+  {
+    "version": "14.44.35211.0",
+    "sizeInByte": 0,
+    "platform": "windows",
+    "deviceCount": 1,
+    "displayName": "Microsoft Visual C++ 2015-2022 Redistributable (x64) - 14.44.35211",
+    "publisher": "Microsoft Corporation",
+    "id": "00002e96ac03ed3ce3b16fbcb7f0627e67f90000ffff"
+  },
+  {
+    "version": "14.44.35211.0",
+    "sizeInByte": 0,
+    "platform": "windows",
+    "deviceCount": 1,
+    "displayName": "Microsoft Visual C++ 2015-2022 Redistributable (x86) - 14.44.35211",
+    "publisher": "Microsoft Corporation",
+    "id": "0000ea448545d03145f01134afdf9efa72e60000ffff"
+  }
+]
