@@ -1,0 +1,17 @@
+{
+  "Id": "7c18b1e7-037a-4386-af09-beb0cde4ca21",
+  "DisplayName": "mycloudofficedev",
+  "Visibility": "Public",
+  "CreatedDateTime": "2024-01-24T20:26:43Z",
+  "Owners": [
+    "mkn@mycloudofficedev.onmicrosoft.com",
+    "Demo-Support-CIPP-SA@mycloudofficedev.onmicrosoft.com"
+  ],
+  "MemberCount": 25,
+  "GuestCount": 0,
+  "Channels": [
+    "General:(standard)"
+  ],
+  "AllowGuestCreateUpdateChannels": false,
+  "AllowGuestDeleteChannels": false
+}
